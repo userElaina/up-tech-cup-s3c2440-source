@@ -1,0 +1,5 @@
+OBJECTS=\
+    obj\ARMV4I\retail\kitlser.obj\
+    obj\ARMV4I\retail\kitlusbser.obj\
+    obj\ARMV4I\retail\kitl.obj
+

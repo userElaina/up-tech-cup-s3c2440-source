@@ -1,0 +1,4 @@
+OBJECTS=\
+    obj\ARMV4I\debug\ser_smdk2440.obj\
+    obj\ARMV4I\debug\pdds3c2440_ser.obj
+

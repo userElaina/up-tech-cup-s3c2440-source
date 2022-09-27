@@ -1,0 +1,20 @@
+!if "$(BSP_NOPWRBTN)" == "1"
+SKIPBUILD=1
+!endif
+
+RELEASETYPE=PLATFORM
+TARGETNAME=PowerButton
+TARGETTYPE=DYNLINK
+DLLENTRY=DllEntry
+
+TARGETLIBS= \
+    $(_COMMONSDKROOT)\lib\$(_CPUINDPATH)\coredll.lib \
+
+MSC_WARNING_LEVEL = $(MSC_WARNING_LEVEL) /W3 /WX
+
+INCLUDES=$(INCLUDES);../../inc
+
+SOURCES= \
+    pwr.c \
+    PowerButton.c \
+

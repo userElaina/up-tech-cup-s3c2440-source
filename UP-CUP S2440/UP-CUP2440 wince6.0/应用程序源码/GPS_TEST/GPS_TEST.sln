@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GPS_TEST", "GPS_TEST\GPS_TEST.vcproj", "{E1ED9CFD-BD77-473B-BEA0-EF60523472A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|UP2440 SDK (ARMV4I) = Debug|UP2440 SDK (ARMV4I)
+		Release|UP2440 SDK (ARMV4I) = Release|UP2440 SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1ED9CFD-BD77-473B-BEA0-EF60523472A3}.Debug|UP2440 SDK (ARMV4I).ActiveCfg = Debug|UP2440 SDK (ARMV4I)
+		{E1ED9CFD-BD77-473B-BEA0-EF60523472A3}.Debug|UP2440 SDK (ARMV4I).Build.0 = Debug|UP2440 SDK (ARMV4I)
+		{E1ED9CFD-BD77-473B-BEA0-EF60523472A3}.Debug|UP2440 SDK (ARMV4I).Deploy.0 = Debug|UP2440 SDK (ARMV4I)
+		{E1ED9CFD-BD77-473B-BEA0-EF60523472A3}.Release|UP2440 SDK (ARMV4I).ActiveCfg = Release|UP2440 SDK (ARMV4I)
+		{E1ED9CFD-BD77-473B-BEA0-EF60523472A3}.Release|UP2440 SDK (ARMV4I).Build.0 = Release|UP2440 SDK (ARMV4I)
+		{E1ED9CFD-BD77-473B-BEA0-EF60523472A3}.Release|UP2440 SDK (ARMV4I).Deploy.0 = Release|UP2440 SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

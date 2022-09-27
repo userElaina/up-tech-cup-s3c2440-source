@@ -1,0 +1,10 @@
+LIBRARY Digital_Dot
+EXPORTS
+	DDT_Init
+	DDT_Open
+	DDT_Close
+	DDT_Deinit
+	DDT_IOControl
+	DDT_Read
+	DDT_Write
+	DDT_Seek

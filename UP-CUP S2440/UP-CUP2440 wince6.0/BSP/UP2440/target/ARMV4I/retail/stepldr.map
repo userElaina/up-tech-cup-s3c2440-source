@@ -1,0 +1,44 @@
+ stepldr
+
+ Timestamp is 4f87b39e (Fri Apr 13 13:03:26 2012)
+
+ Preferred load address is 00010000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000370H .astart                 CODE
+ 0001:00000370 00000027H .rdata                  CODE
+ 0001:00000398 00000024H .rdata$debug            CODE
+ 0001:000003bc 00000654H .text                   CODE
+ 0001:00000a10 00000000H .edata                  CODE
+ 0002:00000000 00000008H .bss                    DATA
+ 0003:00000000 00000060H .pdata                  DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0001:00000000       StartUp                    00011000 f   startup.obj
+ 0001:0000030c       MMU_EnableICache           0001130c f   startup.obj
+ 0001:0000031c       MMU_SetAsyncBusMode        0001131c f   startup.obj
+ 0001:0000032c       __RdPagedata               0001132c     startup.obj
+ 0001:0000038c       pTOC                       0001138c     main.obj
+ 0001:00000390       ??_C@_06KNHHBKFC@ID?5ERR?$AA@ 00011390     main.obj
+ 0001:000003bc       main                       000113bc f   main.obj
+ 0001:000004c0       NF_ReadID                  000114c0 f   nand.obj
+ 0001:00000564       NF_ReadPage                00011564 f   nand.obj
+ 0001:0000067c       NF_Reset                   0001167c f   nand.obj
+ 0001:000006ec       NF_Init                    000116ec f   nand.obj
+ 0001:00000724       Port_Init                  00011724 f   utils.obj
+ 0001:0000080c       Delay                      0001180c f   utils.obj
+ 0001:00000838       Uart_Init                  00011838 f   utils.obj
+ 0001:00000878       Uart_SendByte              00011878 f   utils.obj
+ 0001:000008c8       Uart_SendString            000118c8 f   utils.obj
+ 0001:000008f4       __rt_sdiv                  000118f4 f   fulllibc:__div.obj
+ 0001:000009d0       __raise_int_divide_by_zero 000119d0 f   fulllibc:diverr.obj
+ 0001:000009f4       __crtRaiseException        000119f4 f   fulllibc:raiseexc.obj
+ 0002:00000004       bLARGEBLOCK                00012004     <common>
+
+ entry point at        0001:00000000
+
+ Static symbols
+

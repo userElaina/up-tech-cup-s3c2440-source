@@ -1,0 +1,1 @@
+UP2440目录需要拷贝到CE6.0安装目录的OSDesign下（X:\WINCE600\OSDesign）

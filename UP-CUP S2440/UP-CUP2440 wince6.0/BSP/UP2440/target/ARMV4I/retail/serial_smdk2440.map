@@ -1,0 +1,356 @@
+ serial_smdk2440
+
+ Timestamp is 4f87b397 (Fri Apr 13 13:03:19 2012)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 0000084eH .rdata                  CODE
+ 0001:00000850 0000002cH .rdata$debug            CODE
+ 0001:0000087c 00005d00H .text                   CODE
+ 0001:0000657c 0000002cH .xdata                  CODE
+ 0001:000065a8 00000028H .idata$2                CODE
+ 0001:000065d0 00000014H .idata$3                CODE
+ 0001:000065e4 00000118H .idata$4                CODE
+ 0001:000066fc 00000016H .idata$6                CODE
+ 0001:00006720 00000131H .edata                  CODE
+ 0002:00000000 00000118H .idata$5                DATA
+ 0002:00000118 00000028H .data                   DATA
+ 0002:00000140 00000004H .bss                    DATA
+ 0003:00000000 000004e0H .pdata                  DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0001:00000020       ??_7CPdd2440Serial1@@6BCSerialPDD@@@ 10001020     ser_smdk2440.obj
+ 0001:00000104       ??_7CPdd2440Serial1@@6BCMiniThread@@@ 10001104     ser_smdk2440.obj
+ 0001:00000108       ??_C@_1BA@BDHDGOBO@?$AAS?$AAy?$AAs?$AAI?$AAn?$AAt?$AAr?$AA?$AA@ 10001108     ser_smdk2440.obj
+ 0001:00000118       ??_7CPdd2440Serial2@@6BCSerialPDD@@@ 10001118     ser_smdk2440.obj
+ 0001:000001fc       ??_7CPdd2440Serial2@@6BCMiniThread@@@ 100011fc     ser_smdk2440.obj
+ 0001:00000200       ??_C@_1KO@OEBOAKMH@?$AAI?$AAN?$AAF?$AAO?$AA?3?$AA?5?$AAC?$AAR?$AAe?$AAg?$AA2?$AA4?$AA4?$AA0?$AAU?$AAa?$AAr?$AAt?$AA?3?$AA?3?$AAC?$AAR?$AAe?$AAg?$AA2?$AA4?$AA4?$AA0?$AAU?$AAa?$AAr?$AAt@ 10001200     pdds3c2440_ser.obj
+ 0001:000002b0       ??_C@_1MO@PHPIECGG@?$AAW?$AAA?$AAR?$AAN?$AAI?$AAN?$AAG?$AA?3?$AA?5?$AAC?$AAR?$AAe?$AAg?$AA2?$AA4?$AA4?$AA0?$AAU?$AAa?$AAr?$AAt?$AA?3?$AA?3?$AAC?$AAR?$AAe?$AAg?$AA2?$AA4?$AA4?$AA0?$AAU@ 100012b0     pdds3c2440_ser.obj
+ 0001:00000380       ??_7CReg2440Uart@@6B@      10001380     pdds3c2440_ser.obj
+ 0001:00000398       ??_C@_1JI@ICNGNDPO@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAT?$AAh?$AAe?$AA?5?$AAs?$AA3?$AAc?$AA2?$AA4?$AA4?$AA0?$AAa?$AA?5?$AAs?$AAe?$AAr?$AAi?$AAa?$AAl?$AA?5?$AAd?$AAr?$AAi?$AAv?$AAe@ 10001398     pdds3c2440_ser.obj
+ 0001:00000430       ??_C@_1BI@DFNHKOLO@?$AAI?$AAS?$AAT?$AAT?$AAi?$AAm?$AAe?$AAo?$AAu?$AAt?$AAs?$AA?$AA@ 10001430     pdds3c2440_ser.obj
+ 0001:00000448       ??_C@_1GE@KAPDAGCJ@?$AAR?$AAe?$AAg?$AAi?$AAs?$AAt?$AAe?$AAr?$AAy?$AA?5?$AAd?$AAo?$AAe?$AAs?$AA?5?$AAn?$AAo?$AAt?$AA?5?$AAh?$AAa?$AAv?$AAe?$AA?5?$AA?$CF?$AAs?$AA?5?$AAs?$AAe?$AAt?$AA?4?$AA?5@ 10001448     pdds3c2440_ser.obj
+ 0001:000004ac       ??_C@_1CG@FPJLADND@?$AAI?$AAn?$AAt?$AAe?$AAr?$AAr?$AAu?$AAp?$AAt?$AAB?$AAi?$AAt?$AAs?$AAS?$AAh?$AAi?$AAf?$AAt?$AA?$AA@ 100014ac     pdds3c2440_ser.obj
+ 0001:000004d4       ??_C@_1BI@BIDGGFDD@?$AAW?$AAa?$AAt?$AAe?$AAr?$AAM?$AAa?$AAr?$AAk?$AAe?$AAr?$AA?$AA@ 100014d4     pdds3c2440_ser.obj
+ 0001:000004ec       ??_C@_1CC@KMPFMANC@?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAA?$AAr?$AAr?$AAa?$AAy?$AAI?$AAn?$AAd?$AAe?$AAx?$AA?$AA@ 100014ec     pdds3c2440_ser.obj
+ 0001:00000510       ??_C@_1BM@MHMIAMLB@?$AAI?$AAn?$AAt?$AAe?$AAr?$AAf?$AAa?$AAc?$AAe?$AAT?$AAy?$AAp?$AAe?$AA?$AA@ 10001510     pdds3c2440_ser.obj
+ 0001:0000052c       ??_7CMiniThread@@6B@       1000152c     pdds3c2440_ser.obj
+ 0001:00000530       ??_7CPdd2440Uart@@6BCSerialPDD@@@ 10001530     pdds3c2440_ser.obj
+ 0001:00000614       ??_7CPdd2440Uart@@6BCMiniThread@@@ 10001614     pdds3c2440_ser.obj
+ 0001:00000690       ??_7CSerialPDD@@6B@        10001690     serpddcm:cserpdd.obj
+ 0001:0000075c       ??_C@_1BI@BHLBGEOK@?$AAP?$AAr?$AAi?$AAo?$AAr?$AAi?$AAt?$AAy?$AA2?$AA5?$AA6?$AA?$AA@ 1000175c     serpddcm:cserpdd.obj
+ 0001:00000830       ??_7CSerialPDDPowerUpCallback@@6B@ 10001830     serpddcm:cserpdd.obj
+ 0001:00000834       ??_C@_1BK@CGEFNBAB@?$AAR?$AAx?$AAB?$AAu?$AAf?$AAf?$AAe?$AAr?$AAS?$AAi?$AAz?$AAe?$AA?$AA@ 10001834     serpddcm:cserpdd.obj
+ 0001:0000087c       ?PreDeinit@CSerialPDD@@UAAXXZ 1000187c f i ser_smdk2440.obj
+ 0001:00000880       ?GetDevicePowerState@CSerialPDD@@UAA?AW4_CEDEVICE_POWER_STATE@@XZ 10001880 f i ser_smdk2440.obj
+ 0001:00000888       ?GetPowerCapabilities@CSerialPDD@@UAA?AU_POWER_CAPABILITIES@@XZ 10001888 f i ser_smdk2440.obj
+ 0001:000008ac       ?GetRxBufferSize@CSerialPDD@@UAAKXZ 100018ac f i ser_smdk2440.obj
+ 0001:000008b4       ?IsCTSOff@CSerialPDD@@UAAHXZ 100018b4 f i ser_smdk2440.obj
+ 0001:000008e0       ?IsDSROff@CSerialPDD@@UAAHXZ 100018e0 f i ser_smdk2440.obj
+ 0001:0000090c       ?GetOutputMode@CSerialPDD@@UAAXPAH0@Z 1000190c f i ser_smdk2440.obj
+ 0001:00000928       ?SerialRegisterBackup@CPdd2440Uart@@UAAXXZ 10001928 f i ser_smdk2440.obj
+ 0001:00000948       ?SerialRegisterRestore@CPdd2440Uart@@UAAXXZ 10001948 f i ser_smdk2440.obj
+ 0001:00000968       ?ModemInterruptHandler@CPdd2440Uart@@UAAXXZ 10001968 f i ser_smdk2440.obj
+ 0001:00000984       ?SetDTR@CPdd2440Uart@@UAAXH@Z 10001984 f i ser_smdk2440.obj
+ 0001:00000988       ?LineInterruptHandler@CPdd2440Uart@@UAAXXZ 10001988 f i ser_smdk2440.obj
+ 0001:00000998       ??1CPdd2440Serial1@@UAA@XZ 10001998 f i ser_smdk2440.obj
+ 0001:000009e0       ?Init@CPdd2440Serial1@@UAAHXZ 100019e0 f i ser_smdk2440.obj
+ 0001:00000b50       ?SetDefaultConfiguration@CPdd2440Serial1@@UAAXXZ 10001b50 f i ser_smdk2440.obj
+ 0001:00000b60       ?GetModemStatus@CPdd2440Serial1@@UAAKXZ 10001b60 f i ser_smdk2440.obj
+ 0001:00000b74       ?Rx_Pause@CPdd2440Serial1@@UAAXH@Z 10001b74 f i ser_smdk2440.obj
+ 0001:00000b78       ??_ECPdd2440Serial1@@UAAPAXI@Z 10001b78 f i ser_smdk2440.obj
+ 0001:00000b78       ??_GCPdd2440Serial1@@UAAPAXI@Z 10001b78 f i ser_smdk2440.obj
+ 0001:00000ba0       ??1CPdd2440Serial2@@UAA@XZ 10001ba0 f i ser_smdk2440.obj
+ 0001:00000be8       ?Init@CPdd2440Serial2@@UAAHXZ 10001be8 f i ser_smdk2440.obj
+ 0001:00000d58       ?SetDefaultConfiguration@CPdd2440Serial2@@UAAXXZ 10001d58 f i ser_smdk2440.obj
+ 0001:00000d68       ?GetModemStatus@CPdd2440Serial2@@UAAKXZ 10001d68 f i ser_smdk2440.obj
+ 0001:00000d7c       ?Rx_Pause@CPdd2440Serial2@@UAAXH@Z 10001d7c f i ser_smdk2440.obj
+ 0001:00000d80       ??_ECPdd2440Serial2@@UAAPAXI@Z 10001d80 f i ser_smdk2440.obj
+ 0001:00000d80       ??_GCPdd2440Serial2@@UAAPAXI@Z 10001d80 f i ser_smdk2440.obj
+ 0001:00000da8       ?CreateSerialObject@@YAPAVCSerialPDD@@PAGPAXPAU__HWOBJ@@K@Z 10001da8 f   ser_smdk2440.obj
+ 0001:00000e9c       ?DeleteSerialObject@@YAXPAVCSerialPDD@@@Z 10001e9c f   ser_smdk2440.obj
+ 0001:00000ec0       ??0CRegistryEdit@@QAA@PAUHKEY__@@PBG@Z 10001ec0 f i pdds3c2440_ser.obj
+ 0001:00000f10       ?GetRegValue@CRegistryEdit@@QAAHPBGPAEK@Z 10001f10 f i pdds3c2440_ser.obj
+ 0001:00000f60       ?ThreadStart@CMiniThread@@QAAHXZ 10001f60 f i pdds3c2440_ser.obj
+ 0001:00000fa0       ?WaitThreadComplete@CMiniThread@@QAAHK@Z 10001fa0 f i pdds3c2440_ser.obj
+ 0001:00001000       ?ForceTerminated@CMiniThread@@QAAHXZ 10002000 f i pdds3c2440_ser.obj
+ 0001:00001050       ?ThreadProc@CMiniThread@@CAKPAX@Z 10002050 f i pdds3c2440_ser.obj
+ 0001:00001080       ?SetOutputMode@CSerialPDD@@UAAXHH@Z 10002080 f i pdds3c2440_ser.obj
+ 0001:00001094       ??0CReg2440Uart@@QAA@PAK@Z 10002094 f   pdds3c2440_ser.obj
+ 0001:00001264       ??_ECReg2440Uart@@UAAPAXI@Z 10002264 f i pdds3c2440_ser.obj
+ 0001:00001264       ??_GCReg2440Uart@@UAAPAXI@Z 10002264 f i pdds3c2440_ser.obj
+ 0001:0000128c       ?Init@CReg2440Uart@@UAAHXZ 1000228c f   pdds3c2440_ser.obj
+ 0001:000012f4       ?Backup@CReg2440Uart@@UAAXXZ 100022f4 f   pdds3c2440_ser.obj
+ 0001:00001358       ?Restore@CReg2440Uart@@UAAXXZ 10002358 f   pdds3c2440_ser.obj
+ 0001:000013c8       ?Write_BaudRate@CReg2440Uart@@UAAHK@Z 100023c8 f   pdds3c2440_ser.obj
+ 0001:00001468       ?Init@CPdd2440Uart@@UAAHXZ 10002468 f   pdds3c2440_ser.obj
+ 0001:00001624       ?MapHardware@CPdd2440Uart@@UAAHXZ 10002624 f   pdds3c2440_ser.obj
+ 0001:000017b4       ?CreateHardwareAccess@CPdd2440Uart@@UAAHXZ 100027b4 f   pdds3c2440_ser.obj
+ 0001:00001860       ?PostInit@CPdd2440Uart@@UAAXXZ 10002860 f   pdds3c2440_ser.obj
+ 0001:00001954       ?ThreadRun@CPdd2440Uart@@EAAKXZ 10002954 f   pdds3c2440_ser.obj
+ 0001:00001a48       ?InitialEnableInterrupt@CPdd2440Uart@@UAAHH@Z 10002a48 f   pdds3c2440_ser.obj
+ 0001:00001a90       ?InitXmit@CPdd2440Uart@@UAAHH@Z 10002a90 f   pdds3c2440_ser.obj
+ 0001:00001b7c       ?GetWriteableSize@CPdd2440Uart@@UAAKXZ 10002b7c f   pdds3c2440_ser.obj
+ 0001:00001bb8       ?XmitInterruptHandler@CPdd2440Uart@@UAAXPAEPAK@Z 10002bb8 f   pdds3c2440_ser.obj
+ 0001:00001d64       ?XmitComChar@CPdd2440Uart@@UAAXE@Z 10002d64 f   pdds3c2440_ser.obj
+ 0001:00001df4       ?EnableXmitInterrupt@CPdd2440Uart@@UAAHH@Z 10002df4 f   pdds3c2440_ser.obj
+ 0001:00001e3c       ?CancelXmit@CPdd2440Uart@@UAAHXZ 10002e3c f   pdds3c2440_ser.obj
+ 0001:00001e5c       ?GetWaterMarkBit@CPdd2440Uart@@UAAEXZ 10002e5c f   pdds3c2440_ser.obj
+ 0001:00001eac       ?GetWaterMark@CPdd2440Uart@@UAAKXZ 10002eac f   pdds3c2440_ser.obj
+ 0001:00001f00       ?InitReceive@CPdd2440Uart@@UAAHH@Z 10002f00 f   pdds3c2440_ser.obj
+ 0001:00002020       ?CancelReceive@CPdd2440Uart@@UAAKXZ 10003020 f   pdds3c2440_ser.obj
+ 0001:00002064       ?InitModem@CPdd2440Uart@@UAAHH@Z 10003064 f   pdds3c2440_ser.obj
+ 0001:0000209c       ?GetModemStatus@CPdd2440Uart@@UAAKXZ 1000309c f   pdds3c2440_ser.obj
+ 0001:00002104       ?SetRTS@CPdd2440Uart@@UAAXH@Z 10003104 f   pdds3c2440_ser.obj
+ 0001:00002154       ?InitLine@CPdd2440Uart@@UAAHH@Z 10003154 f   pdds3c2440_ser.obj
+ 0001:0000219c       ?GetLineStatus@CPdd2440Uart@@QAAEXZ 1000319c f   pdds3c2440_ser.obj
+ 0001:00002228       ?SetBreak@CPdd2440Uart@@UAAXH@Z 10003228 f   pdds3c2440_ser.obj
+ 0001:00002278       ?SetBaudRate@CPdd2440Uart@@UAAHKH@Z 10003278 f   pdds3c2440_ser.obj
+ 0001:000022b8       ?SetByteSize@CPdd2440Uart@@UAAHK@Z 100032b8 f   pdds3c2440_ser.obj
+ 0001:00002338       ?SetParity@CPdd2440Uart@@UAAHK@Z 10003338 f   pdds3c2440_ser.obj
+ 0001:000023c8       ?SetStopBits@CPdd2440Uart@@UAAHK@Z 100033c8 f   pdds3c2440_ser.obj
+ 0001:00002428       ?SetOutputMode@CPdd2440Uart@@UAAXHH@Z 10003428 f   pdds3c2440_ser.obj
+ 0001:00002478       ??0CMiniThread@@QAA@KH@Z   10003478 f i pdds3c2440_ser.obj
+ 0001:000024e4       ??0CPdd2440Uart@@QAA@PAGPAXPAU__HWOBJ@@@Z 100034e4 f   pdds3c2440_ser.obj
+ 0001:00002580       ?Rx_Pause@CPdd2440Uart@@UAAXH@Z 10003580 f i pdds3c2440_ser.obj
+ 0001:00002584       ??1CPdd2440Uart@@UAA@XZ    10003584 f   pdds3c2440_ser.obj
+ 0001:00002680       ?ReceiveInterruptHandler@CPdd2440Uart@@UAAKPAEPAK@Z 10003680 f   pdds3c2440_ser.obj
+ 0001:0000278c       ??_GCPdd2440Uart@@UAAPAXI@Z 1000378c f i pdds3c2440_ser.obj
+ 0001:0000278c       ??_ECPdd2440Uart@@UAAPAXI@Z 1000378c f i pdds3c2440_ser.obj
+ 0001:000027b4       ?ThreadRun@CSerialPDDPowerUpCallback@@EAAKXZ 100037b4 f   serpddcm:cserpdd.obj
+ 0001:0000281c       ??0CSerialPDD@@QAA@PAGPAXPAU__HWOBJ@@@Z 1000381c f   serpddcm:cserpdd.obj
+ 0001:000028d8       ?PostInit@CSerialPDD@@UAAXXZ 100038d8 f   serpddcm:cserpdd.obj
+ 0001:00002914       ?Open@CSerialPDD@@UAAHXZ   10003914 f   serpddcm:cserpdd.obj
+ 0001:000029b4       ?Close@CSerialPDD@@UAAHXZ  100039b4 f   serpddcm:cserpdd.obj
+ 0001:00002a40       ?Ioctl@CSerialPDD@@UAAHKPAEK0KPAK@Z 10003a40 f   serpddcm:cserpdd.obj
+ 0001:00002b60       ?InitialPower@CSerialPDD@@UAAHH@Z 10003b60 f   serpddcm:cserpdd.obj
+ 0001:00002b7c       ?SetPowerStateStatic@CSerialPDD@@KA?AW4_CEDEVICE_POWER_STATE@@KW42@@Z 10003b7c f   serpddcm:cserpdd.obj
+ 0001:00002bf8       ?PowerOff@CSerialPDD@@UAAHXZ 10003bf8 f   serpddcm:cserpdd.obj
+ 0001:00002c40       ?PowerOn@CSerialPDD@@UAAHXZ 10003c40 f   serpddcm:cserpdd.obj
+ 0001:00002cb0       ?SetDevicePowerState@CSerialPDD@@UAAHW4_CEDEVICE_POWER_STATE@@@Z 10003cb0 f   serpddcm:cserpdd.obj
+ 0001:00002d88       ?InitialEnableInterrupt@CSerialPDD@@UAAHH@Z 10003d88 f   serpddcm:cserpdd.obj
+ 0001:00002db4       ?NotifyPDDInterrupt@CSerialPDD@@UAAHW4INTERRUPT_TYPE@@@Z 10003db4 f   serpddcm:cserpdd.obj
+ 0001:00002e5c       ?GetInterruptType@CSerialPDD@@UAA?AW4INTERRUPT_TYPE@@XZ 10003e5c f   serpddcm:cserpdd.obj
+ 0001:00002e8c       ?DataReplaced@CSerialPDD@@UAAHPAEH@Z 10003e8c f   serpddcm:cserpdd.obj
+ 0001:00002f2c       ?EventCallback@CSerialPDD@@UAAHKK@Z 10003f2c f   serpddcm:cserpdd.obj
+ 0001:00002f70       ?PurgeComm@CSerialPDD@@UAAHK@Z 10003f70 f   serpddcm:cserpdd.obj
+ 0001:00002fb4       ?SetReceiveError@CSerialPDD@@UAAXK@Z 10003fb4 f   serpddcm:cserpdd.obj
+ 0001:00003004       ?GetReceivedError@CSerialPDD@@UAAKXZ 10004004 f   serpddcm:cserpdd.obj
+ 0001:00003034       ?SetDefaultConfiguration@CSerialPDD@@UAAXXZ 10004034 f   serpddcm:cserpdd.obj
+ 0001:00003150       ?SetDCB@CSerialPDD@@UAAHPAU_DCB@@@Z 10004150 f   serpddcm:cserpdd.obj
+ 0001:000032ac       ?GetDivisorOfRate@CSerialPDD@@UAAHKPAK@Z 100042ac f   serpddcm:cserpdd.obj
+ 0001:00003308       ?SerInit@@YAPAXKPAXPAU__HWOBJ@@@Z 10004308 f   serpddcm:cserpdd.obj
+ 0001:00003348       ?SerDeinit@@YAKPAX@Z       10004348 f   serpddcm:cserpdd.obj
+ 0001:00003384       ?SerPostInit@@YAHPAX@Z     10004384 f   serpddcm:cserpdd.obj
+ 0001:000033a8       ?SerOpen@@YAHPAX@Z         100043a8 f   serpddcm:cserpdd.obj
+ 0001:000033d0       ?SerClose@@YAKPAX@Z        100043d0 f   serpddcm:cserpdd.obj
+ 0001:000033f8       ?SerGetInterruptType@@YA?AW4INTERRUPT_TYPE@@PAX@Z 100043f8 f   serpddcm:cserpdd.obj
+ 0001:00003420       ?SerRxIntr@@YAKPAXPAEPAK@Z 10004420 f   serpddcm:cserpdd.obj
+ 0001:00003448       ?SerTxIntrEx@@YAXPAXPAEPAK@Z 10004448 f   serpddcm:cserpdd.obj
+ 0001:00003468       ?SerModemIntr@@YAXPAX@Z    10004468 f   serpddcm:cserpdd.obj
+ 0001:000034a4       ?SerLineIntr@@YAXPAX@Z     100044a4 f   serpddcm:cserpdd.obj
+ 0001:000034e0       ?SerGetRxBufferSize@@YAKPAX@Z 100044e0 f   serpddcm:cserpdd.obj
+ 0001:00003524       ?SerPowerOff@@YAHPAX@Z     10004524 f   serpddcm:cserpdd.obj
+ 0001:00003568       ?SerPowerOn@@YAHPAX@Z      10004568 f   serpddcm:cserpdd.obj
+ 0001:000035ac       ?SerClearDTR@@YAXPAX@Z     100045ac f   serpddcm:cserpdd.obj
+ 0001:000035ec       ?SerSetDTR@@YAXPAX@Z       100045ec f   serpddcm:cserpdd.obj
+ 0001:0000362c       ?SerClearRTS@@YAXPAX@Z     1000462c f   serpddcm:cserpdd.obj
+ 0001:0000366c       ?SerSetRTS@@YAXPAX@Z       1000466c f   serpddcm:cserpdd.obj
+ 0001:000036ac       ?SerEnableIR@@YAHPAXK@Z    100046ac f   serpddcm:cserpdd.obj
+ 0001:00003700       ?SerDisableIR@@YAHPAX@Z    10004700 f   serpddcm:cserpdd.obj
+ 0001:0000372c       ?SerClearBreak@@YAXPAX@Z   1000472c f   serpddcm:cserpdd.obj
+ 0001:0000376c       ?SerSetBreak@@YAXPAX@Z     1000476c f   serpddcm:cserpdd.obj
+ 0001:000037ac       ?SerXmitComChar@@YAHPAXE@Z 100047ac f   serpddcm:cserpdd.obj
+ 0001:000037ec       ?SerGetStatus@@YAKPAXPAU_COMSTAT@@@Z 100047ec f   serpddcm:cserpdd.obj
+ 0001:000038e4       ?PreDeinit@@YAXPAX@Z       100048e4 f   serpddcm:cserpdd.obj
+ 0001:00003920       ?SerGetModemStatus@@YAXPAXPAK@Z 10004920 f   serpddcm:cserpdd.obj
+ 0001:0000396c       ?SerGetCommProperties@@YAXPAXPAU_COMMPROP@@@Z 1000496c f   serpddcm:cserpdd.obj
+ 0001:00003994       ?SerPurgeComm@@YAXPAXK@Z   10004994 f   serpddcm:cserpdd.obj
+ 0001:000039d0       ?SerSetDCB@@YAHPAXPAU_DCB@@@Z 100049d0 f   serpddcm:cserpdd.obj
+ 0001:00003a1c       ?SerSetCommTimeouts@@YAHPAXPAU_COMMTIMEOUTS@@@Z 10004a1c f   serpddcm:cserpdd.obj
+ 0001:00003a24       ?SerIoctl@@YAHPAXKPAEK1KPAK@Z 10004a24 f   serpddcm:cserpdd.obj
+ 0001:00003a88       GetSerialObject            10004a88 f   serpddcm:cserpdd.obj
+ 0001:00003ac4       ??0CSerialPDDPowerUpCallback@@QAA@PAVCSerialPDD@@@Z 10004ac4 f   serpddcm:cserpdd.obj
+ 0001:00003b1c       ??1CSerialPDDPowerUpCallback@@QAA@XZ 10004b1c f   serpddcm:cserpdd.obj
+ 0001:00003b88       ?Init@CSerialPDD@@UAAHXZ   10004b88 f   serpddcm:cserpdd.obj
+ 0001:00003c78       ??1CSerialPDD@@UAA@XZ      10004c78 f   serpddcm:cserpdd.obj
+ 0001:00003d18       ??_ECSerialPDD@@UAAPAXI@Z  10004d18 f i serpddcm:cserpdd.obj
+ 0001:00003d18       ??_GCSerialPDD@@UAAPAXI@Z  10004d18 f i serpddcm:cserpdd.obj
+ 0001:00003d40       DllEntry                   10004d40 f   com_mdd2:mdd.obj
+ 0001:00003d58       DoTxData                   10004d58 f   com_mdd2:mdd.obj
+ 0001:00003e7c       StopDispatchThread         10004e7c f   com_mdd2:mdd.obj
+ 0001:00003f10       ApplyDCB                   10004f10 f   com_mdd2:mdd.obj
+ 0001:000041bc       COM_PreClose               100051bc f   com_mdd2:mdd.obj
+ 0001:00004280       COM_Close                  10005280 f   com_mdd2:mdd.obj
+ 0001:000043a4       ProcessExiting             100053a4 f   com_mdd2:mdd.obj
+ 0001:000043d8       COM_PreDeinit              100053d8 f   com_mdd2:mdd.obj
+ 0001:00004468       COM_Deinit                 10005468 f   com_mdd2:mdd.obj
+ 0001:00004590       COM_Read                   10005590 f   com_mdd2:mdd.obj
+ 0001:000048ec       COM_Seek                   100058ec f   com_mdd2:mdd.obj
+ 0001:000048f4       COM_PowerUp                100058f4 f   com_mdd2:mdd.obj
+ 0001:00004934       COM_PowerDown              10005934 f   com_mdd2:mdd.obj
+ 0001:0000497c       WaitCommEvent_mdd          1000597c f   com_mdd2:mdd.obj
+ 0001:00004ad0       EvaluateEventFlag          10005ad0 f   com_mdd2:mdd.obj
+ 0001:00004b78       COM_IOControl              10005b78 f   com_mdd2:mdd.obj
+ 0001:00005520       SerialEventHandler         10006520 f   com_mdd2:mdd.obj
+ 0001:000058f4       StartDispatchThread        100068f4 f   com_mdd2:mdd.obj
+ 0001:00005984       COM_Init                   10006984 f   com_mdd2:mdd.obj
+ 0001:00005c20       COM_Open                   10006c20 f   com_mdd2:mdd.obj
+ 0001:00005ecc       COM_Write                  10006ecc f   com_mdd2:mdd.obj
+ 0001:00006084       DDKReg_GetIsrInfo          10007084 f   coredll:COREDLL.dll
+ 0001:00006094       RegSetValueExW             10007094 f   coredll:COREDLL.dll
+ 0001:000060a4       KernelIoControl            100070a4 f   coredll:COREDLL.dll
+ 0001:000060b4       EventModify                100070b4 f   coredll:COREDLL.dll
+ 0001:000060c4       RegOpenKeyExW              100070c4 f   coredll:COREDLL.dll
+ 0001:000060d4       RegCloseKey                100070d4 f   coredll:COREDLL.dll
+ 0001:000060e4       DDKReg_GetWindowInfo       100070e4 f   coredll:COREDLL.dll
+ 0001:000060f4       RegQueryValueExW           100070f4 f   coredll:COREDLL.dll
+ 0001:00006104       ResumeThread               10007104 f   coredll:COREDLL.dll
+ 0001:00006114       CeSetThreadPriority        10007114 f   coredll:COREDLL.dll
+ 0001:00006124       CloseHandle                10007124 f   coredll:COREDLL.dll
+ 0001:00006134       WaitForSingleObject        10007134 f   coredll:COREDLL.dll
+ 0001:00006144       TerminateThread            10007144 f   coredll:COREDLL.dll
+ 0001:00006154       ExitThread                 10007154 f   coredll:COREDLL.dll
+ 0001:00006164       EnterCriticalSection       10007164 f   coredll:COREDLL.dll
+ 0001:00006174       LeaveCriticalSection       10007174 f   coredll:COREDLL.dll
+ 0001:00006184       NKDbgPrintfW               10007184 f   coredll:COREDLL.dll
+ 0001:00006194       InterruptInitialize        10007194 f   coredll:COREDLL.dll
+ 0001:000061a4       CreateEventW               100071a4 f   coredll:COREDLL.dll
+ 0001:000061b4       InterruptDone              100071b4 f   coredll:COREDLL.dll
+ 0001:000061c4       Sleep                      100071c4 f   coredll:COREDLL.dll
+ 0001:000061d4       CreateThread               100071d4 f   coredll:COREDLL.dll
+ 0001:000061e4       InterruptDisable           100071e4 f   coredll:COREDLL.dll
+ 0001:000061f4       OpenDeviceKey              100071f4 f   coredll:COREDLL.dll
+ 0001:00006204       InitializeCriticalSection  10007204 f   coredll:COREDLL.dll
+ 0001:00006214       DeleteCriticalSection      10007214 f   coredll:COREDLL.dll
+ 0001:00006224       InterlockedExchange        10007224 f   coredll:COREDLL.dll
+ 0001:00006234       SetLastError               10007234 f   coredll:COREDLL.dll
+ 0001:00006244       CeEventHasOccurred         10007244 f   coredll:COREDLL.dll
+ 0001:00006254       LocalFree                  10007254 f   coredll:COREDLL.dll
+ 0001:00006264       LocalAlloc                 10007264 f   coredll:COREDLL.dll
+ 0001:00006274       DisableThreadLibraryCalls  10007274 f   coredll:COREDLL.dll
+ 0001:00006284       CeGetThreadPriority        10007284 f   coredll:COREDLL.dll
+ 0001:00006294       SetThreadPriority          10007294 f   coredll:COREDLL.dll
+ 0001:000062a4       InterlockedDecrement       100072a4 f   coredll:COREDLL.dll
+ 0001:000062b4       GetTickCount               100072b4 f   coredll:COREDLL.dll
+ 0001:000062c4       CeSafeCopyMemory           100072c4 f   coredll:COREDLL.dll
+ 0001:000062d4       InterlockedIncrement       100072d4 f   coredll:COREDLL.dll
+ 0001:000062e4       InterlockedCompareExchange 100072e4 f   coredll:COREDLL.dll
+ 0001:000062f4       CeFreeAsynchronousBuffer   100072f4 f   coredll:COREDLL.dll
+ 0001:00006304       CeAllocAsynchronousBuffer  10007304 f   coredll:COREDLL.dll
+ 0001:00006314       MmUnmapIoSpace             10007314 f   ceddk:CEDDK.dll
+ 0001:00006324       MmMapIoSpace               10007324 f   ceddk:CEDDK.dll
+ 0001:00006334       TranslateBusAddr           10007334 f   ceddk:CEDDK.dll
+ 0001:00006344       WRITE_REGISTER_ULONG       10007344 f   ceddk:CEDDK.dll
+ 0001:00006354       READ_REGISTER_ULONG        10007354 f   ceddk:CEDDK.dll
+ 0001:00006364       CreateBusAccessHandle      10007364 f   ceddk:CEDDK.dll
+ 0001:00006374       DDKPwr_RequestLevel        10007374 f   ceddk:CEDDK.dll
+ 0001:00006384       DDKPwr_ReleaseLevel        10007384 f   ceddk:CEDDK.dll
+ 0001:00006394       DDKPwr_GetDeviceLevel      10007394 f   ceddk:CEDDK.dll
+ 0001:000063a4       DDKPwr_SetDeviceLevel      100073a4 f   ceddk:CEDDK.dll
+ 0001:000063b4       SetDevicePowerState        100073b4 f   ceddk:CEDDK.dll
+ 0001:000063c4       DDKPwr_Initialize          100073c4 f   ceddk:CEDDK.dll
+ 0001:000063d4       CloseBusAccessHandle       100073d4 f   ceddk:CEDDK.dll
+ 0001:000063e4       DDKPwr_Deinitialize        100073e4 f   ceddk:CEDDK.dll
+ 0001:000063f4       __GSHandlerCheckCommon     100073f4 f   corelib0:gshandler.obj
+ 0001:00006430       __GSHandlerCheck           10007430 f   corelib0:gshandler.obj
+ 0001:00006454       __security_check_cookie    10007454 f   corelib0:armsecgs.obj
+ 0001:00006468       __gsfailure                10007468 f   corelib0:armsecgs.obj
+ 0001:000064ac       memcpy                     100074ac f   corelib1:COREDLL.dll
+ 0001:000064bc       ??3@YAXPAX@Z               100074bc f   corelib1:COREDLL.dll
+ 0001:000064cc       ??2@YAPAXI@Z               100074cc f   corelib1:COREDLL.dll
+ 0001:000064dc       __rt_udiv                  100074dc f   corelib1:COREDLL.dll
+ 0001:000064ec       __muld                     100074ec f   corelib1:COREDLL.dll
+ 0001:000064fc       __utod                     100074fc f   corelib1:COREDLL.dll
+ 0001:0000650c       __divd                     1000750c f   corelib1:COREDLL.dll
+ 0001:0000651c       __dtoi                     1000751c f   corelib1:COREDLL.dll
+ 0001:0000652c       _purecall                  1000752c f   corelib1:COREDLL.dll
+ 0001:0000653c       memset                     1000753c f   corelib1:COREDLL.dll
+ 0001:0000654c       __C_specific_handler       1000754c f   corelib1:COREDLL.dll
+ 0001:0000655c       memmove                    1000755c f   corelib1:COREDLL.dll
+ 0001:0000656c       __report_gsfailure         1000756c f   corelib1:COREDLL.dll
+ 0001:000065a8       __IMPORT_DESCRIPTOR_COREDLL 100075a8     coredll:COREDLL.dll
+ 0001:000065bc       __IMPORT_DESCRIPTOR_CEDDK  100075bc     ceddk:CEDDK.dll
+ 0001:000065d0       __NULL_IMPORT_DESCRIPTOR   100075d0     coredll:COREDLL.dll
+ 0002:00000000       __imp_CloseBusAccessHandle 10008000     ceddk:CEDDK.dll
+ 0002:00000004       __imp_DDKPwr_Initialize    10008004     ceddk:CEDDK.dll
+ 0002:00000008       __imp_SetDevicePowerState  10008008     ceddk:CEDDK.dll
+ 0002:0000000c       __imp_DDKPwr_SetDeviceLevel 1000800c     ceddk:CEDDK.dll
+ 0002:00000010       __imp_DDKPwr_GetDeviceLevel 10008010     ceddk:CEDDK.dll
+ 0002:00000014       __imp_DDKPwr_ReleaseLevel  10008014     ceddk:CEDDK.dll
+ 0002:00000018       __imp_DDKPwr_RequestLevel  10008018     ceddk:CEDDK.dll
+ 0002:0000001c       __imp_CreateBusAccessHandle 1000801c     ceddk:CEDDK.dll
+ 0002:00000020       __imp_READ_REGISTER_ULONG  10008020     ceddk:CEDDK.dll
+ 0002:00000024       __imp_WRITE_REGISTER_ULONG 10008024     ceddk:CEDDK.dll
+ 0002:00000028       __imp_TranslateBusAddr     10008028     ceddk:CEDDK.dll
+ 0002:0000002c       __imp_MmMapIoSpace         1000802c     ceddk:CEDDK.dll
+ 0002:00000030       __imp_MmUnmapIoSpace       10008030     ceddk:CEDDK.dll
+ 0002:00000034       __imp_DDKPwr_Deinitialize  10008034     ceddk:CEDDK.dll
+ 0002:00000038       \177CEDDK_NULL_THUNK_DATA  10008038     ceddk:CEDDK.dll
+ 0002:0000003c       __imp_LeaveCriticalSection 1000803c     coredll:COREDLL.dll
+ 0002:00000040       __imp_NKDbgPrintfW         10008040     coredll:COREDLL.dll
+ 0002:00000044       __imp_InterruptInitialize  10008044     coredll:COREDLL.dll
+ 0002:00000048       __imp_CreateEventW         10008048     coredll:COREDLL.dll
+ 0002:0000004c       __imp_InterruptDone        1000804c     coredll:COREDLL.dll
+ 0002:00000050       __imp_Sleep                10008050     coredll:COREDLL.dll
+ 0002:00000054       __imp_CreateThread         10008054     coredll:COREDLL.dll
+ 0002:00000058       __imp_InterruptDisable     10008058     coredll:COREDLL.dll
+ 0002:0000005c       __imp_OpenDeviceKey        1000805c     coredll:COREDLL.dll
+ 0002:00000060       __imp_InitializeCriticalSection 10008060     coredll:COREDLL.dll
+ 0002:00000064       __imp_DeleteCriticalSection 10008064     coredll:COREDLL.dll
+ 0002:00000068       __imp_InterlockedExchange  10008068     coredll:COREDLL.dll
+ 0002:0000006c       __imp_SetLastError         1000806c     coredll:COREDLL.dll
+ 0002:00000070       __imp_EnterCriticalSection 10008070     coredll:COREDLL.dll
+ 0002:00000074       __imp_LocalFree            10008074     coredll:COREDLL.dll
+ 0002:00000078       __imp_LocalAlloc           10008078     coredll:COREDLL.dll
+ 0002:0000007c       __imp_DisableThreadLibraryCalls 1000807c     coredll:COREDLL.dll
+ 0002:00000080       __imp_CeGetThreadPriority  10008080     coredll:COREDLL.dll
+ 0002:00000084       __imp_SetThreadPriority    10008084     coredll:COREDLL.dll
+ 0002:00000088       __imp_InterlockedDecrement 10008088     coredll:COREDLL.dll
+ 0002:0000008c       __imp_GetTickCount         1000808c     coredll:COREDLL.dll
+ 0002:00000090       __imp_CeSafeCopyMemory     10008090     coredll:COREDLL.dll
+ 0002:00000094       __imp_InterlockedIncrement 10008094     coredll:COREDLL.dll
+ 0002:00000098       __imp_InterlockedCompareExchange 10008098     coredll:COREDLL.dll
+ 0002:0000009c       __imp_CeFreeAsynchronousBuffer 1000809c     coredll:COREDLL.dll
+ 0002:000000a0       __imp_CeAllocAsynchronousBuffer 100080a0     coredll:COREDLL.dll
+ 0002:000000a4       __imp_ExitThread           100080a4     coredll:COREDLL.dll
+ 0002:000000a8       __imp_TerminateThread      100080a8     coredll:COREDLL.dll
+ 0002:000000ac       __imp_WaitForSingleObject  100080ac     coredll:COREDLL.dll
+ 0002:000000b0       __imp_CloseHandle          100080b0     coredll:COREDLL.dll
+ 0002:000000b4       __imp_CeSetThreadPriority  100080b4     coredll:COREDLL.dll
+ 0002:000000b8       __imp_ResumeThread         100080b8     coredll:COREDLL.dll
+ 0002:000000bc       __imp_RegQueryValueExW     100080bc     coredll:COREDLL.dll
+ 0002:000000c0       __imp_DDKReg_GetWindowInfo 100080c0     coredll:COREDLL.dll
+ 0002:000000c4       __imp_RegCloseKey          100080c4     coredll:COREDLL.dll
+ 0002:000000c8       __imp_RegOpenKeyExW        100080c8     coredll:COREDLL.dll
+ 0002:000000cc       __imp_EventModify          100080cc     coredll:COREDLL.dll
+ 0002:000000d0       __imp_KernelIoControl      100080d0     coredll:COREDLL.dll
+ 0002:000000d4       __imp_RegSetValueExW       100080d4     coredll:COREDLL.dll
+ 0002:000000d8       __imp_CeEventHasOccurred   100080d8     coredll:COREDLL.dll
+ 0002:000000dc       __imp_DDKReg_GetIsrInfo    100080dc     coredll:COREDLL.dll
+ 0002:000000e0       __imp_memcpy               100080e0     corelib1:COREDLL.dll
+ 0002:000000e4       __imp_??3@YAXPAX@Z         100080e4     corelib1:COREDLL.dll
+ 0002:000000e8       __imp_??2@YAPAXI@Z         100080e8     corelib1:COREDLL.dll
+ 0002:000000ec       __imp___rt_udiv            100080ec     corelib1:COREDLL.dll
+ 0002:000000f0       __imp___muld               100080f0     corelib1:COREDLL.dll
+ 0002:000000f4       __imp___utod               100080f4     corelib1:COREDLL.dll
+ 0002:000000f8       __imp___divd               100080f8     corelib1:COREDLL.dll
+ 0002:000000fc       __imp___dtoi               100080fc     corelib1:COREDLL.dll
+ 0002:00000100       __imp__purecall            10008100     corelib1:COREDLL.dll
+ 0002:00000104       __imp_memset               10008104     corelib1:COREDLL.dll
+ 0002:00000108       __imp___C_specific_handler 10008108     corelib1:COREDLL.dll
+ 0002:0000010c       __imp_memmove              1000810c     corelib1:COREDLL.dll
+ 0002:00000110       __imp___report_gsfailure   10008110     corelib1:COREDLL.dll
+ 0002:00000114       \177COREDLL_NULL_THUNK_DATA 10008114     coredll:COREDLL.dll
+ 0002:00000138       __security_cookie          10008138     corelib0:seccinit.obj
+ 0002:0000013c       __security_cookie_complement 1000813c     corelib0:seccinit.obj
+
+ entry point at        0001:00003d40
+
+ Static symbols
+
+ 0001:00005888       SerialDispatchThread       10006888 f   com_mdd2:mdd.obj

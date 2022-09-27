@@ -1,0 +1,26 @@
+!if 0
+    File:   sources
+
+    Copyright (c) 1995-2002 Microsoft Corporation.  All rights reserved.
+!endif
+
+RELEASETYPE=PLATFORM
+TARGETNAME=GPIODriver
+TARGETTYPE=DYNLINK
+DLLENTRY=DllEntry
+
+TARGETLIBS= \
+    $(_COMMONSDKROOT)\lib\$(_CPUINDPATH)\coredll.lib \
+
+MSC_WARNING_LEVEL = $(MSC_WARNING_LEVEL) /W3 /WX
+
+INCLUDES= \
+    $(_TARGETPLATROOT)\src\inc; \
+    $(_COMMONOAKROOT)\inc; \
+    $(_PUBLICROOT)\common\oak\inc;$(_PUBLICROOT)\common\sdk\inc;$(_PUBLICROOT)\common\ddk\inc;	\
+    ..\..\inc
+      
+SOURCES= \
+	GPIODriver.cpp
+    
+

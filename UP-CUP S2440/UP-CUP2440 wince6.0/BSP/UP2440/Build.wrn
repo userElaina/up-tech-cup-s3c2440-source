@@ -1,0 +1,81 @@
+BUILD: [Thrd:Sequence:Type  ] Message
+BUILD: [00:0000000049:WARNS ] Directory: C:\WINCE600\platform\UP2440\inc\ does not exist.
+BUILD: [00:0000000054:WARNS ] Directory: C:\WINCE600\platform\UP2440\inc\ does not exist.
+BUILD: [01:0000000115:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Common\Intr\.\intr.c(408) : warning C4067: unexpected tokens following preprocessor directive - expected a newline
+BUILD: [01:0000000116:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Common\Intr\.\intr.c(408) : warning C4067: unexpected tokens following preprocessor directive - expected a newline
+BUILD: [01:0000000240:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Common\NandFlash\fmd\.\fmd.cpp(966) : warning C4018: '<' : signed/unsigned mismatch
+BUILD: [01:0000000241:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Common\NandFlash\fmd\.\fmd.cpp(967) : warning C4244: '=' : conversion from 'unsigned long' to 'USHORT', possible loss of data
+BUILD: [01:0000000242:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Common\NandFlash\fmd\.\fmd.cpp(971) : warning C4018: '<' : signed/unsigned mismatch
+BUILD: [01:0000000243:WARNN ] c:\wince600\platform\up2440\src\common\nandflash\fmd\fmd.cpp(982) : warning C4700: uninitialized local variable 'pLockInfo' used
+BUILD: [01:0000000296:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\OAL\OALLIB\.\intr.c(28) : warning C4101: 'sysIntr' : unreferenced local variable
+BUILD: [01:0000000297:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\OAL\OALLIB\.\intr.c(28) : warning C4101: 'irq' : unreferenced local variable
+BUILD: [00:0000000471:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Drivers\Usb\HCD\sources(51) : Build.exe does not evaluate IF conditional statements. Conditional statements that affect macro definitions might cause Build.exe to not rebuild modified source code. Refer to the Platform Builder documentation.
+BUILD: [01:0000000643:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Drivers\Wavedev\.\i2s.cpp(229) : warning C4101: 'dwBytesReturned' : unreferenced local variable
+BUILD: [01:0000000644:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Drivers\Wavedev\.\i2s.cpp(228) : warning C4101: 'procInfo' : unreferenced local variable
+BUILD: [01:0000000742:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Drivers\dm9000\.\device.cpp(344) : warning C4244: '=' : conversion from 'ULONG' to 'U8', possible loss of data
+BUILD: [01:0000000809:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Bootloader\Eboot\.\main.c(215) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+BUILD: [01:0000000810:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Bootloader\Eboot\.\main.c(216) : warning C4018: '>' : signed/unsigned mismatch
+BUILD: [01:0000000811:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Bootloader\Eboot\.\main.c(888) : warning C4244: '=' : conversion from 'DWORD' to 'WORD', possible loss of data
+BUILD: [01:0000000812:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Bootloader\Eboot\.\main.c(808) : warning C4101: 'i' : unreferenced local variable
+BUILD: [01:0000000813:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Bootloader\Eboot\.\main.c(1142) : warning C4101: 'i' : unreferenced local variable
+BUILD: [01:0000000814:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Bootloader\Eboot\.\main.c(1396) : warning C4002: too many actual parameters for macro 'OALMSG'
+BUILD: [01:0000000815:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Bootloader\Eboot\.\main.c(1410) : warning C4002: too many actual parameters for macro 'OALMSG'
+BUILD: [01:0000000861:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Bootloader\Stepldr\.\main.c(115) : warning C4013: 'NF_Reset' undefined; assuming extern returning int
+BUILD: [01:0000000862:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Bootloader\Stepldr\.\main.c(129) : warning C4013: 'NF_ReadID' undefined; assuming extern returning int
+BUILD: [01:0000000863:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Bootloader\Stepldr\.\main.c(110) : warning C4102: 'NANDSTART' : unreferenced label
+BUILD: [01:0000000864:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Bootloader\Stepldr\.\main.c(74) : warning C4101: 'i' : unreferenced local variable
+BUILD: [01:0000000868:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Bootloader\Stepldr\.\nand.c(63) : warning C4244: '=' : conversion from 'UINT16' to 'UINT8', possible loss of data
+BUILD: [01:0000000869:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Bootloader\Stepldr\.\nand.c(57) : warning C4101: 'nBAddr' : unreferenced local variable
+BUILD: [00:0000001351:WARNN ] File: C:\WINCE600\PLATFORM\UP2440\Src\Drivers\PowerButton\obj\ARMV4I\retail\pwr.obj does not exist (2).
+BUILD: [00:0000001352:WARNN ] File: C:\WINCE600\PLATFORM\UP2440\Src\Drivers\PowerButton\obj\ARMV4I\retail\PowerButton.obj does not exist (2).
+BUILD: [00:0000001366:WARNN ] File: C:\WINCE600\PLATFORM\UP2440\Src\Drivers\Pccard\obj\ARMV4I\retail\init.obj does not exist (2).
+BUILD: [00:0000001367:WARNN ] File: C:\WINCE600\PLATFORM\UP2440\Src\Drivers\Pccard\obj\ARMV4I\retail\pdsocket.obj does not exist (2).
+BUILD: [00:0000001368:WARNN ] File: C:\WINCE600\PLATFORM\UP2440\Src\Drivers\Pccard\obj\ARMV4I\retail\pcmsock.obj does not exist (2).
+BUILD: [00:0000001369:WARNN ] File: C:\WINCE600\PLATFORM\UP2440\Src\Drivers\Pccard\obj\ARMV4I\retail\pcmwin.obj does not exist (2).
+BUILD: [00:0000001442:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Drivers\Usb\HCD\sources(58) : Build.exe does not evaluate IF conditional statements. Conditional statements that affect macro definitions might cause Build.exe to not rebuild modified source code. Refer to the Platform Builder documentation.
+BUILD: [00:0000001443:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Drivers\Usb\HCD\sources(50) : Build.exe does not evaluate IF conditional statements. Conditional statements that affect macro definitions might cause Build.exe to not rebuild modified source code. Refer to the Platform Builder documentation.
+BUILD: [00:0000001469:WARNN ] File: C:\WINCE600\PLATFORM\UP2440\Src\Drivers\Battdrvr\obj\ARMV4I\retail\battif.obj does not exist (2).
+BUILD: [00:0000001483:WARNN ] File: C:\WINCE600\PLATFORM\UP2440\Src\Drivers\Backlight\obj\ARMV4I\retail\Bak_io.obj does not exist (2).
+BUILD: [00:0000001484:WARNN ] File: C:\WINCE600\PLATFORM\UP2440\Src\Drivers\Backlight\obj\ARMV4I\retail\Bak_hw.obj does not exist (2).
+BUILD: [00:0000001527:WARNN ] File: C:\WINCE600\PLATFORM\UP2440\Src\Drivers\IIC\obj\ARMV4I\retail\i2c.obj does not exist (2).
+BUILD: [00:0000001528:WARNN ] File: C:\WINCE600\PLATFORM\UP2440\Src\Drivers\IIC\obj\ARMV4I\retail\drv.obj does not exist (2).
+BUILD: [00:0000001542:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\PowerButton.lib does not exist (2).
+BUILD: [00:0000001543:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\pcc_smdk2440.lib does not exist (2).
+BUILD: [00:0000001544:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\battdrvr.lib does not exist (2).
+BUILD: [00:0000001545:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\backlight.lib does not exist (2).
+BUILD: [00:0000001546:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\i2c.lib does not exist (2).
+BUILD: [00:0000001547:WARNN ] File: C:\WINCE600\PLATFORM\UP2440\Src\Drivers\camera\obj\ARMV4I\retail\camera.obj does not exist (2).
+BUILD: [00:0000001576:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\PowerButton.lib does not exist (2).
+BUILD: [00:0000001577:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\pcc_smdk2440.lib does not exist (2).
+BUILD: [00:0000001578:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\battdrvr.lib does not exist (2).
+BUILD: [00:0000001579:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\backlight.lib does not exist (2).
+BUILD: [00:0000001580:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\i2c.lib does not exist (2).
+BUILD: [00:0000001581:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\camera.lib does not exist (2).
+BUILD: [00:0000001646:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\PowerButton.lib does not exist (2).
+BUILD: [00:0000001647:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\pcc_smdk2440.lib does not exist (2).
+BUILD: [00:0000001648:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\battdrvr.lib does not exist (2).
+BUILD: [00:0000001649:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\backlight.lib does not exist (2).
+BUILD: [00:0000001650:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\i2c.lib does not exist (2).
+BUILD: [00:0000001651:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\camera.lib does not exist (2).
+BUILD: [00:0000001833:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\PowerButton.lib does not exist (2).
+BUILD: [00:0000001834:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\pcc_smdk2440.lib does not exist (2).
+BUILD: [00:0000001835:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\battdrvr.lib does not exist (2).
+BUILD: [00:0000001836:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\backlight.lib does not exist (2).
+BUILD: [00:0000001837:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\i2c.lib does not exist (2).
+BUILD: [00:0000001838:WARNN ] File: C:\WINCE600\platform\UP2440\lib\ARMV4I\retail\camera.lib does not exist (2).
+BUILD: [01:0000001928:WARNN ] fulllibc.lib(tolower.obj) : warning LNK4099: PDB 'ccrtconv.pdb' was not found with 'C:\WINCE600\OSDesign\UP2440\Wince600\UP2440_ARMV4I\cesysgen\oak\lib\ARMV4I\retail\fulllibc.lib' or at 'C:\WINCE600\platform\UP2440\target\ARMV4I\retail\ccrtconv.pdb'; linking object as if no debug info
+BUILD: [01:0000001929:WARNN ] fulllibc.lib(diverr.obj) : warning LNK4099: PDB 'ccrthelp.pdb' was not found with 'C:\WINCE600\OSDesign\UP2440\Wince600\UP2440_ARMV4I\cesysgen\oak\lib\ARMV4I\retail\fulllibc.lib' or at 'C:\WINCE600\platform\UP2440\target\ARMV4I\retail\ccrthelp.pdb'; linking object as if no debug info
+BUILD: [01:0000001983:WARNN ] fulllibc.lib(atox.obj) : warning LNK4099: PDB 'ccrtconv.pdb' was not found with 'C:\WINCE600\OSDesign\UP2440\Wince600\UP2440_ARMV4I\cesysgen\oak\lib\ARMV4I\retail\fulllibc.lib' or at 'C:\WINCE600\platform\UP2440\target\ARMV4I\retail\ccrtconv.pdb'; linking object as if no debug info
+BUILD: [01:0000001984:WARNN ] fulllibc.lib(diverr.obj) : warning LNK4099: PDB 'ccrthelp.pdb' was not found with 'C:\WINCE600\OSDesign\UP2440\Wince600\UP2440_ARMV4I\cesysgen\oak\lib\ARMV4I\retail\fulllibc.lib' or at 'C:\WINCE600\platform\UP2440\target\ARMV4I\retail\ccrthelp.pdb'; linking object as if no debug info
+BUILD: [01:0000001985:WARNN ] fulllibc.lib(chandler.obj) : warning LNK4099: PDB 'ccrthelp.pdb' was not found with 'C:\WINCE600\OSDesign\UP2440\Wince600\UP2440_ARMV4I\cesysgen\oak\lib\ARMV4I\retail\fulllibc.lib' or at 'C:\WINCE600\platform\UP2440\target\ARMV4I\retail\ccrthelp.pdb'; linking object as if no debug info
+BUILD: [00:0000002351:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Drivers\Usb\HCD\sources(61) : Build.exe does not evaluate IF conditional statements. Conditional statements that affect macro definitions might cause Build.exe to not rebuild modified source code. Refer to the Platform Builder documentation.
+BUILD: [00:0000002352:WARNN ] C:\WINCE600\PLATFORM\UP2440\Src\Drivers\Usb\HCD\sources(55) : Build.exe does not evaluate IF conditional statements. Conditional statements that affect macro definitions might cause Build.exe to not rebuild modified source code. Refer to the Platform Builder documentation.
+BUILD: [00:0000002876:WARNN ] File: C:\WINCE600\PLATFORM\UP2440\Src\Bootloader\Eboot\BootImage does not exist (2).
+BUILD: [01:0000002933:WARNN ] usb.lib : warning LNK4099: PDB 'eboot.pdb' was not found with 'C:\WINCE600\platform\UP2440\Src\Bootloader\lib\usb.lib' or at 'C:\WINCE600\platform\UP2440\target\ARMV4I\retail\eboot.pdb'; linking object as if no debug info
+BUILD: [01:0000002934:WARNN ] bootpart.lib(bootpart.obj) : warning LNK4099: PDB 'bootpart.pdb' was not found with 'C:\WINCE600\platform\UP2440\Src\Bootloader\lib\bootpart.lib' or at 'C:\WINCE600\platform\UP2440\target\ARMV4I\retail\bootpart.pdb'; linking object as if no debug info
+BUILD: [01:0000002935:WARNN ] fulllibc.lib(fpraise.obj) : warning LNK4099: PDB 'ccrtfpw1.pdb' was not found with 'C:\WINCE600\OSDesign\UP2440\Wince600\UP2440_ARMV4I\cesysgen\oak\lib\ARMV4I\retail\fulllibc.lib' or at 'C:\WINCE600\platform\UP2440\target\ARMV4I\retail\ccrtfpw1.pdb'; linking object as if no debug info
+BUILD: [01:0000002936:WARNN ] fulllibc.lib(atox.obj) : warning LNK4099: PDB 'ccrtconv.pdb' was not found with 'C:\WINCE600\OSDesign\UP2440\Wince600\UP2440_ARMV4I\cesysgen\oak\lib\ARMV4I\retail\fulllibc.lib' or at 'C:\WINCE600\platform\UP2440\target\ARMV4I\retail\ccrtconv.pdb'; linking object as if no debug info
+BUILD: [01:0000002937:WARNN ] fulllibc.lib(xtoa.obj) : warning LNK4099: PDB 'ccrtconv.pdb' was not found with 'C:\WINCE600\OSDesign\UP2440\Wince600\UP2440_ARMV4I\cesysgen\oak\lib\ARMV4I\retail\fulllibc.lib' or at 'C:\WINCE600\platform\UP2440\target\ARMV4I\retail\ccrtconv.pdb'; linking object as if no debug info
+BUILD: [01:0000002938:WARNN ] fulllibc.lib(diverr.obj) : warning LNK4099: PDB 'ccrthelp.pdb' was not found with 'C:\WINCE600\OSDesign\UP2440\Wince600\UP2440_ARMV4I\cesysgen\oak\lib\ARMV4I\retail\fulllibc.lib' or at 'C:\WINCE600\platform\UP2440\target\ARMV4I\retail\ccrthelp.pdb'; linking object as if no debug info
+BUILD: [00:0000002988:WARNN ] File: C:\WINCE600\PLATFORM\UP2440\Src\Bootloader\Stepldr\stepldr_romimage does not exist (2).
+BUILD: [01:0000003026:WARNN ] fulllibc.lib(diverr.obj) : warning LNK4099: PDB 'ccrthelp.pdb' was not found with 'C:\WINCE600\OSDesign\UP2440\Wince600\UP2440_ARMV4I\cesysgen\oak\lib\ARMV4I\retail\fulllibc.lib' or at 'C:\WINCE600\platform\UP2440\target\ARMV4I\retail\ccrthelp.pdb'; linking object as if no debug info

@@ -1,0 +1,78 @@
+XL
+H 2 areas C global symbols
+M SensorEXB.c
+S _ADC_Init Ref0000
+S _CMD Ref0000
+S _delay_s Ref0000
+S _SPI_MasterTransmitaByte Ref0000
+S _Get_Temperature Ref0000
+S _SPI_MasterInit Ref0000
+S lpm32 Ref0000
+S _GetSensorMessage Ref0000
+S _USART_Init Ref0000
+S _WaitForCMD Ref0000
+A text size 6E flags 0
+dbfile C:\DOCUME~1\≤Ã”±≈Ù\◊¿√Ê\SensorEXBIcc\SensorEXB.c
+dbfunc e port_init 0 fV
+dbline FFFFFFFF 0
+dbline 5 0
+dbline 6 0
+dbline 7 4
+dbline 8 8
+dbline 9 A
+dbline A E
+dbline B 12
+dbline FFFFFFFE 16
+dbline 0 16
+dbfunc e main 18 fI
+dbsym l i 0 D
+dbline FFFFFFFF 1A
+dbline F 1A
+dbline 10 1A
+dbline 11 2A
+dbline 12 2C
+dbline 13 2E
+dbline 14 34
+dbline 15 36
+dbline 18 38
+dbline 1B 3A
+dbline 1C 3E
+dbline 1E 42
+dbline 1F 48
+dbline 23 4C
+dbline 26 4C
+dbline 27 4C
+dbline 29 52
+dbline 25 52
+dbline 2A 5A
+dbline 2B 5E
+dbline 2C 64
+dbline 22 64
+dbline 2D 66
+dbline FFFFFFFE 6A
+dbline 0 6C
+S _main Def0018
+S _port_init Def0000
+A lit size 4 flags 0
+T 00 00 22 24 28 BA 8C E2 87 BB 25 BA 80 E4 84 BB
+R 00 00 00 00
+T 0E 00 80 E8 82 BB 82 E8 81 BB 08 95
+R 00 00 00 00
+T 18 00 24 97 00 E0 10 E0
+R 00 00 00 00 20 04 01 00 00 00 40 06 01 00 00 00
+T 1E 00 00 D0 FE 01 00 83 11 83 22 83 33 83 EA DF
+R 00 00 00 00 82 02 06 00
+T 2C 00 00 D0 01 E0 10 E0 00 D0 00 D0
+R 00 00 00 00 82 02 08 00 82 08 02 00 82 0A 00 00
+T 36 00 00 D0 00 D0 08 E8 00 D0 08 E8
+R 00 00 00 00 82 02 05 00 82 04 04 00 82 08 03 00
+T 40 00 00 D0 88 B3 8B 7F 88 BB C2 9A 0C C0 00 D0
+R 00 00 00 00 82 02 03 00 82 0E 09 00
+T 4E 00 00 93 00 00 20 90 00 00 22 20 C9 F3 02 2D
+R 00 00 00 00 02 04 01 00 02 08 01 00
+T 5C 00 00 D0 22 24 20 92 00 00 F6 CF 00 27 11 27
+R 00 00 00 00 82 02 07 00 02 08 01 00
+T 6A 00 24 96 08 95
+R 00 00 00 00
+T 00 00 00 00 00 00
+R 00 00 01 00

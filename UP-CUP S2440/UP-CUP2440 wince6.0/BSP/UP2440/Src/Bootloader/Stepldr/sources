@@ -1,0 +1,20 @@
+!if "$(WINCEDEBUG)" == "debug"
+SKIPBUILD=1
+!endif
+
+TARGETNAME=stepldr
+TARGETTYPE=PROGRAM
+RELEASETYPE=PLATFORM
+EXEENTRY=StartUp
+NOMIPS16CODE=1
+
+LDEFINES=-subsystem:native /DEBUG /DEBUGTYPE:CV /FIXED:NO
+
+TARGETLIBS=$(_COMMONOAKROOT)\lib\$(_CPUINDPATH)\fulllibc.lib
+
+SOURCES=startup.s \
+        main.c    \
+        nand.c    \
+        utils.c
+
+WINCETARGETFILES=stepldr_romimage

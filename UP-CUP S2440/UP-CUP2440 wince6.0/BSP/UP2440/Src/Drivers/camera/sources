@@ -1,0 +1,29 @@
+!if 0
+Copyright (c) 2002 DST Corporation.  All rights reserved.
+!endif
+
+!if "$(BSP_NOCAMERA)" == "1"
+SKIPBUILD=1
+!endif
+
+TARGETNAME=camera
+RELEASETYPE=PLATFORM
+TARGETTYPE=DYNLINK
+
+TARGETLIBS=\
+   $(_COMMONSDKROOT)\lib\$(_CPUINDPATH)\coredll.lib \
+
+SOURCELIBS=$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ceddk.lib
+
+DEFFILE=camera.def
+
+DLLENTRY=DllEntry
+
+INCLUDES=$(INCLUDES); $(_TARGETPLATROOT)\src\inc;
+
+SOURCES= \
+	camera.cpp \
+
+	 
+
+

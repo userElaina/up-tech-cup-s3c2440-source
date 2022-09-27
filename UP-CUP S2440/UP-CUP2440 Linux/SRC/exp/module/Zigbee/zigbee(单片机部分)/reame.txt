@@ -1,0 +1,6 @@
+zigbee_COOR:   协调器端程序
+zigbee_ED:     节点端程序
+IMG:           协调器与节点端分别生成的可执行程序,可直接通过烧写软件下载               进zigbee模块中
+TOOLS:         烧写软件
+
+

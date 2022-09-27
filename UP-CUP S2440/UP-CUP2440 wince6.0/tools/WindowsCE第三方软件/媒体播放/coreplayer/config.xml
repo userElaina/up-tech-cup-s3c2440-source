@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CONFIG Serial="AAAAAA-BBBBBB-CCCCCC-DDDDDD-EEEEEE" Lang="EN">
+  <EQUA/>
+  <PLAB BufSize="512" VUnderrun="70.0" AUnderrun="64" BufPreload="5.000" LowDelay="0" MDSize="16000" MDStart="1472"/>
+  <CTDB DelOldPocast="1" ArtistWithAlbumArtists="1" MediaScanUpdate="1"/>
+  <YUTB Enabled="1" YouTubeUser="corecodec" YouTubeFormat="7" YouTubeTimeScope="2"/>
+  <VIDE VOut="DRAW" VQual="2" Smooth="1" Dither="1" VOutAccel="1" VOutMax="RAWD"/>
+  <AUDI Mute="0" Volume="100" PreAmp="0" AQual="2" Stereo="0" AOut="WAVE" AOutMax="WAVE"/>
+  <DESK>
+    <UIHK Name="main_hotkey">
+      <UIHK Key="#36" Cmd="PLAY.Next"/>
+      <UIHK Key="#35" Cmd="PLAY.Play"/>
+      <UIHK Key="#34" Cmd="PLAY.Prev"/>
+      <UIHK Key="#30"/>
+      <UIHK Key="#9012" Cmd="PLAY.Forward"/>
+      <UIHK Key="#9011" Cmd="PLAY.Backward"/>
+      <UIHK Key="#9008" Keep="1" Cmd="PLAY.Backward"/>
+      <UIHK Key="#9007" Keep="1" Cmd="PLAY.Forward"/>
+      <UIHK Key="#9006" Keep="1"/>
+      <UIHK Key="#9002" Keep="1" Cmd="PLAY.Prev"/>
+      <UIHK Key="#9003" Keep="1" Cmd="PLAY.Next"/>
+      <UIHK Key="#9000" Keep="1" Cmd="PLAY.Stop"/>
+      <UIHK Key="#9001" Keep="1" Cmd="PLAY.Fullscreen_Play"/>
+      <UIHK Cycle="1" Key="#9005" Cmd="AUDI.Volume+=-10"/>
+      <UIHK Cycle="1" Key="#9004" Cmd="AUDI.Volume+=10"/>
+      <UIHK Cycle="1" Key="#9014" Cmd="AUDI.Volume+=-10"/>
+      <UIHK Cycle="1" Key="#9013" Cmd="AUDI.Volume+=10"/>
+      <UIHK Key="#9021" Cmd="PLAY.Play"/>
+      <UIHK Key="#9010" Cmd="PLAY.Fullscreen_Play"/>
+    </UIHK>
+  </DESK>
+  <COLO Count="3" Bri="14" Con="0" Sat="14" _1000="0E000E0000000000" _2000="Mobile" _1001="2816200000000000" _2001="Color Boost" _2002="Native"/>
+  <WMPP Set="1" _2002="7aac2b28-5dd1-4052-81dd-e17114ee96b6"/>
+  <ADVP OldShell="0" Lookup="1" KeyDir="1" SysVol="0" WidAud="0" WidDLL="0" AllKeys="0" _0045="1" _0046="1" DropTol="0.055" SkipTol="0.700" SkinZoom="100.00"/>
+  <EQPR Count="9" _1000="00000808080501FCF8F6F5F5" _2000="Bass Boost" _1001="0000000000000000F9F9F9F6" _2001="Classical" _1002="00000806010000FAF9F90000" _2002="Dance" _1003="0000FB000304050503020201" _2003="Live" _1004="0000FE04060704FFFEFEFEFE" _2004="Pop" _1005="00000704FBF8FC03080A0A0A" _2005="Rock" _1006="00000401FFFEFF0307080A0B" _2006="Soft" _1007="0000070500FBFB0007080808" _2007="Techno" _1008="0000F6F6F6FC020A0E0E0E10" _2008="Treble Boost"/>
+  <CHAS Enabled="1" ResultsPerPage="6"/>
+  <DRAW UseColKey="0" Blit="1" BlitZoom="0" Format="0"/>
+  <NETW Enabled="1" Type="0" Proxy="0" PreferUDP="0" UDPFrom="4000" UDPTo="9999" AgentSpoof="1"/>
+  <CFGX/>
+  <PLAY AutoPreRot="1" KeepPlyAud="1" KeepPlyVid="0" ContPlay="0" ShowInBack="0" KeepList="1" PlayAtOpen="0" PlayAtOpenFull="0" ReloadNetworkStreams="0" ExitAtEnd="0" Speed="100.00" FFSpeed="200.00" FwdStep="10.000" BwdStep="10.000" ListCount="2" ListCurr="0" Percent="2105662:92956102" CurrentDir="\Storage Card\Video" Repeat="1" Shuffle="0" FullZ="0:1" SkinZ="0:1" Aspect="1:1" FullDir="5" SkinDir="-1" AStrm="1" VStrm="0" SStrm="255"/>
+</CONFIG>

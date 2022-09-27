@@ -1,0 +1,719 @@
+;
+; Copyright (c) Microsoft Corporation.  All rights reserved.
+;
+;
+; Use of this source code is subject to the terms of the Microsoft end-user
+; license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+; If you did not accept the terms of the EULA, you are not authorized to use
+; this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+; install media.
+;
+
+; Our variables
+#define BUILTIN_ROOT HKEY_LOCAL_MACHINE\Drivers\BuiltIn
+#define DRIVERS_DIR $(_PUBLICROOT)\common\oak\drivers
+
+
+; @CESYSGEN IF WCESHELLFE_MODULES_CTLPNL
+; This registry setting controls the checkboxes displayed in the Sounds CPL
+; under "enable clicks & taps". Set bit0 if you have a keyboard, set bit1 if
+; you have a touch screen. Set bit2 if you have HW buttons (NOTE: for now
+; HW buttons are mutually exclusive with the keyboard)
+[HKEY_LOCAL_MACHINE\ControlPanel]
+	"InputConfig"=dword:3	; 3 => keybd and touch screen
+; @CESYSGEN ENDIF WCESHELLFE_MODULES_CTLPNL
+
+; @CESYSGEN IF WCESHELLFE_MODULES_EXPLORER
+; This registry setting controls display of the Explorer's suspend menu button
+[HKEY_LOCAL_MACHINE\Explorer]
+;	"Suspend"=dword:1
+
+; Disable Suspend
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+	"BattPowerOff"=dword:0
+	"ExtPowerOff"=dword:0
+	"WakeupPowerOff"=dword:0
+	"ScreenPowerOff"=dword:0
+; @CESYSGEN ENDIF WCESHELLFE_MODULES_EXPLORER
+
+
+
+; @CESYSGEN IF CE_MODULES_DEVICE
+
+; HIVE BOOT SECTION
+
+;END HIVE BOOT SECTION
+
+;-------------- Battery Driver ----------------------
+; @CESYSGEN IF CE_MODULES_BATTDRVR
+#include "$(DRIVERS_DIR)\battdrvr\battdrvr.reg"
+; @CESYSGEN ENDIF CE_MODULES_BATTDRVR
+;----------------------------------------------------
+
+;--------------- Notification LED Driver ------------
+; @CESYSGEN IF CE_MODULES_NLEDDRVR
+#include "$(DRIVERS_DIR)\nleddrvr\nleddrvr.reg"
+; @CESYSGEN ENDIF CE_MODULES_NLEDDRVR
+;----------------------------------------------------
+
+;-------------- Touch Driver ----------------------------------------
+; @CESYSGEN IF CE_MODULES_POINTER
+IF BSP_NOTOUCH !
+[HKEY_LOCAL_MACHINE\HARDWARE\DEVICEMAP\TOUCH]
+	"MaxCalError"=dword:7
+; for 240x320 display
+;	"CalibrationData"="500,645 200,242 800,242 800,1060 200,1060 "
+; for 320x240 display S35
+;	"CalibrationData"="650,470 225,780 220,170 1075,170 1075,780 "
+; for 320x240 display W35 3.5¥Á∆¡
+;	"CalibrationData"="650,475 208,780 208,170 1085,170 1090,775 "
+; for 320x240 display W35_2 3.5¥Á∆¡
+;	"CalibrationData"="640,495 1088,188 1088,808 188,808 188,180 "
+; for 320x240 display Q35 3.5¥Á∆¡
+;	"CalibrationData"="650,500 210,200 210,800 1092,800 1085,185 "
+; for 480x272 display
+;	"CalibrationData"="960,555 1630,875 1630,228 285,230 290,875 "
+; for 800x480 display
+;	"CalibrationData"="1565,945 430,1535 430,355 2730,345 2735,1545"
+; for 640x480 display
+	"CalibrationData"="1313,984 455,1588 370,372 2132,364 2189,1584"
+ENDIF BSP_NOTOUCH !
+; @CESYSGEN ENDIF CE_MODULES_POINTER
+;---------------------------------------------------------------------
+
+;--------------- Serial Driver -----------------------------------------------------------------------------
+; @CESYSGEN IF CE_MODULES_SERIAL
+IF BSP_NOSERIAL !
+;IF BSP_KITL != SERIAL_UART0
+;=============== UART0 (physical COM1 connector P1) (Serial) ===============
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\Serial0]
+	"DeviceArrayIndex"=dword:0
+	"Irq"=dword:1c
+	"MemBase"=dword:50000000
+	"MemLen"=dword:2C
+	"InterruptBitsShift"=dword:0 ; UART 0 Interrupt Sub Register shift bit.
+;	"ISTTimeouts"=dword:200	; every 512 ticks checking Modem status.
+	"Prefix"="COM"
+	"Index"=dword:1
+	"Dll"="serial_smdk2440.dll"
+	"Order"=dword:0
+	"Priority"=dword:0
+	"Port"="COM1:"
+	"DeviceType"=dword:0
+	"FriendlyName"=LOC_DISPLAYNAME_COM1
+	"Tsp"="unimodem.dll"
+	"IClass"="{CC5195AC-BA49-48a0-BE17-DF6D1B0173DD}"
+	"DevConfig"=hex: 10,00, 00,00, 05,00,00,00, 10,01,00,00, 00,4B,00,00, 00,00, 08, 00, 00, 00,00,00,00
+;ENDIF
+
+
+;=============== UART1 (physical COM2 connector P1) (Serial) ===============
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\Serial1]
+	"DeviceArrayIndex"=dword:1
+	"Irq"=dword:17
+	"MemBase"=dword:50004000
+	"MemLen"=dword:2C
+	"InterruptBitsShift"=dword:3 ; UART 1 Interrupt Sub Register shift bit.
+;	"ISTTimeouts"=dword:200	; every 512 ticks checking Modem status.
+	"Prefix"="COM"
+	"Index"=dword:2
+	"Dll"="serial_smdk2440.dll"
+	"Order"=dword:0
+	"Priority"=dword:0
+	"Port"="COM2:"
+	"DeviceType"=dword:0
+	"FriendlyName"=LOC_DISPLAYNAME_COM2
+	"Tsp"="unimodem.dll"
+	"IClass"="{CC5195AC-BA49-48a0-BE17-DF6D1B0173DD}"
+	"DevConfig"=hex: 10,00, 00,00, 05,00,00,00, 10,01,00,00, 00,4B,00,00, 00,00, 08, 00, 00, 00,00,00,00
+;IF BSP_NOIRDA !
+; S2440 IrDA(UART2)
+;=============== UART2 (physical COM3 connector P1) (Serial) ===============
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\Serial2]
+	"DeviceArrayIndex"=dword:2
+	"Irq"=dword:f
+	"MemBase"=dword:50008000
+	"MemLen"=dword:2C
+	"InterruptBitsShift"=dword:6 ; UART 2 Interrupt Sub Register shift bit.
+;	"ISTTimeouts"=dword:200	; every 512 ticks checking Modem status.
+	"Prefix"="COM"
+	"Index"=dword:3
+	"Dll"="serial_smdk2440.dll"
+	"Order"=dword:0
+	"Priority"=dword:0
+	"Port"="COM3:"
+	"DeviceType"=dword:0
+	"FriendlyName"=LOC_DISPLAYNAME_RAWIR
+	"IClass"="{CC5195AC-BA49-48a0-BE17-DF6D1B0173DD}"
+	"DevConfig"=hex: 10,00, 00,00, 05,00,00,00, 10,01,00,00, 00,4B,00,00, 00,00, 08, 00, 00, 00,00,00,00
+;ENDIF
+
+ENDIF BSP_NOSERIAL !
+; @CESYSGEN ENDIF CE_MODULES_SERIAL
+;-------------------------------------------------------------------------------------------------------------
+
+;---------- Keyboard/Mouse Driver ---------------------------------------------------
+; @CESYSGEN IF CE_MODULES_KEYBD
+; Keybd driver is the same.
+IF BSP_NOKEYBD !
+#include "$(DRIVERS_DIR)\keybd\keybd.reg"
+
+[HKEY_LOCAL_MACHINE\HARDWARE\DEVICEMAP\KEYBD]
+	"DriverName"="kbdmouse.dll"
+	"Irq"=dword:1
+	"IOBase"=dword:B1600000
+	"SSPBase"=dword:B1900000
+
+#include "$(DRIVERS_DIR)\keybd\LayMgr.reg"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\$(input_locale)]
+	"Matrix"="kbdmouse.dll"
+
+
+; @CESYSGEN IF CE_MODULES_KBDA1
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\00000401]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDA1
+
+; @CESYSGEN IF CE_MODULES_KBDHEB
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\0000040D]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDHEB
+
+; @CESYSGEN IF CE_MODULES_KBDTH0
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\0000041E]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDTH0
+
+; @CESYSGEN IF CE_MODULES_KBDINHIN
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\00010439]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDINHIN
+
+; @CESYSGEN IF CE_MODULES_KBDINMAR
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\0000044E]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDINMAR
+
+; @CESYSGEN IF CE_MODULES_KBDINPUN
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\00000446]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDINPUN
+
+; @CESYSGEN IF CE_MODULES_KBDINTEL
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\0000044A]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDINTEL
+
+; @CESYSGEN IF CE_MODULES_KBDINGUJ
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\00000447]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDINGUJ
+
+; @CESYSGEN IF CE_MODULES_KBDINKAN
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\0000044B]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDINKAN
+
+; @CESYSGEN IF CE_MODULES_KBDINTAM
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\00000449]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDINTAM
+
+; @CESYSGEN IF CE_MODULES_KBDDV
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\00010409]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDDV
+
+ENDIF BSP_NOKEYBD !
+; @CESYSGEN ENDIF CE_MODULES_KEYBD
+;------------------------------------------------------------------------
+
+;------------- PCcard Driver ------------------------------------------------------
+; @CESYSGEN IF CE_MODULES_PCCARD
+IF BSP_NOPCCARD !
+;#include "$(_TARGETPLATROOT)\src\drivers\pccard\pcc_smdk2440.reg"
+;#include "$(DRIVERS_DIR)\pccard\mdd\pcc_serv.reg"
+;[HKEY_LOCAL_MACHINE\Drivers\PCCARD\PCMCIA\TEMPLATE\PCMCIA]
+;	"Dll"="pcmcia.dll"
+;	"NoConfig"=dword:1
+;	"NoISR"=dword:1 ; Do not load any ISR.
+;	"IClass"=multi_sz:"{6BEAB08A-8914-42fd-B33F-61968B9AAB32}=PCMCIA Card Services"
+ENDIF BSP_NOPCCARD !
+; @CESYSGEN ENDIF CE_MODULES_PCCARD
+;----------------------------------------------------------------------------------
+
+
+
+;------------ SDHC Driver ------------------------------------------------------------------
+; @CESYSGEN IF CE_MODULES_SDBUS
+IF BSP_NOSD !
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\SDHC_SMDK2440]
+	"Order"=dword:21
+	"Dll"="sdhc_sc2440.dll"
+	"Prefix"="SDH"
+
+	"DMAChannel"=dword:0		; DMA channel 0 to use.  Set to 0xffffffff to disable DMA
+	"DMAIrq"=dword:11
+	"DMA_IST_Priority"=dword:96
+
+	"SDIOIrq"=dword:15
+	"SDIO_IST_Priority"=dword:97
+
+	"PollingTimeout"=dword:100	; 100 ms
+	"CardDetect_Thread_Priority"=dword:98
+
+	"CardDetectGPIO"="G"		; card detect on GPB8
+"CardDetectMask"=dword:400
+	"CardDetectFlag"=dword:0
+	"CardDetectControlMask"=dword:fffcffff
+	"CardDetectControlFlag"=dword:0
+	"CardDetectPullupMask"=dword:fffffeff
+	"CardDetectPullupFlag"=dword:100
+
+	"CardReadWriteGPIO"="H"		; card R/W on GPH8
+	"CardReadWriteMask"=dword:100
+	"CardReadWriteFlag"=dword:100
+	"CardReadWriteControlMask"=dword:fffcffff
+	"CardReadWriteControlFlag"=dword:0
+	"CardReadWritePullupMask"=dword:fffffeff
+	"CardReadWritePullupFlag"=dword:100
+
+	"HandleBusyFinishOnCommand38"=dword:1
+	"DmaTransferTimeoutFactor"=dword:8
+	"DmaTransferTimeoutConstant"=dword:3000
+
+ENDIF BSP_NOSD !
+; @CESYSGEN ENDIF CE_MODULES_SDBUS
+;-----------------------------------------------------------------------------------------------
+
+
+;------------ I2C Driver ------------------------------------------------------------------------------------
+IF BSP_NOI2C !
+;; I2C Bus Driver
+;[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\I2C]
+;	"Prefix"="I2C"
+;	"Dll"="I2C.DLL"
+;	"Order"=dword:0
+;	"Index"=dword:0
+;	"Mode"=dword:1			; Mode: 0 = POLLING, 1 = INTERRUPT
+;	"SlaveAddress"=dword:0		; Bus Driver's Slave Address
+;	"FriendlyName"="I2C Bus Driver"
+;	"IClass"="{A32942B7-920C-486b-B0E6-92A702A99B35}"	; Power-manageable generic
+ENDIF BSP_NOI2C !  
+;-------------------------------------------------------------------------------------------------------------
+
+;------------- Camera Driver ------------------------------------------------------------------------------------
+IF BSP_NOCAMERA !
+;[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\Camera]
+;	"Prefix"="CIS"
+;	"Dll"="camera.dll"
+;	"Index"=dword:1
+;	"Order"=dword:1
+;	"IClass"="{A32942B7-920C-486b-B0E6-92A702A99B35}"
+
+ENDIF BSP_NOCAMERA!
+;--------------------------------------------------------------------------------------------------------------------------
+
+
+;---------- Power Button Driver ----------------------------------------------------
+IF BSP_NOPWRBTN !
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\PowerButton]
+	"Dll"="PowerButton.dll"
+	"Prefix"="PWR"
+	"Order"=dword:0 
+	"FriendlyName"="Power Controller Driver"
+	"IClass"="{A32942B7-920C-486b-B0E6-92A702A99B35}"	; Power-manageable generic
+ENDIF BSP_NOPWRBTN !
+;-----------------------------------------------------------------------------------
+
+
+;------------ Audio Driver ---------------------------------------------------------
+IF BSP_NOAUDIO !
+; @CESYSGEN IF CE_MODULES_WAVEAPI
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\Audio]
+	"Prefix"="WAV"
+	"Dll"="s3c2440a_wavedev.dll"
+	"Priority256"=dword:95
+	"Index"=dword:1
+	"Order"=dword:0
+	"IClass"=multi_sz:"{37168569-61C4-45fd-BD54-9442C7DBA46F}","{A32942B7-920C-486b-B0E6-92A702A99B35}"
+
+[HKEY_LOCAL_MACHINE\Audio\SoftwareMixer]
+	"BufferSize"=dword:1000
+	"Priority256"=dword:96
+
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\WAPIMAN\]
+	"Priority256"=dword:97
+; @CESYSGEN ENDIF CE_MODULES_WAVEAPI
+ENDIF BSP_NOAUDIO !
+;------------------------------------------------------------------------------------
+
+
+;--------------- USB Host Controller Driver --------------------------------------------
+IF BSP_NOUSBHCD !
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\OHCI]
+	"InterfaceType"=dword:0		; Internal
+	"Prefix"="HCD"
+	"Dll"="ohci2.dll"
+	"Index"=dword:1
+	"Order"=dword:1
+	"Irq"=dword:1a			; 26
+	"SysIntr"=dword:11		; (SYSINTR_FIRMWARE+1)
+	"MemBase"=dword:49000000
+	"MemLen"=dword:1000
+	"UseExistingSettings"=dword:0
+ENDIF BSP_NOUSBHCD !
+;----------------------------------------------------------------------------------------
+
+
+;--------- USB Function Client Driver ---------------------------------------------------
+#include "$(_TARGETPLATROOT)\Files\rasbook.reg"
+
+; @CESYSGEN IF CE_MODULES_USBFN
+IF BSP_NOUSBFN !
+IF BSP_KITL != USBSERIAL
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\SC2440USBFN]
+	"Dll"="sc2440usbfn.dll"
+	"Prefix"="UFN"
+	"Priority256"=dword:64
+	"IoBase"=dword:B1200000
+	"IoLen"=dword:1000		; Use one page
+	"Irq"=dword:19
+	"BusIoctl"=dword:2a0048
+	"IClass"=multi_sz:"{E2BDC372-598F-4619-BC50-54B3F7848D35}=%b","{6F40791D-300E-44E4-BC38-E0E63CA8375C}=%b"
+
+IF BSP_USBFN_SERIAL
+[HKEY_LOCAL_MACHINE\Drivers\USB\FunctionDrivers]
+	"DefaultClientDriver"=- ; erase previous default
+	"DefaultClientDriver"="Serial_Class"
+
+[HKEY_LOCAL_MACHINE\Drivers\USB\FunctionDrivers\Serial_Class]
+	"FriendlyName"=LOC_USBFN_SERIAL_NAME
+	"idVendor"=dword:0547
+	"Manufacturer"=LOC_USBFN_SERIAL_MANUFACTURER
+	"idProduct"=dword:2720
+	"Product"=LOC_USBFN_SERIAL_PRODUCT
+	"Index"=dword:5
+
+ENDIF 
+
+IF BSP_USBFN_RNDIS
+
+[HKEY_LOCAL_MACHINE\Drivers\USB\FunctionDrivers]
+	"DefaultClientDriver"=- ; erase previous default
+	"DefaultClientDriver"="RNDIS"
+
+[HKEY_LOCAL_MACHINE\Drivers\USB\FunctionDrivers\RNDIS]
+	"UseActiveSyncIds"=dword:1
+	"idVendor"=dword:0547
+	"Manufacturer"=LOC_USBFN_RNDIS_MANUFACTURER
+	"idProduct"=dword:2c2d
+	"Product"=LOC_USBFN_RNDIS_PRODUCT
+
+
+ENDIF
+
+IF BSP_USBFN_STORAGE
+[HKEY_LOCAL_MACHINE\Drivers\USB\FunctionDrivers]
+	"DefaultClientDriver"=- ; erase previous default
+	"DefaultClientDriver"="Mass_Storage_Class"
+
+[HKEY_LOCAL_MACHINE\Drivers\USB\FunctionDrivers\Mass_Storage_Class]
+	"Dll"="usbmsfn.dll"
+	"InterfaceSubClass"=dword:06
+	"InterfaceProtocol"=dword:50
+	"DeviceName"="DSK3:"
+	"FriendlyName"="Mass Storage"
+	"idVendor"=dword:045E
+	"Manufacturer"="Generic Manufacturer (PROTOTYPE--Remember to change idVendor)"
+	"idProduct"=dword:FFFF
+	"Product"="Generic Mass Storage (PROTOTYPE--Remember to change idVendor)"
+	"bcdDevice"=dword:0
+ENDIF	
+
+
+[HKEY_CURRENT_USER\ControlPanel\Comm]
+	"Cnct"="`USB"
+
+ENDIF
+ENDIF BSP_NOUSBFN !
+; @CESYSGEN ENDIF CE_MODULES_USBFN
+;-------------------------------------------------------------------------------------------------
+
+
+
+IF BSP_NODM9isa !
+
+[HKEY_LOCAL_MACHINE\Comm\DM9CE]
+	"DisplayName"="DM9000A/9010 ISA Fast Ethernet Adapter"
+	"Group"="NDIS"
+	"ImagePath"="dm9000.dll"
+	
+[HKEY_LOCAL_MACHINE\Comm\DM9CE\Linkage]
+	"Route"=multi_sz:"DM9CE1"
+
+[HKEY_LOCAL_MACHINE\Comm\DM9CE1]
+	"DisplayName"="DM9000A/9010 ISA Fast Ethernet Adapter"
+	"Group"="NDIS"
+	"ImagePath"="dm9000.dll"
+
+[HKEY_LOCAL_MACHINE\Comm\Tcpip\Linkage]
+	"Bind"="DM9CE1"
+
+[HKEY_LOCAL_MACHINE\Comm\DM9CE1\Parms]
+	"BusNumber"=dword:0
+	"BusType"=dword:0
+	"XmitBuffer"=dword:20
+	"RecvBuffer"=dword:20
+	"IrqNumber"=dword:2
+	"SysIntr"=dword:23
+	"IoAddress"=dword:10000000
+	"UseSoftwareMac"=dword:1
+	"SoftwareMacAddress0"=dword:10
+	"SoftwareMacAddress1"=dword:23
+	"SoftwareMacAddress2"=dword:45
+	"SoftwareMacAddress3"=dword:67
+	"SoftwareMacAddress4"=dword:89
+	"SoftwareMacAddress5"=dword:ab
+
+
+[HKEY_LOCAL_MACHINE\Comm\DM9CE1\Parms\TcpIp]
+	"EnableDHCP"=dword:0
+	"UseZeroBroadcast"=dword:0
+	"DefaultGateway"="192.168.12.254"
+	"IpAddress"="192.168.12.198"
+	"Subnetmask"="255.255.255.0"
+	"DNS"="202.104.0.20"
+;	"WINS"="0.0.0.0"
+;[HKEY_LOCAL_MACHINE\Comm\Tcpip\Linkage]
+;	"Bind"=multi_sz: "ppp", "DM9CE1"
+ENDIF BSP_DM9isa
+
+
+
+;------------ Backlight Driver -------------------------------------------------------------
+IF BSP_NOBACKLIGHT !
+; backlight driver
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\BAK]
+	"Index"=dword:1
+	"Prefix"="BAK"
+	"Dll"="backlight.dll"
+	"Order"=dword:1
+	"IClass"="{A32942B7-920C-486b-B0E6-92A702A99B35}"	; Power-manageable generic
+
+[HKEY_CURRENT_USER\ControlPanel\Backlight]
+	"ACTimeout"=dword:3c
+	"BatteryTimeout"=dword:1e
+	"BacklightOnTap"=dword:1
+	"ACBacklightOnTap"=dword:1
+	
+[HKEY_CURRENT_USER\ControlPanel\BackLight]
+	"AdvancedCPL" = "AdvBacklight"
+ENDIF ; BSP_NOBACKLIGHT
+;---------------------------------------------------------------------------------------------
+
+; @CESYSGEN ENDIF CE_MODULES_DEVICE
+
+;------ NAND Driver --------------------------------------------------------------------------
+; HIVE BOOT SECTION
+IF BSP_NONAND !
+
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\SMFLASH]
+	"Prefix"="DSK"
+	"Dll"="nandflash.dll"
+	"Order"=dword:0
+	"Ioctl"=dword:4
+	"Profile"="SMFLASH"
+	"FriendlyName"="MS Flash Driver"
+	"MountFlags"=dword:11
+	"BootPhase"=dword:1
+	"Flags"=dword:1000 
+
+[HKEY_LOCAL_MACHINE\System\StorageManager\AutoLoad\SMFLASH]
+	"DriverPath"="Drivers\\BuiltIn\\SMFLASH"
+	"LoadFlags"=dword:1
+	"BootPhase"=dword:0
+	"MountAsBootable"=dword:1   ; for hive-based registry
+
+[HKEY_LOCAL_MACHINE\System\StorageManager\Profiles\SMFLASH]
+	"DefaultFileSystem"="BINFS"
+	"PartitionDriver"="mspart.dll"
+	"AutoMount"=dword:1
+	"AutoPart"=dword:1
+	"AutoFormat"=dword:1
+	"Folder"="HardDisk"
+	"Name"="Microsoft Flash Disk"
+	"BootPhase"=dword:0
+	"Flags"=dword:1000
+	"MountAsBootable"=dword:1
+
+[HKEY_LOCAL_MACHINE\System\StorageManager\Profiles\SMFLASH\FATFS]
+	"FormatExfat"=dword:1
+	"Flags"=dword:14
+	"DisableAutoScan"=dword:1
+	"CheckForFormat"=dword:1
+	"EnableWriteBack"=dword:1
+	"Folder"="HardDisk"
+	"MountAsRoot"=dword:1
+
+ENDIF ; BSP_NONANDFS
+; END HIVE BOOT SECTION
+;-----------------------------------------------------------------------------------
+;[HKEY_CURRENT_USER\ControlPanel\Desktop]
+;	"wallpaper"="\\windows\\UPTECH.bmp"
+
+;----------- Display Driver --------------------------------------------------------
+; @CESYSGEN IF CE_MODULES_DISPLAY
+IF BSP_NODISPLAY !
+[HKEY_LOCAL_MACHINE\Drivers\Display\S3C2440\CONFIG]
+	"DisplayDll"="S3C2440DISP.dll"
+	"LCDVirtualFrameBase"=dword:A0060000
+	"LCDPhysicalFrameBase"=dword:30060000
+
+[HKEY_LOCAL_MACHINE\System\GDI\Drivers]
+	"Display"="S3C2440DISP.dll"
+	"DisplayPowerClass"="{EB91C7C9-8BF6-4a2d-9AB8-69724EED97D1}"
+
+; Settings to rotate the screen by 0 degrees clockwise upon download
+[HKEY_LOCAL_MACHINE\System\GDI\Rotation]
+	 "Angle"=dword:0
+
+; GWES will pass this value to the LCD driver; the driver will open the
+; key to which it points to read its configuration.
+[HKEY_LOCAL_MACHINE\System\GDI\DisplayCandidates]
+	"Candidate10"="Drivers\\Display\\S3C2440\\CONFIG"
+
+; Let GWES save/restore video memory during suspend/resume
+;
+[HKEY_LOCAL_MACHINE\SYSTEM\GWE]
+	; "PORepaint"=dword:0 - the display driver handles everything
+	; "PORepaint"=dword:1 - gwe should save and restore the bits
+	; "PORepaint"=dword:2 - gwe should invalidate and repaint
+	; "PORepaint"=dword:3 - gwe and driver need to save video memory
+	;
+	"PORepaint"=dword:1
+	
+ENDIF BSP_NODISPLAY !
+; @CESYSGEN ENDIF CE_MODULES_DISPLAY
+;-----------------------------------------------------------------------------------
+
+;------------ D3DM Driver -------------------------------------------------------
+; @CESYSGEN IF DIRECTX_MODULES_D3DM  
+IF BSP_NOD3DM !
+[HKEY_LOCAL_MACHINE\System\D3DM\Drivers]
+	"LocalHook"="d3dm_sedrv.dll "
+ENDIF BSP_NOD3DM !
+; @CESYSGEN ENDIF DIRECTX_MODULES_D3DM
+;----------------------------------------------------------------------------------
+
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\GPIODriver]
+	"Prefix"="GIO"
+	"Index"=dword:1
+	"Dll"="GPIODriver.dll"
+
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\EINTDriver]
+	"Prefix"="INT"
+	"Dll"="EINTDriver.dll"
+
+
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\Digital_Dot]
+	"Index"=dword:1
+	"Prefix"="DDT"
+	"Dll"="digital_dot.dll"
+	;"Order"=dword:0
+	;"Ioctl"=dword:1
+
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\ADC]
+	"Index"=dword:1
+	"Prefix"="ADC"
+	"Dll"="adc.dll"
+	"Order"=dword:0
+	"Irq"=dword:2
+  "SysIntr"=dword:10
+
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\DCM_Motor]
+	"Index"=dword:1
+	"Prefix"="DCM"
+	"Dll"="dcmotor.dll"
+	"Order"=dword:0
+;[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\STR]
+;	"Index"=dword:1
+;	"Prefix"="STR"
+;	"DLL"="STR.dll"
+;	"Order"=dword:0
+;	"Irq"=dword:2
+	;"SysIntr"=dword:10
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[HKEY_LOCAL_MACHINE\COMM\FTPD] 
+	"IsEnabled"=dword:1 
+	"AllowAnonymous"=dword:1 
+	"AllowAnonymousUpload"=dword:1 
+	"AllowAnonymousVroots"=dword:1 
+	"UseAuthentication"=dword:0 		
+	"DefaultDir"="\\" 
+
+[HKEY_LOCAL_MACHINE\COMM\TELNETD] 
+	"IsEnabled"=dword:1 
+	"UseAuthentication"=dword:0 
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shell\AutoHide]
+	"Default"=dword:0
+
+[HKEY_LOCAL_MACHINE\Ident] 
+	"Name"="Uptech_Board" 
+	"OrigName"="Uptech" 
+	"Desc"="Uptech"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Ethernet (for uptech_USB_Wifi chip)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[HKEY_LOCAL_MACHINE\Comm\RT2501USB]
+	"DisplayName"="Ralink RT2501USB Wireless LAN Driver"
+	"Group"="NDIS"
+	"ImagePath"="RT2501USB.DLL"
+
+[HKEY_LOCAL_MACHINE\Drivers\USB\LoadClients\Default\Default\Default\RT2501USB]
+	"Dll"="RT2501USB.DLL"
+
+[HKEY_LOCAL_MACHINE\Drivers\USB\ClientDrivers\RT2501USB]
+	"Dll"="RT2501USB.DLL"
+
+[HKEY_LOCAL_MACHINE\Comm\RT2501USB1\Parms]
+	"BusNumber"=dword:0
+	"BusType"=dword:0
+	"SSID"="RT2501USB"
+	"CountryRegion"=dword:5
+	"OpMode"=dword:0
+	"RtsThresh"=dword:92B
+	"FragThresh"=dword:92A
+	"Encryption"=dword:1
+	"AuthenType"=dword:0
+	"NetworkType"=dword:1
+	"ProviderName"="Ralink Technology, Inc."
+	"VendorDesc"="RT71W 802.11 b/g Wireless Card."
+	"WEPKeyUse"=dword:3
+	"WEPKey1"="12345678901234567890123456"
+	"WEPKey2"="12345678901234567890123456"
+	"WEPKey3"="12345678901234567890123456"
+	"WEPKey4"="12345678901234567890123456"
+	"WPAPSK"="3f348c1f8f8c8c701bac7b528e349ce2e647dfeb124f3be9f3d593fd054e7321"
+
+[HKEY_LOCAL_MACHINE\Comm\RT2501USB1\Parms\TcpIp]
+	"EnableDHCP"=dword:1
+	"DefaultGateway"=multi_sz:""
+	"IpAddress"=multi_sz:""
+	"Subnetmask"=multi_sz:""
+	"DNS"="202.96.134.133"
+	;"WINS"=""
+
+[HKEY_LOCAL_MACHINE\init]
+        "Launch70"="GPIO_Test.exe"
+        "Depend70"=hex:14,00,1e,00
+
+[HKEY_LOCAL_MACHINE\Drivers\USB\LoadClients\2760\Default\Default\ZC030X]
+   "DLL"="ZC030X.DLL"
+
+[HKEY_LOCAL_MACHINE\Drivers\USB\ClientDrivers\ZC030X]
+   "Prefix"="CAM"
+   "Dll"="ZC030X.DLL"

@@ -1,0 +1,18 @@
+---- extern Æ¥Åä (17 in 7 ÎÄ¼þ) ----
+EXIO.h (inc):6:extern unsigned short int EXIOReg;
+Lib.h (inc):63:extern unsigned int PCLK, HCLK, FCLK;
+Lib.h (inc):67:extern struct struct_system_param system_param;
+Retarget.c (init):56:extern unsigned int bottom_of_heap;     /* defined in heap.s */
+Cpu.c (src):28:/* Externl clock frequency used by CPU */
+Drivers.c (src):26:extern serial_driver_t s3c2410_serial0_driver, s3c2410_serial1_driver, 
+Lib.c (src):32:extern unsigned int PCLK;
+Lib.c (src):82:extern serial_driver_t* serial_drv[];
+Lib.c (src):83:extern int NumberOfUartDrv;
+2410addr.s (startup):380:EXTINT0     EQU  0x56000088     ;External interrupt control register 0
+2410addr.s (startup):381:EXTINT1     EQU  0x5600008c     ;External interrupt control register 1
+2410addr.s (startup):382:EXTINT2     EQU  0x56000090     ;External interrupt control register 2
+2410addr.s (startup):385:EINTFLT2    EQU  0x5600009c     ;External interrupt filter control register 2
+2410addr.s (startup):386:EINTFLT3    EQU  0x560000a0     ;External interrupt filter control register 3
+2410addr.s (startup):387:EINTMASK    EQU  0x560000a4     ;External interrupt mask
+2410addr.s (startup):388:EINTPEND    EQU  0x560000a8     ;External interrupt pending
+2410addr.s (startup):389:GSTATUS0    EQU  0x560000ac     ;External pin status

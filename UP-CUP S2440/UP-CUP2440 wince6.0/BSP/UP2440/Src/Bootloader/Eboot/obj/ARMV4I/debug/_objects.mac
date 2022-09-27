@@ -1,0 +1,11 @@
+OBJECTS=\
+    obj\ARMV4I\debug\startup.obj\
+    obj\ARMV4I\debug\util.obj\
+    obj\ARMV4I\debug\main.obj\
+    obj\ARMV4I\debug\debug.obj\
+    obj\ARMV4I\debug\ether.obj\
+    obj\ARMV4I\debug\flash.obj\
+    obj\ARMV4I\debug\usbs.obj\
+    obj\ARMV4I\debug\dm9000dbg.obj\
+    obj\ARMV4I\debug\nand.obj
+

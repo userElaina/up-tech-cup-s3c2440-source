@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatalogFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" RequiredVersion="6.00" xsi:schemaLocation="urn:Microsoft.PlatformBuilder/Catalog PbcXml600.xsd" xmlns="urn:Microsoft.PlatformBuilder/Catalog">
+  <FileInformation Id="FileInformation:UP-TECH:UP2440">
+    <Title>UP2440</Title>
+    <Description>UP2440 BSP Catalog Items</Description>
+    <Vendor>UP-TECH</Vendor>
+    <OSVersion>6.00</OSVersion>
+    <FileVersion>1.8</FileVersion>
+  </FileInformation>
+  <Bsp Id="Bsp:UP-TECH:UP2440:ARMV4I">
+    <Title>UP2440: ARMV4I</Title>
+    <Description>WinCE 6.0 for UP2440</Description>
+    <PlatformDirectory>UP2440</PlatformDirectory>
+    <CpuId>Cpu:ARMV4I</CpuId>
+    <BspItemId>Item:UP-TECH:LCD:UP2440_UP2440</BspItemId>
+    <BspItemId>Item:UP-TECH:MatrixKeyboardMouseCommon_UP2440</BspItemId>
+    <BspItemId>Item:UP-TECH:MatrixKeyboardMouseEnglish_UP2440</BspItemId>
+    <BspItemId>Item:UP-TECH:bsp_keybd_jpn1_UP2440</BspItemId>
+    <BspItemId>Item:UP-TECH:MatrixKeyboardMouseJapanese2(IBMlayout)_UP2440</BspItemId>
+    <BspItemId>Item:UP-TECH:MatrixKeyboardMouseKorean_UP2440</BspItemId>
+    <BspItemId>Item:UP-TECH:Touch:UP2440_UP2440</BspItemId>
+    <BspItemId>Item:UP-TECH:USBFN:UP2440_UP2440</BspItemId>
+    <BspItemId>Item:UP-TECH:USBHOST:UP2440_UP2440</BspItemId>
+    <BspItemId>Item:UP-TECH:EthernetBootloader(Eboot)_UP2440</BspItemId>
+  </Bsp>
+  <Item Id="Item:UP-TECH:EthernetBootloader(Eboot)_UP2440">
+    <Title>Ethernet Bootloader (Eboot)</Title>
+    <Description>Samsung Windows CE Ethernet bootloader.</Description>
+    <Type>BspSpecific</Type>
+    <SupportedCpuId>Cpu:ARMV4I</SupportedCpuId>
+    <ChooseOneGroup>true</ChooseOneGroup>
+    <Location />
+    <SourceCode>
+      <Title>$(_WINCEROOT)\PLATFORM\UP2440\SRC\BOOTLOADER\EBOOT</Title>
+      <Path>$(_WINCEROOT)\PLATFORM\UP2440\SRC\BOOTLOADER\EBOOT</Path>
+    </SourceCode>
+  </Item>
+  <Item Id="Item:UP-TECH:bsp_keybd_jpn1_UP2440">
+    <Title>Matrix Keyboard/Mouse Japanese1 (NEC layout)</Title>
+    <Description>Matrix Keyboard/Mouse Japanese1 (NEC layout)</Description>
+    <Type>BspSpecific</Type>
+    <Variable>BSP_KEYBD_JPN1</Variable>
+    <SupportedCpuId>Cpu:ARMV4I</SupportedCpuId>
+    <Module>KbdS3C2440Jpn1.dll</Module>
+    <ChooseOneGroup>true</ChooseOneGroup>
+    <Location>Device Drivers\Input Devices\Keyboard/Mouse</Location>
+    <SourceCode>
+      <Title>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\KEYBD\KBDS3C2440JPN1</Title>
+      <Path>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\KEYBD\KBDS3C2440JPN1</Path>
+    </SourceCode>
+  </Item>
+  <Item Id="Item:UP-TECH:MatrixKeyboardMouseEnglish_UP2440">
+    <Title>Matrix Keyboard/Mouse English</Title>
+    <Description>Matrix Keyboard/Mouse English</Description>
+    <Type>BspSpecific</Type>
+    <SupportedCpuId>Cpu:ARMV4I</SupportedCpuId>
+    <Module>KbdS3C2440Us.dll</Module>
+    <ChooseOneGroup>true</ChooseOneGroup>
+    <Location>Device Drivers\Input Devices\Keyboard/Mouse</Location>
+    <SourceCode>
+      <Title>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\KEYBD\KBDS3C2440US</Title>
+      <Path>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\KEYBD\KBDS3C2440US</Path>
+    </SourceCode>
+  </Item>
+  <Item Id="Item:UP-TECH:MatrixKeyboardMouseJapanese2(IBMlayout)_UP2440">
+    <Title>Matrix Keyboard/Mouse Japanese2 (IBM layout)</Title>
+    <Description>Matrix Keyboard/Mouse Japanese2 (IBM layout)</Description>
+    <Type>BspSpecific</Type>
+    <SupportedCpuId>Cpu:ARMV4I</SupportedCpuId>
+    <Module>KbdS3C2440Jpn2.dll</Module>
+    <ChooseOneGroup>true</ChooseOneGroup>
+    <Location>Device Drivers\Input Devices\Keyboard/Mouse</Location>
+    <SourceCode>
+      <Title>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\KEYBD\KBDS3C2440JPN2</Title>
+      <Path>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\KEYBD\KBDS3C2440JPN2</Path>
+    </SourceCode>
+  </Item>
+  <Item Id="Item:UP-TECH:MatrixKeyboardMouseKorean_UP2440">
+    <Title>Matrix Keyboard/Mouse Korean</Title>
+    <Description>Keyboard/Mouse Korean</Description>
+    <Type>BspSpecific</Type>
+    <SupportedCpuId>Cpu:ARMV4I</SupportedCpuId>
+    <Module>KbdS3C2440Kor.dll</Module>
+    <ChooseOneGroup>true</ChooseOneGroup>
+    <Location>Device Drivers\Input Devices\Keyboard/Mouse</Location>
+    <SourceCode>
+      <Title>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\KEYBD\KBDS3C2440KOR</Title>
+      <Path>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\KEYBD\KBDS3C2440KOR</Path>
+    </SourceCode>
+  </Item>
+  <Item Id="Item:UP-TECH:MatrixKeyboardMouseCommon_UP2440">
+    <Title>Matrix Keyboard/Mouse Common</Title>
+    <Description>Matrix Keyboard/Mouse Common</Description>
+    <Type>BspSpecific</Type>
+    <SupportedCpuId>Cpu:ARMV4I</SupportedCpuId>
+    <Module>kbdmouse.dll</Module>
+    <ChooseOneGroup>true</ChooseOneGroup>
+    <Location>Device Drivers\Input Devices\Keyboard/Mouse</Location>
+    <SourceCode>
+      <Title>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\KEYBD\KBDCOMMON</Title>
+      <Path>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\KEYBD\KBDCOMMON</Path>
+    </SourceCode>
+  </Item>
+  <Item Id="Item:UP-TECH:Touch:UP2440_UP2440">
+    <Title>UP2440 Touch Driver</Title>
+    <Description>UP2440 Touch</Description>
+    <Type>BspSpecific</Type>
+    <Module>touch.dll</Module>
+    <Location>Device Drivers\Touch</Location>
+    <SourceCode>
+      <Title>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\TOUCH</Title>
+      <Path>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\TOUCH</Path>
+    </SourceCode>
+  </Item>
+  <Item Id="Item:UP-TECH:LCD:UP2440_UP2440">
+    <Title>UP2440 LCD Driver</Title>
+    <Type>BspSpecific</Type>
+    <Module>s3c2440disp.dll</Module>
+    <Location>Device Drivers\Display</Location>
+    <SourceCode>
+      <Title>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\DISPLAY</Title>
+      <Path>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\DISPLAY</Path>
+    </SourceCode>
+  </Item>
+  <Item Id="Item:UP-TECH:USBFN:UP2440_UP2440">
+    <Title>UP2440 USB Function Driver</Title>
+    <Type>BspSpecific</Type>
+    <Module>sc2440usbfn.dll</Module>
+    <Location>Device Drivers\USB\Function</Location>
+    <SourceCode>
+      <Title>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\USB\FUNCTION</Title>
+      <Path>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\USB\FUNCTION</Path>
+    </SourceCode>
+  </Item>
+  <Item Id="Item:UP-TECH:USBHOST:UP2440_UP2440">
+    <Title>UP2440 USB Host Driver</Title>
+    <Type>BspSpecific</Type>
+    <Module>ohci2.dll</Module>
+    <Location>Device Drivers\USB\Host</Location>
+    <SourceCode>
+      <Title>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\USB\HCD</Title>
+      <Path>$(_WINCEROOT)\PLATFORM\UP2440\SRC\DRIVERS\USB\HCD</Path>
+    </SourceCode>
+  </Item>
+</CatalogFile>

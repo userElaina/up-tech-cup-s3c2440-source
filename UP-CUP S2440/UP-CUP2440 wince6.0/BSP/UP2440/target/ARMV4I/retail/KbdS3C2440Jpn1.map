@@ -1,0 +1,300 @@
+ KbdS3C2440Jpn1
+
+ Timestamp is 4f87b396 (Fri Apr 13 13:03:18 2012)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00001580H .rdata                  CODE
+ 0001:00001580 0000002bH .rdata$debug            CODE
+ 0001:000015ac 00004b08H .text                   CODE
+ 0001:000060b4 000000bcH .xdata                  CODE
+ 0001:00006170 00000014H .idata$2                CODE
+ 0001:00006184 00000014H .idata$3                CODE
+ 0001:00006198 00000110H .idata$4                CODE
+ 0001:000062a8 0000000cH .idata$6                CODE
+ 0001:000062c0 00000249H .edata                  CODE
+ 0002:00000000 00000110H .idata$5                DATA
+ 0002:00000110 00000614H .data                   DATA
+ 0002:00000728 000003e0H .bss                    DATA
+ 0003:00000000 00000270H .pdata                  DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0001:00000140       ??_C@_1EO@LEIGAKKL@?$AAM?$AAa?$AAt?$AAr?$AAi?$AAx?$AA?3?$AA?5?$AAd?$AAa?$AAt?$AAa?$AA?5?$AAs?$AAt?$AAr?$AAu?$AAc?$AAt?$AAu?$AAr?$AAe?$AA?5?$AAs?$AAi?$AAz?$AAe?$AA?5?$AAm?$AAi?$AAs?$AAm@ 10001140     S3C2440_Layout:s3c2440.obj
+ 0001:00000190       ??_C@_1GA@EBOAAHI@?$AAP?$AAS?$AA2?$AA_?$AAA?$AAT?$AA_?$AA0?$AA0?$AA0?$AA1?$AA0?$AA4?$AA1?$AA1?$AA?3?$AA?5?$AAd?$AAa?$AAt?$AAa?$AA?5?$AAs?$AAt?$AAr?$AAu?$AAc?$AAt?$AAu?$AAr?$AAe?$AA?5@ 10001190     kbdjpn1_lib:kbdjpn1.obj
+ 0001:00000328       ??_C@_1IA@JFDDLIEO@?$AAC?$AA?3?$AA?2?$AAW?$AAI?$AAN?$AAC?$AAE?$AA6?$AA0?$AA0?$AA?2?$AAP?$AAU?$AAB?$AAL?$AAI?$AAC?$AA?2?$AAC?$AAO?$AAM?$AAM?$AAO?$AAN?$AA?2?$AAO?$AAA?$AAK?$AA?2?$AAD?$AAR@ 10001328     LayoutManager:laymgr.obj
+ 0001:000003a8       ??_C@_1CI@OHCJFJPM@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AA?$CF?$AAs?$AA?5?$AAl?$AAi?$AAn?$AAe?$AA?5?$AA?$CF?$AAd?$AA?3?$AA?5?$AA?$AA@ 100013a8     LayoutManager:laymgr.obj
+ 0001:000003d0       ??_C@_1GA@OJOBFCAJ@?$AAV?$AAa?$AAl?$AAi?$AAd?$AAa?$AAt?$AAe?$AAI?$AAn?$AAp?$AAu?$AAt?$AAL?$AAa?$AAn?$AAg?$AAu?$AAa?$AAg?$AAe?$AA?3?$AA?5?$AAI?$AAn?$AAv?$AAa?$AAl?$AAi?$AAd?$AA?5?$AAi@ 100013d0     LayoutManager:laymgr.obj
+ 0001:00000430       ??_C@_1KA@IKFNAPIN@?$AAW?$AAr?$AAi?$AAt?$AAe?$AAT?$AAo?$AAC?$AAh?$AAa?$AAr?$AAB?$AAu?$AAf?$AAf?$AAe?$AAr?$AA?3?$AA?5?$AAC?$AAh?$AAa?$AAr?$AAa?$AAc?$AAt?$AAe?$AAr?$AA?5?$AAb?$AAu?$AAf@ 10001430     LayoutManager:laymgr.obj
+ 0001:000004d0       ??_C@_1GE@GJAGNIFN@?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAL?$AAi?$AAg?$AAa?$AAt?$AAu?$AAr?$AAe?$AA?3?$AA?5?$AAT?$AAo?$AAo?$AA?5?$AAm?$AAa?$AAn?$AAy?$AA?5?$AAc?$AAh?$AAa?$AAr?$AAa?$AAc@ 100014d0     LayoutManager:laymgr.obj
+ 0001:00000538       ??_C@_1GE@EEKLGEPK@?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAL?$AAi?$AAg?$AAa?$AAt?$AAu?$AAr?$AAe?$AA?3?$AA?5?$AAW?$AAC?$AAH?$AA_?$AAL?$AAG?$AAT?$AAR?$AA?5?$AAb?$AAu?$AAt?$AA?5?$AAn?$AAo@ 10001538     LayoutManager:laymgr.obj
+ 0001:000005a0       ??_C@_1HE@LCAGGIGJ@?$AAK?$AAe?$AAy?$AAb?$AAo?$AAa?$AAr?$AAd?$AA?3?$AA?5?$AAE?$AAx?$AAc?$AAe?$AAp?$AAt?$AAi?$AAo?$AAn?$AA?5?$AAi?$AAn?$AA?5?$AAd?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?5?$AAl?$AAa@ 100015a0     LayoutManager:laymgr.obj
+ 0001:00000618       ??_C@_1HA@NLAOBOAF@?$AAK?$AAe?$AAy?$AAb?$AAo?$AAa?$AAr?$AAd?$AA?3?$AA?5?$AAR?$AAe?$AAm?$AAa?$AAp?$AAp?$AAi?$AAn?$AAg?$AA?5?$AAf?$AAu?$AAn?$AAc?$AAt?$AAi?$AAo?$AAn?$AA?5?$AAr?$AAe?$AAt@ 10001618     LayoutManager:laymgr.obj
+ 0001:00000688       ??_C@_1HI@HIFNONDF@?$AAK?$AAe?$AAy?$AAb?$AAo?$AAa?$AAr?$AAd?$AA?3?$AA?5?$AAK?$AAe?$AAy?$AAp?$AAr?$AAe?$AAs?$AAs?$AA?5?$AAi?$AAg?$AAn?$AAo?$AAr?$AAe?$AAd?$AA?5?$AAs?$AAi?$AAn?$AAc?$AAe@ 10001688     LayoutManager:laymgr.obj
+ 0001:00000700       ??_C@_1GO@DOKJIHPH@?$AAK?$AAb?$AAd?$AAN?$AAo?$AAt?$AAi?$AAf?$AAi?$AAc?$AAa?$AAt?$AAi?$AAo?$AAn?$AAT?$AAh?$AAr?$AAe?$AAa?$AAd?$AA?3?$AA?5?$AAR?$AAe?$AAa?$AAd?$AAM?$AAs?$AAg?$AAQ?$AAu@ 10001700     LayoutManager:laymgr.obj
+ 0001:00000770       ??_C@_1IM@EMDBBKLD@?$AAK?$AAb?$AAd?$AAN?$AAo?$AAt?$AAi?$AAf?$AAi?$AAc?$AAa?$AAt?$AAi?$AAo?$AAn?$AAT?$AAh?$AAr?$AAe?$AAa?$AAd?$AA?3?$AA?5?$AAW?$AAa?$AAi?$AAt?$AAF?$AAo?$AAr?$AAM?$AAu@ 10001770     LayoutManager:laymgr.obj
+ 0001:000007fc       ??_C@_17LIMMJKCA@?$AAK?$AAB?$AAD?$AA?$AA@ 100017fc     LayoutManager:laymgr.obj
+ 0001:00000808       ??_C@_1JA@GIEDPKKC@?$AAK?$AAb?$AAd?$AAN?$AAo?$AAt?$AAi?$AAf?$AAi?$AAc?$AAa?$AAt?$AAi?$AAo?$AAn?$AAT?$AAh?$AAr?$AAe?$AAa?$AAd?$AA?3?$AA?5?$AAU?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAt?$AAo@ 10001808     LayoutManager:laymgr.obj
+ 0001:00000898       ??_C@_1IE@GGGHHACJ@?$AAK?$AAb?$AAd?$AAN?$AAo?$AAt?$AAi?$AAf?$AAi?$AAc?$AAa?$AAt?$AAi?$AAo?$AAn?$AAT?$AAh?$AAr?$AAe?$AAa?$AAd?$AA?3?$AA?5?$AAU?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAt?$AAo@ 10001898     LayoutManager:laymgr.obj
+ 0001:0000091c       ??_C@_1DA@FKJDDCGN@?$AAK?$AAe?$AAy?$AAb?$AAo?$AAa?$AAr?$AAd?$AA?5?$AAL?$AAa?$AAy?$AAo?$AAu?$AAt?$AA?2?$AAP?$AAr?$AAe?$AAl?$AAo?$AAa?$AAd?$AA?$AA@ 1000191c     LayoutManager:laymgr.obj
+ 0001:0000094c       ??_C@_15EFLNJKHH@?$AA?$CF?$AAu?$AA?$AA@ 1000194c     LayoutManager:laymgr.obj
+ 0001:00000954       ??_C@_19NGFMKOON@?$AA?$CF?$AA0?$AA8?$AAX?$AA?$AA@ 10001954     LayoutManager:laymgr.obj
+ 0001:00000960       ??_C@_1KG@CKCOLAOB@?$AAG?$AAe?$AAt?$AAD?$AAe?$AAf?$AAa?$AAu?$AAl?$AAt?$AAI?$AAn?$AAp?$AAu?$AAt?$AAM?$AAe?$AAt?$AAh?$AAo?$AAd?$AAN?$AAa?$AAm?$AAe?$AA?3?$AA?5?$AAN?$AAo?$AA?5?$AAv?$AAa@ 10001960     LayoutManager:laymgr.obj
+ 0001:00000a08       ??_C@_1HE@IHAGDHOA@?$AAG?$AAe?$AAt?$AAD?$AAe?$AAf?$AAa?$AAu?$AAl?$AAt?$AAI?$AAn?$AAp?$AAu?$AAt?$AAM?$AAe?$AAt?$AAh?$AAo?$AAd?$AAN?$AAa?$AAm?$AAe?$AA?3?$AA?5?$AAN?$AAo?$AA?5?$AAv?$AAa@ 10001a08     LayoutManager:laymgr.obj
+ 0001:00000a7c       ??_C@_1CA@GLIJBCFK@?$AAK?$AAe?$AAy?$AAb?$AAo?$AAa?$AAr?$AAd?$AA?5?$AAL?$AAa?$AAy?$AAo?$AAu?$AAt?$AA?$AA@ 10001a7c     LayoutManager:laymgr.obj
+ 0001:00000aa0       ??_C@_1FI@IHOACNGN@?$AAI?$AAn?$AAv?$AAa?$AAl?$AAi?$AAd?$AA?5?$AAi?$AAn?$AAp?$AAu?$AAt?$AA?5?$AAl?$AAa?$AAn?$AAg?$AAu?$AAa?$AAg?$AAe?$AA?5?$AAi?$AAn?$AAf?$AAo?$AAr?$AAm?$AAa?$AAt?$AAi@ 10001aa0     LayoutManager:laymgr.obj
+ 0001:00000af8       ??_C@_1M@LLCLNBHO@?$AA?$CF?$AAs?$AA_?$AA?$CF?$AAs?$AA?$AA@ 10001af8     LayoutManager:laymgr.obj
+ 0001:00000b04       ??_C@_1CA@PAEAFIKJ@?$AAO?$AAu?$AAt?$AA?5?$AAo?$AAf?$AA?5?$AAm?$AAe?$AAm?$AAo?$AAr?$AAy?$AA?$AN?$AA?6?$AA?$AA@ 10001b04     LayoutManager:laymgr.obj
+ 0001:00000b28       ??_C@_1FG@IKEAAOND@?$AAI?$AAn?$AAv?$AAa?$AAl?$AAi?$AAd?$AA?5?$AAd?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?5?$AAl?$AAa?$AAy?$AAo?$AAu?$AAt?$AA?5?$AAi?$AAn?$AAf?$AAo?$AAr?$AAm?$AAa?$AAt?$AAi?$AAo@ 10001b28     LayoutManager:laymgr.obj
+ 0001:00000b80       ??_C@_1FG@KKEHCAMF@?$AAU?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAt?$AAo?$AA?5?$AAs?$AAe?$AAt?$AA?5?$AAu?$AAp?$AA?5?$AAk?$AAe?$AAy?$AAb?$AAo?$AAa?$AAr?$AAd?$AA?5?$AAl?$AAa?$AAy?$AAo?$AAu?$AAt@ 10001b80     LayoutManager:laymgr.obj
+ 0001:00000bd8       ??_C@_1GK@PNFGDIJE@?$AA?$CF?$AAs?$AA?3?$AA?5?$AAL?$AAa?$AAy?$AAo?$AAu?$AAt?$AA?5?$AAM?$AAa?$AAn?$AAa?$AAg?$AAe?$AAr?$AA?5?$AAs?$AAu?$AAc?$AAc?$AAe?$AAs?$AAs?$AAf?$AAu?$AAl?$AAl?$AAy?$AA?5@ 10001bd8     LayoutManager:laymgr.obj
+ 0001:00000c48       ??_C@_1GK@EADJFIFB@?$AAK?$AAe?$AAy?$AAb?$AAo?$AAa?$AAr?$AAd?$AA?3?$AA?5?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?5?$AAs?$AAe?$AAl?$AAe?$AAc?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAd?$AAe?$AAv?$AAi?$AAc?$AAe@ 10001c48     LayoutManager:laymgr.obj
+ 0001:00000cb8       ??_C@_1ME@GIAPPCNP@?$AAK?$AAe?$AAy?$AAb?$AAo?$AAa?$AAr?$AAd?$AA?3?$AA?5?$AAC?$AAo?$AAu?$AAl?$AAd?$AA?5?$AAn?$AAo?$AAt?$AA?5?$AAa?$AAc?$AAt?$AAi?$AAv?$AAa?$AAt?$AAe?$AA?5?$AAt?$AAh?$AAe@ 10001cb8     LayoutManager:laymgr.obj
+ 0001:00000d80       ??_C@_1LE@PONPAOJG@?$AAK?$AAe?$AAy?$AAb?$AAo?$AAa?$AAr?$AAd?$AA?3?$AA?5?$AAD?$AAe?$AAf?$AAa?$AAu?$AAl?$AAt?$AA?5?$AAi?$AAn?$AAp?$AAu?$AAt?$AA?5?$AAm?$AAe?$AAt?$AAh?$AAo?$AAd?$AA?5?$AAs@ 10001d80     LayoutManager:laymgr.obj
+ 0001:00000e38       ??_C@_1FC@BFKJMBD@?$AAK?$AAe?$AAy?$AAb?$AAo?$AAa?$AAr?$AAd?$AA?3?$AA?5?$AAP?$AAD?$AAD?$AA?5?$AA?$CF?$AAu?$AA?5?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAa?$AAt?$AAi?$AAo?$AAn?$AA?5@ 10001e38     LayoutManager:laymgr.obj
+ 0001:00000e8c       ??_C@_1DO@NIMCJCOO@?$AA?$CF?$AAs?$AA?3?$AA?5?$AAC?$AAa?$AAl?$AAl?$AAe?$AAd?$AA?5?$AAw?$AAi?$AAt?$AAh?$AA?5?$AAh?$AAk?$AAl?$AA?5?$AA?$DN?$AA?5?$AA0?$AAx?$AA?$CF?$AA0?$AA8?$AAx?$AA?$AN?$AA?6?$AA?$AA@ 10001e8c     LayoutManager:laymgr.obj
+ 0001:00000ed0       ??_C@_1HA@EHIGJNFN@?$AAK?$AAe?$AAy?$AAb?$AAd?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AAV?$AAK?$AAe?$AAy?$AAT?$AAo?$AAU?$AAn?$AAi?$AAc?$AAo?$AAd?$AAe?$AA?3?$AA?5?$AAN?$AAo?$AA?5?$AAi?$AAn?$AAp@ 10001ed0     LayoutManager:laymgr.obj
+ 0001:00000f40       ??_C@_1FI@LMKMPEMM@?$AAM?$AAa?$AAp?$AAV?$AAi?$AAr?$AAt?$AAu?$AAa?$AAl?$AAK?$AAe?$AAy?$AA?3?$AA?5?$AAN?$AAo?$AA?5?$AAd?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?5?$AAl?$AAa?$AAy?$AAo?$AAu?$AAt?$AA?5@ 10001f40     LayoutManager:laymgr.obj
+ 0001:00000f98       ??_C@_1FK@KLIIDPFG@?$AAM?$AAa?$AAp?$AAV?$AAi?$AAr?$AAt?$AAu?$AAa?$AAl?$AAK?$AAe?$AAy?$AA?3?$AA?5?$AAN?$AAo?$AA?5?$AAi?$AAn?$AAp?$AAu?$AAt?$AA?5?$AAl?$AAa?$AAn?$AAg?$AAu?$AAa?$AAg?$AAe@ 10001f98     LayoutManager:laymgr.obj
+ 0001:00000ff8       ??_C@_1EC@PDDNOLEO@?$AAK?$AAe?$AAr?$AAn?$AAe?$AAl?$AA?5?$AAP?$AAr?$AAo?$AAf?$AAi?$AAl?$AAe?$AAr?$AA?5?$AAm?$AAo?$AAd?$AAe?$AA?3?$AA?5?$AAB?$AAu?$AAf?$AAf?$AAe?$AAr?$AAe?$AAd?$AA?$AN?$AA?6@ 10001ff8     LayoutManager:profiler.obj
+ 0001:0000103c       ??_C@_1DM@LDFFLEGF@?$AAK?$AAe?$AAr?$AAn?$AAe?$AAl?$AA?5?$AAP?$AAr?$AAo?$AAf?$AAi?$AAl?$AAe?$AAr?$AA?5?$AAm?$AAo?$AAd?$AAe?$AA?3?$AA?5?$AAC?$AAe?$AAL?$AAo?$AAg?$AA?$AN?$AA?6?$AA?$AA@ 1000203c     LayoutManager:profiler.obj
+ 0001:00001078       ??_C@_1EG@OLMAKGJN@?$AAK?$AAe?$AAr?$AAn?$AAe?$AAl?$AA?5?$AAP?$AAr?$AAo?$AAf?$AAi?$AAl?$AAe?$AAr?$AA?5?$AAm?$AAo?$AAd?$AAe?$AA?3?$AA?5?$AAU?$AAn?$AAb?$AAu?$AAf?$AAf?$AAe?$AAr?$AAe?$AAd@ 10002078     LayoutManager:profiler.obj
+ 0001:000010d0       ??_C@_1GE@FBCIKAJP@?$AAK?$AAe?$AAy?$AAb?$AAo?$AAa?$AAr?$AAd?$AA?3?$AA?5?$AAB?$AAu?$AAf?$AAf?$AAe?$AAr?$AA?5?$AAn?$AAo?$AAt?$AA?5?$AAl?$AAa?$AAr?$AAg?$AAe?$AA?5?$AAe?$AAn?$AAo?$AAu?$AAg@ 100020d0     NumPadRmp:numpadrmp.obj
+ 0001:00001338       ??_C@_1FI@GDAMFMIA@?$AAI?$AAL?$AA_?$AA0?$AA0?$AA0?$AA0?$AA0?$AA4?$AA1?$AA1?$AA?3?$AA?5?$AAd?$AAa?$AAt?$AAa?$AA?5?$AAs?$AAt?$AAr?$AAu?$AAc?$AAt?$AAu?$AAr?$AAe?$AA?5?$AAs?$AAi?$AAz?$AAe@ 10002338     InputLang_0411:il_0411.obj
+ 0001:00001390       ??_C@_1BC@MIPAGAPN@?$AAP?$AAS?$AA?1?$AA2?$AA?5?$AAN?$AAO?$AAP?$AA?$AA@ 10002390     Nop_KbdCommon:nopkbd.obj
+ 0001:000013a4       ??_C@_1O@PLFHEEBL@?$AAM?$AAa?$AAt?$AAr?$AAi?$AAx?$AA?$AA@ 100023a4     S3C2440KBD:kbd.obj
+ 0001:000013b8       ??_C@_1IE@GPNJJMCA@?$AAC?$AA?3?$AA?2?$AAW?$AAI?$AAN?$AAC?$AAE?$AA6?$AA0?$AA0?$AA?2?$AAP?$AAL?$AAA?$AAT?$AAF?$AAO?$AAR?$AAM?$AA?2?$AAU?$AAP?$AA2?$AA4?$AA4?$AA0?$AA?2?$AAS?$AAr?$AAc?$AA?2@ 100023b8     S3C2440KBD:kbd.obj
+ 0001:00001440       ??_C@_1EK@MOBBCAKI@?$AAC?$AAo?$AAu?$AAl?$AAd?$AA?5?$AAn?$AAo?$AAt?$AA?5?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA?5?$AAp?$AAs?$AA2?$AA?5?$AAk?$AAe?$AAy?$AAb?$AAo?$AAa?$AAr@ 10002440     S3C2440KBD:kbd.obj
+ 0001:0000148c       ??_C@_1BA@JCIEHDJA@?$AAS?$AAS?$AAP?$AAB?$AAa?$AAs?$AAe?$AA?$AA@ 1000248c     S3C2440KBD:s3c2440kbd.obj
+ 0001:0000149c       ??_C@_1O@IEBMKJOO@?$AAI?$AAO?$AAB?$AAa?$AAs?$AAe?$AA?$AA@ 1000249c     S3C2440KBD:s3c2440kbd.obj
+ 0001:000014ac       ??_C@_1DC@EACIGNLE@?$AAH?$AAA?$AAR?$AAD?$AAW?$AAA?$AAR?$AAE?$AA?2?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AAM?$AAA?$AAP?$AA?2?$AAK?$AAE?$AAY?$AAB?$AAD?$AA?$AA@ 100024ac     S3C2440KBD:s3c2440kbd.obj
+ 0001:000014e0       ??_C@_1IA@JKNIKOOG@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAF?$AAa?$AAi?$AAl?$AAe?$AAd?$AA?5?$AAt?$AAo?$AA?5?$AAo?$AAb?$AAt?$AAa?$AAi?$AAn?$AA?5?$AAs?$AAy?$AAs?$AAi?$AAn?$AAt?$AAr?$AA?5@ 100024e0     S3C2440KBD:s3c2440kbd.obj
+ 0001:00001560       ??_C@_17DJGGJCGD@?$AAI?$AAr?$AAq?$AA?$AA@ 10002560     S3C2440KBD:s3c2440kbd.obj
+ 0001:00001568       ??_C@_1BI@BHLBGEOK@?$AAP?$AAr?$AAi?$AAo?$AAr?$AAi?$AAt?$AAy?$AA2?$AA5?$AA6?$AA?$AA@ 10002568     S3C2440KBD:s3c2440kbd.obj
+ 0001:00001764       Matrix                     10002764 f   S3C2440_Layout:s3c2440.obj
+ 0001:0000185c       PS2_AT_00010411            1000285c f   kbdjpn1_lib:kbdjpn1.obj
+ 0001:000021a0       KeybdDriverInitStates      100031a0 f   LayoutManager:laymgr.obj
+ 0001:000021c8       KeybdDriverGetInfo         100031c8 f   LayoutManager:laymgr.obj
+ 0001:00002368       KeybdDriverSetMode         10003368 f   LayoutManager:laymgr.obj
+ 0001:0000242c       KeybdDriverPowerHandler    1000342c f   LayoutManager:laymgr.obj
+ 0001:0000267c       ?KeybdEventThreadProc@@YAKPAX@Z 1000367c f   LayoutManager:laymgr.obj
+ 0001:00002930       ?KeybdEventCallback@@YAXIIH@Z 10003930 f   LayoutManager:laymgr.obj
+ 0001:000033fc       ?GetKeyboardProcAddr@@YAP6AHXZPAUHINSTANCE__@@PBG@Z 100043fc f   LayoutManager:laymgr.obj
+ 0001:00003e58       KeybdDriverInitializeEx    10004e58 f   LayoutManager:laymgr.obj
+ 0001:00004218       LayoutMgrGetKeyboardType   10005218 f   LayoutManager:laymgr.obj
+ 0001:0000429c       LayoutMgrGetKeyboardLayout 1000529c f   LayoutManager:laymgr.obj
+ 0001:000042e0       LayoutMgrGetKeyboardLayoutName 100052e0 f   LayoutManager:laymgr.obj
+ 0001:00004358       LayoutMgrGetKeyboardLayoutList 10005358 f   LayoutManager:laymgr.obj
+ 0001:000045a4       LayoutMgrLoadKeyboardLayout 100055a4 f   LayoutManager:laymgr.obj
+ 0001:000047ec       LayoutMgrActivateKeyboardLayout 100057ec f   LayoutManager:laymgr.obj
+ 0001:00004880       DllMain                    10005880 f   LayoutManager:laymgr.obj
+ 0001:00004898       KeybdDriverVKeyToUnicode   10005898 f   LayoutManager:laymgr.obj
+ 0001:00004bfc       KeybdDriverMapVirtualKey   10005bfc f   LayoutManager:laymgr.obj
+ 0001:00004dfc       ?DoProfilerKey@@YAHG@Z     10005dfc f   LayoutManager:profiler.obj
+ 0001:000051c8       ?NumPadRemapVKey@@YAIPBU_KEYBD_EVENT@@IPAU1@I@Z 100061c8 f   NumPadRmp:numpadrmp.obj
+ 0001:000052b0       IL_00000411                100062b0 f   InputLang_0411:il_0411.obj
+ 0001:000052f4       NKDbgPrintfW               100062f4 f   coredll:COREDLL.dll
+ 0001:00005304       EventModify                10006304 f   coredll:COREDLL.dll
+ 0001:00005314       EnterCriticalSection       10006314 f   coredll:COREDLL.dll
+ 0001:00005324       LeaveCriticalSection       10006324 f   coredll:COREDLL.dll
+ 0001:00005334       SetLastError               10006334 f   coredll:COREDLL.dll
+ 0001:00005344       DeviceIoControl            10006344 f   coredll:COREDLL.dll
+ 0001:00005354       keybd_event                10006354 f   coredll:COREDLL.dll
+ 0001:00005364       WaitForSingleObject        10006364 f   coredll:COREDLL.dll
+ 0001:00005374       GetTickCount               10006374 f   coredll:COREDLL.dll
+ 0001:00005384       SetThreadPriority          10006384 f   coredll:COREDLL.dll
+ 0001:00005394       WaitForMultipleObjects     10006394 f   coredll:COREDLL.dll
+ 0001:000053a4       StopDeviceNotifications    100063a4 f   coredll:COREDLL.dll
+ 0001:000053b4       CloseHandle                100063b4 f   coredll:COREDLL.dll
+ 0001:000053c4       CreateFileW                100063c4 f   coredll:COREDLL.dll
+ 0001:000053d4       ReadMsgQueue               100063d4 f   coredll:COREDLL.dll
+ 0001:000053e4       RequestDeviceNotifications 100063e4 f   coredll:COREDLL.dll
+ 0001:000053f4       GetLastError               100063f4 f   coredll:COREDLL.dll
+ 0001:00005404       CreateMsgQueue             10006404 f   coredll:COREDLL.dll
+ 0001:00005414       RegOpenKeyExW              10006414 f   coredll:COREDLL.dll
+ 0001:00005424       RegCloseKey                10006424 f   coredll:COREDLL.dll
+ 0001:00005434       RegQueryValueExW           10006434 f   coredll:COREDLL.dll
+ 0001:00005444       StringCchCopyW             10006444 f   coredll:COREDLL.dll
+ 0001:00005454       GetProcAddressW            10006454 f   coredll:COREDLL.dll
+ 0001:00005464       FreeLibrary                10006464 f   coredll:COREDLL.dll
+ 0001:00005474       LoadLibraryW               10006474 f   coredll:COREDLL.dll
+ 0001:00005484       RegEnumValueW              10006484 f   coredll:COREDLL.dll
+ 0001:00005494       LocalFree                  10006494 f   coredll:COREDLL.dll
+ 0001:000054a4       LocalAlloc                 100064a4 f   coredll:COREDLL.dll
+ 0001:000054b4       DeleteCriticalSection      100064b4 f   coredll:COREDLL.dll
+ 0001:000054c4       CreateThread               100064c4 f   coredll:COREDLL.dll
+ 0001:000054d4       CreateEventW               100064d4 f   coredll:COREDLL.dll
+ 0001:000054e4       InitializeCriticalSection  100064e4 f   coredll:COREDLL.dll
+ 0001:000054f4       CeSafeCopyMemory           100064f4 f   coredll:COREDLL.dll
+ 0001:00005504       RegDeleteKeyW              10006504 f   coredll:COREDLL.dll
+ 0001:00005514       RegSetValueExW             10006514 f   coredll:COREDLL.dll
+ 0001:00005524       RegCreateKeyExW            10006524 f   coredll:COREDLL.dll
+ 0001:00005534       StringCchLengthW           10006534 f   coredll:COREDLL.dll
+ 0001:00005544       DisableThreadLibraryCalls  10006544 f   coredll:COREDLL.dll
+ 0001:00005554       ProfileStart               10006554 f   coredll:COREDLL.dll
+ 0001:00005564       ProfileStop                10006564 f   coredll:COREDLL.dll
+ 0001:00005574       GetAsyncKeyState           10006574 f   coredll:COREDLL.dll
+ 0001:00005584       IsAPIReady                 10006584 f   coredll:COREDLL.dll
+ 0001:00005594       __GSHandlerCheckCommon     10006594 f   corelib0:gshandler.obj
+ 0001:000055d0       __GSHandlerCheck           100065d0 f   corelib0:gshandler.obj
+ 0001:000055f4       __security_check_cookie    100065f4 f   corelib0:armsecgs.obj
+ 0001:00005608       __gsfailure                10006608 f   corelib0:armsecgs.obj
+ 0001:0000564c       __GSHandlerCheck_SEH       1000664c f   corelib0:gshandlerseh.obj
+ 0001:0000569c       memcpy                     1000669c f   corelib1:COREDLL.dll
+ 0001:000056ac       wcsrchr                    100066ac f   corelib1:COREDLL.dll
+ 0001:000056bc       wcsstr                     100066bc f   corelib1:COREDLL.dll
+ 0001:000056cc       memset                     100066cc f   corelib1:COREDLL.dll
+ 0001:000056dc       __C_specific_handler       100066dc f   corelib1:COREDLL.dll
+ 0001:000056ec       _snwprintf                 100066ec f   corelib1:COREDLL.dll
+ 0001:000056fc       wcstoul                    100066fc f   corelib1:COREDLL.dll
+ 0001:0000570c       wcscpy                     1000670c f   corelib1:COREDLL.dll
+ 0001:0000571c       _wcsicmp                   1000671c f   corelib1:COREDLL.dll
+ 0001:0000572c       _wcslwr                    1000672c f   corelib1:COREDLL.dll
+ 0001:0000573c       wcsncat                    1000673c f   corelib1:COREDLL.dll
+ 0001:0000574c       wcsncpy                    1000674c f   corelib1:COREDLL.dll
+ 0001:0000575c       wcsncmp                    1000675c f   corelib1:COREDLL.dll
+ 0001:0000576c       towlower                   1000676c f   corelib1:COREDLL.dll
+ 0001:0000577c       __report_gsfailure         1000677c f   corelib1:COREDLL.dll
+ 0001:0000578c       ?PS2_NOP_Entry@@YAHIP6AXIIH@ZPAPAUtagKEYBD_PDD@@@Z 1000678c f   Nop_KbdCommon:nopkbd.obj
+ 0001:000057a0       ?ReadRegDWORD@@YAXPBG0PAK@Z 100067a0 f   S3C2440KBD:kbd.obj
+ 0001:00005870       ?Matrix_Entry@@YAHIP6AXIIH@ZPAPAUtagKEYBD_PDD@@@Z 10006870 f   S3C2440KBD:kbd.obj
+ 0001:00005928       ?putcToKBCTL@@YAHE@Z       10006928 f   S3C2440KBD:s3c2440kbd.obj
+ 0001:00005980       ?getsFromKBCTL@@YAXPAEH@Z  10006980 f   S3C2440KBD:s3c2440kbd.obj
+ 0001:00005a24       ?putsToKBCTL@@YAXPAEH@Z    10006a24 f   S3C2440KBD:s3c2440kbd.obj
+ 0001:00005ac0       ?KeybdDriverInitializeAddresses@@YAHXZ 10006ac0 f   S3C2440KBD:s3c2440kbd.obj
+ 0001:00005c44       ?KeybdPdd_ToggleKeyNotification@@YAXI@Z 10006c44 f   S3C2440KBD:s3c2440kbd.obj
+ 0001:00005c48       ?IsrThreadProc@Ps2Keybd@@QAAHXZ 10006c48 f   S3C2440KBD:s3c2440kbd.obj
+ 0001:00005d84       ?Ps2KeybdIsrThread@@YAKPAVPs2Keybd@@@Z 10006d84 f   S3C2440KBD:s3c2440kbd.obj
+ 0001:00005d98       ?IsrThreadStart@Ps2Keybd@@QAAHXZ 10006d98 f   S3C2440KBD:s3c2440kbd.obj
+ 0001:00005dd8       ?Initialize@Ps2Keybd@@QAAHXZ 10006dd8 f   S3C2440KBD:s3c2440kbd.obj
+ 0001:00005de8       ?KeybdPowerOn@Ps2Keybd@@QAAHXZ 10006de8 f   S3C2440KBD:s3c2440kbd.obj
+ 0001:00005f88       ?KeybdPdd_PowerHandler@@YAXH@Z 10006f88 f   S3C2440KBD:s3c2440kbd.obj
+ 0001:00005fa8       ?KeybdIstLoop@@YAHPAUtagKEYBD_IST@@@Z 10006fa8 f   KeybdIst:keybdist.obj
+ 0001:00006024       VirtualFree                10007024 f   coredll:COREDLL.dll
+ 0001:00006034       VirtualCopy                10007034 f   coredll:COREDLL.dll
+ 0001:00006044       VirtualAlloc               10007044 f   coredll:COREDLL.dll
+ 0001:00006054       CeSetThreadPriority        10007054 f   coredll:COREDLL.dll
+ 0001:00006064       InterruptInitialize        10007064 f   coredll:COREDLL.dll
+ 0001:00006074       KernelIoControl            10007074 f   coredll:COREDLL.dll
+ 0001:00006084       InterruptDone              10007084 f   coredll:COREDLL.dll
+ 0001:00006094       ??3@YAXPAX@Z               10007094 f   corelib1:COREDLL.dll
+ 0001:000060a4       ??2@YAPAXI@Z               100070a4 f   corelib1:COREDLL.dll
+ 0001:00006170       __IMPORT_DESCRIPTOR_COREDLL 10007170     coredll:COREDLL.dll
+ 0001:00006184       __NULL_IMPORT_DESCRIPTOR   10007184     coredll:COREDLL.dll
+ 0002:00000000       __imp_NKDbgPrintfW         10008000     coredll:COREDLL.dll
+ 0002:00000004       __imp_EventModify          10008004     coredll:COREDLL.dll
+ 0002:00000008       __imp_EnterCriticalSection 10008008     coredll:COREDLL.dll
+ 0002:0000000c       __imp_LeaveCriticalSection 1000800c     coredll:COREDLL.dll
+ 0002:00000010       __imp_SetLastError         10008010     coredll:COREDLL.dll
+ 0002:00000014       __imp_DeviceIoControl      10008014     coredll:COREDLL.dll
+ 0002:00000018       __imp_keybd_event          10008018     coredll:COREDLL.dll
+ 0002:0000001c       __imp_WaitForSingleObject  1000801c     coredll:COREDLL.dll
+ 0002:00000020       __imp_GetTickCount         10008020     coredll:COREDLL.dll
+ 0002:00000024       __imp_SetThreadPriority    10008024     coredll:COREDLL.dll
+ 0002:00000028       __imp_WaitForMultipleObjects 10008028     coredll:COREDLL.dll
+ 0002:0000002c       __imp_StopDeviceNotifications 1000802c     coredll:COREDLL.dll
+ 0002:00000030       __imp_CloseHandle          10008030     coredll:COREDLL.dll
+ 0002:00000034       __imp_CreateFileW          10008034     coredll:COREDLL.dll
+ 0002:00000038       __imp_ReadMsgQueue         10008038     coredll:COREDLL.dll
+ 0002:0000003c       __imp_RequestDeviceNotifications 1000803c     coredll:COREDLL.dll
+ 0002:00000040       __imp_GetLastError         10008040     coredll:COREDLL.dll
+ 0002:00000044       __imp_CreateMsgQueue       10008044     coredll:COREDLL.dll
+ 0002:00000048       __imp_RegOpenKeyExW        10008048     coredll:COREDLL.dll
+ 0002:0000004c       __imp_RegCloseKey          1000804c     coredll:COREDLL.dll
+ 0002:00000050       __imp_RegQueryValueExW     10008050     coredll:COREDLL.dll
+ 0002:00000054       __imp_StringCchCopyW       10008054     coredll:COREDLL.dll
+ 0002:00000058       __imp_GetProcAddressW      10008058     coredll:COREDLL.dll
+ 0002:0000005c       __imp_FreeLibrary          1000805c     coredll:COREDLL.dll
+ 0002:00000060       __imp_LoadLibraryW         10008060     coredll:COREDLL.dll
+ 0002:00000064       __imp_RegEnumValueW        10008064     coredll:COREDLL.dll
+ 0002:00000068       __imp_LocalFree            10008068     coredll:COREDLL.dll
+ 0002:0000006c       __imp_LocalAlloc           1000806c     coredll:COREDLL.dll
+ 0002:00000070       __imp_DeleteCriticalSection 10008070     coredll:COREDLL.dll
+ 0002:00000074       __imp_CreateThread         10008074     coredll:COREDLL.dll
+ 0002:00000078       __imp_CreateEventW         10008078     coredll:COREDLL.dll
+ 0002:0000007c       __imp_InitializeCriticalSection 1000807c     coredll:COREDLL.dll
+ 0002:00000080       __imp_CeSafeCopyMemory     10008080     coredll:COREDLL.dll
+ 0002:00000084       __imp_RegDeleteKeyW        10008084     coredll:COREDLL.dll
+ 0002:00000088       __imp_RegSetValueExW       10008088     coredll:COREDLL.dll
+ 0002:0000008c       __imp_RegCreateKeyExW      1000808c     coredll:COREDLL.dll
+ 0002:00000090       __imp_StringCchLengthW     10008090     coredll:COREDLL.dll
+ 0002:00000094       __imp_DisableThreadLibraryCalls 10008094     coredll:COREDLL.dll
+ 0002:00000098       __imp_ProfileStart         10008098     coredll:COREDLL.dll
+ 0002:0000009c       __imp_ProfileStop          1000809c     coredll:COREDLL.dll
+ 0002:000000a0       __imp_GetAsyncKeyState     100080a0     coredll:COREDLL.dll
+ 0002:000000a4       __imp_IsAPIReady           100080a4     coredll:COREDLL.dll
+ 0002:000000a8       __imp_memcpy               100080a8     corelib1:COREDLL.dll
+ 0002:000000ac       __imp_wcsrchr              100080ac     corelib1:COREDLL.dll
+ 0002:000000b0       __imp_wcsstr               100080b0     corelib1:COREDLL.dll
+ 0002:000000b4       __imp_memset               100080b4     corelib1:COREDLL.dll
+ 0002:000000b8       __imp___C_specific_handler 100080b8     corelib1:COREDLL.dll
+ 0002:000000bc       __imp___rt_udiv            100080bc     corelib1:COREDLL.dll
+ 0002:000000c0       __imp__snwprintf           100080c0     corelib1:COREDLL.dll
+ 0002:000000c4       __imp_wcstoul              100080c4     corelib1:COREDLL.dll
+ 0002:000000c8       __imp_wcscpy               100080c8     corelib1:COREDLL.dll
+ 0002:000000cc       __imp__wcsicmp             100080cc     corelib1:COREDLL.dll
+ 0002:000000d0       __imp__wcslwr              100080d0     corelib1:COREDLL.dll
+ 0002:000000d4       __imp_wcsncat              100080d4     corelib1:COREDLL.dll
+ 0002:000000d8       __imp_wcsncpy              100080d8     corelib1:COREDLL.dll
+ 0002:000000dc       __imp_wcsncmp              100080dc     corelib1:COREDLL.dll
+ 0002:000000e0       __imp_towlower             100080e0     corelib1:COREDLL.dll
+ 0002:000000e4       __imp___report_gsfailure   100080e4     corelib1:COREDLL.dll
+ 0002:000000e8       __imp_VirtualFree          100080e8     coredll:COREDLL.dll
+ 0002:000000ec       __imp_VirtualCopy          100080ec     coredll:COREDLL.dll
+ 0002:000000f0       __imp_VirtualAlloc         100080f0     coredll:COREDLL.dll
+ 0002:000000f4       __imp_CeSetThreadPriority  100080f4     coredll:COREDLL.dll
+ 0002:000000f8       __imp_InterruptInitialize  100080f8     coredll:COREDLL.dll
+ 0002:000000fc       __imp_KernelIoControl      100080fc     coredll:COREDLL.dll
+ 0002:00000100       __imp_InterruptDone        10008100     coredll:COREDLL.dll
+ 0002:00000104       __imp_??3@YAXPAX@Z         10008104     corelib1:COREDLL.dll
+ 0002:00000108       __imp_??2@YAPAXI@Z         10008108     corelib1:COREDLL.dll
+ 0002:0000010c       \177COREDLL_NULL_THUNK_DATA 1000810c     coredll:COREDLL.dll
+ 0002:00000110       ?ScanCodeToVKeyTable@@3PAEA 10008110     S3C2440_Layout:s3c2440.obj
+ 0002:000006ec       __security_cookie          100086ec     corelib0:seccinit.obj
+ 0002:000006f0       __security_cookie_complement 100086f0     corelib0:seccinit.obj
+ 0002:000006f4       ?g_rgpfnPddEntries@@3PAP6AHIP6AXIIH@ZPAPAUtagKEYBD_PDD@@@ZA 100086f4     PddList:pddlist.obj
+ 0002:00000720       ?g_dwSysIntr_Keybd@@3KA    10008720     S3C2440KBD:s3c2440kbd.obj
+ 0002:00000740       ?g_csEventCallback@@3UCRITICAL_SECTION@@A 10008740     LayoutManager:laymgr.obj
+ 0002:00000aec       ?v_uiPddId@@3IA            10008aec     S3C2440KBD:kbd.obj
+ 0002:00000af0       ?v_pfnKeybdEvent@@3P6AXIIH@ZA 10008af0     S3C2440KBD:kbd.obj
+ 0002:00000af8       ?v_pp2k@@3PAVPs2Keybd@@A   10008af8     S3C2440KBD:s3c2440kbd.obj
+ 0002:00000afc       ?v_pIOPregs@@3PCUS3C2440A_IOPORT_REG@@C 10008afc     S3C2440KBD:s3c2440kbd.obj
+ 0002:00000b00       ?v_pSPIregs@@3PCUS3C2440A_SPI_REG@@C 10008b00     S3C2440KBD:s3c2440kbd.obj
+
+ entry point at        0001:00004880
+
+ Static symbols
+
+ 0001:000015ac       ?MatrixUsRemapVKey@@YAIPBU_KEYBD_EVENT@@IPAU1@I@Z 100025ac f   S3C2440_Layout:s3c2440.obj
+ 0001:000017a8       ?ATJpn1RemapVKey@@YAIPBU_KEYBD_EVENT@@IPAU1@I@Z 100027a8 f   kbdjpn1_lib:kbdjpn1.obj
+ 0001:000018a0       ?ValidateInputLanguage@@YAHPBU_INPUT_LANGUAGE@@@Z 100028a0 f   LayoutManager:laymgr.obj
+ 0001:0000196c       ?ScanCodeToVKey@@YAHIPAPAUScanCodeToVKeyData@@IPAI@Z 1000296c f   LayoutManager:laymgr.obj
+ 0001:000019f8       ?WriteToCharBuffer@@YAXGIPAI0@Z 100029f8 f   LayoutManager:laymgr.obj
+ 0001:00001a58       ?ProcessDeadKeys@@YAIPAGPBU_DEADKEY@@GPAIII@Z 10002a58 f   LayoutManager:laymgr.obj
+ 0001:00001b0c       ?ProcessLigature@@YAIPAUtagINPUT_LANGUAGE_INFO@@IIGPAII@Z 10002b0c f   LayoutManager:laymgr.obj
+ 0001:00001c7c       ?GetCharacters@@YAIPAUtagINPUT_LANGUAGE_INFO@@PBU_VK_TO_WCHAR_TABLE@@PBU_VK_TO_WCHARS1@@GIPAII@Z 10002c7c f   LayoutManager:laymgr.obj
+ 0001:00001e10       ?VKeyToUnicode@@YAIPAUtagINPUT_LANGUAGE_INFO@@IIPAII@Z 10002e10 f   LayoutManager:laymgr.obj
+ 0001:00001fb0       ?AltNumKeyEvent@@YAHIIPAI0@Z 10002fb0 f   LayoutManager:laymgr.obj
+ 0001:00002304       ?BroadcastToKeyboards@@YAXKPAXK@Z 10003304 f   LayoutManager:laymgr.obj
+ 0001:000024b0       ?CallDLRemapFn@@YAIP6AIPBU_KEYBD_EVENT@@IPAU1@I@Z0I1I@Z 100034b0 f   LayoutManager:laymgr.obj
+ 0001:00002524       ?SendRemappedEvent@@YAXIIIHPAUtagDEVICE_LAYOUT_INFO@@@Z 10003524 f   LayoutManager:laymgr.obj
+ 0001:000029ac       ?KbdNotificationThread@@YAKPAX@Z 100039ac f   LayoutManager:laymgr.obj
+ 0001:00002d78       ?GetPreloadInputMethodKey@@YAHIPAPAUHKEY__@@@Z 10003d78 f   LayoutManager:laymgr.obj
+ 0001:00002e44       ?GetPreloadInputMethodName@@YAHIPAG@Z 10003e44 f   LayoutManager:laymgr.obj
+ 0001:00002ed8       ?GetInputMethodInfo@@YAHPBGPAUtagINPUT_LANGUAGE_INFO@@@Z 10003ed8 f   LayoutManager:laymgr.obj
+ 0001:00003030       ?GetDefaultInputMethodName@@YAHPAG@Z 10004030 f   LayoutManager:laymgr.obj
+ 0001:000031dc       ?GenerateModifierToShiftTable@@YAHPAUtagINPUT_LANGUAGE_INFO@@@Z 100041dc f   LayoutManager:laymgr.obj
+ 0001:000032b4       ?GetImeKeyboardLayout@@YAPAUHKL__@@PAU1@@Z 100042b4 f   LayoutManager:laymgr.obj
+ 0001:00003480       ?SetInputLanguage@@YAHPAUHKL__@@PAPAU1@@Z 10004480 f   LayoutManager:laymgr.obj
+ 0001:00003758       ?DeviceLayoutMatchesPDD@@YAHPBG00GPAGK@Z 10004758 f   LayoutManager:laymgr.obj
+ 0001:0000394c       ?SelectDeviceLayout@@YAHPAGPAUtagKEYBD_PDD@@0K0K@Z 1000494c f   LayoutManager:laymgr.obj
+ 0001:00003b68       ?SetDeviceLayout@@YAHPAUHKL__@@I@Z 10004b68 f   LayoutManager:laymgr.obj
+ 0001:00004464       ?IsLayoutLoaded@@YAHPBG@Z  10005464 f   LayoutManager:laymgr.obj
+ 0001:00004ed0       ?NumPadRemapVKeyDown@@YAIIIIPAU_KEYBD_EVENT@@@Z 10005ed0 f   NumPadRmp:numpadrmp.obj
+ 0001:00005044       ?NumPadRemapVKeyUp@@YAIIIIPAU_KEYBD_EVENT@@@Z 10006044 f   NumPadRmp:numpadrmp.obj
+ 0001:00005824       ?Matrix_PowerHandler@@YAXIH@Z 10006824 f   S3C2440KBD:kbd.obj
+ 0001:00005838       ?Matrix_ToggleLights@@YAXII@Z 10006838 f   S3C2440KBD:kbd.obj
+ 0001:00005bdc       ?KeybdPdd_GetEventEx2@@YAIIQAIQAH@Z 10006bdc f   S3C2440KBD:s3c2440kbd.obj

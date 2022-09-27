@@ -1,0 +1,4 @@
+BUILD: [Thrd:Sequence:Type  ] Message
+BUILD: [01:0000000038:WARNN ] C:\WINCE600\PLATFORM\UP2440\src\drivers\wavedev\.\hwctxt.cpp(696) : warning C4101: 'flags' : unreferenced local variable
+BUILD: [01:0000000042:WARNN ] C:\WINCE600\PLATFORM\UP2440\src\drivers\wavedev\.\i2s.cpp(229) : warning C4101: 'dwBytesReturned' : unreferenced local variable
+BUILD: [01:0000000043:WARNN ] C:\WINCE600\PLATFORM\UP2440\src\drivers\wavedev\.\i2s.cpp(228) : warning C4101: 'procInfo' : unreferenced local variable

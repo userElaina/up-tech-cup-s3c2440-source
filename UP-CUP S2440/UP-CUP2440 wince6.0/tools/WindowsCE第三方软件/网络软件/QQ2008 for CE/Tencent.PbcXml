@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatalogFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" RequiredVersion="6.0" xmlns="urn:Microsoft.PlatformBuilder/Catalog">
+  <FileInformation Id="FileInformation:DefaultCatalogFile">
+    <Title>Default Catalog File</Title>
+    <Vendor>Default Vendor</Vendor>
+    <OSVersion>7.00</OSVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </FileInformation>
+  <Item Id="Item:Tencent:SYSGEN_TENCENT_QQ">
+    <Title>Tencent Mobile QQ</Title>
+    <Description>Tencent Mobile QQ Instant Messenger</Description>
+    <SysgenVariable>SYSGEN_TENCENT_MobileQQ</SysgenVariable>
+    <Variable>SYSGEN_ATL</Variable>
+    <Variable>SYSGEN_CELLCORE</Variable>
+    <Variable>SYSGEN_CELLCORE_SMS</Variable>
+    <Variable>SYSGEN_CELLCORE_WAP</Variable>
+    <Variable>SYSGEN_TCPIP</Variable>
+    <Variable>SYSGEN_TAPI</Variable>
+    <Variable>SYSGEN_IMAGING</Variable>
+    <Variable>SYSGEN_IMAGING_PNG_DECODE</Variable>
+    <SupportedCpuId>Cpu:ARMV4I</SupportedCpuId>
+    <Project>%_WINCEROOT%\3rdParty\Tencent\Tencent.pbpxml</Project>
+    <Location>\Tencent</Location>
+  </Item>
+</CatalogFile>

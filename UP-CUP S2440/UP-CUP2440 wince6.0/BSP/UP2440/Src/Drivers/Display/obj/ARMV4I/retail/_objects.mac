@@ -1,0 +1,8 @@
+OBJECTS=\
+    obj\ARMV4I\retail\s3c2440disp.obj\
+    obj\ARMV4I\retail\halcaps.obj\
+    obj\ARMV4I\retail\haldd.obj\
+    obj\ARMV4I\retail\halsurf.obj\
+    obj\ARMV4I\retail\halpalette.obj\
+    obj\ARMV4I\retail\surf.obj
+

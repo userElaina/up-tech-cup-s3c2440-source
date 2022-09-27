@@ -1,0 +1,68 @@
+ GPIODriver
+
+ Timestamp is 4f87b39b (Fri Apr 13 13:03:23 2012)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 000003a2H .rdata                  CODE
+ 0001:000003a4 00000027H .rdata$debug            CODE
+ 0001:000003cc 0000037cH .text                   CODE
+ 0001:00000748 00000014H .idata$2                CODE
+ 0001:0000075c 00000014H .idata$3                CODE
+ 0001:00000770 00000014H .idata$4                CODE
+ 0001:00000784 0000000cH .idata$6                CODE
+ 0001:00000790 00000100H .edata                  CODE
+ 0002:00000000 00000014H .idata$5                DATA
+ 0002:00000014 00000008H .bss                    DATA
+ 0003:00000000 00000060H .pdata                  DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0001:00000020       ??_C@_1EI@ENODHOHH@?$AAF?$AAo?$AAr?$AA?5?$AAI?$AAO?$AAP?$AAr?$AAe?$AAg?$AAs?$AA?3?$AA?5?$AAV?$AAi?$AAr?$AAt?$AAu?$AAa?$AAl?$AAC?$AAo?$AAp?$AAy?$AA?5?$AAf?$AAa?$AAi?$AAG?$AAP?$AAI?$AAO@ 10001020     GPIODriver.obj
+ 0001:00000068       ??_C@_1II@BGKNHNJA@?$AAC?$AA?3?$AA?2?$AAW?$AAI?$AAN?$AAC?$AAE?$AA6?$AA0?$AA0?$AA?2?$AAP?$AAL?$AAA?$AAT?$AAF?$AAO?$AAR?$AAM?$AA?2?$AAU?$AAP?$AA2?$AA4?$AA4?$AA0?$AA?2?$AAS?$AAr?$AAc?$AA?2@ 10001068     GPIODriver.obj
+ 0001:000000f0       ??_C@_1CI@OHCJFJPM@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AA?$CF?$AAs?$AA?5?$AAl?$AAi?$AAn?$AAe?$AA?5?$AA?$CF?$AAd?$AA?3?$AA?5?$AA?$AA@ 100010f0     GPIODriver.obj
+ 0001:00000118       ??_C@_1EM@KJHIGCFM@?$AAF?$AAo?$AAr?$AA?5?$AAI?$AAO?$AAP?$AAr?$AAe?$AAg?$AAs?$AA?5?$AA?3?$AA?5?$AAV?$AAi?$AAr?$AAt?$AAu?$AAa?$AAl?$AAA?$AAl?$AAl?$AAo?$AAc?$AA?5?$AAf?$AAa?$AAi?$AAG?$AAP@ 10001118     GPIODriver.obj
+ 0001:00000164       ??_C@_1DG@EKNDKKEG@?$AAG?$AAP?$AAI?$AAO?$AA_?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?3?$AA?5?$AAG?$AAI?$AAO?$AA_?$AAD?$AAe?$AAi?$AAn?$AAi?$AAt?$AA?$AN?$AA?6?$AA?$AA@ 10001164     GPIODriver.obj
+ 0001:0000019c       ??_C@_1BA@JDGOAOFP@?$AAO?$AAK?$AA?5?$AA?$CB?$AA?$CB?$AA?$CB?$AA?6?$AA?$AA@ 1000119c     GPIODriver.obj
+ 0001:000001ac       ??_C@_1CI@GKMBGCKK@?$AAG?$AAP?$AAI?$AAO?$AA?5?$AAI?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA?5?$AA?4?$AA?4?$AA?4?$AA?$AA@ 100011ac     GPIODriver.obj
+ 0001:000001d8       ??_C@_1EC@GHHJCEIO@?$AAG?$AAP?$AAI?$AAO?$AA_?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?3?$AAI?$AAo?$AAc?$AAt?$AAl?$AA?5?$AAc?$AAo?$AAd?$AAe?$AA?5?$AA?$DN?$AA?5?$AA0?$AAx?$AA?$CF?$AAx?$AA?$AN?$AA?6@ 100011d8     GPIODriver.obj
+ 0001:0000021c       ??_C@_1DE@JPCOILFO@?$AAG?$AAP?$AAI?$AAO?$AA_?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?3?$AA?5?$AAG?$AAP?$AAI?$AAO?$AA_?$AAO?$AAp?$AAe?$AAn?$AA?$AN?$AA?6?$AA?$AA@ 1000121c     GPIODriver.obj
+ 0001:00000250       ??_C@_1DG@PMOGECDO@?$AAG?$AAP?$AAI?$AAO?$AA_?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?3?$AA?5?$AAG?$AAP?$AAI?$AAO?$AA_?$AAC?$AAl?$AAo?$AAs?$AAe?$AA?$AN?$AA?6?$AA?$AA@ 10001250     GPIODriver.obj
+ 0001:00000288       ??_C@_1DO@LNCIMBD@?$AAG?$AAP?$AAI?$AAO?$AA_?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?3?$AA?5?$AAG?$AAP?$AAI?$AAO?$AA_?$AAP?$AAo?$AAw?$AAe?$AAr?$AAD?$AAo?$AAw?$AAn?$AA?$AN?$AA?6?$AA?$AA@ 10001288     GPIODriver.obj
+ 0001:000002c8       ??_C@_1DK@ENJIGNMK@?$AAG?$AAP?$AAI?$AAO?$AA_?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?3?$AA?5?$AAG?$AAP?$AAI?$AAO?$AA_?$AAP?$AAo?$AAw?$AAe?$AAr?$AAU?$AAp?$AA?$AN?$AA?6?$AA?$AA@ 100012c8     GPIODriver.obj
+ 0001:00000304       ??_C@_1DE@ECPGOBDH@?$AAG?$AAP?$AAI?$AAO?$AA_?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?3?$AA?5?$AAG?$AAP?$AAI?$AAO?$AA_?$AAR?$AAe?$AAa?$AAd?$AA?$AN?$AA?6?$AA?$AA@ 10001304     GPIODriver.obj
+ 0001:00000338       ??_C@_1DE@PDCLCJH@?$AAG?$AAP?$AAI?$AAO?$AA_?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?3?$AA?5?$AAG?$AAP?$AAI?$AAO?$AA_?$AAS?$AAe?$AAe?$AAk?$AA?$AN?$AA?6?$AA?$AA@ 10001338     GPIODriver.obj
+ 0001:0000036c       ??_C@_1DG@GODIOHFC@?$AAG?$AAP?$AAI?$AAO?$AA_?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?3?$AA?5?$AAG?$AAP?$AAI?$AAO?$AA_?$AAW?$AAr?$AAi?$AAt?$AAe?$AA?$AN?$AA?6?$AA?$AA@ 1000136c     GPIODriver.obj
+ 0001:000003cc       ?InitializeAddresses@@YA_NXZ 100013cc f   GPIODriver.obj
+ 0001:0000048c       ?DllEntry@@YAHPAXK0@Z      1000148c f   GPIODriver.obj
+ 0001:00000494       ?GIO_Deinit@@YAHK@Z        10001494 f   GPIODriver.obj
+ 0001:000004b0       ?GIO_Init@@YAKK@Z          100014b0 f   GPIODriver.obj
+ 0001:00000538       ?GIO_IOControl@@YAHKKPAEK0KPAK@Z 10001538 f   GPIODriver.obj
+ 0001:0000061c       ?GIO_Open@@YAKKKK@Z        1000161c f   GPIODriver.obj
+ 0001:00000650       ?GIO_Close@@YAHK@Z         10001650 f   GPIODriver.obj
+ 0001:00000684       ?GIO_PowerDown@@YAXK@Z     10001684 f   GPIODriver.obj
+ 0001:0000069c       ?GIO_PowerUp@@YAXK@Z       1000169c f   GPIODriver.obj
+ 0001:000006b4       ?GIO_Read@@YAKKPAXK@Z      100016b4 f   GPIODriver.obj
+ 0001:000006d0       ?GIO_Seek@@YAKKJK@Z        100016d0 f   GPIODriver.obj
+ 0001:000006ec       ?GIO_Write@@YAKKPBXK@Z     100016ec f   GPIODriver.obj
+ 0001:00000708       VirtualFree                10001708 f   coredll:COREDLL.dll
+ 0001:00000718       VirtualCopy                10001718 f   coredll:COREDLL.dll
+ 0001:00000728       NKDbgPrintfW               10001728 f   coredll:COREDLL.dll
+ 0001:00000738       VirtualAlloc               10001738 f   coredll:COREDLL.dll
+ 0001:00000748       __IMPORT_DESCRIPTOR_COREDLL 10001748     coredll:COREDLL.dll
+ 0001:0000075c       __NULL_IMPORT_DESCRIPTOR   1000175c     coredll:COREDLL.dll
+ 0002:00000000       __imp_VirtualCopy          10002000     coredll:COREDLL.dll
+ 0002:00000004       __imp_NKDbgPrintfW         10002004     coredll:COREDLL.dll
+ 0002:00000008       __imp_VirtualAlloc         10002008     coredll:COREDLL.dll
+ 0002:0000000c       __imp_VirtualFree          1000200c     coredll:COREDLL.dll
+ 0002:00000010       \177COREDLL_NULL_THUNK_DATA 10002010     coredll:COREDLL.dll
+ 0002:00000014       ?mInitialized@@3HA         10002014     GPIODriver.obj
+ 0002:00000018       ?v_pIOPregs@@3PCUS3C2440A_IOPORT_REG@@C 10002018     GPIODriver.obj
+
+ entry point at        0000:00000000
+
+ Static symbols
+

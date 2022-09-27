@@ -1,0 +1,12 @@
+LIBRARY EINTDriver
+EXPORTS
+	INT_Close
+	INT_Deinit
+	INT_Init
+	INT_IOControl
+	INT_Open
+	INT_PowerDown
+	INT_PowerUp
+	INT_Read
+	INT_Seek
+	INT_Write

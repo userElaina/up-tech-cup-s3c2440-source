@@ -1,0 +1,43 @@
+# $Id$
+# Copyright (c) 2000-2005 Davicom Inc.  All rights reserved.
+# 
+# ++ Configurations
+# 
+# Step 1. Select target device class
+# 
+# -- Configurations
+# 
+# 
+# Builder enviroment
+# 
+
+!if "$(BSP_NODM9K)" == "1"
+SKIPBUILD=1
+!endif
+
+TARGETNAME=dm9000
+TARGETTYPE=DYNLINK
+RELEASETYPE=PLATFORM
+TARGETDEFNAME=$(TARGETNAME)
+DEFFILE=$(TARGETNAME).def
+WINCETARGETFILE0=$(_RELEASELIBDIR)\$(DEFFILE)
+DM9CE_TARGET=DM9000
+CDEFINES=$(CDEFINES) -DNDIS_MINIPORT_DRIVER -D$(DM9CE_TARGET) -DNDIS40_MINIPORT -D_WIN32_WCE=$(CEVERSION) -DUNDER_CE=$(CEVERSION) -D"UNICODE" -D"/TP"
+TARGETLIBS= \
+    	$(_PROJECTROOT)\cesysgen\sdk\lib\$(_CPUINDPATH)\coredll.lib \
+  	$(_PROJECTROOT)\cesysgen\oak\lib\$(_CPUINDPATH)\ceddk.lib   \
+  	$(_PROJECTROOT)\cesysgen\sdk\lib\$(_CPUINDPATH)\ntcompat.lib  \
+	$(_PROJECTROOT)\cesysgen\sdk\lib\$(_CPUINDPATH)\ndis.lib      \
+
+
+DLLENTRY=DllEntry
+
+SOURCES= \
+  wince.c \
+  common.cpp \
+  driver.cpp \
+  device.cpp \
+  dm9000.cpp \
+
+ARM_COMPILE_XSCALE=1
+EXCEPTION_EXTERN_C=THROW

@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tictac", "tictac.vcproj", "{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Pocket PC 2003 (ARMV4) = Debug|Pocket PC 2003 (ARMV4)
+		Debug|Smartphone 2003 (ARMV4) = Debug|Smartphone 2003 (ARMV4)
+		Debug|UP2440 SDK (ARMV4I) = Debug|UP2440 SDK (ARMV4I)
+		Release|Pocket PC 2003 (ARMV4) = Release|Pocket PC 2003 (ARMV4)
+		Release|Smartphone 2003 (ARMV4) = Release|Smartphone 2003 (ARMV4)
+		Release|UP2440 SDK (ARMV4I) = Release|UP2440 SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Debug|Pocket PC 2003 (ARMV4).ActiveCfg = Debug|Pocket PC 2003 (ARMV4)
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Debug|Pocket PC 2003 (ARMV4).Build.0 = Debug|Pocket PC 2003 (ARMV4)
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Debug|Pocket PC 2003 (ARMV4).Deploy.0 = Debug|Pocket PC 2003 (ARMV4)
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Debug|Smartphone 2003 (ARMV4).ActiveCfg = Debug|Smartphone 2003 (ARMV4)
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Debug|Smartphone 2003 (ARMV4).Build.0 = Debug|Smartphone 2003 (ARMV4)
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Debug|Smartphone 2003 (ARMV4).Deploy.0 = Debug|Smartphone 2003 (ARMV4)
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Debug|UP2440 SDK (ARMV4I).ActiveCfg = Debug|UP2440 SDK (ARMV4I)
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Debug|UP2440 SDK (ARMV4I).Build.0 = Debug|UP2440 SDK (ARMV4I)
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Debug|UP2440 SDK (ARMV4I).Deploy.0 = Debug|UP2440 SDK (ARMV4I)
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Release|Pocket PC 2003 (ARMV4).ActiveCfg = Release|Pocket PC 2003 (ARMV4)
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Release|Pocket PC 2003 (ARMV4).Build.0 = Release|Pocket PC 2003 (ARMV4)
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Release|Pocket PC 2003 (ARMV4).Deploy.0 = Release|Pocket PC 2003 (ARMV4)
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Release|Smartphone 2003 (ARMV4).ActiveCfg = Release|Smartphone 2003 (ARMV4)
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Release|Smartphone 2003 (ARMV4).Build.0 = Release|Smartphone 2003 (ARMV4)
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Release|Smartphone 2003 (ARMV4).Deploy.0 = Release|Smartphone 2003 (ARMV4)
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Release|UP2440 SDK (ARMV4I).ActiveCfg = Release|UP2440 SDK (ARMV4I)
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Release|UP2440 SDK (ARMV4I).Build.0 = Release|UP2440 SDK (ARMV4I)
+		{393D7D92-90DC-489C-8BF8-7FDD9B39C96E}.Release|UP2440 SDK (ARMV4I).Deploy.0 = Release|UP2440 SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

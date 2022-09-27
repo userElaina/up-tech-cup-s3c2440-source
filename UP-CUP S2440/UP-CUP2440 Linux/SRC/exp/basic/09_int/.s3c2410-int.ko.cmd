@@ -1,0 +1,1 @@
+cmd_/home/wendy/2440/basic/09_int/s3c2410-int.ko := arm-linux-ld -EL -r    -o /home/wendy/2440/basic/09_int/s3c2410-int.ko /home/wendy/2440/basic/09_int/s3c2410-int.o /home/wendy/2440/basic/09_int/s3c2410-int.mod.o

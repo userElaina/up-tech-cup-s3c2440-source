@@ -1,0 +1,4 @@
+bootpart_bar.lib			是支持进度条的库文件。
+bootpart.lib				是不支持进度条的库文件。
+
+默认使用的是不支持进度条的，如果需要进度条，请修改eboot/soures文件的37行，将“bootpart.lib”改为“bootpart_bar.lib”

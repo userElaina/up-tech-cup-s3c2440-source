@@ -1,0 +1,37 @@
+;
+; Copyright (c) Microsoft Corporation.  All rights reserved.
+;
+;
+; Use of this source code is subject to the terms of the Microsoft end-user
+; license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+; If you did not accept the terms of the EULA, you are not authorized to use
+; this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+; install media.
+;
+
+IF BSP_NOBATTERY !
+
+; HIVE BOOT SECTION
+
+[HKEY_LOCAL_MACHINE\System\Events]
+    "SYSTEM/BatteryAPIsReady"="Battery Interface APIs"
+
+; END HIVE BOOT SECTION
+
+; These registry entries load the battery driver.  The IClass value must match
+; the BATTERY_DRIVER_CLASS definition in battery.h -- this is how the system
+; knows which device is the battery driver.  Note that we are using 
+; DEVFLAGS_NAKEDENTRIES with this driver.  This tells the device manager
+; to instantiate the device with the prefix named in the registry but to look
+; for DLL entry points without the prefix.  For example, it will look for Init
+; instead of BAT_Init.  This allows the prefix to be changed in the registry (if
+; desired) without editing the driver code.
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\Battery]
+   "Prefix"="BAT"
+   "Dll"="battdrvr.dll"
+   "Flags"=dword:8                      ; DEVFLAGS_NAKEDENTRIES
+   "Order"=dword:0
+   "IClass"="{DD176277-CD34-4980-91EE-67DBEF3D8913}"
+
+ENDIF BSP_NOBATTERY !
+

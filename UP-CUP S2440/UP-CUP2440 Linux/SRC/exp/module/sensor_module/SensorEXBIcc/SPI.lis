@@ -1,0 +1,594 @@
+                        .module SPI.c
+                        .area data(ram, con, rel)
+ 0000           _CharacterTable::
+ 0000                   .blkb 2
+                        .area idata
+ 0000 C0F9              .byte 192,249
+                        .area data(ram, con, rel)
+ 0002                   .blkb 2
+                        .area idata
+ 0002 A4B0              .byte 164,176
+                        .area data(ram, con, rel)
+ 0004                   .blkb 2
+                        .area idata
+ 0004 9992              .byte 153,146
+                        .area data(ram, con, rel)
+ 0006                   .blkb 2
+                        .area idata
+ 0006 82F8              .byte 130,248
+                        .area data(ram, con, rel)
+ 0008                   .blkb 2
+                        .area idata
+ 0008 8090              .byte 128,144
+                        .area data(ram, con, rel)
+ 000A                   .dbfile C:\DOCUME~1\蔡颖鹏\桌面\SensorEXBIcc\SPI.c
+ 000A                   .dbsym e CharacterTable _CharacterTable A[10:10]c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile C:\DOCUME~1\蔡颖鹏\桌面\SensorEXBIcc\SPI.c
+ 0000                   .dbfunc e SPI_MasterInit _SPI_MasterInit fV
+                        .even
+ 0000           _SPI_MasterInit::
+ 0000                   .dbline -1
+ 0000                   .dbline 10
+ 0000           ; #include "Generic.h"
+ 0000           ; #include "math.h"
+ 0000           ; //字符表
+ 0000           ; unsigned char CharacterTable[10] =
+ 0000           ;       { 0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90 };
+ 0000           ; //0~9,若要显示小数点，则可表示为CharacterTable[i] & 0x7F
+ 0000           ; 
+ 0000           ; 
+ 0000           ; void SPI_MasterInit(void)
+ 0000           ; {
+ 0000                   .dbline 12
+ 0000           ; 
+ 0000           ;       SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0);
+ 0000 81E5              ldi R24,81
+ 0002 8DB9              out 0xd,R24
+ 0004                   .dbline 15
+ 0004           ;       //使能SPI 主机模式，设置时钟速率为fck/16
+ 0004           ;       
+ 0004           ;       SPSR = 0x00;
+ 0004 2224              clr R2
+ 0006 2EB8              out 0xe,R2
+ 0008                   .dbline -2
+ 0008           L1:
+ 0008                   .dbline 0 ; func end
+ 0008 0895              ret
+ 000A                   .dbend
+ 000A                   .dbfunc e SPI_MasterTransmitaByte _SPI_MasterTransmitaByte fV
+ 000A           ;          cData -> R16
+                        .even
+ 000A           _SPI_MasterTransmitaByte::
+ 000A                   .dbline -1
+ 000A                   .dbline 19
+ 000A           ; }
+ 000A           ; 
+ 000A           ; void SPI_MasterTransmitaByte(unsigned char cData)
+ 000A           ; {
+ 000A                   .dbline 21
+ 000A           ;       //启动数据传输
+ 000A           ;       SPDR = cData;
+ 000A 0FB9              out 0xf,R16
+ 000C           L3:
+ 000C                   .dbline 24
+ 000C           L4:
+ 000C                   .dbline 24
+ 000C           ; 
+ 000C           ;       //等待传输结束
+ 000C           ;       while(!(SPSR&(1<<SPIF)));
+ 000C 779B              sbis 0xe,7
+ 000E FECF              rjmp L3
+ 0010                   .dbline -2
+ 0010           L2:
+ 0010                   .dbline 0 ; func end
+ 0010 0895              ret
+ 0012                   .dbsym r cData 16 c
+ 0012                   .dbend
+ 0012                   .dbfunc e DisplayData _DisplayData fV
+ 0012           ;          dataL -> R22
+ 0012           ;          dataH -> R20
+ 0012           ;           data -> y+14
+                        .even
+ 0012           _DisplayData::
+ 0012 00D0              rcall push_arg4
+ 0014 00D0              rcall push_gset3
+ 0016 2897              sbiw R28,8
+ 0018                   .dbline -1
+ 0018                   .dbline 28
+ 0018           ; }
+ 0018           ; 
+ 0018           ; void DisplayData(float data)
+ 0018           ; {
+ 0018                   .dbline 31
+ 0018           ;       unsigned char dataH,dataL;
+ 0018           ;       
+ 0018           ;       data+=0.001;//特殊处理，防止浮点运算导致结果减小0.1
+ 0018 FE01              movw R30,R28
+ 001A 2684              ldd R2,z+14
+ 001C 3784              ldd R3,z+15
+ 001E 4088              ldd R4,z+16
+ 0020 5188              ldd R5,z+17
+ 0022 5A92              st -y,R5
+ 0024 4A92              st -y,R4
+ 0026 3A92              st -y,R3
+ 0028 2A92              st -y,R2
+ 002A 00E0              ldi R16,<L7
+ 002C 10E0              ldi R17,>L7
+ 002E 00D0              rcall lpm32
+ 0030 3A93              st -y,R19
+ 0032 2A93              st -y,R18
+ 0034 1A93              st -y,R17
+ 0036 0A93              st -y,R16
+ 0038 00D0              rcall add32f
+ 003A FE01              movw R30,R28
+ 003C 0687              std z+14,R16
+ 003E 1787              std z+15,R17
+ 0040 208B              std z+16,R18
+ 0042 318B              std z+17,R19
+ 0044                   .dbline 34
+ 0044           ;       
+ 0044           ;       //整数显示
+ 0044           ;       if((data>=10)&&(data<100))
+ 0044 FE01              movw R30,R28
+ 0046 2684              ldd R2,z+14
+ 0048 3784              ldd R3,z+15
+ 004A 4088              ldd R4,z+16
+ 004C 5188              ldd R5,z+17
+ 004E 5A92              st -y,R5
+ 0050 4A92              st -y,R4
+ 0052 3A92              st -y,R3
+ 0054 2A92              st -y,R2
+ 0056 00E0              ldi R16,<L10
+ 0058 10E0              ldi R17,>L10
+ 005A 00D0              rcall lpm32
+ 005C 3A93              st -y,R19
+ 005E 2A93              st -y,R18
+ 0060 1A93              st -y,R17
+ 0062 0A93              st -y,R16
+ 0064 00D0              rcall cmp32f
+ 0066 0CF4              brge X0
+ 0068 AFC0              rjmp L8
+ 006A           X0:
+ 006A FE01              movw R30,R28
+ 006C 2684              ldd R2,z+14
+ 006E 3784              ldd R3,z+15
+ 0070 4088              ldd R4,z+16
+ 0072 5188              ldd R5,z+17
+ 0074 5A92              st -y,R5
+ 0076 4A92              st -y,R4
+ 0078 3A92              st -y,R3
+ 007A 2A92              st -y,R2
+ 007C 00E0              ldi R16,<L11
+ 007E 10E0              ldi R17,>L11
+ 0080 00D0              rcall lpm32
+ 0082 3A93              st -y,R19
+ 0084 2A93              st -y,R18
+ 0086 1A93              st -y,R17
+ 0088 0A93              st -y,R16
+ 008A 00D0              rcall cmp32f
+ 008C 0CF0              brlt X1
+ 008E 9CC0              rjmp L8
+ 0090           X1:
+ 0090                   .dbline 35
+ 0090           ;       {
+ 0090                   .dbline 36
+ 0090           ;               dataH = (unsigned char)(data/10);
+ 0090 FE01              movw R30,R28
+ 0092 2684              ldd R2,z+14
+ 0094 3784              ldd R3,z+15
+ 0096 4088              ldd R4,z+16
+ 0098 5188              ldd R5,z+17
+ 009A 5A92              st -y,R5
+ 009C 4A92              st -y,R4
+ 009E 3A92              st -y,R3
+ 00A0 2A92              st -y,R2
+ 00A2 00E0              ldi R16,<L10
+ 00A4 10E0              ldi R17,>L10
+ 00A6 00D0              rcall lpm32
+ 00A8 3A93              st -y,R19
+ 00AA 2A93              st -y,R18
+ 00AC 1A93              st -y,R17
+ 00AE 0A93              st -y,R16
+ 00B0 00D0              rcall div32f
+ 00B2 FE01              movw R30,R28
+ 00B4 0083              std z+0,R16
+ 00B6 1183              std z+1,R17
+ 00B8 2283              std z+2,R18
+ 00BA 3383              std z+3,R19
+ 00BC FE01              movw R30,R28
+ 00BE 2080              ldd R2,z+0
+ 00C0 3180              ldd R3,z+1
+ 00C2 4280              ldd R4,z+2
+ 00C4 5380              ldd R5,z+3
+ 00C6 5A92              st -y,R5
+ 00C8 4A92              st -y,R4
+ 00CA 3A92              st -y,R3
+ 00CC 2A92              st -y,R2
+ 00CE 00E0              ldi R16,<L14
+ 00D0 10E0              ldi R17,>L14
+ 00D2 00D0              rcall lpm32
+ 00D4 3A93              st -y,R19
+ 00D6 2A93              st -y,R18
+ 00D8 1A93              st -y,R17
+ 00DA 0A93              st -y,R16
+ 00DC 00D0              rcall cmp32f
+ 00DE B4F0              brlt L12
+ 00E0 FE01              movw R30,R28
+ 00E2 2080              ldd R2,z+0
+ 00E4 3180              ldd R3,z+1
+ 00E6 4280              ldd R4,z+2
+ 00E8 5380              ldd R5,z+3
+ 00EA 5A92              st -y,R5
+ 00EC 4A92              st -y,R4
+ 00EE 3A92              st -y,R3
+ 00F0 2A92              st -y,R2
+ 00F2 00E0              ldi R16,<L14
+ 00F4 10E0              ldi R17,>L14
+ 00F6 00D0              rcall lpm32
+ 00F8 3A93              st -y,R19
+ 00FA 2A93              st -y,R18
+ 00FC 1A93              st -y,R17
+ 00FE 0A93              st -y,R16
+ 0100 00D0              rcall sub32f
+ 0102 00D0              rcall fp2int
+ 0104 A801              movw R20,R16
+ 0106 4050              subi R20,0  ; offset = 32768
+ 0108 5048              sbci R21,128
+ 010A 07C0              rjmp L13
+ 010C           L12:
+ 010C FE01              movw R30,R28
+ 010E 0081              ldd R16,z+0
+ 0110 1181              ldd R17,z+1
+ 0112 2281              ldd R18,z+2
+ 0114 3381              ldd R19,z+3
+ 0116 00D0              rcall fp2int
+ 0118 A801              movw R20,R16
+ 011A           L13:
+ 011A                   .dbline 37
+ 011A           ;               dataL = (unsigned char)(data-dataH*10);
+ 011A FE01              movw R30,R28
+ 011C 2684              ldd R2,z+14
+ 011E 3784              ldd R3,z+15
+ 0120 4088              ldd R4,z+16
+ 0122 5188              ldd R5,z+17
+ 0124 5A92              st -y,R5
+ 0126 4A92              st -y,R4
+ 0128 3A92              st -y,R3
+ 012A 2A92              st -y,R2
+ 012C 8AE0              ldi R24,10
+ 012E 849F              mul R24,R20
+ 0130 8001              movw R16,R0
+ 0132 00D0              rcall int2fp
+ 0134 3A93              st -y,R19
+ 0136 2A93              st -y,R18
+ 0138 1A93              st -y,R17
+ 013A 0A93              st -y,R16
+ 013C 00D0              rcall sub32f
+ 013E FE01              movw R30,R28
+ 0140 0483              std z+4,R16
+ 0142 1583              std z+5,R17
+ 0144 2683              std z+6,R18
+ 0146 3783              std z+7,R19
+ 0148 FE01              movw R30,R28
+ 014A 2480              ldd R2,z+4
+ 014C 3580              ldd R3,z+5
+ 014E 4680              ldd R4,z+6
+ 0150 5780              ldd R5,z+7
+ 0152 5A92              st -y,R5
+ 0154 4A92              st -y,R4
+ 0156 3A92              st -y,R3
+ 0158 2A92              st -y,R2
+ 015A 00E0              ldi R16,<L14
+ 015C 10E0              ldi R17,>L14
+ 015E 00D0              rcall lpm32
+ 0160 3A93              st -y,R19
+ 0162 2A93              st -y,R18
+ 0164 1A93              st -y,R17
+ 0166 0A93              st -y,R16
+ 0168 00D0              rcall cmp32f
+ 016A B4F0              brlt L15
+ 016C FE01              movw R30,R28
+ 016E 2480              ldd R2,z+4
+ 0170 3580              ldd R3,z+5
+ 0172 4680              ldd R4,z+6
+ 0174 5780              ldd R5,z+7
+ 0176 5A92              st -y,R5
+ 0178 4A92              st -y,R4
+ 017A 3A92              st -y,R3
+ 017C 2A92              st -y,R2
+ 017E 00E0              ldi R16,<L14
+ 0180 10E0              ldi R17,>L14
+ 0182 00D0              rcall lpm32
+ 0184 3A93              st -y,R19
+ 0186 2A93              st -y,R18
+ 0188 1A93              st -y,R17
+ 018A 0A93              st -y,R16
+ 018C 00D0              rcall sub32f
+ 018E 00D0              rcall fp2int
+ 0190 B801              movw R22,R16
+ 0192 6050              subi R22,0  ; offset = 32768
+ 0194 7048              sbci R23,128
+ 0196 07C0              rjmp L16
+ 0198           L15:
+ 0198 FE01              movw R30,R28
+ 019A 0481              ldd R16,z+4
+ 019C 1581              ldd R17,z+5
+ 019E 2681              ldd R18,z+6
+ 01A0 3781              ldd R19,z+7
+ 01A2 00D0              rcall fp2int
+ 01A4 B801              movw R22,R16
+ 01A6           L16:
+ 01A6                   .dbline 38
+ 01A6           ;               SPI_MasterTransmitaByte(CharacterTable[dataL]);
+ 01A6 80E0              ldi R24,<_CharacterTable
+ 01A8 90E0              ldi R25,>_CharacterTable
+ 01AA E62F              mov R30,R22
+ 01AC FF27              clr R31
+ 01AE E80F              add R30,R24
+ 01B0 F91F              adc R31,R25
+ 01B2 0081              ldd R16,z+0
+ 01B4 2ADF              rcall _SPI_MasterTransmitaByte
+ 01B6                   .dbline 39
+ 01B6           ;               SPI_MasterTransmitaByte(CharacterTable[dataH]);
+ 01B6 80E0              ldi R24,<_CharacterTable
+ 01B8 90E0              ldi R25,>_CharacterTable
+ 01BA E42F              mov R30,R20
+ 01BC FF27              clr R31
+ 01BE E80F              add R30,R24
+ 01C0 F91F              adc R31,R25
+ 01C2 0081              ldd R16,z+0
+ 01C4 22DF              rcall _SPI_MasterTransmitaByte
+ 01C6                   .dbline 40
+ 01C6           ;       }
+ 01C6 B7C0              rjmp L9
+ 01C8           L8:
+ 01C8                   .dbline 42
+ 01C8           ;       //浮点数显示
+ 01C8           ;       else if((data>=0)&&(data<10))
+ 01C8 FE01              movw R30,R28
+ 01CA 2684              ldd R2,z+14
+ 01CC 3784              ldd R3,z+15
+ 01CE 4088              ldd R4,z+16
+ 01D0 5188              ldd R5,z+17
+ 01D2 5A92              st -y,R5
+ 01D4 4A92              st -y,R4
+ 01D6 3A92              st -y,R3
+ 01D8 2A92              st -y,R2
+ 01DA 00E0              ldi R16,<L19
+ 01DC 10E0              ldi R17,>L19
+ 01DE 00D0              rcall lpm32
+ 01E0 3A93              st -y,R19
+ 01E2 2A93              st -y,R18
+ 01E4 1A93              st -y,R17
+ 01E6 0A93              st -y,R16
+ 01E8 00D0              rcall cmp32f
+ 01EA 0CF4              brge X2
+ 01EC A0C0              rjmp L17
+ 01EE           X2:
+ 01EE FE01              movw R30,R28
+ 01F0 2684              ldd R2,z+14
+ 01F2 3784              ldd R3,z+15
+ 01F4 4088              ldd R4,z+16
+ 01F6 5188              ldd R5,z+17
+ 01F8 5A92              st -y,R5
+ 01FA 4A92              st -y,R4
+ 01FC 3A92              st -y,R3
+ 01FE 2A92              st -y,R2
+ 0200 00E0              ldi R16,<L10
+ 0202 10E0              ldi R17,>L10
+ 0204 00D0              rcall lpm32
+ 0206 3A93              st -y,R19
+ 0208 2A93              st -y,R18
+ 020A 1A93              st -y,R17
+ 020C 0A93              st -y,R16
+ 020E 00D0              rcall cmp32f
+ 0210 0CF0              brlt X3
+ 0212 8DC0              rjmp L17
+ 0214           X3:
+ 0214                   .dbline 43
+ 0214           ;       {
+ 0214                   .dbline 44
+ 0214           ;               dataH = (unsigned char)data;
+ 0214 FE01              movw R30,R28
+ 0216 2684              ldd R2,z+14
+ 0218 3784              ldd R3,z+15
+ 021A 4088              ldd R4,z+16
+ 021C 5188              ldd R5,z+17
+ 021E 5A92              st -y,R5
+ 0220 4A92              st -y,R4
+ 0222 3A92              st -y,R3
+ 0224 2A92              st -y,R2
+ 0226 00E0              ldi R16,<L14
+ 0228 10E0              ldi R17,>L14
+ 022A 00D0              rcall lpm32
+ 022C 3A93              st -y,R19
+ 022E 2A93              st -y,R18
+ 0230 1A93              st -y,R17
+ 0232 0A93              st -y,R16
+ 0234 00D0              rcall cmp32f
+ 0236 BCF0              brlt L20
+ 0238 FE01              movw R30,R28
+ 023A 2684              ldd R2,z+14
+ 023C 3784              ldd R3,z+15
+ 023E 4088              ldd R4,z+16
+ 0240 5188              ldd R5,z+17
+ 0242 5A92              st -y,R5
+ 0244 4A92              st -y,R4
+ 0246 3A92              st -y,R3
+ 0248 2A92              st -y,R2
+ 024A 00E0              ldi R16,<L14
+ 024C 10E0              ldi R17,>L14
+ 024E 00D0              rcall lpm32
+ 0250 3A93              st -y,R19
+ 0252 2A93              st -y,R18
+ 0254 1A93              st -y,R17
+ 0256 0A93              st -y,R16
+ 0258 00D0              rcall sub32f
+ 025A 00D0              rcall fp2int
+ 025C C801              movw R24,R16
+ 025E 8050              subi R24,0  ; offset = 32768
+ 0260 9048              sbci R25,128
+ 0262 5C01              movw R10,R24
+ 0264 07C0              rjmp L21
+ 0266           L20:
+ 0266 FE01              movw R30,R28
+ 0268 0685              ldd R16,z+14
+ 026A 1785              ldd R17,z+15
+ 026C 2089              ldd R18,z+16
+ 026E 3189              ldd R19,z+17
+ 0270 00D0              rcall fp2int
+ 0272 5801              movw R10,R16
+ 0274           L21:
+ 0274 4A2D              mov R20,R10
+ 0276                   .dbline 45
+ 0276           ;               dataL = (unsigned char)(data*10)%10;
+ 0276 00E0              ldi R16,<L10
+ 0278 10E0              ldi R17,>L10
+ 027A 00D0              rcall lpm32
+ 027C 3A93              st -y,R19
+ 027E 2A93              st -y,R18
+ 0280 1A93              st -y,R17
+ 0282 0A93              st -y,R16
+ 0284 FE01              movw R30,R28
+ 0286            ; stack offset 4
+ 0286 2288              ldd R2,z+18
+ 0288 3388              ldd R3,z+19
+ 028A 4488              ldd R4,z+20
+ 028C 5588              ldd R5,z+21
+ 028E 5A92              st -y,R5
+ 0290 4A92              st -y,R4
+ 0292 3A92              st -y,R3
+ 0294 2A92              st -y,R2
+ 0296 00D0              rcall empy32f
+ 0298 FE01              movw R30,R28
+ 029A 0083              std z+0,R16
+ 029C 1183              std z+1,R17
+ 029E 2283              std z+2,R18
+ 02A0 3383              std z+3,R19
+ 02A2 FE01              movw R30,R28
+ 02A4 2080              ldd R2,z+0
+ 02A6 3180              ldd R3,z+1
+ 02A8 4280              ldd R4,z+2
+ 02AA 5380              ldd R5,z+3
+ 02AC 5A92              st -y,R5
+ 02AE 4A92              st -y,R4
+ 02B0 3A92              st -y,R3
+ 02B2 2A92              st -y,R2
+ 02B4 00E0              ldi R16,<L14
+ 02B6 10E0              ldi R17,>L14
+ 02B8 00D0              rcall lpm32
+ 02BA 3A93              st -y,R19
+ 02BC 2A93              st -y,R18
+ 02BE 1A93              st -y,R17
+ 02C0 0A93              st -y,R16
+ 02C2 00D0              rcall cmp32f
+ 02C4 BCF0              brlt L22
+ 02C6 FE01              movw R30,R28
+ 02C8 2080              ldd R2,z+0
+ 02CA 3180              ldd R3,z+1
+ 02CC 4280              ldd R4,z+2
+ 02CE 5380              ldd R5,z+3
+ 02D0 5A92              st -y,R5
+ 02D2 4A92              st -y,R4
+ 02D4 3A92              st -y,R3
+ 02D6 2A92              st -y,R2
+ 02D8 00E0              ldi R16,<L14
+ 02DA 10E0              ldi R17,>L14
+ 02DC 00D0              rcall lpm32
+ 02DE 3A93              st -y,R19
+ 02E0 2A93              st -y,R18
+ 02E2 1A93              st -y,R17
+ 02E4 0A93              st -y,R16
+ 02E6 00D0              rcall sub32f
+ 02E8 00D0              rcall fp2int
+ 02EA C801              movw R24,R16
+ 02EC 8050              subi R24,0  ; offset = 32768
+ 02EE 9048              sbci R25,128
+ 02F0 5C01              movw R10,R24
+ 02F2 07C0              rjmp L23
+ 02F4           L22:
+ 02F4 FE01              movw R30,R28
+ 02F6 0081              ldd R16,z+0
+ 02F8 1181              ldd R17,z+1
+ 02FA 2281              ldd R18,z+2
+ 02FC 3381              ldd R19,z+3
+ 02FE 00D0              rcall fp2int
+ 0300 5801              movw R10,R16
+ 0302           L23:
+ 0302 1AE0              ldi R17,10
+ 0304 0A2D              mov R16,R10
+ 0306 00D0              rcall mod8u
+ 0308 602F              mov R22,R16
+ 030A                   .dbline 46
+ 030A           ;               SPI_MasterTransmitaByte(CharacterTable[dataL]);
+ 030A 80E0              ldi R24,<_CharacterTable
+ 030C 90E0              ldi R25,>_CharacterTable
+ 030E E62F              mov R30,R22
+ 0310 FF27              clr R31
+ 0312 E80F              add R30,R24
+ 0314 F91F              adc R31,R25
+ 0316 0081              ldd R16,z+0
+ 0318 78DE              rcall _SPI_MasterTransmitaByte
+ 031A                   .dbline 47
+ 031A           ;               SPI_MasterTransmitaByte(CharacterTable[dataH]&0x7F);
+ 031A 80E0              ldi R24,<_CharacterTable
+ 031C 90E0              ldi R25,>_CharacterTable
+ 031E E42F              mov R30,R20
+ 0320 FF27              clr R31
+ 0322 E80F              add R30,R24
+ 0324 F91F              adc R31,R25
+ 0326 0081              ldd R16,z+0
+ 0328 0F77              andi R16,127
+ 032A 6FDE              rcall _SPI_MasterTransmitaByte
+ 032C                   .dbline 48
+ 032C           ;       }
+ 032C 04C0              rjmp L18
+ 032E           L17:
+ 032E                   .dbline 50
+ 032E           ;       else
+ 032E           ;       {
+ 032E                   .dbline 51
+ 032E           ;               SPI_MasterTransmitaByte(0x8E);//显示F
+ 032E 0EE8              ldi R16,142
+ 0330 6CDE              rcall _SPI_MasterTransmitaByte
+ 0332                   .dbline 52
+ 0332           ;               SPI_MasterTransmitaByte(0x8E);//显示F
+ 0332 0EE8              ldi R16,142
+ 0334 6ADE              rcall _SPI_MasterTransmitaByte
+ 0336                   .dbline 53
+ 0336           ;       }
+ 0336           L18:
+ 0336           L9:
+ 0336                   .dbline 55
+ 0336           ;       //将从机的SS拉低
+ 0336           ;       PORTB&=0xFB;
+ 0336 88B3              in R24,0x18
+ 0338 8B7F              andi R24,251
+ 033A 88BB              out 0x18,R24
+ 033C                   .dbline 57
+ 033C           ;       //将从机的SS拉高，表明发送完毕
+ 033C           ;       PORTB|=0x04;
+ 033C C29A              sbi 0x18,2
+ 033E                   .dbline -2
+ 033E           L6:
+ 033E 2896              adiw R28,8
+ 0340 00D0              rcall pop_gset3
+ 0342 2496              adiw R28,4
+ 0344                   .dbline 0 ; func end
+ 0344 0895              ret
+ 0346                   .dbsym r dataL 22 c
+ 0346                   .dbsym r dataH 20 c
+ 0346                   .dbsym l data 14 D
+ 0346                   .dbend
+                        .area lit(rom, con, rel)
+ 0000           L19:
+ 0000 00000000          .word 0x0,0x0
+ 0004           L14:
+ 0004 00000047          .word 0x0,0x4700
+ 0008           L11:
+ 0008 0000C842          .word 0x0,0x42c8
+ 000C           L10:
+ 000C 00002041          .word 0x0,0x4120
+ 0010           L7:
+ 0010 6F12833A          .word 0x126f,0x3a83

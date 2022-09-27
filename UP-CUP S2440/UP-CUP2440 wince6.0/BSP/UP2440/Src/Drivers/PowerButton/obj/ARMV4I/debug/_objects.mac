@@ -1,0 +1,4 @@
+OBJECTS=\
+    obj\ARMV4I\debug\pwr.obj\
+    obj\ARMV4I\debug\PowerButton.obj
+

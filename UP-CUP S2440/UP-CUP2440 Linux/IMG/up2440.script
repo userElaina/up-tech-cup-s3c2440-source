@@ -1,0 +1,14 @@
+echo
+echo Script Configuration:
+echo ----------------------
+echo set update_kernel:
+setenv update_kernel 'tftp 0x30008000 uImage;nand erase 0x80000 0x400000;nand write 0x30008000 0x80000 0x400000'
+echo set update_rootfs:
+setenv update_rootfs 'tftp 0x30008000 root.cramfs;nand erase 0x480000 0x400000;nand write 0x30008000 0x480000 0x400000'
+echo set update_boot:
+setenv update_boot 'tftp 0x30008000 u-boot.bin;nand erase 0x0000 0x80000;nand write 0x30008000 0x0000 0x80000'
+echo set update_usr(erase usr):
+setenv update_usr 'nand erase 0x00880000 0xf780000'
+saveenv
+echo Done
+

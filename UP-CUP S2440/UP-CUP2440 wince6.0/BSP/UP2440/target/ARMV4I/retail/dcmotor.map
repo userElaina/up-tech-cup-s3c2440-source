@@ -1,0 +1,53 @@
+ dcmotor
+
+ Timestamp is 4f87b39c (Fri Apr 13 13:03:24 2012)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 0000019cH .rdata                  CODE
+ 0001:0000019c 00000024H .rdata$debug            CODE
+ 0001:000001c0 000002bcH .text                   CODE
+ 0001:0000047c 00000014H .idata$2                CODE
+ 0001:00000490 00000014H .idata$3                CODE
+ 0001:000004a4 00000010H .idata$4                CODE
+ 0001:000004b4 0000000cH .idata$6                CODE
+ 0001:000004c0 000000d1H .edata                  CODE
+ 0002:00000000 00000010H .idata$5                DATA
+ 0002:00000010 00000008H .bss                    DATA
+ 0003:00000000 00000048H .pdata                  DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0001:00000020       ??_C@_1FC@COEBEILG@?$AAS?$AAP?$AAI?$AAD?$AAR?$AAV?$AA?4?$AAD?$AAL?$AAL?$AA?3?$AAP?$AAW?$AAM?$AAr?$AAe?$AAg?$AA?5?$AAv?$AAi?$AAr?$AAt?$AAu?$AAa?$AAl?$AAc?$AAo?$AAp?$AAy?$AA?5?$AAf?$AAa@ 10001020     dcmotor.obj
+ 0001:00000078       ??_C@_1FA@JEKIIPCJ@?$AAS?$AAP?$AAI?$AAD?$AAR?$AAV?$AA?4?$AAD?$AAL?$AAL?$AA?3?$AA?5?$AAP?$AAW?$AAM?$AAr?$AAe?$AAg?$AA?5?$AAv?$AAi?$AAr?$AAu?$AAa?$AAl?$AAa?$AAl?$AAl?$AAo?$AAc?$AA?5?$AAf@ 10001078     dcmotor.obj
+ 0001:000000c8       ??_C@_1FA@IDDGBGBI@?$AAF?$AAo?$AAr?$AA?5?$AAS?$AAP?$AAI?$AA_?$AAI?$AAO?$AAP?$AAr?$AAe?$AAg?$AAs?$AA2?$AA?3?$AA?5?$AAV?$AAi?$AAr?$AAt?$AAu?$AAa?$AAl?$AAC?$AAo?$AAp?$AAy?$AA?5?$AAf?$AAa@ 100010c8     dcmotor.obj
+ 0001:00000118       ??_C@_1FC@KNNDMNGE@?$AAF?$AAo?$AAr?$AA?5?$AAS?$AAP?$AAI?$AA_?$AAI?$AAO?$AAP?$AAr?$AAe?$AAg?$AAs?$AA?5?$AA?3?$AA?5?$AAV?$AAi?$AAr?$AAt?$AAu?$AAa?$AAl?$AAA?$AAl?$AAl?$AAo?$AAc?$AA?5?$AAf@ 10001118     dcmotor.obj
+ 0001:0000016c       ??_C@_1DA@LBILHFNH@?$AAD?$AAC?$AAM?$AAO?$AAT?$AAO?$AAR?$AA?5?$AAD?$AAL?$AAL?$AA?5?$AAI?$AAO?$AAC?$AAO?$AAN?$AAT?$AAR?$AAO?$AAL?$AA?$AN?$AA?6?$AA?$AA@ 1000116c     dcmotor.obj
+ 0001:000001c0       ?DllEntry@@YA_NPAXK0@Z     100011c0 f   dcmotor.obj
+ 0001:000001c8       ?DCM_Close@@YA_NK@Z        100011c8 f   dcmotor.obj
+ 0001:000001d0       ?DCM_Deinit@@YA_NK@Z       100011d0 f   dcmotor.obj
+ 0001:000001d8       ?DCM_Init@@YAKK@Z          100011d8 f   dcmotor.obj
+ 0001:000002d4       ?DCM_IOControl@@YAKKKPAEK0KPAK@Z 100012d4 f   dcmotor.obj
+ 0001:0000042c       ?DCM_Open@@YAKKKK@Z        1000142c f   dcmotor.obj
+ 0001:00000434       ?DCM_Read@@YAKKPAXK@Z      10001434 f   dcmotor.obj
+ 0001:0000043c       ?DCM_Seek@@YAKKJK@Z        1000143c f   dcmotor.obj
+ 0001:00000444       ?DCM_Write@@YAKKPAXK@Z     10001444 f   dcmotor.obj
+ 0001:0000044c       VirtualCopy                1000144c f   coredll:COREDLL.dll
+ 0001:0000045c       NKDbgPrintfW               1000145c f   coredll:COREDLL.dll
+ 0001:0000046c       VirtualAlloc               1000146c f   coredll:COREDLL.dll
+ 0001:0000047c       __IMPORT_DESCRIPTOR_COREDLL 1000147c     coredll:COREDLL.dll
+ 0001:00000490       __NULL_IMPORT_DESCRIPTOR   10001490     coredll:COREDLL.dll
+ 0002:00000000       __imp_NKDbgPrintfW         10002000     coredll:COREDLL.dll
+ 0002:00000004       __imp_VirtualAlloc         10002004     coredll:COREDLL.dll
+ 0002:00000008       __imp_VirtualCopy          10002008     coredll:COREDLL.dll
+ 0002:0000000c       \177COREDLL_NULL_THUNK_DATA 1000200c     coredll:COREDLL.dll
+ 0002:00000010       ?g_pPWMreg@@3PCUS3C2440A_PWM_REG@@C 10002010     dcmotor.obj
+ 0002:00000014       ?g_pIOPregs@@3PCUS3C2440A_IOPORT_REG@@C 10002014     dcmotor.obj
+
+ entry point at        0000:00000000
+
+ Static symbols
+

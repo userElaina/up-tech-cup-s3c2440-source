@@ -1,0 +1,10 @@
+extern unsigned char UART_RECEIVE_BUFFER[24];
+void Cmd_Get_Img(void);
+void Cmd_Img_To_Buffer1(void);
+void Cmd_Img_To_Buffer2(void);
+void Cmd_Reg_Model(void);
+void Cmd_Delete_All_Model(void);
+void Cmd_Search_Finger(void);
+void Cmd_Search_Finger_Admin(void);
+void Cmd_Save_Finger( unsigned char ucH_Char,unsigned char ucL_Char );
+void Recevice_Data(unsigned char ucLength);

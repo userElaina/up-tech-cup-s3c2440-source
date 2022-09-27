@@ -1,0 +1,361 @@
+ nandflash
+
+ Timestamp is 4f87b394 (Fri Apr 13 13:03:16 2012)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000004H .CRT$XCA                CODE
+ 0001:00000004 00000004H .CRT$XCZ                CODE
+ 0001:00000008 00000004H .CRT$XIA                CODE
+ 0001:0000000c 00000004H .CRT$XIZ                CODE
+ 0001:00000010 00000004H .CRT$XPA                CODE
+ 0001:00000014 00000004H .CRT$XPZ                CODE
+ 0001:00000018 00000004H .CRT$XTA                CODE
+ 0001:0000001c 00000004H .CRT$XTZ                CODE
+ 0001:00000020 0000104eH .rdata                  CODE
+ 0001:00001070 00000026H .rdata$debug            CODE
+ 0001:00001098 00006f98H .text                   CODE
+ 0001:00008030 00000038H .xdata                  CODE
+ 0001:00008068 00000014H .idata$2                CODE
+ 0001:0000807c 00000014H .idata$3                CODE
+ 0001:00008090 000000acH .idata$4                CODE
+ 0001:0000813c 0000000cH .idata$6                CODE
+ 0001:00008150 00000105H .edata                  CODE
+ 0002:00000000 000000acH .idata$5                DATA
+ 0002:000000b0 00000650H .data                   DATA
+ 0002:00000700 000001b4H .bss                    DATA
+ 0003:00000000 00000428H .pdata                  DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0001:00000000       __xc_a                     10001000     corelib0:crt0init.obj
+ 0001:00000004       __xc_z                     10001004     corelib0:crt0init.obj
+ 0001:00000008       __xi_a                     10001008     corelib0:crt0init.obj
+ 0001:0000000c       __xi_z                     1000100c     corelib0:crt0init.obj
+ 0001:00000010       __xp_a                     10001010     corelib0:crt0init.obj
+ 0001:00000014       __xp_z                     10001014     corelib0:crt0init.obj
+ 0001:00000018       __xt_a                     10001018     corelib0:crt0init.obj
+ 0001:0000001c       __xt_z                     1000101c     corelib0:crt0init.obj
+ 0001:0000003c       ??_7XipFal@@6B@            1000103c     fal:falmain.obj
+ 0001:00000058       ??_C@_1BI@FBGIJHPE@?$AAR?$AAe?$AAg?$AAC?$AAl?$AAo?$AAs?$AAe?$AAK?$AAe?$AAy?$AA?$AA@ 10001058     fal:falmain.obj
+ 0001:00000070       ??_C@_1BO@LKKCNJCL@?$AAU?$AAp?$AAd?$AAa?$AAt?$AAe?$AAR?$AAe?$AAa?$AAd?$AAO?$AAn?$AAl?$AAy?$AA?$AA@ 10001070     fal:falmain.obj
+ 0001:00000090       ??_C@_1CM@MKLFNJPO@?$AAC?$AAo?$AAm?$AAp?$AAa?$AAc?$AAt?$AAi?$AAo?$AAn?$AAC?$AAr?$AAi?$AAt?$AAP?$AAr?$AAi?$AAo?$AA2?$AA5?$AA6?$AA?$AA@ 10001090     fal:falmain.obj
+ 0001:000000bc       ??_C@_1CE@MGKNJNOC@?$AAC?$AAo?$AAm?$AAp?$AAa?$AAc?$AAt?$AAi?$AAo?$AAn?$AAP?$AAr?$AAi?$AAo?$AA2?$AA5?$AA6?$AA?$AA@ 100010bc     fal:falmain.obj
+ 0001:000000e0       ??_C@_1BA@OKEJPPOI@?$AAP?$AAr?$AAo?$AAf?$AAi?$AAl?$AAe?$AA?$AA@ 100010e0     fal:falmain.obj
+ 0001:000000f0       ??_C@_1CC@KOJKGDIE@?$AAR?$AAe?$AAg?$AAQ?$AAu?$AAe?$AAr?$AAy?$AAV?$AAa?$AAl?$AAu?$AAe?$AAE?$AAx?$AAW?$AA?$AA@ 100010f0     fal:falmain.obj
+ 0001:00000114       ??_C@_1BE@KMNOGLLC@?$AAF?$AAl?$AAa?$AAs?$AAh?$AAD?$AAi?$AAs?$AAk?$AA?$AA@ 10001114     fal:falmain.obj
+ 0001:00000128       ??_C@_1BM@MHOCPMNA@?$AAO?$AAp?$AAe?$AAn?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAK?$AAe?$AAy?$AA?$AA@ 10001128     fal:falmain.obj
+ 0001:00000144       ??_C@_1BI@CJKPFBEK@?$AAc?$AAo?$AAr?$AAe?$AAd?$AAl?$AAl?$AA?4?$AAd?$AAl?$AAl?$AA?$AA@ 10001144     fal:falmain.obj
+ 0001:00000160       ??_C@_1FE@GNIKMNDM@?$AA?$CF?$AAM?$AAS?$AAF?$AAL?$AAA?$AAS?$AAH?$AA?$CB?$AAR?$AAe?$AAa?$AAd?$AAS?$AAe?$AAc?$AAt?$AAo?$AAr?$AAs?$AA?5?$AA?9?$AA?5?$AAS?$AAt?$AAa?$AAr?$AAt?$AA?3?$AA?5?$AA?$CF?$AAd@ 10001160     fal:fal.obj
+ 0001:000001b8       ??_C@_1FG@MKOHFEFK@?$AA?$CF?$AAM?$AAS?$AAF?$AAL?$AAA?$AAS?$AAH?$AA?$CB?$AAW?$AAr?$AAi?$AAt?$AAe?$AAS?$AAe?$AAc?$AAt?$AAo?$AAr?$AAs?$AA?5?$AA?9?$AA?5?$AAS?$AAt?$AAa?$AAr?$AAt?$AA?3?$AA?5?$AA?$CF@ 100011b8     fal:fal.obj
+ 0001:00000210       ??_C@_1FI@PBLLLKID@?$AA?$CF?$AAM?$AAS?$AAF?$AAL?$AAA?$AAS?$AAH?$AA?$CB?$AAD?$AAe?$AAl?$AAe?$AAt?$AAe?$AAS?$AAe?$AAc?$AAt?$AAo?$AAr?$AAs?$AA?5?$AA?9?$AA?5?$AAS?$AAt?$AAa?$AAr?$AAt?$AA?3?$AA?5@ 10001210     fal:fal.obj
+ 0001:00000268       ??_7Fal@@6B@               10001268     fal:fal.obj
+ 0001:00000284       ??_7FileSysFal@@6B@        10001284     fal:fal.obj
+ 0001:000002a0       ??_C@_1KA@MEHLHECN@?$AA?$CF?$AAM?$AAS?$AAF?$AAL?$AAA?$AAS?$AAH?$AA?$CB?$AAG?$AAe?$AAt?$AAP?$AAh?$AAy?$AAs?$AAi?$AAc?$AAa?$AAl?$AAS?$AAe?$AAc?$AAt?$AAo?$AAr?$AAA?$AAd?$AAd?$AAr?$AA?5?$AA?9@ 100012a0     fal:log2physmap.obj
+ 0001:00000340       ??_C@_1MI@EPOJAJPE@?$AA?$CF?$AAM?$AAS?$AAF?$AAL?$AAA?$AAS?$AAH?$AA?$CB?$AAM?$AAa?$AAp?$AAL?$AAo?$AAg?$AAi?$AAc?$AAa?$AAl?$AAS?$AAe?$AAc?$AAt?$AAo?$AAr?$AA?5?$AA?9?$AA?5?$AAW?$AAr?$AAi?$AAt@ 10001340     fal:log2physmap.obj
+ 0001:00000408       ??_C@_1FE@GJOOEFCO@?$AAF?$AAM?$AAD?$AA?3?$AA?3?$AAF?$AAM?$AAD?$AA_?$AAI?$AAn?$AAi?$AAt?$AA?5?$AAF?$AAi?$AAr?$AAs?$AAt?$AA?5?$AAB?$AAo?$AAo?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAI?$AAN?$AA?5?$AAO@ 10001408     nandflash_lib:fmd.obj
+ 0001:00000460       ??_C@_1EC@ENKKLJIE@?$AAF?$AAM?$AAD?$AA?3?$AA?3?$AAF?$AAM?$AAD?$AA_?$AAI?$AAn?$AAi?$AAt?$AA?5?$AAS?$AAo?$AAf?$AAt?$AAr?$AAe?$AAs?$AAe?$AAt?$AA?5?$AA?4?$AA?4?$AA?4?$AA?4?$AA?4?$AA?5?$AA?$AN?$AA?6@ 10001460     nandflash_lib:fmd.obj
+ 0001:000004a4       ??_C@_1DG@LLHCAFDD@?$AAF?$AAM?$AAD?$AA?3?$AA?3?$AAF?$AAM?$AAD?$AA_?$AAI?$AAn?$AAi?$AAt?$AA?5?$AAI?$AAP?$AAL?$AA?5?$AA?4?$AA?4?$AA?4?$AA?4?$AA?4?$AA?5?$AA?$AN?$AA?6?$AA?$AA@ 100014a4     nandflash_lib:fmd.obj
+ 0001:000004e0       ??_C@_1FG@KOPKLKKM@?$AAF?$AAM?$AAD?$AA?3?$AA?3?$AAF?$AAM?$AAD?$AA_?$AAI?$AAn?$AAi?$AAt?$AA?5?$AA?9?$AA?5?$AAp?$AAB?$AAS?$AAP?$AAA?$AAr?$AAg?$AAs?$AA?9?$AA?$DO?$AAn?$AAf?$AAs?$AAb?$AAl?$AAk@ 100014e0     nandflash_lib:fmd.obj
+ 0001:00000538       ??_C@_1GM@FPODKAPJ@?$AAF?$AAM?$AAD?$AA?3?$AA?3?$AAF?$AAM?$AAD?$AA_?$AAI?$AAn?$AAi?$AAt?$AA?5?$AA?9?$AA?5?$AAR?$AAE?$AAA?$AAD?$AA_?$AAR?$AAE?$AAG?$AAI?$AAS?$AAT?$AAE?$AAR?$AA_?$AAB?$AAY@ 10001538     nandflash_lib:fmd.obj
+ 0001:000005a8       ??_C@_1EG@OPJCCPC@?$AA?$FL?$AAS?$AA2?$AA4?$AA4?$AA0?$AA?5?$AA?3?$AA?5?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAI?$AAD?$AA?5?$AAF?$AAi?$AAn?$AAd?$AAi?$AAn?$AAg?$AA?5?$AAF?$AAa?$AAi?$AAl?$AAu?$AAr?$AAe@ 100015a8     nandflash_lib:fmd.obj
+ 0001:000005f0       ??_C@_1JO@NAKJKKPF@?$AAN?$AAU?$AAM?$AAB?$AAL?$AAO?$AAC?$AAK?$AAS?$AA?5?$AA?3?$AA?5?$AA?$CF?$AAd?$AA?$CI?$AA0?$AAx?$AA?$CF?$AAx?$AA?$CJ?$AA?0?$AA?5?$AAS?$AAE?$AAC?$AAT?$AAO?$AAR?$AAS?$AAP?$AAE?$AAR@ 100015f0     nandflash_lib:fmd.obj
+ 0001:00000690       ??_C@_1EE@KFMIPOIL@?$AAd?$AAw?$AAP?$AAr?$AAi?$AAm?$AAa?$AAr?$AAy?$AAN?$AAa?$AAn?$AAd?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?5?$AA?3?$AA?5?$AA?$CF?$AAd?$AA?$CI?$AA0?$AAx?$AA?$CF?$AAx?$AA?$CJ?$AA?5?$AA?$AN@ 10001690     nandflash_lib:fmd.obj
+ 0001:000006d8       ??_C@_1HC@GJMLDPDA@?$AAa?$AAs?$AAt?$AAN?$AAa?$AAn?$AAd?$AAS?$AAp?$AAe?$AAc?$AA?$FL?$AAd?$AAw?$AAP?$AAr?$AAi?$AAm?$AAa?$AAr?$AAy?$AAN?$AAa?$AAn?$AAd?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?$FN@ 100016d8     nandflash_lib:fmd.obj
+ 0001:00000750       ??_C@_1FA@IMOODEDO@?$AAw?$AAP?$AAR?$AAI?$AAM?$AAA?$AAR?$AAY?$AA_?$AAR?$AAE?$AAA?$AAL?$AA_?$AAN?$AAA?$AAN?$AAD?$AA_?$AAB?$AAL?$AAO?$AAC?$AAK?$AAS?$AA?5?$AA?3?$AA?5?$AA?$CF?$AAd?$AA?$CI?$AA0@ 10001750     nandflash_lib:fmd.obj
+ 0001:000007a0       ??_C@_1EO@OLFHAOII@?$AA?$FL?$AAF?$AAM?$AAD?$AA_?$AAG?$AAe?$AAt?$AAI?$AAn?$AAf?$AAo?$AA?5?$AA?3?$AA?5?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AA_?$AAR?$AAe?$AAa?$AAd?$AAX?$AAI?$AAD?$AA?$CI?$AA?$CJ?$AA?5?$AAE@ 100017a0     nandflash_lib:fmd.obj
+ 0001:000007f0       ??_C@_1HI@CDODNDIL@?$AAN?$AAA?$AAN?$AAD?$AA_?$AAW?$AAr?$AAi?$AAt?$AAe?$AAS?$AAe?$AAc?$AAt?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?$CI?$AA?$CJ?$AA?5?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?5@ 100017f0     nandflash_lib:fmd.obj
+ 0001:00000868       ??_C@_1JK@BAHNEMGO@?$AAN?$AAA?$AAN?$AAD?$AA_?$AAW?$AAr?$AAi?$AAt?$AAe?$AAS?$AAe?$AAc?$AAt?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?$CI?$AA?$CJ?$AA?5?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?5@ 10001868     nandflash_lib:fmd.obj
+ 0001:00000904       ??_C@_1CK@JOILJOGL@?$AAI?$AAn?$AAv?$AAa?$AAl?$AAi?$AAd?$AA?5?$AAp?$AAa?$AAr?$AAa?$AAm?$AAe?$AAt?$AAe?$AAr?$AAs?$AA?$CB?$AA?6?$AA?$AA@ 10001904     nandflash_lib:fmd.obj
+ 0001:00000930       ??_C@_1DO@BNKBONNE@?$AAF?$AAM?$AAD?$AA?3?$AA?3?$AAF?$AAM?$AAD?$AA_?$AAS?$AAB?$AA_?$AAR?$AAe?$AAa?$AAd?$AAS?$AAe?$AAc?$AAt?$AAo?$AAr?$AA?5?$AA0?$AAx?$AA?$CF?$AAx?$AA?5?$AA?$AN?$AA?6?$AA?$AA@ 10001930     nandflash_lib:fmd.obj
+ 0001:00000970       ??_C@_1DE@KBMOHBJC@?$AAs?$AAt?$AAa?$AAr?$AAt?$AAS?$AAe?$AAc?$AAt?$AAo?$AAr?$AAA?$AAd?$AAd?$AAr?$AA?5?$AA?$DN?$AA?5?$AA0?$AAx?$AA?$CF?$AAx?$AA?5?$AA?$AN?$AA?6?$AA?$AA@ 10001970     nandflash_lib:fmd.obj
+ 0001:000009a4       ??_C@_1CM@LDDCGCAD@?$AAp?$AAB?$AAS?$AAP?$AAA?$AAr?$AAg?$AAs?$AA?9?$AA?$DO?$AAn?$AAf?$AAs?$AAb?$AAl?$AAk?$AA?$DN?$AA?$CF?$AAd?$AA?$AN?$AA?6?$AA?$AA@ 100019a4     nandflash_lib:fmd.obj
+ 0001:000009d0       ??_C@_1GK@LODCJMCG@?$AAS?$AAB?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?5?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?5?$AAE?$AAr?$AAa?$AAs?$AAi?$AAn?$AAg?$AA?5?$AAb?$AAl?$AAo?$AAc?$AAk?$AA?5?$AA?$CI@ 100019d0     nandflash_lib:fmd.obj
+ 0001:00000a40       ??_C@_1GO@NKGLNICF@?$AAF?$AAM?$AAD?$AA_?$AAW?$AAr?$AAi?$AAt?$AAe?$AAS?$AAe?$AAc?$AAt?$AAo?$AAr?$AA?$CI?$AA?$CJ?$AA?5?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?5?$AAE?$AAr?$AAr?$AAo?$AAr@ 10001a40     nandflash_lib:fmd.obj
+ 0001:00000ab0       ??_C@_1JA@DGJBNIIK@?$AAF?$AAM?$AAD?$AA_?$AAW?$AAr?$AAi?$AAt?$AAe?$AAS?$AAe?$AAc?$AAt?$AAo?$AAr?$AA?$CI?$AA?$CJ?$AA?5?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?5?$AAE?$AAr?$AAr?$AAo?$AAr@ 10001ab0     nandflash_lib:fmd.obj
+ 0001:00000b40       ??_C@_1FA@HNFOOHCE@?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?5?$AAF?$AAa?$AAi?$AAl?$AAe?$AAd?$AA?5?$AAt?$AAo?$AA?5?$AAm?$AAa?$AAr?$AAk?$AA?5?$AAt?$AAh?$AAe?$AA?5?$AAb?$AAl?$AAo?$AAc@ 10001b40     nandflash_lib:fmd.obj
+ 0001:00000b90       ??_C@_1HM@INJKDHEP@?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?5?$AAF?$AAa?$AAi?$AAl?$AAe?$AAd?$AA?5?$AAt?$AAo?$AA?5?$AAm?$AAa?$AAr?$AAk?$AA?5?$AAt?$AAh?$AAe?$AA?5?$AAb?$AAl?$AAo?$AAc@ 10001b90     nandflash_lib:fmd.obj
+ 0001:00000c0c       ??_C@_1DA@DMFPABI@?$AAS?$AAB?$AA_?$AAM?$AAa?$AAr?$AAk?$AAB?$AAl?$AAo?$AAc?$AAk?$AAB?$AAa?$AAd?$AA?5?$AA0?$AAx?$AA?$CF?$AAx?$AA?5?$AA?$AN?$AA?6?$AA?$AA@ 10001c0c     nandflash_lib:fmd.obj
+ 0001:00000c40       ??_C@_1HO@NOFENAEF@?$AAN?$AAA?$AAN?$AAD?$AA_?$AAL?$AAB?$AA_?$AAW?$AAr?$AAi?$AAt?$AAe?$AAS?$AAe?$AAc?$AAt?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?$CI?$AA?$CJ?$AA?5?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD@ 10001c40     nandflash_lib:fmd.obj
+ 0001:00000cc0       ??_C@_1KA@MADFDKCH@?$AAN?$AAA?$AAN?$AAD?$AA_?$AAL?$AAB?$AA_?$AAW?$AAr?$AAi?$AAt?$AAe?$AAS?$AAe?$AAc?$AAt?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?$CI?$AA?$CJ?$AA?5?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD@ 10001cc0     nandflash_lib:fmd.obj
+ 0001:00000d60       ??_C@_1EI@DHEIJEEH@?$AAL?$AAB?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?5?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?5?$AAE?$AAr?$AAa?$AAs?$AAi?$AAn?$AAg?$AA?5?$AAb?$AAl?$AAo?$AAc?$AAk?$AA?5?$AA?$CF@ 10001d60     nandflash_lib:fmd.obj
+ 0001:00000da8       ??_C@_1GK@GDIOGCCE@?$AAL?$AAB?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?5?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?5?$AAE?$AAr?$AAa?$AAs?$AAi?$AAn?$AAg?$AA?5?$AAb?$AAl?$AAo?$AAc?$AAk?$AA?5?$AA?$CI@ 10001da8     nandflash_lib:fmd.obj
+ 0001:00000e18       ??_C@_1HI@PCFDDOLN@?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?$CD?$AA?5?$AAF?$AAa?$AAi?$AAl?$AAe?$AAd?$AA?5?$AAt?$AAo?$AA?5?$AAm?$AAa?$AAr?$AAk?$AA?5?$AAt?$AAh?$AAe?$AA?5?$AAb?$AAl?$AAo?$AAc@ 10001e18     nandflash_lib:fmd.obj
+ 0001:00000e90       ??_C@_1DA@OINCNHOP@?$AAL?$AAB?$AA_?$AAM?$AAa?$AAr?$AAk?$AAB?$AAl?$AAo?$AAc?$AAk?$AAB?$AAa?$AAd?$AA?5?$AA0?$AAx?$AA?$CF?$AAx?$AA?5?$AA?$AN?$AA?6?$AA?$AA@ 10001e90     nandflash_lib:fmd.obj
+ 0001:00000ec0       ??_C@_1CK@LCCPOAOI@?$AAF?$AAM?$AAD?$AA_?$AAE?$AAr?$AAe?$AAa?$AAs?$AAe?$AAB?$AAl?$AAo?$AAc?$AAk?$AA?5?$AA?$CF?$AAd?$AA?$AN?$AA?6?$AA?$AA@ 10001ec0     nandflash_lib:fmd.obj
+ 0001:00000ef0       ??_C@_1FA@ONJBFOD@?$AAI?$AAO?$AAC?$AAT?$AAL?$AA_?$AAF?$AAM?$AAD?$AA_?$AAL?$AAO?$AAC?$AAK?$AA_?$AAB?$AAL?$AAO?$AAC?$AAK?$AAS?$AA?$CB?$AA?$CB?$AA?$CB?$AA?$CB?$AA?$CI?$AA0?$AAx?$AA?$CF?$AAx?$AA?0?$AA0@ 10001ef0     nandflash_lib:fmd.obj
+ 0001:00000f40       ??_C@_1FE@MNHMPDC@?$AAI?$AAO?$AAC?$AAT?$AAL?$AA_?$AAF?$AAM?$AAD?$AA_?$AAU?$AAN?$AAL?$AAO?$AAC?$AAK?$AA_?$AAB?$AAL?$AAO?$AAC?$AAK?$AAS?$AA?$CB?$AA?$CB?$AA?$CB?$AA?$CB?$AA?$CI?$AA0?$AAx?$AA?$CF?$AAx@ 10001f40     nandflash_lib:fmd.obj
+ 0001:00000f98       ??_C@_1HC@EOELHAIB@?$AAS?$AA3?$AAC?$AA2?$AA4?$AA4?$AA0?$AA?5?$AAD?$AAo?$AAe?$AAs?$AA?5?$AAn?$AAo?$AAt?$AA?5?$AAs?$AAu?$AAp?$AAp?$AAo?$AAr?$AAt?$AA?5?$AAI?$AAO?$AAC?$AAT?$AAL?$AA_?$AAF@ 10001f98     nandflash_lib:fmd.obj
+ 0001:00001010       ??_C@_1FO@BAOLBCAH@?$AAF?$AAM?$AAD?$AA_?$AAO?$AAE?$AAM?$AAI?$AAo?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?3?$AA?5?$AAu?$AAn?$AAr?$AAe?$AAc?$AAo?$AAg?$AAn?$AAi?$AAz?$AAe?$AAd?$AA?5?$AAI@ 10002010     nandflash_lib:fmd.obj
+ 0001:00001098       ?GetDeviceInfo@@YAHPAUtagSTORAGEDEVICEINFO@@@Z 10002098 f   fal:falmain.obj
+ 0001:000010ec       DSK_Open                   100020ec f   fal:falmain.obj
+ 0001:000010f0       DSK_Close                  100020f0 f   fal:falmain.obj
+ 0001:000010f8       DSK_Read                   100020f8 f   fal:falmain.obj
+ 0001:00001100       DSK_Write                  10002100 f   fal:falmain.obj
+ 0001:00001108       DSK_Seek                   10002108 f   fal:falmain.obj
+ 0001:00001110       DSK_PowerUp                10002110 f   fal:falmain.obj
+ 0001:00001130       DSK_PowerDown              10002130 f   fal:falmain.obj
+ 0001:00001150       ?GetFMDInterface@@YAXPAU_DEVICE@@@Z 10002150 f   fal:falmain.obj
+ 0001:00001238       ?GetFALObject@@YAPAVFal@@KK@Z 10002238 f   fal:falmain.obj
+ 0001:000012ac       ?GetDiskInfo@@YAHPAU_DISK_INFO@@@Z 100022ac f   fal:falmain.obj
+ 0001:00001304       ?CheckSg@@YAHPAU_SG_REQ@@HPAHPAK@Z 10002304 f   fal:falmain.obj
+ 0001:00001450       ?GetPhysSectorAddr@@YAHPAK0K@Z 10002450 f   fal:falmain.obj
+ 0001:000014f4       ?ReadFromMedia@@YAHPAU_SG_REQ@@@Z 100024f4 f   fal:falmain.obj
+ 0001:000016f0       ?WriteToMedia@@YAHPAU_SG_REQ@@@Z 100026f0 f   fal:falmain.obj
+ 0001:000018e0       ?DeleteSectors@@YAHPAU_DELETE_SECTOR_INFO@@@Z 100028e0 f   fal:falmain.obj
+ 0001:00001924       ?SecureWipe@@YAHPAU_DELETE_SECTOR_INFO@@@Z 10002924 f   fal:falmain.obj
+ 0001:00001990       ?SetSecureWipeFlag@@YAHPAU_DELETE_SECTOR_INFO@@@Z 10002990 f   fal:falmain.obj
+ 0001:000019d8       ?FormatMedia@@YAHXZ        100029d8 f   fal:falmain.obj
+ 0001:00001a80       ?SetPowerState@@YAHPAW4_CEDEVICE_POWER_STATE@@@Z 10002a80 f   fal:falmain.obj
+ 0001:00001ae0       ?ComputeLog2@@YAEK@Z       10002ae0 f   fal:falmain.obj
+ 0001:00001b14       ?CalculateLogicalRange@@YAHPAU_FlashRegion@@@Z 10002b14 f   fal:falmain.obj
+ 0001:00001b90       ?CalculatePhysRange@@YAHPAU_FlashRegion@@@Z 10002b90 f   fal:falmain.obj
+ 0001:00001c0c       DSK_Deinit                 10002c0c f   fal:falmain.obj
+ 0001:00001d4c       DSK_IOControl              10002d4c f   fal:falmain.obj
+ 0001:0000255c       DSK_Init                   1000355c f   fal:falmain.obj
+ 0001:00002b78       ?CELOG_ReadSectors@@YAXKK@Z 10003b78 f i fal:fal.obj
+ 0001:00002bbc       ?CELOG_WriteSectors@@YAXKK@Z 10003bbc f i fal:fal.obj
+ 0001:00002c00       ?CELOG_DeleteSectors@@YAXKK@Z 10003c00 f i fal:fal.obj
+ 0001:00002c44       ??0Fal@@QAA@KKH@Z          10003c44 f   fal:fal.obj
+ 0001:00002cd8       ??1Fal@@QAA@XZ             10003cd8 f   fal:fal.obj
+ 0001:00002d04       ?FormatRegion@Fal@@QAAHXZ  10003d04 f   fal:fal.obj
+ 0001:00002dbc       ?ReadFromMedia@Fal@@QAAHPAU_SG_REQ@@H@Z 10003dbc f   fal:fal.obj
+ 0001:00003010       ?WriteToMedia@Fal@@QAAHPAU_SG_REQ@@H@Z 10004010 f   fal:fal.obj
+ 0001:000031a4       ?IsInRange@Fal@@QAAHKK@Z   100041a4 f   fal:fal.obj
+ 0001:000031dc       ?StartupFAL@Fal@@UAAHPAU_FlashRegion@@@Z 100041dc f   fal:fal.obj
+ 0001:00003240       ?ShutdownFAL@Fal@@UAAHXZ   10004240 f   fal:fal.obj
+ 0001:00003264       ?StartupFAL@XipFal@@UAAHPAU_FlashRegion@@@Z 10004264 f   fal:fal.obj
+ 0001:000032a4       ?BuildupMappingInfo@XipFal@@MAAHXZ 100042a4 f   fal:fal.obj
+ 0001:000033b4       ?InternalWriteToMedia@XipFal@@MAAKKKPAE@Z 100043b4 f   fal:fal.obj
+ 0001:000035e8       ?DeleteSectors@XipFal@@UAAHKK@Z 100045e8 f   fal:fal.obj
+ 0001:000035f0       ?SecureWipe@XipFal@@UAAHXZ 100045f0 f   fal:fal.obj
+ 0001:000035f8       ?SetSecureWipeFlag@XipFal@@UAAKK@Z 100045f8 f   fal:fal.obj
+ 0001:00003600       ??0FileSysFal@@QAA@KKH@Z   10004600 f   fal:fal.obj
+ 0001:00003650       ?StartupFAL@FileSysFal@@UAAHPAU_FlashRegion@@@Z 10004650 f   fal:fal.obj
+ 0001:000036ac       ?ShutdownFAL@FileSysFal@@UAAHXZ 100046ac f   fal:fal.obj
+ 0001:000036d8       ?HandleWriteFailure@FileSysFal@@QAAHK@Z 100046d8 f   fal:fal.obj
+ 0001:00003748       ?DeleteSectors@FileSysFal@@UAAHKK@Z 10004748 f   fal:fal.obj
+ 0001:00003870       ?SecureWipe@FileSysFal@@UAAHXZ 10004870 f   fal:fal.obj
+ 0001:000039ac       ?SetSecureWipeFlag@FileSysFal@@UAAKK@Z 100049ac f   fal:fal.obj
+ 0001:00003ac8       ?BuildupMappingInfo@FileSysFal@@MAAHXZ 10004ac8 f   fal:fal.obj
+ 0001:00003d78       ?InternalWriteToMedia@FileSysFal@@MAAKKKPAE@Z 10004d78 f   fal:fal.obj
+ 0001:00003fdc       ?CELOG_GetPhysicalSectorAddr@@YAXKK@Z 10004fdc f i fal:log2physmap.obj
+ 0001:00004020       ?CELOG_MapLogicalSector@@YAXKKK@Z 10005020 f i fal:log2physmap.obj
+ 0001:00004068       ??0MappingTable@@QAA@KK@Z  10005068 f   fal:log2physmap.obj
+ 0001:00004094       ?Init@MappingTable@@QAAHPAU_FlashRegion@@@Z 10005094 f   fal:log2physmap.obj
+ 0001:00004184       ?Deinit@MappingTable@@QAAHXZ 10005184 f   fal:log2physmap.obj
+ 0001:000041b8       ?GetPhysicalSectorAddr@MappingTable@@QAAPAEKPAK@Z 100051b8 f   fal:log2physmap.obj
+ 0001:000043cc       ?MapLogicalSector@MappingTable@@QAAPAEKKPAK@Z 100053cc f   fal:log2physmap.obj
+ 0001:000045ac       ?IsValidLogicalSector@MappingTable@@QAAHK@Z 100055ac f   fal:log2physmap.obj
+ 0001:000045d4       ?Init@DirtyList@@QAAHPAU_FlashRegion@@@Z 100055d4 f   fal:sectormgr.obj
+ 0001:00004620       ?AddDirtySectors@DirtyList@@QAAXKK@Z 10005620 f   fal:sectormgr.obj
+ 0001:0000466c       ?RemoveDirtySectors@DirtyList@@QAAHKK@Z 1000566c f   fal:sectormgr.obj
+ 0001:000046e8       ?Deinit@SMList@@QAAXXZ     100056e8 f   fal:sectormgr.obj
+ 0001:00004720       ?AddSectors@SMList@@QAAHKK@Z 10005720 f   fal:sectormgr.obj
+ 0001:000047cc       ?AreSectorsInList@SMList@@QAAKKK@Z 100057cc f   fal:sectormgr.obj
+ 0001:00004840       ?Init@SectorMgr@@QAAHPAU_FlashRegion@@PAVFal@@PAVCompactor@@@Z 10005840 f   fal:sectormgr.obj
+ 0001:000048ac       ?Deinit@SectorMgr@@QAAHXZ  100058ac f   fal:sectormgr.obj
+ 0001:000048e4       ?AddSectorsToList@SectorMgr@@QAAHW4ListType@1@KK@Z 100058e4 f   fal:sectormgr.obj
+ 0001:00004908       ?UnmarkSectorsAsFree@SectorMgr@@QAAHKK@Z 10005908 f   fal:sectormgr.obj
+ 0001:000049e4       ?GetNextFreeSector@SectorMgr@@QAAHPAKH@Z 100059e4 f   fal:sectormgr.obj
+ 0001:00004b20       ?GetDirtyCount@SectorMgr@@QAAKK@Z 10005b20 f   fal:sectormgr.obj
+ 0001:00004b48       ?GetStartSectorInBlock@SectorMgr@@QAAKK@Z 10005b48 f   fal:sectormgr.obj
+ 0001:00004b70       ?GetBlockFromSector@SectorMgr@@QAAKK@Z 10005b70 f   fal:sectormgr.obj
+ 0001:00004bac       ?IsBlockFree@SectorMgr@@QAAHK@Z 10005bac f   fal:sectormgr.obj
+ 0001:00004bec       ?MarkSectorsAsDirty@SectorMgr@@QAAHKK@Z 10005bec f   fal:sectormgr.obj
+ 0001:00004c74       ?UnmarkSectorsAsDirty@SectorMgr@@QAAHKK@Z 10005c74 f   fal:sectormgr.obj
+ 0001:00004d00       ?CELOG_CompactBlock@@YAXHK@Z 10005d00 f i fal:compactor.obj
+ 0001:00004d78       ?Deinit@Compactor@@QAAHXZ  10005d78 f   fal:compactor.obj
+ 0001:00004dec       ?StartCompactor@Compactor@@QAAHKKH@Z 10005dec f   fal:compactor.obj
+ 0001:00004eb0       ?CompactBlock@Compactor@@QAAKKK@Z 10005eb0 f   fal:compactor.obj
+ 0001:000051bc       ?GetDirtiestBlock@Compactor@@IAAKK@Z 100061bc f   fal:compactor.obj
+ 0001:00005254       ?GetNextRandomBlock@Compactor@@IAAKK@Z 10006254 f   fal:compactor.obj
+ 0001:000052d0       ?GetNextCompactionBlock@Compactor@@QAAKK@Z 100062d0 f   fal:compactor.obj
+ 0001:0000535c       ?CompactorThread@Compactor@@QAAKXZ 1000635c f   fal:compactor.obj
+ 0001:00005460       ?CompactorThread@@YAKPAX@Z 10006460 f   fal:compactor.obj
+ 0001:00005470       ?Init@Compactor@@QAAHPAU_FlashRegion@@PAVFileSysFal@@@Z 10006470 f   fal:compactor.obj
+ 0001:00005574       FMDHOOK_HookInterface      10006574 f   fmdhooklib:fmdhook.obj
+ 0001:00005578       FMDHOOK_UnhookInterface    10006578 f   fmdhooklib:fmdhook.obj
+ 0001:0000557c       FMD_Init                   1000657c f   nandflash_lib:fmd.obj
+ 0001:00005770       FMD_Deinit                 10006770 f   nandflash_lib:fmd.obj
+ 0001:00005778       ?_ReadXID@@YAHPAE0H@Z      10006778 f   nandflash_lib:fmd.obj
+ 0001:0000585c       FMD_GetInfo                1000685c f   nandflash_lib:fmd.obj
+ 0001:000059f4       FMD_PowerUp                100069f4 f   nandflash_lib:fmd.obj
+ 0001:000059f8       FMD_PowerDown              100069f8 f   nandflash_lib:fmd.obj
+ 0001:000059fc       ?NAND_SB_ReadSectorInfo@@YAXKPAU_SectorInfo@@H@Z 100069fc f   nandflash_lib:fmd.obj
+ 0001:00005b00       ?NAND_SB_WriteSectorInfo@@YAHKPAU_SectorInfo@@H@Z 10006b00 f   nandflash_lib:fmd.obj
+ 0001:00005c8c       ?FMD_SB_ReadSector@@YAHKPAEPAU_SectorInfo@@KH@Z 10006c8c f   nandflash_lib:fmd.obj
+ 0001:00005f54       ?FMD_SB_GetBlockStatus@@YAKKH@Z 10006f54 f   nandflash_lib:fmd.obj
+ 0001:00005ff0       ?FMD_SB_EraseBlock@@YAHKH@Z 10006ff0 f   nandflash_lib:fmd.obj
+ 0001:00006110       ?FMD_SB_WriteSector@@YAHKPAEPAU_SectorInfo@@KH@Z 10007110 f   nandflash_lib:fmd.obj
+ 0001:000063cc       ?SB_MarkBlockBad@@YAHKH@Z  100073cc f   nandflash_lib:fmd.obj
+ 0001:0000652c       ?FMD_SB_SetBlockStatus@@YAHKKH@Z 1000752c f   nandflash_lib:fmd.obj
+ 0001:00006588       ?NAND_LB_ReadSectorInfo@@YAXKPAU_SectorInfo@@H@Z 10007588 f   nandflash_lib:fmd.obj
+ 0001:000066b4       ?NAND_LB_WriteSectorInfo@@YAHKPAU_SectorInfo@@H@Z 100076b4 f   nandflash_lib:fmd.obj
+ 0001:00006850       ?FMD_LB_ReadSector@@YAHKPAEPAU_SectorInfo@@KH@Z 10007850 f   nandflash_lib:fmd.obj
+ 0001:00006b68       ?FMD_LB_GetBlockStatus@@YAKKH@Z 10007b68 f   nandflash_lib:fmd.obj
+ 0001:00006bf4       ?FMD_LB_EraseBlock@@YAHKH@Z 10007bf4 f   nandflash_lib:fmd.obj
+ 0001:00006d24       ?FMD_LB_WriteSector@@YAHKPAEPAU_SectorInfo@@KH@Z 10007d24 f   nandflash_lib:fmd.obj
+ 0001:00007010       ?LB_MarkBlockBad@@YAHKH@Z  10008010 f   nandflash_lib:fmd.obj
+ 0001:0000716c       ?FMD_LB_SetBlockStatus@@YAHKKH@Z 1000816c f   nandflash_lib:fmd.obj
+ 0001:000071c8       FMD_ReadSector             100081c8 f   nandflash_lib:fmd.obj
+ 0001:00007298       FMD_GetBlockStatus         10008298 f   nandflash_lib:fmd.obj
+ 0001:00007364       FMD_EraseBlock             10008364 f   nandflash_lib:fmd.obj
+ 0001:00007488       FMD_WriteSector            10008488 f   nandflash_lib:fmd.obj
+ 0001:00007558       FMD_SetBlockStatus         10008558 f   nandflash_lib:fmd.obj
+ 0001:0000766c       FMD_OEMIoControl           1000866c f   nandflash_lib:fmd.obj
+ 0001:00007828       ECC_CorrectData            10008828 f   nandflash_lib:ecc.obj
+ 0001:00007978       ReadPage512                10008978 f   nandflash_lib:nand.obj
+ 0001:000079b4       WritePage512               100089b4 f   nandflash_lib:nand.obj
+ 0001:000079f4       DllMain                    100089f4 f   corelib0:dllmain.obj
+ 0001:00007b10       _DllMainCRTStartup         10008b10 f   corelib0:pegdmain.obj
+ 0001:00007b40       __GSHandlerCheckCommon     10008b40 f   corelib0:gshandler.obj
+ 0001:00007b7c       __GSHandlerCheck           10008b7c f   corelib0:gshandler.obj
+ 0001:00007ba0       __security_init_cookie     10008ba0 f   corelib0:seccinit.obj
+ 0001:00007bfc       __security_check_cookie    10008bfc f   corelib0:armsecgs.obj
+ 0001:00007c10       __gsfailure                10008c10 f   corelib0:armsecgs.obj
+ 0001:00007d1c       _cexit                     10008d1c f   corelib0:cexit.obj
+ 0001:00007d38       _initterm                  10008d38 f   corelib0:crt0dat.obj
+ 0001:00007d6c       _cinit                     10008d6c f   corelib0:crt0dat.obj
+ 0001:00007da0       wcscpy                     10008da0 f   corelib1:COREDLL.dll
+ 0001:00007db0       ??3@YAXPAX@Z               10008db0 f   corelib1:COREDLL.dll
+ 0001:00007dc0       memcpy                     10008dc0 f   corelib1:COREDLL.dll
+ 0001:00007dd0       memset                     10008dd0 f   corelib1:COREDLL.dll
+ 0001:00007de0       __C_specific_handler       10008de0 f   corelib1:COREDLL.dll
+ 0001:00007df0       ??2@YAPAXI@Z               10008df0 f   corelib1:COREDLL.dll
+ 0001:00007e00       _purecall                  10008e00 f   corelib1:COREDLL.dll
+ 0001:00007e10       _XcptFilter                10008e10 f   corelib1:COREDLL.dll
+ 0001:00007e20       __security_gen_cookie2     10008e20 f   corelib1:COREDLL.dll
+ 0001:00007e30       __report_gsfailure         10008e30 f   corelib1:COREDLL.dll
+ 0001:00007e40       free                       10008e40 f   corelib1:COREDLL.dll
+ 0001:00007e50       LocalFree                  10008e50 f   coredll:COREDLL.dll
+ 0001:00007e60       CeCloseCallerBuffer        10008e60 f   coredll:COREDLL.dll
+ 0001:00007e70       CeOpenCallerBuffer         10008e70 f   coredll:COREDLL.dll
+ 0001:00007e80       GetLastError               10008e80 f   coredll:COREDLL.dll
+ 0001:00007e90       LocalAlloc                 10008e90 f   coredll:COREDLL.dll
+ 0001:00007ea0       SetLastError               10008ea0 f   coredll:COREDLL.dll
+ 0001:00007eb0       LeaveCriticalSection       10008eb0 f   coredll:COREDLL.dll
+ 0001:00007ec0       EnterCriticalSection       10008ec0 f   coredll:COREDLL.dll
+ 0001:00007ed0       FreeLibrary                10008ed0 f   coredll:COREDLL.dll
+ 0001:00007ee0       GetProcAddressW            10008ee0 f   coredll:COREDLL.dll
+ 0001:00007ef0       DeleteCriticalSection      10008ef0 f   coredll:COREDLL.dll
+ 0001:00007f00       InterlockedDecrement       10008f00 f   coredll:COREDLL.dll
+ 0001:00007f10       LoadLibraryW               10008f10 f   coredll:COREDLL.dll
+ 0001:00007f20       InitializeCriticalSection  10008f20 f   coredll:COREDLL.dll
+ 0001:00007f30       InterlockedIncrement       10008f30 f   coredll:COREDLL.dll
+ 0001:00007f40       CeLogData                  10008f40 f   coredll:COREDLL.dll
+ 0001:00007f50       StringCchLengthW           10008f50 f   coredll:COREDLL.dll
+ 0001:00007f60       StringCchVPrintfW          10008f60 f   coredll:COREDLL.dll
+ 0001:00007f70       CeGetThreadPriority        10008f70 f   coredll:COREDLL.dll
+ 0001:00007f80       EventModify                10008f80 f   coredll:COREDLL.dll
+ 0001:00007f90       CloseHandle                10008f90 f   coredll:COREDLL.dll
+ 0001:00007fa0       WaitForSingleObject        10008fa0 f   coredll:COREDLL.dll
+ 0001:00007fb0       CeSetThreadPriority        10008fb0 f   coredll:COREDLL.dll
+ 0001:00007fc0       Random                     10008fc0 f   coredll:COREDLL.dll
+ 0001:00007fd0       CreateThread               10008fd0 f   coredll:COREDLL.dll
+ 0001:00007fe0       CreateEventW               10008fe0 f   coredll:COREDLL.dll
+ 0001:00007ff0       SetKMode                   10008ff0 f   coredll:COREDLL.dll
+ 0001:00008000       NKDbgPrintfW               10009000 f   coredll:COREDLL.dll
+ 0001:00008010       DisableThreadLibraryCalls  10009010 f   coredll:COREDLL.dll
+ 0001:00008020       TerminateProcess           10009020 f   coredll:COREDLL.dll
+ 0001:00008068       __IMPORT_DESCRIPTOR_COREDLL 10009068     corelib1:COREDLL.dll
+ 0001:0000807c       __NULL_IMPORT_DESCRIPTOR   1000907c     corelib1:COREDLL.dll
+ 0002:00000000       __imp_wcscpy               1000a000     corelib1:COREDLL.dll
+ 0002:00000004       __imp_??3@YAXPAX@Z         1000a004     corelib1:COREDLL.dll
+ 0002:00000008       __imp___rt_udiv            1000a008     corelib1:COREDLL.dll
+ 0002:0000000c       __imp_memcpy               1000a00c     corelib1:COREDLL.dll
+ 0002:00000010       __imp_memset               1000a010     corelib1:COREDLL.dll
+ 0002:00000014       __imp___C_specific_handler 1000a014     corelib1:COREDLL.dll
+ 0002:00000018       __imp_??2@YAPAXI@Z         1000a018     corelib1:COREDLL.dll
+ 0002:0000001c       __imp__purecall            1000a01c     corelib1:COREDLL.dll
+ 0002:00000020       __imp__XcptFilter          1000a020     corelib1:COREDLL.dll
+ 0002:00000024       __imp___security_gen_cookie2 1000a024     corelib1:COREDLL.dll
+ 0002:00000028       __imp___report_gsfailure   1000a028     corelib1:COREDLL.dll
+ 0002:0000002c       __imp_free                 1000a02c     corelib1:COREDLL.dll
+ 0002:00000030       __imp_LocalFree            1000a030     coredll:COREDLL.dll
+ 0002:00000034       __imp_CeCloseCallerBuffer  1000a034     coredll:COREDLL.dll
+ 0002:00000038       __imp_CeOpenCallerBuffer   1000a038     coredll:COREDLL.dll
+ 0002:0000003c       __imp_GetLastError         1000a03c     coredll:COREDLL.dll
+ 0002:00000040       __imp_LocalAlloc           1000a040     coredll:COREDLL.dll
+ 0002:00000044       __imp_SetLastError         1000a044     coredll:COREDLL.dll
+ 0002:00000048       __imp_LeaveCriticalSection 1000a048     coredll:COREDLL.dll
+ 0002:0000004c       __imp_EnterCriticalSection 1000a04c     coredll:COREDLL.dll
+ 0002:00000050       __imp_FreeLibrary          1000a050     coredll:COREDLL.dll
+ 0002:00000054       __imp_GetProcAddressW      1000a054     coredll:COREDLL.dll
+ 0002:00000058       __imp_DeleteCriticalSection 1000a058     coredll:COREDLL.dll
+ 0002:0000005c       __imp_InterlockedDecrement 1000a05c     coredll:COREDLL.dll
+ 0002:00000060       __imp_LoadLibraryW         1000a060     coredll:COREDLL.dll
+ 0002:00000064       __imp_InitializeCriticalSection 1000a064     coredll:COREDLL.dll
+ 0002:00000068       __imp_InterlockedIncrement 1000a068     coredll:COREDLL.dll
+ 0002:0000006c       __imp_CeLogData            1000a06c     coredll:COREDLL.dll
+ 0002:00000070       __imp_StringCchLengthW     1000a070     coredll:COREDLL.dll
+ 0002:00000074       __imp_StringCchVPrintfW    1000a074     coredll:COREDLL.dll
+ 0002:00000078       __imp_CeGetThreadPriority  1000a078     coredll:COREDLL.dll
+ 0002:0000007c       __imp_EventModify          1000a07c     coredll:COREDLL.dll
+ 0002:00000080       __imp_CloseHandle          1000a080     coredll:COREDLL.dll
+ 0002:00000084       __imp_WaitForSingleObject  1000a084     coredll:COREDLL.dll
+ 0002:00000088       __imp_CeSetThreadPriority  1000a088     coredll:COREDLL.dll
+ 0002:0000008c       __imp_Random               1000a08c     coredll:COREDLL.dll
+ 0002:00000090       __imp_CreateThread         1000a090     coredll:COREDLL.dll
+ 0002:00000094       __imp_CreateEventW         1000a094     coredll:COREDLL.dll
+ 0002:00000098       __imp_SetKMode             1000a098     coredll:COREDLL.dll
+ 0002:0000009c       __imp_NKDbgPrintfW         1000a09c     coredll:COREDLL.dll
+ 0002:000000a0       __imp_DisableThreadLibraryCalls 1000a0a0     coredll:COREDLL.dll
+ 0002:000000a4       __imp_TerminateProcess     1000a0a4     coredll:COREDLL.dll
+ 0002:000000a8       \177COREDLL_NULL_THUNK_DATA 1000a0a8     corelib1:COREDLL.dll
+ 0002:000000b0       ?dpCurSettings@@3U_DBGPARAM@@A 1000a0b0     fal:falmain.obj
+ 0002:000004f4       ?g_dwCompactionPrio256@@3KA 1000a4f4     fal:falmain.obj
+ 0002:000004f8       ?g_dwCompactionCritPrio256@@3KA 1000a4f8     fal:falmain.obj
+ 0002:000006f8       __security_cookie          1000a6f8     corelib0:seccinit.obj
+ 0002:000006fc       __security_cookie_complement 1000a6fc     corelib0:seccinit.obj
+ 0002:00000700       ?g_csMain@@3UCRITICAL_SECTION@@A 1000a700     fal:falmain.obj
+ 0002:00000714       ?g_csFlashDevice@@3UCRITICAL_SECTION@@A 1000a714     fal:falmain.obj
+ 0002:00000728       ?FMD@@3U_FMDInterface@@A   1000a728     fal:falmain.obj
+ 0002:00000760       ?g_szProfile@@3PAGA        1000a760     fal:falmain.obj
+ 0002:000007a0       ?g_FalObjects@@3PAPAVFal@@A 1000a7a0     fal:falmain.obj
+ 0002:000007ac       ?g_pFlashMediaInfo@@3PAU_FlashInfoEx@@A 1000a7ac     fal:falmain.obj
+ 0002:000007b0       ?g_hDeviceKey@@3PAUHKEY__@@A 1000a7b0     fal:falmain.obj
+ 0002:000007b4       ?g_hCoreDll@@3PAUHINSTANCE__@@A 1000a7b4     fal:falmain.obj
+ 0002:000007b8       ?g_dwAvailableSectors@@3KA 1000a7b8     fal:falmain.obj
+ 0002:000007bc       ?g_CurrentPowerState@@3W4_CEDEVICE_POWER_STATE@@A 1000a7bc     fal:falmain.obj
+ 0002:00000840       ?pNFCONF@@3RAGA            1000a840     nandflash_lib:fmd.obj
+ 0002:00000844       ?pNFCMD@@3RAGA             1000a844     nandflash_lib:fmd.obj
+ 0002:00000848       ?pNFMECCD1@@3RAKA          1000a848     nandflash_lib:fmd.obj
+ 0002:0000084c       ?wPRIMARY_REAL_NAND_BLOCKS@@3GA 1000a84c     nandflash_lib:fmd.obj
+ 0002:00000850       ?pNFDATA@@3RAKA            1000a850     nandflash_lib:fmd.obj
+ 0002:00000854       ?pBSPArgs@@3PAUBSP_ARGS@@A 1000a854     nandflash_lib:fmd.obj
+ 0002:00000858       ?wSECONDARY_NAND_BLOCKS@@3GA 1000a858     nandflash_lib:fmd.obj
+ 0002:0000085c       ?pNFSTAT@@3RAGA            1000a85c     nandflash_lib:fmd.obj
+ 0002:00000860       ?pNFCONT@@3RAGA            1000a860     nandflash_lib:fmd.obj
+ 0002:00000864       ?dwPrimaryNandDevice@@3KA  1000a864     nandflash_lib:fmd.obj
+ 0002:00000868       ?pNFReg@@3RAGA             1000a868     nandflash_lib:fmd.obj
+ 0002:0000086c       ?pNFESTAT1@@3RAKA          1000a86c     nandflash_lib:fmd.obj
+ 0002:00000870       ?pNFESTAT0@@3RAKA          1000a870     nandflash_lib:fmd.obj
+ 0002:00000874       ?pNFADDR@@3RAGA            1000a874     nandflash_lib:fmd.obj
+ 0002:00000878       ?pNFMECC1@@3RAKA           1000a878     nandflash_lib:fmd.obj
+ 0002:0000087c       ?v_pIOPregs@@3PAUS3C2440A_IOPORT_REG@@A 1000a87c     nandflash_lib:fmd.obj
+ 0002:00000880       ?wPRIMARY_NAND_BLOCKS@@3GA 1000a880     nandflash_lib:fmd.obj
+ 0002:00000884       ?pNFSBLK@@3RAKA            1000a884     nandflash_lib:fmd.obj
+ 0002:00000888       ?pNFEBLK@@3RAKA            1000a888     nandflash_lib:fmd.obj
+ 0002:0000088c       ?pNFMECCD0@@3RAKA          1000a88c     nandflash_lib:fmd.obj
+ 0002:00000890       ?pNFECC@@3RAKA             1000a890     nandflash_lib:fmd.obj
+ 0002:00000894       ?wSECONDARY_REAL_NAND_BLOCKS@@3GA 1000a894     nandflash_lib:fmd.obj
+ 0002:00000898       ?wNUM_BLOCKS@@3GA          1000a898     nandflash_lib:fmd.obj
+ 0002:0000089c       ?dwSecondaryNandDevice@@3KA 1000a89c     nandflash_lib:fmd.obj
+ 0002:000008a0       ?pNFMECC0@@3RAKA           1000a8a0     nandflash_lib:fmd.obj
+ 0002:000008a4       _exitflag                  1000a8a4     corelib0:cexit.obj
+ 0002:000008a8       __onexitend                1000a8a8     <common>
+ 0002:000008ac       __onexitbegin              1000a8ac     <common>
+ 0002:000008b0       _pRawDllMain               1000a8b0     <common>
+
+ entry point at        0001:00007b10
+
+ Static symbols
+
+ 0001:00002ad0       CeLogMsg                   10003ad0 f   fal:fal.obj
+ 0001:00003f34       CeLogMsg                   10004f34 f   fal:log2physmap.obj
+ 0001:00007a14       _DllMainCRTStartupHelper   10008a14 f   corelib0:pegdmain.obj
+ 0001:00007c54       doexit                     10008c54 f   corelib0:cexit.obj

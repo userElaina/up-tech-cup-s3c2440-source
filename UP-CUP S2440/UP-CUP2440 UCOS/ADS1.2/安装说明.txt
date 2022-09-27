@@ -1,0 +1,4 @@
+ 双击setup.exe开始安装ADS1.2,依次点击"Next"、"YES"按钮，选择安装路径，然后连续点击几次"Next"按钮即开始安装。
+   文件复制完成后，点击"YES"、"确定"按钮，即可进入ARM License Wizard窗口，安装License。点击"下一步"、"下一步"按钮，进入Install License页，点击"Browse..."按钮,选取源安装目录下的Crack\License.dat文件，确定后再按照提示进入下一步，直到安装完毕。
+   
+   若在安装ADS1.2时没有安装License，则可通过"开始"->"程序"->"ARM Developer Suite v1.2"->"License installation Wizard"打开ARM License Wizard窗口，安装License。(本处以WINxp为例)

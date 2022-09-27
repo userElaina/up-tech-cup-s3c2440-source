@@ -1,0 +1,4 @@
+OBJECTS=\
+    obj\ARMV4I\debug\Bak_io.obj\
+    obj\ARMV4I\debug\Bak_hw.obj
+

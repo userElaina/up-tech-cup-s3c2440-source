@@ -1,0 +1,4 @@
+OBJECTS=\
+    obj\ARMV4I\debug\s3c2440kbd.obj\
+    obj\ARMV4I\debug\kbd.obj
+

@@ -1,0 +1,155 @@
+                        .module SensorEXB.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile C:\DOCUME~1\蔡颖鹏\桌面\SensorEXBIcc\SensorEXB.c
+ 0000                   .dbfunc e port_init _port_init fV
+                        .even
+ 0000           _port_init::
+ 0000                   .dbline -1
+ 0000                   .dbline 5
+ 0000           ; #include "generic.h"
+ 0000           ; 
+ 0000           ; 
+ 0000           ; void port_init(void)
+ 0000           ; {
+ 0000                   .dbline 6
+ 0000           ;       PORTB = 0x00;
+ 0000 2224              clr R2
+ 0002 28BA              out 0x18,R2
+ 0004                   .dbline 7
+ 0004           ;       DDRB  = 0x2C;//00101100
+ 0004 8CE2              ldi R24,44
+ 0006 87BB              out 0x17,R24
+ 0008                   .dbline 8
+ 0008           ;       PORTC = 0x00;
+ 0008 25BA              out 0x15,R2
+ 000A                   .dbline 9
+ 000A           ;       DDRC  = 0x40;
+ 000A 80E4              ldi R24,64
+ 000C 84BB              out 0x14,R24
+ 000E                   .dbline 10
+ 000E           ;       PORTD = 0x80;
+ 000E 80E8              ldi R24,128
+ 0010 82BB              out 0x12,R24
+ 0012                   .dbline 11
+ 0012           ;       DDRD  = 0x82;
+ 0012 82E8              ldi R24,130
+ 0014 81BB              out 0x11,R24
+ 0016                   .dbline -2
+ 0016           L1:
+ 0016                   .dbline 0 ; func end
+ 0016 0895              ret
+ 0018                   .dbend
+ 0018                   .dbfunc e main _main fI
+ 0018           ;              i -> y+0
+                        .even
+ 0018           _main::
+ 0018 2497              sbiw R28,4
+ 001A                   .dbline -1
+ 001A                   .dbline 15
+ 001A           ; }
+ 001A           ; 
+ 001A           ; int main(void)
+ 001A           ; {
+ 001A                   .dbline 16
+ 001A           ;       float i = 0;
+ 001A 00E0              ldi R16,<L3
+ 001C 10E0              ldi R17,>L3
+ 001E 00D0              rcall lpm32
+ 0020 FE01              movw R30,R28
+ 0022 0083              std z+0,R16
+ 0024 1183              std z+1,R17
+ 0026 2283              std z+2,R18
+ 0028 3383              std z+3,R19
+ 002A                   .dbline 17
+ 002A           ;       port_init();
+ 002A EADF              rcall _port_init
+ 002C                   .dbline 18
+ 002C           ;       USART_Init();
+ 002C 00D0              rcall _USART_Init
+ 002E                   .dbline 19
+ 002E           ;       delay_s(1);
+ 002E 01E0              ldi R16,1
+ 0030 10E0              ldi R17,0
+ 0032 00D0              rcall _delay_s
+ 0034                   .dbline 20
+ 0034           ;       ADC_Init();
+ 0034 00D0              rcall _ADC_Init
+ 0036                   .dbline 21
+ 0036           ;       SPI_MasterInit();
+ 0036 00D0              rcall _SPI_MasterInit
+ 0038                   .dbline 24
+ 0038           ;       
+ 0038           ;       //先读一次数据，第一次的数据很大概率会出错
+ 0038           ;       Get_Temperature();
+ 0038 00D0              rcall _Get_Temperature
+ 003A                   .dbline 27
+ 003A           ;       
+ 003A           ;       //显示0xAA表示等待命令状态
+ 003A           ;       SPI_MasterTransmitaByte(0x88);//显示A
+ 003A 08E8              ldi R16,136
+ 003C 00D0              rcall _SPI_MasterTransmitaByte
+ 003E                   .dbline 28
+ 003E           ;       SPI_MasterTransmitaByte(0x88);//显示A
+ 003E 08E8              ldi R16,136
+ 0040 00D0              rcall _SPI_MasterTransmitaByte
+ 0042                   .dbline 30
+ 0042           ;               
+ 0042           ;       PORTB&=0xFB;
+ 0042 88B3              in R24,0x18
+ 0044 8B7F              andi R24,251
+ 0046 88BB              out 0x18,R24
+ 0048                   .dbline 31
+ 0048           ;       PORTB|=0x04;
+ 0048 C29A              sbi 0x18,2
+ 004A 0CC0              rjmp L5
+ 004C           X0:
+ 004C                   .dbline 35
+ 004C           ;       
+ 004C           ;       
+ 004C           ;       while(1)
+ 004C           ;       {
+ 004C           L7:
+ 004C                   .dbline 38
+ 004C                   .dbline 39
+ 004C 00D0              rcall _WaitForCMD
+ 004E 00930000          sts _CMD,R16
+ 0052                   .dbline 41
+ 0052           L8:
+ 0052                   .dbline 37
+ 0052 20900000          lds R2,_CMD
+ 0056 2220              tst R2
+ 0058 C9F3              breq L7
+ 005A                   .dbline 42
+ 005A 022D              mov R16,R2
+ 005C 00D0              rcall _GetSensorMessage
+ 005E                   .dbline 43
+ 005E 2224              clr R2
+ 0060 20920000          sts _CMD,R2
+ 0064                   .dbline 44
+ 0064           L5:
+ 0064                   .dbline 34
+ 0064 F6CF              rjmp L8
+ 0066           X1:
+ 0066                   .dbline 45
+ 0066           ;               //等待命令
+ 0066           ;               while(CMD == 0x00)
+ 0066           ;               {
+ 0066           ;                       CMD = WaitForCMD();
+ 0066           ;                       //返回0代表命令失败，重新等待新的命令
+ 0066           ;               }
+ 0066           ;               GetSensorMessage(CMD);
+ 0066           ;               CMD = 0x00;
+ 0066           ;       }
+ 0066           ;       return 0;
+ 0066 0027              clr R16
+ 0068 1127              clr R17
+ 006A                   .dbline -2
+ 006A           L2:
+ 006A 2496              adiw R28,4
+ 006C                   .dbline 0 ; func end
+ 006C 0895              ret
+ 006E                   .dbsym l i 0 D
+ 006E                   .dbend
+                        .area lit(rom, con, rel)
+ 0000           L3:
+ 0000 00000000          .word 0x0,0x0

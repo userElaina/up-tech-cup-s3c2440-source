@@ -1,0 +1,209 @@
+XL
+H 2 areas B global symbols
+M UART.c
+S push_gset2 Ref0000
+S push_gset3 Ref0000
+S _SPI_MasterTransmitaByte Ref0000
+S pop_gset2 Ref0000
+S pop_gset3 Ref0000
+A text size 1A0 flags 0
+dbfile C:\DOCUME~1\≤Ã”±≈Ù\◊¿√Ê\SensorEXBIcc\UART.c
+dbfunc e USART_Init 0 fV
+dbline FFFFFFFF 0
+dbline A 0
+dbline B 0
+dbline C 4
+dbline E 6
+dbline 11 A
+dbline 12 E
+dbline 13 10
+dbline FFFFFFFE 14
+dbline 0 14
+dbfunc e UARTSendaByte 16 fV
+dbsym r cTransmitValue 10 c
+dbline FFFFFFFF 16
+dbline 17 16
+dbline 18 16
+dbline 18 16
+dbline 19 1A
+dbline FFFFFFFE 1C
+dbline 0 1C
+dbfunc e UARTSendAMessage 1E fV
+dbsym r i 14 i
+dbsym r num 16 i
+dbsym r SendBuffer A pc
+dbline FFFFFFFF 24
+dbline 1D 24
+dbline 1F 24
+dbline 20 2A
+dbline 21 30
+dbline 22 36
+dbline 23 3C
+dbline 24 3C
+dbline 25 46
+dbline 26 5E
+dbline 22 5E
+dbline 22 62
+dbline 27 6C
+dbline 28 78
+dbline FFFFFFFE 84
+dbline 0 86
+dbfunc e UARTRcvaByte 88 fc
+dbline FFFFFFFF 88
+dbline 2D 88
+dbline 2F 88
+dbline 2F 88
+dbline 31 8C
+dbline FFFFFFFE 8E
+dbline 0 8E
+dbfunc e WaitForCMD 90 fc
+dbsym r k 14 i
+dbsym r CMD 14 i
+dbsym r rcvByte 16 c
+dbline FFFFFFFF 92
+dbline 35 92
+dbline 36 92
+dbline 37 94
+dbline 38 98
+dbline 43 9A
+dbline 44 9A
+dbline 45 9E
+dbline 46 9E
+dbline 47 A2
+dbline 48 A2
+dbline 49 A6
+dbline 4A A6
+dbline 4B AA
+dbline 50 AA
+dbline 52 AC
+dbline 53 AC
+dbline 54 AC
+dbline 55 AC
+dbline 42 AC
+dbline 58 AE
+dbline 59 B2
+dbline 5C B6
+dbline 5D C8
+dbline 5F C8
+dbline 60 CC
+dbline 61 D0
+dbline 62 D6
+dbline 64 D8
+dbline 65 DE
+dbline 66 E4
+dbline 67 EA
+dbline 68 EE
+dbline 69 F2
+dbline 6A F6
+dbline 6C 100
+dbline 6F 104
+dbline 71 104
+dbline 72 108
+dbline 73 11A
+dbline 75 11A
+dbline 76 11E
+dbline 77 122
+dbline 78 128
+dbline 7A 12A
+dbline 7B 130
+dbline 7C 136
+dbline 7D 13C
+dbline 7E 140
+dbline 7F 144
+dbline 80 148
+dbline 82 152
+dbline 85 156
+dbline 86 156
+dbline 87 15A
+dbline 88 15E
+dbline 8A 15E
+dbline 8B 162
+dbline 8C 166
+dbline 8D 16C
+dbline 8F 16E
+dbline 90 174
+dbline 91 17A
+dbline 92 180
+dbline 93 184
+dbline 94 188
+dbline 95 18C
+dbline 97 196
+dbline 9A 19A
+dbline 9B 19A
+dbline FFFFFFFE 19C
+dbline 0 19E
+S _UARTSendaByte Def0016
+S _UARTSendAMessage Def001E
+S _UARTRcvaByte Def0088
+S _USART_Init Def0000
+S _WaitForCMD Def0090
+A bss size 7 flags 20
+dbfile C:\DOCUME~1\≤Ã”±≈Ù\◊¿√Ê\SensorEXBIcc\UART.c
+dbsym e SendBuffer 0 A[7:7]c
+S _SendBuffer Def0000
+T 00 00 22 24 2A B8 2B B8 86 E8 80 BD 83 E0 89 B9
+R 00 00 00 00
+T 0E 00 20 BC 88 E1 8A B9 08 95
+R 00 00 00 00
+T 16 00 5D 9B FE CF 0C B9 08 95
+R 00 00 00 00
+T 1E 00 00 D0 B9 01 58 01 22 24 F5 01 25 82 F5 01
+R 00 00 00 00 82 02 01 00
+T 2C 00 00 81 F3 DF F5 01 01 81 F0 DF 42 E0 50 E0
+R 00 00 00 00
+T 3A 00 13 C0 FA 01 EA 0D FB 1D 00 81 E8 DF CB 01
+R 00 00 00 00
+T 48 00 02 97 8A 0D 9B 1D FA 01 EA 0D FB 1D 40 80
+R 00 00 00 00
+T 56 00 FC 01 50 80 54 24 50 82 4F 5F 5F 4F CB 01
+R 00 00 00 00
+T 64 00 02 97 48 17 59 07 40 F3 FB 01 32 97 EA 0D
+R 00 00 00 00
+T 72 00 FB 1D 00 81 CF DF FB 01 31 97 EA 0D FB 1D
+R 00 00 00 00
+T 80 00 00 81 C9 DF 00 D0 08 95
+R 00 00 00 00 82 06 04 00
+T 88 00 5F 9B FE CF 0C B1 08 95
+R 00 00 00 00
+T 90 00 00 D0 66 27 44 27 55 27 09 C0 F6 DF 60 2F
+R 00 00 00 00 82 02 00 00
+T 9E 00 0A 3A 29 F4 F2 DF 60 2F 0F 3F 09 F4 01 C0
+R 00 00 00 00
+T AC 00 F6 CF EC DF 60 2F 46 2F 55 27 40 31 E0 E0
+R 00 00 00 00
+T BA 00 5E 07 28 F0 80 E2 90 E0 84 17 95 07 F0 F4
+R 00 00 00 00
+T C8 00 02 E8 00 D0 02 E8 00 D0 88 B3 8B 7F 88 BB
+R 00 00 00 00 82 04 02 00 82 08 02 00
+T D6 00 C2 9A 8B EB 80 93 00 00 8F EF 80 93 01 00
+R 00 00 00 00 00 08 01 00 00 0E 01 00
+T E4 00 22 24 20 92 02 00 20 92 03 00 20 92 04 00
+R 00 00 00 00 00 06 01 00 00 0A 01 00 00 0E 01 00
+T F2 00 80 93 06 00 27 E0 30 E0 00 E0
+R 00 00 00 00 00 04 01 00 20 0A 01 00 00 00
+T FC 00 10 E0 8F DF 00 27 4C C0 C1 DF 60 2F 26 2E
+R 00 00 00 00 40 02 01 00 00 00
+T 0A 01 33 24 CA 01 82 0D 93 1D 8F 3F E0 E0 9E 07
+R 00 00 00 00
+T 18 01 F1 F0 06 EC 00 D0 06 EC 00 D0 88 B3 8B 7F
+R 00 00 00 00 82 06 02 00 82 0A 02 00
+T 26 01 88 BB C2 9A 8B EB 80 93 00 00 8F EF 80 93
+R 00 00 00 00 00 0A 01 00
+T 34 01 01 00 22 24 20 92 02 00 20 92 03 00 20 92
+R 00 00 00 00 00 02 01 00 00 08 01 00 00 0C 01 00
+T 42 01 04 00 80 93 06 00 27 E0 30 E0
+R 00 00 00 00 00 02 01 00 00 06 01 00
+T 4C 01 00 E0 10 E0 66 DF 00 27 23 C0 98 DF 60 2F
+R 00 00 00 00 20 02 01 00 00 00 40 04 01 00 00 00
+T 5A 01 0F 3F F1 F0 01 EA 00 D0 01 EA 00 D0 88 B3
+R 00 00 00 00 82 08 02 00 82 0C 02 00
+T 68 01 8B 7F 88 BB C2 9A 8B EB 80 93 00 00 8F EF
+R 00 00 00 00 00 0C 01 00
+T 76 01 80 93 01 00 22 24 20 92 02 00 20 92 03 00
+R 00 00 00 00 00 04 01 00 00 0A 01 00 00 0E 01 00
+T 84 01 20 92 04 00 80 93 06 00 27 E0 30 E0
+R 00 00 00 00 00 04 01 00 00 08 01 00
+T 90 01 00 E0 10 E0 44 DF 00 27 01 C0 04 2F
+R 00 00 00 00 20 02 01 00 00 00 40 04 01 00 00 00
+T 9C 01 00 D0 08 95
+R 00 00 00 00 82 02 03 00

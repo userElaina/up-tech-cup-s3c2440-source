@@ -1,0 +1,390 @@
+ kitl
+
+ Timestamp is 4f87b395 (Fri Apr 13 13:03:17 2012)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00002150H .rdata                  CODE
+ 0001:00002150 00000021H .rdata$debug            CODE
+ 0001:00002174 00009eb4H .text                   CODE
+ 0001:0000c028 0000004cH .xdata                  CODE
+ 0001:0000c080 00000031H .edata                  CODE
+ 0002:00000000 000004d8H .data                   DATA
+ 0002:000004e0 0003e584H .bss                    DATA
+ 0003:00000000 00000598H .pdata                  DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0001:000000b0       ??_C@_0BG@JEMGNBDG@?$CLS3C2440UART_PowerOn?6?$AA@ 100010b0     kitlser.obj
+ 0001:00000158       ??_C@_0BF@DCOKKFJP@Wait?5for?5connecting?6?$AA@ 10001158     kitlusbser.obj
+ 0001:00000200       ??_C@_05FGLJHCHH@NONE?6?$AA@ 10001200     kitl.obj
+ 0001:00000208       ??_C@_1EE@LHEPEBKN@?$AAK?$AAI?$AAT?$AAL?$AA?5?$AAA?$AAr?$AAg?$AAu?$AAm?$AAe?$AAn?$AAt?$AA?5?$AAS?$AAe?$AAt?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAI?$AAN?$AAI?$AAT?$AA?5?$AAf?$AAa?$AAi?$AAl?$AA?4@ 10001208     kitl.obj
+ 0001:0000024c       ??_C@_1CE@IIOONFBD@?$AA?$CL?$AAO?$AAE?$AAM?$AAK?$AAi?$AAt?$AAl?$AAS?$AAt?$AAa?$AAr?$AAt?$AAu?$AAp?$AA?$AN?$AA?6?$AA?$AA@ 1000124c     kitl.obj
+ 0001:00000270       ??_C@_0DG@BEEKIGEB@?$CB?5Time?5went?5backwards?5?$CIor?5wrappe@ 10001270     kitl.obj
+ 0001:000002a8       ??_C@_0CA@NGKEKANM@Closing?5Handle?5of?5Timer?5Thread?6?$AA@ 100012a8     kitlcore:ethdbg.obj
+ 0001:000002c8       ??_C@_0BN@FPKBKHBK@Error?5creating?5timer?5thread?6?$AA@ 100012c8     kitlcore:ethdbg.obj
+ 0001:000002e8       ??_C@_0CF@GGNNPHKD@Connecting?5to?5Desktop?5?4?4?5resendi@ 100012e8     kitlcore:ethdbg.obj
+ 0001:00000310       ??_C@_0BI@OFAMBHJH@Connecting?5to?5Desktop?$AN?6?$AA@ 10001310     kitlcore:ethdbg.obj
+ 0001:00000328       ??_C@_0EO@CEOOKDBM@?$CBKITL?5Interrupt?5thread?5got?5error@ 10001328     kitlcore:ethdbg.obj
+ 0001:00000378       ??_C@_0CB@PCGPHMPD@KITL?5InterruptInitialize?5failed?6@ 10001378     kitlcore:ethdbg.obj
+ 0001:0000039c       ??_C@_0BK@HDMNDFBA@KITL?5CreateEvent?5failed?$CB?6?$AA@ 1000139c     kitlcore:ethdbg.obj
+ 0001:000003b8       ??_C@_1BK@PPDMEPMD@?$AAE?$AAd?$AAb?$AAg?$AAI?$AAn?$AAt?$AAE?$AAv?$AAe?$AAn?$AAt?$AA?$AA@ 100013b8     kitlcore:ethdbg.obj
+ 0001:000003d4       ??_C@_0CK@GNMBECNI@?$CBDoRegisterClient?$CI?$CFs?$CJ?3?5Invalid?5p@ 100013d4     kitlcore:ethdbg.obj
+ 0001:00000400       ??_C@_04HIBGFPH@NULL?$AA@  10001400     kitlcore:ethdbg.obj
+ 0001:00000408       ??_C@_0CP@LFECMIMJ@?$CBDoRegisterClient?$CI?$CFs?$CJ?3?5Invalid?5w@ 10001408     kitlcore:ethdbg.obj
+ 0001:00000438       ??_C@_0DN@GDEGDLCL@?$CBKITLRegisterClient?$CI?$CFs?$CJ?3?5Client?5@ 10001438     kitlcore:ethdbg.obj
+ 0001:00000478       ??_C@_0DG@FHPIAJCD@?$CBKITLRegisterClient?$CI?$CFs?$CJ?3?5No?5avai@ 10001478     kitlcore:ethdbg.obj
+ 0001:000004b0       ??_C@_0DO@NHOEDOMO@?$CBDoRegisterClient?$CI?$CFs?$CJ?3?5Need?5to?5s@ 100014b0     kitlcore:ethdbg.obj
+ 0001:000004f0       ??_C@_0CB@GFDDAGEF@Error?5creating?5interrupt?5thread?6@ 100014f0     kitlcore:ethdbg.obj
+ 0001:00000514       ??_C@_0CE@FKCJJLLC@KITL?3?5Leaving?5polling?5mode?4?4?4?50x@ 10001514     kitlcore:ethdbg.obj
+ 0001:00000538       ??_C@_0DC@LLJMBDFH@?$CBKITLRegisterDfltClient?3?5Fail?5to@ 10001538     kitlcore:ethdbg.obj
+ 0001:0000056c       ??_C@_0DH@MFOCECCL@?$AN?6?$CBUnable?5to?5establish?5KITL?5conn@ 1000156c     kitlcore:ethdbg.obj
+ 0001:000005a4       ??_C@_0DN@NDJFLFHF@?$AN?6?$CBKitl?5buffer?5specified?5by?5OAL?5@ 100015a4     kitlcore:ethdbg.obj
+ 0001:000005e4       ??_C@_0CE@HDEHCBNJ@KITL?5Error?5allocating?5timer?5memo@ 100015e4     kitlcore:timer.obj
+ 0001:00000608       ??_C@_0DM@HHCOAHOB@?$CBKitlSendFrame?3?5transport?5failed@ 10001608     kitlcore:edbgprot.obj
+ 0001:00000644       ??_C@_0CF@ELFKFCIB@?$CBSendConfig?3?5Error?5in?5KitlSendFr@ 10001644     kitlcore:edbgprot.obj
+ 0001:0000066c       ??_C@_0BO@OHFCENNA@?$CBSendConfig?3?5Stack?5overflow?$AN?6?$AA@ 1000166c     kitlcore:edbgprot.obj
+ 0001:0000068c       ??_C@_0CM@CLKKFLBC@?$CBRetransmitFrame?3?5Error?5in?5KitlS@ 1000168c     kitlcore:edbgprot.obj
+ 0001:000006b8       ??_C@_0CH@PDOCBOKH@?$CBKITL?3?5Error?5in?5KitlSendFrame?5fo@ 100016b8     kitlcore:edbgprot.obj
+ 0001:000006e0       ??_C@_0BP@EJOKEGGJ@?$CBSendAckNack?3?5Stack?5overflow?$AN?6?$AA@ 100016e0     kitlcore:edbgprot.obj
+ 0001:00000700       ??_C@_0BJ@HLKLCDLN@KITL?3?5Got?5RESET?5command?6?$AA@ 10001700     kitlcore:edbgprot.obj
+ 0001:0000071c       ??_C@_0DH@FAHMLBID@KITL?3?5IOCTL_HAL_REBOOT?5not?5suppo@ 1000171c     kitlcore:edbgprot.obj
+ 0001:00000754       ??_C@_0CM@CCHLHCID@?$CBHost?5config?5message?5size?5mismat@ 10001754     kitlcore:edbgprot.obj
+ 0001:00000780       ??_C@_0CB@MCDILJMK@?$CBKITLPollData?3?5STACK?5OVERFLOW?$CB?$AN?6@ 10001780     kitlcore:edbgprot.obj
+ 0001:000007a4       ??_C@_0DA@KOJGDENJ@?$CBExchangeConfig?3?5WaitForMultiple@ 100017a4     kitlcore:edbgprot.obj
+ 0001:000007d4       ??_C@_0CD@CLDOKAPO@?$CBKITLSend?3?5Error?5in?5KitlSendFram@ 100017d4     kitlcore:edbgprot.obj
+ 0001:000007f8       ??_C@_0FD@BAMAHPPH@0x?$CFx?5?$CI0x?$CFx?$CJ?3?5KITLSend?$CI?$CFu?$CJ?3?5Timed@ 100017f8     kitlcore:edbgprot.obj
+ 0001:0000084c       ??_C@_02DKCKIIND@?$CFs?$AA@ 1000184c     kitlcore:edbgprot.obj
+ 0001:00000850       ??_C@_0DD@OOGFOEID@?$CBKITLSend?$CIDBGMSG?$CJ?3?5Reentrant?5cal@ 10001850     kitlcore:edbgprot.obj
+ 0001:00000884       ??_C@_03OFAPEBGM@?$CFs?6?$AA@ 10001884     kitlcore:edbgprot.obj
+ 0001:00000888       ??_C@_0DK@DPCAMIHE@?$CBKITLSend?3?5Data?5to?5be?5send?5overl@ 10001888     kitlcore:edbgprot.obj
+ 0001:000008c4       ??_C@_0CJ@KPACHCHO@?$AN?6?$CBKITLRecv?3?5Invalid?5client?5ID?5?$CF@ 100018c4     kitlcore:edbgprot.obj
+ 0001:000008f0       ??_C@_0DJ@KKFBBHCF@?$CBKITLRecv?3?5Receive?5buffer?5overla@ 100018f0     kitlcore:edbgprot.obj
+ 0001:00000a50       ??_C@_1BI@FCMLLAGN@?$AA?$CF?$AAd?$AA?4?$AA?$CF?$AAd?$AA?4?$AA?$CF?$AAd?$AA?4?$AA?$CF?$AAd?$AA?$AA@ 10001a50     oal_kitl:format.obj
+ 0001:00000af8       ??_C@_0BD@GBONLPAN@?9OALKitlPowerOff?$AN?6?$AA@ 10001af8     oal_kitl:kitl.obj
+ 0001:00000b0c       ??_C@_0BD@PMDBLEBO@?$CLOALKitlPowerOff?$AN?6?$AA@ 10001b0c     oal_kitl:kitl.obj
+ 0001:00000b20       ??_C@_0BC@KIOCKNCJ@?9OALKitlPowerOn?$AN?6?$AA@ 10001b20     oal_kitl:kitl.obj
+ 0001:00000b34       ??_C@_0BC@KGJOBBKM@?$CLOALKitlPowerOn?$AN?6?$AA@ 10001b34     oal_kitl:kitl.obj
+ 0001:00000b48       ??_C@_0BI@GBPEIAJI@?9OEMKitlInit?$CIrc?5?$DN?5?$CFd?$CJ?$AN?6?$AA@ 10001b48     oal_kitl:kitl.obj
+ 0001:00000b60       ??_C@_0BH@DJPAMHLI@?$CLOEMKitlInit?$CI0x?$CF08x?$CJ?$AN?6?$AA@ 10001b60     oal_kitl:kitl.obj
+ 0001:00000c9c       ??_C@_0BG@PDHAIEPB@?9SerialSend?$CIrc?5?$DN?51?$CJ?$AN?6?$AA@ 10001c9c     oal_kitl:kitlserial.obj
+ 0001:00000cb4       ??_C@_0BK@FJBKAKDG@?$CLSerialSend?$CI0x?$CF08x?0?5?$CFd?$CJ?$AN?6?$AA@ 10001cb4     oal_kitl:kitlserial.obj
+ 0001:00000cd0       ??_C@_0BN@FOGKPFOM@?9SerialRecv?$CI?$CKpLength?5?$DN?5?$CFd?$CJ?$AN?6?$AA@ 10001cd0     oal_kitl:kitlserial.obj
+ 0001:00000cf0       ??_C@_0DN@FPKOAPOO@ERROR?3?5SerialRecv?3?5Received?5pack@ 10001cf0     oal_kitl:kitlserial.obj
+ 0001:00000d30       ??_C@_0DI@FBKFFAPI@WARN?3?5SerialRecv?3?5Packet?5checksu@ 10001d30     oal_kitl:kitlserial.obj
+ 0001:00000d68       ??_C@_0FC@OLAMHMJA@WARN?3?5SerialRecv?3?5payload?5size?5e@ 10001d68     oal_kitl:kitlserial.obj
+ 0001:00000dc0       ??_C@_0FE@EPOLMELO@WARN?3?5SerialRecv?3?5Packet?5type?5wr@ 10001dc0     oal_kitl:kitlserial.obj
+ 0001:00000e18       ??_C@_0FH@COFDJCJM@WARN?3?5SerialRecv?3?5Header?5checksu@ 10001e18     oal_kitl:kitlserial.obj
+ 0001:00000e70       ??_C@_0BK@PNMBDCIB@?$CLSerialRecv?$CI0x?$CF08x?0?5?$CFd?$CJ?$AN?6?$AA@ 10001e70     oal_kitl:kitlserial.obj
+ 0001:00000e8c       ??_C@_0BO@KPIGKMGK@?9OALKitlSerialInit?$CIrc?5?$DN?5?$CFd?$CJ?$AN?6?$AA@ 10001e8c     oal_kitl:kitlserial.obj
+ 0001:00000eac       ??_C@_0CG@IJDAEBCE@WARN?3?5KITL?5will?5run?5in?5polling?5m@ 10001eac     oal_kitl:kitlserial.obj
+ 0001:00000ed4       ??_C@_0CN@MENCFIED@WARN?3?5KITL?5can?8t?5obtain?5SYSINTR?5@ 10001ed4     oal_kitl:kitlserial.obj
+ 0001:00000f04       ??_C@_0CO@BPFMIJNH@WARN?3?5KITL?5can?8t?5obtain?5IRQ?5for?5@ 10001f04     oal_kitl:kitlserial.obj
+ 0001:00000f34       ??_C@_0CF@GMMNDEHJ@ERROR?3?5KITL?5call?5to?5pfnInit?5fail@ 10001f34     oal_kitl:kitlserial.obj
+ 0001:00000f5c       ??_C@_0CE@LGCGCDLA@ERROR?3?5KITL?5device?5driver?5is?5NUL@ 10001f5c     oal_kitl:kitlserial.obj
+ 0001:00000f80       ??_C@_0DB@NNJFABKG@?$CLOALKitlSerialInit?$CI?8?$CFS?8?0?5?8?$CFs?8?0?50@ 10001f80     oal_kitl:kitlserial.obj
+ 0001:00001048       ??_C@_0CB@GFLGAKPJ@KITL?3?5Start?5DHCP?5RENEW?5process?$AN?6@ 10002048     oal_kitl:kitleth.obj
+ 0001:0000106c       ??_C@_0CJ@OFEHEAMD@KITL?3?5Connected?5host?5?5IP?3?5?$CFs?5?5Po@ 1000206c     oal_kitl:kitleth.obj
+ 0001:00001098       ??_C@_0CO@LIMJACDF@?9KitlEthDecode?$CIpData?5?$DN?50x?$CF08x?0?5l@ 10002098     oal_kitl:kitleth.obj
+ 0001:000010c8       ??_C@_0CF@DCHGBGAP@?$CLKitlEthDecode?$CI0x?$CF08x?0?50x?$CF08x?9?$DO?$CF@ 100020c8     oal_kitl:kitleth.obj
+ 0001:000010f0       ??_C@_0BJ@BAFHPAIJ@?9KitlEthEncode?$CIrc?5?$DN?51?$CJ?$AN?6?$AA@ 100020f0     oal_kitl:kitleth.obj
+ 0001:0000110c       ??_C@_0BL@NHDADPAH@?$CLKitlEthEncode?$CI?$CF08x?0?5?$CFd?$CJ?$AN?6?$AA@ 1000210c     oal_kitl:kitleth.obj
+ 0001:00001128       ??_C@_0BN@OHPDCAJH@?9KitlEthGetDevCfg?$CIrc?5?$DN?5?$CFd?$CJ?$AN?6?$AA@ 10002128     oal_kitl:kitleth.obj
+ 0001:00001148       ??_C@_0CI@LLEHHLED@?$CLKitlEthGetDevCfg?$CI0x?$CF08x?0?50x?$CF08x@ 10002148     oal_kitl:kitleth.obj
+ 0001:00001170       ??_C@_0BI@DJIGCCGG@?9KitlEthSend?$CIrc?5?$DN?5?$CFd?$CJ?$AN?6?$AA@ 10002170     oal_kitl:kitleth.obj
+ 0001:00001188       ??_C@_0CA@ELPHLPBP@?$CBDriver?5Send?5failure?0?5retry?5?$CFu?6?$AA@ 10002188     oal_kitl:kitleth.obj
+ 0001:000011a8       ??_C@_0BL@MJDALEMH@?$CLKitlEthSend?$CI0x?$CF08x?0?5?$CFd?$CJ?$AN?6?$AA@ 100021a8     oal_kitl:kitleth.obj
+ 0001:000011c4       ??_C@_0BI@PEEPNADN@?9KitlEthRecv?$CIrc?5?$DN?5?$CFd?$CJ?$AN?6?$AA@ 100021c4     oal_kitl:kitleth.obj
+ 0001:000011dc       ??_C@_0CD@HNBDALDE@?$CLKitlEthRecv?$CI0x?$CF08x?0?50x?$CF08x?9?$DO?$CFd?$CJ@ 100021dc     oal_kitl:kitleth.obj
+ 0001:00001200       ??_C@_0BE@NDAHGBJL@?9KitlEthEnableInt?$AN?6?$AA@ 10002200     oal_kitl:kitleth.obj
+ 0001:00001214       ??_C@_0BI@OLDCGLHD@?$CLKitlEthEnableInt?$CI?$CFd?$CJ?$AN?6?$AA@ 10002214     oal_kitl:kitleth.obj
+ 0001:0000122c       ??_C@_0BM@FALEIOIG@?9OALIoCtlVBridge?$CIrc?5?$DN?5?$CFd?$CJ?$AN?6?$AA@ 1000222c     oal_kitl:kitleth.obj
+ 0001:00001248       ??_C@_0BP@BIAFCCDM@?$CLOALIoCtlVBridge?$CI0x?$CF08x?0?4?4?4?$CJ?$AN?6?$AA@ 10002248     oal_kitl:kitleth.obj
+ 0001:00001268       ??_C@_0CF@CNPGAGEH@KITL?3?5DHCP?5get?1renew?5device?5IP?3?5@ 10002268     oal_kitl:kitleth.obj
+ 0001:00001290       ??_C@_0BL@OCIIDPCB@?9OALKitlEthInit?$CIrc?5?$DN?5?$CFd?$CJ?$AN?6?$AA@ 10002290     oal_kitl:kitleth.obj
+ 0001:000012ac       ??_C@_0BL@EIDMIDBA@KITL?3?5using?5sysintr?50x?$CFx?$AN?6?$AA@ 100022ac     oal_kitl:kitleth.obj
+ 0001:000012c8       ??_C@_0BP@ILGKAKAA@KITL?3?5?$CK?$CK?$CK?5Device?5Name?5?$CFs?5?$CK?$CK?$CK?$AN?6?$AA@ 100022c8     oal_kitl:kitleth.obj
+ 0001:000012e8       ??_C@_0CO@PDOCGCJP@ERROR?3?5KITL?5call?5to?5pfnInitDmaBu@ 100022e8     oal_kitl:kitleth.obj
+ 0001:00001318       ??_C@_0CO@HIMCOMKP@?$CLOALKitlEthInit?$CI?8?$CFS?8?0?5?8?$CFs?8?0?50x?$CF0@ 10002318     oal_kitl:kitleth.obj
+ 0001:000013d8       ??_C@_0CG@IHIMJOIA@?9OALKitlCreateName?$CIpBuffer?5?$DN?5?8?$CFh@ 100023d8     oal_kitl:name.obj
+ 0001:00001400       ??_C@_0CM@BCMDHFLI@?$CLOALKitlCreateName?$CI?8?$CFhs?8?0?50x?$CF04x@ 10002400     oal_kitl:name.obj
+ 0001:000014c0       ??_C@_1DA@HPAIFLP@?$AA?9?$AAC?$AAS?$AA8?$AA9?$AA0?$AA0?$AAA?$AAI?$AAn?$AAi?$AAt?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 100024c0     oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:000014f0       ??_C@_1FG@OMDFJAIK@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAC?$AAS?$AA8?$AA9?$AA0?$AA0?$AAA?$AAI?$AAn?$AAi?$AAt?$AA?3?$AA?5?$AAF?$AAa?$AAi?$AAl?$AAe?$AAd?$AA?5?$AAt?$AAo?$AA?5?$AAr?$AAe@ 100024f0     oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:00001548       ??_C@_1EE@JGGAHGPC@?$AAI?$AAN?$AAF?$AAO?$AA?3?$AA?5?$AAC?$AAS?$AA8?$AA9?$AA0?$AA0?$AAA?$AAI?$AAn?$AAi?$AAt?$AA?5?$AAc?$AAh?$AAi?$AAp?$AA?5?$AAd?$AAe?$AAt?$AAe?$AAc?$AAt?$AAe?$AAd?$AA?$AN@ 10002548     oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:00001590       ??_C@_1FC@MDLJIMFC@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAC?$AAS?$AA8?$AA9?$AA0?$AA0?$AAA?$AAI?$AAn?$AAi?$AAt?$AA?3?$AA?5?$AAF?$AAa?$AAi?$AAl?$AAe?$AAd?$AA?5?$AAd?$AAe?$AAt?$AAe?$AAc@ 10002590     oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:000015e8       ??_C@_1HM@NGLAKPGN@?$AA?$CL?$AAC?$AAS?$AA8?$AA9?$AA0?$AA0?$AAA?$AAI?$AAn?$AAi?$AAt?$AA?$CI?$AA0?$AAx?$AA?$CF?$AA0?$AA8?$AAx?$AA?0?$AA?5?$AA0?$AAx?$AA?$CF?$AA0?$AA8?$AAx?$AA?0?$AA?5?$AA?$CF?$AA0?$AA2@ 100025e8     oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:00001664       ??_C@_1DK@NOGHLOAJ@?$AA?9?$AAC?$AAS?$AA8?$AA9?$AA0?$AA0?$AAA?$AAS?$AAe?$AAn?$AAd?$AAF?$AAr?$AAa?$AAm?$AAe?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 10002664     oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:000016a0       ??_C@_1EA@EJDJMGMM@?$AA?$CL?$AAC?$AAS?$AA8?$AA9?$AA0?$AA0?$AAA?$AAS?$AAe?$AAn?$AAd?$AAF?$AAr?$AAa?$AAm?$AAe?$AA?$CI?$AA0?$AAx?$AA?$CF?$AA0?$AA8?$AAx?$AA?0?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 100026a0     oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:000016e0       ??_C@_1EA@NNPLDGPH@?$AA?9?$AAC?$AAS?$AA8?$AA9?$AA0?$AA0?$AAA?$AAG?$AAe?$AAt?$AAF?$AAr?$AAa?$AAm?$AAe?$AA?$CI?$AAl?$AAe?$AAn?$AAg?$AAt?$AAh?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 100026e0     oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:00001720       ??_C@_1DO@KOGIIKI@?$AA?$CL?$AAC?$AAS?$AA8?$AA9?$AA0?$AA0?$AAA?$AAG?$AAe?$AAt?$AAF?$AAr?$AAa?$AAm?$AAe?$AA?$CI?$AA0?$AAx?$AA?$CF?$AA0?$AA8?$AAx?$AA?0?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 10002720     oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:00001760       ??_C@_1CK@MHFPLOF@?$AA?9?$AAC?$AAS?$AA8?$AA9?$AA0?$AA0?$AAA?$AAE?$AAn?$AAa?$AAb?$AAl?$AAe?$AAI?$AAn?$AAt?$AAs?$AA?$AN?$AA?6?$AA?$AA@ 10002760     oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:0000178c       ??_C@_1CK@HMACONAD@?$AA?$CL?$AAC?$AAS?$AA8?$AA9?$AA0?$AA0?$AAA?$AAE?$AAn?$AAa?$AAb?$AAl?$AAe?$AAI?$AAn?$AAt?$AAs?$AA?$AN?$AA?6?$AA?$AA@ 1000278c     oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:000017b8       ??_C@_1CM@HJOGNMLM@?$AA?9?$AAC?$AAS?$AA8?$AA9?$AA0?$AA0?$AAA?$AAD?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAI?$AAn?$AAt?$AAs?$AA?$AN?$AA?6?$AA?$AA@ 100027b8     oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:000017e4       ??_C@_1CM@IFBGENPA@?$AA?$CL?$AAC?$AAS?$AA8?$AA9?$AA0?$AA0?$AAA?$AAD?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAI?$AAn?$AAt?$AAs?$AA?$AN?$AA?6?$AA?$AA@ 100027e4     oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:00001810       ??_C@_1DM@JKDMICEC@?$AA?9?$AAC?$AAS?$AA8?$AA9?$AA0?$AA0?$AAA?$AAC?$AAu?$AAr?$AAr?$AAe?$AAn?$AAt?$AAP?$AAa?$AAc?$AAk?$AAe?$AAt?$AAF?$AAi?$AAl?$AAt?$AAe?$AAr?$AA?$AN?$AA?6?$AA?$AA@ 10002810     oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:00001850       ??_C@_1EM@MHLCOBBO@?$AA?$CL?$AAC?$AAS?$AA8?$AA9?$AA0?$AA0?$AAA?$AAC?$AAu?$AAr?$AAr?$AAe?$AAn?$AAt?$AAP?$AAa?$AAc?$AAk?$AAe?$AAt?$AAF?$AAi?$AAl?$AAt?$AAe?$AAr?$AA?$CI?$AA0?$AAx?$AA?$CF?$AA0@ 10002850     oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:000018a0       ??_C@_1EA@KHPNHEKF@?$AA?9?$AAC?$AAS?$AA8?$AA9?$AA0?$AA0?$AAA?$AAM?$AAu?$AAl?$AAt?$AAi?$AAc?$AAa?$AAs?$AAt?$AAL?$AAi?$AAs?$AAt?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA1?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 100028a0     oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:000018e0       ??_C@_1EI@MLDMDCPO@?$AA?$CL?$AAR?$AAT?$AAL?$AA8?$AA1?$AA3?$AA9?$AAM?$AAu?$AAl?$AAt?$AAi?$AAc?$AAa?$AAs?$AAt?$AAL?$AAi?$AAs?$AAt?$AA?$CI?$AA0?$AAx?$AA?$CF?$AA0?$AA8?$AAx?$AA?0?$AA?5?$AA?$CF?$AAd@ 100028e0     oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:00001928       ??_C@_1DE@DAHNLBLJ@?$AA?9?$AAO?$AAA?$AAL?$AAP?$AAA?$AAt?$AAo?$AAV?$AAA?$AA?$CI?$AAv?$AAa?$AA?5?$AA?$DN?$AA?5?$AA0?$AAx?$AA?$CF?$AA0?$AA8?$AAx?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 10002928     oal_memory_arm:memory.obj
+ 0001:0000195c       ??_C@_1CO@JEIJEAKF@?$AA?$CL?$AAO?$AAA?$AAL?$AAP?$AAA?$AAt?$AAo?$AAV?$AAA?$AA?$CI?$AA0?$AAx?$AA?$CF?$AAx?$AA?0?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 1000295c     oal_memory_arm:memory.obj
+ 0001:00001a20       ??_C@_1EA@DJGHLELP@?$AA?9?$AAO?$AAA?$AAL?$AAA?$AAr?$AAg?$AAs?$AAQ?$AAu?$AAe?$AAr?$AAy?$AA?$CI?$AAp?$AAD?$AAa?$AAt?$AAa?$AA?5?$AA?$DN?$AA?5?$AA0?$AAx?$AA?$CF?$AA0?$AA8?$AAx?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 10002a20     s3c2440a_args:args.obj
+ 0001:00001a60       ??_C@_1CI@CLMEBIJE@?$AA?$CL?$AAO?$AAA?$AAL?$AAA?$AAr?$AAg?$AAs?$AAQ?$AAu?$AAe?$AAr?$AAy?$AA?$CI?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 10002a60     s3c2440a_args:args.obj
+ 0001:00001b18       ??_C@_0EH@OHHLEIM@VBridge?3?5Error?$CB?5ProduceBufferDon@ 10002b18     vbridge:vbridge.obj
+ 0001:00001b60       ??_C@_0ED@LALCLDGC@VBridge?3?5Error?$CB?5ConsumeBuffer?$CI?$CJ?5@ 10002b60     vbridge:vbridge.obj
+ 0001:00001ba8       ??_C@_0EH@PDMAJMNN@VBridge?3?5Error?$CB?5ConsumeBufferDon@ 10002ba8     vbridge:vbridge.obj
+ 0001:00001bf0       ??_C@_0GA@BIIJJCHI@VBridge?3?5Error?$CB?5ConsumeBufferDon@ 10002bf0     vbridge:vbridge.obj
+ 0001:00001c50       ??_C@_08MGAEGNHB@12?319?313?$AA@ 10002c50     vbridge:vbridge.obj
+ 0001:00001c5c       ??_C@_0M@JFNAGGHB@Apr?513?52012?$AA@ 10002c5c     vbridge:vbridge.obj
+ 0001:00001c68       ??_C@_0CE@JNBGKBJC@VBridge?3?3?5built?5on?5?$FL?$CFs?$FN?5time?5?$FL?$CFs@ 10002c68     vbridge:vbridge.obj
+ 0001:00001c8c       ??_C@_0DF@FKGFCLPJ@VBridgeInit?$CI?$CJ?4?4?4TX?5?$DN?5?$FL?$CFd?$FN?5bytes?5@ 10002c8c     vbridge:vbridge.obj
+ 0001:00001cc4       ??_C@_0BO@IKIKAINA@Tx?5buffer?5?$FL0x?$CFx?$FN?5to?5?$FL0x?$CFx?$FN?4?$AN?6?$AA@ 10002cc4     vbridge:vbridge.obj
+ 0001:00001ce4       ??_C@_0BO@DMIECOA@Rx?5buffer?5?$FL0x?$CFx?$FN?5to?5?$FL0x?$CFx?$FN?4?$AN?6?$AA@ 10002ce4     vbridge:vbridge.obj
+ 0001:00001d04       ??_C@_0CO@ILLJABOE@VBridgeKGetOneTxBuffer?$CI?$CJ?5Err?$CB?5?$FL0@ 10002d04     vbridge:vbridge.obj
+ 0001:00001d34       ??_C@_0DE@LOPBMMHM@VBridgeKGetOneTxBufferComplete?$CI?$CJ@ 10002d34     vbridge:vbridge.obj
+ 0001:00001d68       ??_C@_0DJ@LKNKOIHJ@VBridgeKIndicateOneRxBuffer?$CI?$CJ?5Er@ 10002d68     vbridge:vbridge.obj
+ 0001:00001da4       ??_C@_0DI@HEJDFJBF@?$CK?$CK?5WARNING?$CB?$CB?$CB?5?$CK?$CK?5Device?5MAC?5addr@ 10002da4     vbridge:vbridge.obj
+ 0001:00001ddc       ??_C@_0CM@PJABNFGI@VBridge?3?3?5NK?5add?5MAC?3?5?$FL?$CFx?9?$CFx?9?$CFx?9@ 10002ddc     vbridge:vbridge.obj
+ 0001:00001e08       ??_C@_0DJ@JPHIEPAD@VBridgeKSetLocalMacAddress?$CI?$CJ?5Err@ 10002e08     vbridge:vbridge.obj
+ 0001:00001e44       ??_C@_0DA@BNPLKEKM@VBridgeUGetOneTxPacket?$CI?$CJ?5Err?$CB?$CB?5?$FL@ 10002e44     vbridge:vbridge.obj
+ 0001:00001e74       ??_C@_0DI@MDDGKNHB@VBridgeUGetOneTxPacketComplete?$CI?$CJ@ 10002e74     vbridge:vbridge.obj
+ 0001:00001eac       ??_C@_0DA@MGPGECBI@VBridgeUGetOneRxPacket?$CI?$CJ?5Err?$CB?$CB?5?$FL@ 10002eac     vbridge:vbridge.obj
+ 0001:00001edc       ??_C@_0DA@KIINIKAM@VBridgeUGetOneRxPacketComplete?$CI?$CJ@ 10002edc     vbridge:vbridge.obj
+ 0001:00001f0c       ??_C@_0CD@KPODIJAL@VBridge?3?3?5RESET_BUFFER?5received?4@ 10002f0c     vbridge:vbridge.obj
+ 0001:00001f30       ??_C@_0CI@BDPMFOMO@VBridge?3?3?5VB_INITIALIZED?5returns@ 10002f30     vbridge:vbridge.obj
+ 0001:00001f58       ??_C@_0DB@IMBKLANK@VBridgeUGetEDBGMac?$CI?$CJ?0?5ERR?$CB?5NULL?5@ 10002f58     vbridge:vbridge.obj
+ 0001:00001f8c       ??_C@_0DB@BMKDFNPB@VBridge?3?3?5Current?5VMini?5packet?5f@ 10002f8c     vbridge:vbridge.obj
+ 0001:00001fc0       ??_C@_0DG@MKNLPBLF@VBridgeUCurrentPacketFilter?$CI?$CJ?0?5E@ 10002fc0     vbridge:vbridge.obj
+ 0001:00001ff8       uStd                       10002ff8     kitlusbser_lib:kitlusbser.obj
+ 0001:00002174       S3C2440UART_Init           10003174 f   kitlser.obj
+ 0001:0000232c       S3C2440UART_WriteData      1000332c f   kitlser.obj
+ 0001:00002370       S3C2440UART_ReadData       10003370 f   kitlser.obj
+ 0001:000023b0       S3C2440UART_EnableInt      100033b0 f   kitlser.obj
+ 0001:000023b4       S3C2440UART_DisableInt     100033b4 f   kitlser.obj
+ 0001:000023b8       S3C2440UART_PowerOff       100033b8 f   kitlser.obj
+ 0001:000023bc       S3C2440UART_PowerOn        100033bc f   kitlser.obj
+ 0001:00002558       WaitMS                     10003558 f   kitlusbser.obj
+ 0001:000025b8       S3C2440USBSER_Init         100035b8 f   kitlusbser.obj
+ 0001:000026f4       OEMKitlStartup             100036f4 f   kitl.obj
+ 0001:0000277c       OEMKitlGetSecs             1000377c f   kitl.obj
+ 0001:000027f8       OALGetTickCount            100037f8 f   kitl.obj
+ 0001:00002814       IsDesktopDbgrExist         10003814 f   kitlcore:ethdbg.obj
+ 0001:000028d0       ChkDfltSvc                 100038d0 f   kitlcore:ethdbg.obj
+ 0001:00002b20       KITLDeregisterClient       10003b20 f   kitlcore:ethdbg.obj
+ 0001:00002dd8       KITLWriteDebugString       10003dd8 f   kitlcore:ethdbg.obj
+ 0001:00003310       KITLInitializeInterrupt    10004310 f   kitlcore:ethdbg.obj
+ 0001:00003488       KITLRegisterDfltClient     10004488 f   kitlcore:ethdbg.obj
+ 0001:0000379c       KITLRegisterClient         1000479c f   kitlcore:ethdbg.obj
+ 0001:000039c0       ExtKITLIoctl               100049c0 f   kitlcore:ethdbg.obj
+ 0001:00003d5c       KITLIoctl                  10004d5c f   kitlcore:ethdbg.obj
+ 0001:00003fd8       KitlDllMain                10004fd8 f   kitlcore:ethdbg.obj
+ 0001:00004304       KITLOutputDebugString      10005304 f   kitlcore:debug.obj
+ 0001:000043a0       FreeTimerEntry             100053a0 f   kitlcore:timer.obj
+ 0001:000043f8       TimerCallback              100053f8 f   kitlcore:timer.obj
+ 0001:000045c8       TimerStart                 100055c8 f   kitlcore:timer.obj
+ 0001:000046ac       TimerStop                  100056ac f   kitlcore:timer.obj
+ 0001:000047a4       CancelTimersForClient      100057a4 f   kitlcore:timer.obj
+ 0001:000047f4       KitlSetTimerCallback       100057f4 f   kitlcore:timer.obj
+ 0001:000048a0       TimerThread                100058a0 f   kitlcore:timer.obj
+ 0001:00004a38       DoDebugBreak               10005a38 f   kitlcore:edbgprot.obj
+ 0001:00004a40       ResetClientState           10005a40 f   kitlcore:edbgprot.obj
+ 0001:00004afc       KitlSendRawData            10005afc f   kitlcore:edbgprot.obj
+ 0001:00004bc4       KitlSendFrame              10005bc4 f   kitlcore:edbgprot.obj
+ 0001:00004c34       SendConfig                 10005c34 f   kitlcore:edbgprot.obj
+ 0001:00004d74       RetransmitFrame            10005d74 f   kitlcore:edbgprot.obj
+ 0001:000057d8       HandleRecvInterrupt        100067d8 f   kitlcore:edbgprot.obj
+ 0001:00005958       KITLPollResponse           10006958 f   kitlcore:edbgprot.obj
+ 0001:00005ab8       ExchangeConfig             10006ab8 f   kitlcore:edbgprot.obj
+ 0001:00005bbc       KITLSend                   10006bbc f   kitlcore:edbgprot.obj
+ 0001:000061d8       KITLRecv                   100071d8 f   kitlcore:edbgprot.obj
+ 0001:0000658c       NKDbgPrintfW               1000758c f   nkstub:nkstub.obj
+ 0001:000065c0       NKwvsprintfW               100075c0 f   nkstub:nkstub.obj
+ 0001:000065e4       NKSetLastError             100075e4 f   nkstub:nkstub.obj
+ 0001:00006608       NKGetLastError             10007608 f   nkstub:nkstub.obj
+ 0001:0000662c       EnterCriticalSection       1000762c f   nkstub:nkstub.obj
+ 0001:00006650       LeaveCriticalSection       10007650 f   nkstub:nkstub.obj
+ 0001:00006674       InitializeCriticalSection  10007674 f   nkstub:nkstub.obj
+ 0001:00006698       DeleteCriticalSection      10007698 f   nkstub:nkstub.obj
+ 0001:000066bc       INTERRUPTS_OFF             100076bc f   nkstub:nkstub.obj
+ 0001:000066e0       NKSetInterruptEvent        100076e0 f   nkstub:nkstub.obj
+ 0001:00006704       NKSleep                    10007704 f   nkstub:nkstub.obj
+ 0001:00006728       NKForceCleanBoot           10007728 f   nkstub:nkstub.obj
+ 0001:0000674c       NKUnicodeToAscii           1000774c f   nkstub:nkstub.obj
+ 0001:00006770       NKPhysToVirt               10007770 f   nkstub:nkstub.obj
+ 0001:00006794       __report_gsfailure         10007794 f   nkstub:nkstub.obj
+ 0001:000067b8       OEMInitDebugSerial         100077b8 f   oemstub:oemstub.obj
+ 0001:000067dc       OEMWriteDebugByte          100077dc f   oemstub:oemstub.obj
+ 0001:00006800       OEMWriteDebugString        10007800 f   oemstub:oemstub.obj
+ 0001:00006824       OEMGetRealTime             10007824 f   oemstub:oemstub.obj
+ 0001:00006848       OEMGetTickCount            10007848 f   oemstub:oemstub.obj
+ 0001:0000686c       OEMInterruptEnable         1000786c f   oemstub:oemstub.obj
+ 0001:00006890       OEMIoControl               10007890 f   oemstub:oemstub.obj
+ 0001:000068e8       OALKitlIPtoString          100078e8 f   oal_kitl:format.obj
+ 0001:00006940       OALKitlPowerOff            10007940 f   oal_kitl:kitl.obj
+ 0001:000069d8       OALKitlPowerOn             100079d8 f   oal_kitl:kitl.obj
+ 0001:00006a64       OEMKitlInit                10007a64 f   oal_kitl:kitl.obj
+ 0001:00006b1c       OEMKitlIoctl               10007b1c f   oal_kitl:kitlioctl.obj
+ 0001:0000707c       OALKitlSerialInit          1000807c f   oal_kitl:kitlserial.obj
+ 0001:00007e64       DecodeIP                   10008e64 f   oal_kitl:kitleth.obj
+ 0001:00008560       OALIoCtlVBridge            10009560 f   oal_kitl:kitleth.obj
+ 0001:000089ac       OALKitlEthInit             100099ac f   oal_kitl:kitleth.obj
+ 0001:00008dc8       OALKitlCreateName          10009dc8 f   oal_kitl:name.obj
+ 0001:00008f70       CS8900AInit                10009f70 f   oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:00009148       CS8900ASendFrame           1000a148 f   oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:00009248       CS8900AGetFrame            1000a248 f   oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:00009368       CS8900AEnableInts          1000a368 f   oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:000093c4       CS8900ADisableInts         1000a3c4 f   oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:00009428       CS8900ACurrentPacketFilter 1000a428 f   oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:0000952c       CS8900AMulticastList       1000a52c f   oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:00009698       OALPAtoVA                  1000a698 f   oal_memory_arm:memory.obj
+ 0001:0000971c       OALArgsQuery               1000a71c f   s3c2440a_args:args.obj
+ 0001:00009824       READ_REGISTER_USHORT       1000a824 f   ddk_io:ddk_io.obj
+ 0001:0000982c       WRITE_REGISTER_USHORT      1000a82c f   ddk_io:ddk_io.obj
+ 0001:00009834       READ_PORT_USHORT           1000a834 f   ddk_io:ddk_io.obj
+ 0001:0000983c       WRITE_PORT_USHORT          1000a83c f   ddk_io:ddk_io.obj
+ 0001:00009844       ProduceBuffer              1000a844 f   vbridge:vbridge.obj
+ 0001:0000995c       ProduceBufferDone          1000a95c f   vbridge:vbridge.obj
+ 0001:0000999c       ConsumeBuffer              1000a99c f   vbridge:vbridge.obj
+ 0001:00009a60       ConsumeBufferDone          1000aa60 f   vbridge:vbridge.obj
+ 0001:00009af0       VBridgeInit                1000aaf0 f   vbridge:vbridge.obj
+ 0001:00009c04       VBridgeKGetOneTxBuffer     1000ac04 f   vbridge:vbridge.obj
+ 0001:00009c78       VBridgeKGetOneTxBufferComplete 1000ac78 f   vbridge:vbridge.obj
+ 0001:00009cc4       VBridgeKIndicateOneRxBuffer 1000acc4 f   vbridge:vbridge.obj
+ 0001:00009db4       VBridgeKSetLocalMacAddress 1000adb4 f   vbridge:vbridge.obj
+ 0001:00009e34       VBridgeUGetOneTxPacket     1000ae34 f   vbridge:vbridge.obj
+ 0001:00009e90       VBridgeUGetOneTxPacketComplete 1000ae90 f   vbridge:vbridge.obj
+ 0001:00009ed4       VBridgeUGetOneRxPacket     1000aed4 f   vbridge:vbridge.obj
+ 0001:00009f28       VBridgeUGetOneRxPacketComplete 1000af28 f   vbridge:vbridge.obj
+ 0001:00009f64       VBridgeUWildCard           1000af64 f   vbridge:vbridge.obj
+ 0001:00009ff8       VBridgeUGetEDBGMac         1000aff8 f   vbridge:vbridge.obj
+ 0001:0000a040       VBridgeUCurrentPacketFilter 1000b040 f   vbridge:vbridge.obj
+ 0001:0000a088       S3C2440_USB_INIT           1000b088 f   kitlusbser_lib:kitlusbser.obj
+ 0001:0000a364       S3C2440_USB_EP0            1000b364 f   kitlusbser_lib:kitlusbser.obj
+ 0001:0000a7b4       S3C2440_USB_TX             1000b7b4 f   kitlusbser_lib:kitlusbser.obj
+ 0001:0000a858       S3C2440_USB_RX             1000b858 f   kitlusbser_lib:kitlusbser.obj
+ 0001:0000a964       S3C2440USBSER_WriteData    1000b964 f   kitlusbser_lib:kitlusbser.obj
+ 0001:0000a990       S3C2440USBSER_SendComplete 1000b990 f   kitlusbser_lib:kitlusbser.obj
+ 0001:0000a9b0       S3C2440USBSER_ReadData     1000b9b0 f   kitlusbser_lib:kitlusbser.obj
+ 0001:0000aa38       S3C2440USBSER_EnableInt    1000ba38 f   kitlusbser_lib:kitlusbser.obj
+ 0001:0000aa6c       S3C2440USBSER_DisableInt   1000ba6c f   kitlusbser_lib:kitlusbser.obj
+ 0001:0000aaa0       __rt_udiv                  1000baa0 f   fulllibc:__udiv.obj
+ 0001:0000ab64       memset                     1000bb64 f   fulllibc:memset.obj
+ 0001:0000abec       __GSHandlerCheckCommon     1000bbec f   fulllibc:gshandler.obj
+ 0001:0000ac28       __GSHandlerCheck           1000bc28 f   fulllibc:gshandler.obj
+ 0001:0000ac4c       __security_check_cookie    1000bc4c f   fulllibc:armsecgs.obj
+ 0001:0000ac60       __gsfailure                1000bc60 f   fulllibc:armsecgs.obj
+ 0001:0000aca4       strcpy                     1000bca4 f   fulllibc:strcpy.obj
+ 0001:0000ad28       strlen                     1000bd28 f   fulllibc:mdsstrlen.obj
+ 0001:0000ad8c       strcmp                     1000bd8c f   fulllibc:mdsstrcmp.obj
+ 0001:0000ae7c       memcpy                     1000be7c f   fulllibc:memcpy.obj
+ 0001:0000b228       memcpybigblk               1000c228 f   fulllibc:memcpy.obj
+ 0001:0000bbdc       __C_specific_handler       1000cbdc f   fulllibc:chandler.obj
+ 0001:0000bd28       __GSHandlerCheck_SEH       1000cd28 f   fulllibc:gshandlerseh.obj
+ 0001:0000bd78       __rt_sdiv                  1000cd78 f   fulllibc:__div.obj
+ 0001:0000be54       memcmp                     1000ce54 f   fulllibc:memcmp.obj
+ 0001:0000bf20       __raise_int_divide_by_zero 1000cf20 f   fulllibc:diverr.obj
+ 0001:0000bf44       __C_ExecuteTerminationHandler 1000cf44 f   fulllibc:jmpuwind.obj
+ 0001:0000bf44       __C_ExecuteExceptionFilter 1000cf44 f   fulllibc:jmpuwind.obj
+ 0001:0000bf84       __crtRaiseException        1000cf84 f   fulllibc:raiseexc.obj
+ 0001:0000bfa8       OALLogSerial               1000cfa8 f   kitl_log:log.obj
+ 0001:0000bffc       OALLogPrintf               1000cffc f   kitl_log:log.obj
+ 0002:00000000       DrvSerial                  1000e000     kitlser.obj
+ 0002:00000054       g_dwKITLThreadPriority     1000e054     kitlcore:ethdbg.obj
+ 0002:00000058       g_dwKITLTimerThreadPriority 1000e058     kitlcore:ethdbg.obj
+ 0002:0000005c       __security_cookie          1000e05c     nkstub:nkstub.obj
+ 0002:00000060       __security_cookie_complement 1000e060     nkstub:nkstub.obj
+ 0002:00000068       dpCurSettings              1000e068     kitl_log:debug.obj
+ 0002:000004b0       DrvUSBSerial               1000e4b0     kitlusbser_lib:kitlusbser.obj
+ 0002:000004f0       USBSerKitl_POLL            1000e4f0     kitl.obj
+ 0002:00025e60       dwCurrentPacketFilter      10033e60     vbridge:vbridge.obj
+ 0002:00025e64       bValidAddress              10033e64     vbridge:vbridge.obj
+ 0002:00025e68       bWarnNoMacDone             10033e68     vbridge:vbridge.obj
+ 0002:00025e6c       g_bResetBuffer             10033e6c     vbridge:vbridge.obj
+ 0002:00025e70       g_bUOpened                 10033e70     vbridge:vbridge.obj
+ 0002:00025ea0       USBSerInfo                 10033ea0     <common>
+ 0002:00025ef0       g_Info                     10033ef0     <common>
+ 0002:00025efc       g_pUSBDReg                 10033efc     <common>
+ 0002:00025f00       g_pUARTReg                 10033f00     <common>
+ 0002:00025f04       g_KitlInterval             10033f04     <common>
+ 0002:00025f08       g_pprcNK                   10033f08     <common>
+ 0002:00025f20       DfltClnts                  10033f20     <common>
+ 0002:000260c0       g_kpriv                    100340c0     <common>
+ 0002:00026120       TimerListCS                10034120     <common>
+ 0002:00026134       KITLGlobalState            10034134     <common>
+ 0002:00026140       SendFmtBuf                 10034140     <common>
+ 0002:00026740       KITLcs                     10034740     <common>
+ 0002:00026754       g_pKData                   10034754     <common>
+ 0002:00026760       KITLODScs                  10034760     <common>
+ 0002:00026780       KITLKCallcs                10034780     <common>
+ 0002:000267a0       Kitl                       100347a0     <common>
+ 0002:00026800       KITLClients                10034800     <common>
+ 0002:00026a00       g_pNKGlobal                10034a00     <common>
+ 0002:00026a04       g_pOemGlobal               10034a04     <common>
+ 0002:00026a20       g_oalKitlBuffer            10034a20     <common>
+ 0002:00036a20       pucRxMax                   10044a20     <common>
+ 0002:00036a24       pucTxConsumer              10044a24     <common>
+ 0002:00036a28       pucTxMin                   10044a28     <common>
+ 0002:00036a40       TxBuffers                  10044a40     <common>
+ 0002:0003aa44       pucRxProducer              10048a44     <common>
+ 0002:0003aa48       EDBGMacAddress             10048a48     <common>
+ 0002:0003aa50       pucTxMax                   10048a50     <common>
+ 0002:0003aa54       pucRxMin                   10048a54     <common>
+ 0002:0003aa58       pucTxProducer              10048a58     <common>
+ 0002:0003aa5c       pucRxConsumer              10048a5c     <common>
+ 0002:0003aa60       RxBuffers                  10048a60     <common>
+
+ entry point at        0001:00003fd8
+
+ Static symbols
+
+ 0001:00002828       NewClient                  10003828 f   kitlcore:ethdbg.obj
+ 0001:00002918       RegisterClientPart2        10003918 f   kitlcore:ethdbg.obj
+ 0001:00002c64       ChkCnxDsktp                10003c64 f   kitlcore:ethdbg.obj
+ 0001:00002c78       TranCnxDsktp               10003c78 f   kitlcore:ethdbg.obj
+ 0001:00002ca8       KITLConnectToDesktop       10003ca8 f   kitlcore:ethdbg.obj
+ 0001:00002e6c       MemCopyUserPtr             10003e6c f   kitlcore:ethdbg.obj
+ 0001:00002f08       KITLInterruptThread        10003f08 f   kitlcore:ethdbg.obj
+ 0001:000030c4       DoRegisterClient           100040c4 f   kitlcore:ethdbg.obj
+ 0001:000035e4       StartKitl                  100045e4 f   kitlcore:ethdbg.obj
+ 0001:00004088       pOutputByte                10005088 f   kitlcore:debug.obj
+ 0001:000040b8       pOutputNumHex              100050b8 f   kitlcore:debug.obj
+ 0001:00004100       pOutputNumDecimal          10005100 f   kitlcore:debug.obj
+ 0001:00004144       vOutputFormatString        10005144 f   kitlcore:debug.obj
+ 0001:00004514       TimerListInsert            10005514 f   kitlcore:timer.obj
+ 0001:00004ad0       CheckCfg                   10005ad0 f   kitlcore:edbgprot.obj
+ 0001:00004ae4       ChkAck                     10005ae4 f   kitlcore:edbgprot.obj
+ 0001:00004e68       SendAckNack                10005e68 f   kitlcore:edbgprot.obj
+ 0001:00004f68       ProcessAdminMsg            10005f68 f   kitlcore:edbgprot.obj
+ 0001:000052cc       RetransmitCfg              100062cc f   kitlcore:edbgprot.obj
+ 0001:000052e0       TranAck                    100062e0 f   kitlcore:edbgprot.obj
+ 0001:0000534c       ProcessRecvFrame           1000634c f   kitlcore:edbgprot.obj
+ 0001:000058c4       KITLPollData               100068c4 f   kitlcore:edbgprot.obj
+ 0001:00006b44       SerialSend                 10007b44 f   oal_kitl:kitlserial.obj
+ 0001:00006c14       SerialRecv                 10007c14 f   oal_kitl:kitlserial.obj
+ 0001:00006f5c       SerialEncode               10007f5c f   oal_kitl:kitlserial.obj
+ 0001:0000700c       SerialDecode               1000800c f   oal_kitl:kitlserial.obj
+ 0001:00007024       SerialEnableInt            10008024 f   oal_kitl:kitlserial.obj
+ 0001:00007064       SerialGetDevCfg            10008064 f   oal_kitl:kitlserial.obj
+ 0001:00007074       SerialSetHostCfg           10008074 f   oal_kitl:kitlserial.obj
+ 0001:00007348       Sum                        10008348 f   oal_kitl:kitleth.obj
+ 0001:000073b0       SendARP                    100083b0 f   oal_kitl:kitleth.obj
+ 0001:00007478       EncodeIP                   10008478 f   oal_kitl:kitleth.obj
+ 0001:000075dc       EncodeUDP                  100085dc f   oal_kitl:kitleth.obj
+ 0001:000076c8       SendDHCP                   100086c8 f   oal_kitl:kitleth.obj
+ 0001:000078b8       RenewDHCP                  100088b8 f   oal_kitl:kitleth.obj
+ 0001:00007910       DecodeDHCP                 10008910 f   oal_kitl:kitleth.obj
+ 0001:00007b54       DecodeICMP                 10008b54 f   oal_kitl:kitleth.obj
+ 0001:00007c84       DecodeUDP                  10008c84 f   oal_kitl:kitleth.obj
+ 0001:00007f38       KitlEthDecode              10008f38 f   oal_kitl:kitleth.obj
+ 0001:000080a8       KitlEthEncode              100090a8 f   oal_kitl:kitleth.obj
+ 0001:00008138       KitlEthSetHostCfg          10009138 f   oal_kitl:kitleth.obj
+ 0001:00008140       KitlEthGetDevCfg           10009140 f   oal_kitl:kitleth.obj
+ 0001:00008230       KitlEthSend                10009230 f   oal_kitl:kitleth.obj
+ 0001:000083a4       KitlEthRecv                100093a4 f   oal_kitl:kitleth.obj
+ 0001:000084ec       KitlEthEnableInt           100094ec f   oal_kitl:kitleth.obj
+ 0001:0000872c       GetAddressDHCP             1000972c f   oal_kitl:kitleth.obj
+ 0001:00008f00       ReadPacketPage             10009f00 f   oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:00008f38       WritePacketPage            10009f38 f   oal_ethdrv_cs8900a:cs8900a.obj
+ 0001:0000a298       sendData                   1000b298 f   kitlusbser_lib:kitlusbser.obj

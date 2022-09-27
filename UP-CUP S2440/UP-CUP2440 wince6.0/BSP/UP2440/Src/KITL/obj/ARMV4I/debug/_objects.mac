@@ -1,0 +1,5 @@
+OBJECTS=\
+    obj\ARMV4I\debug\kitlser.obj\
+    obj\ARMV4I\debug\kitlusbser.obj\
+    obj\ARMV4I\debug\kitl.obj
+

@@ -1,0 +1,45 @@
+!if 0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+!endif
+!if 0
+Use of this source code is subject to the terms of the Microsoft end-user
+license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+If you did not accept the terms of the EULA, you are not authorized to use
+this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+install media.
+!endif
+
+TARGETNAME=oal
+TARGETTYPE=PROGRAM
+SYNCHRONIZE_DRAIN=1
+RELEASETYPE=PLATFORM
+NOMIPS16CODE=1
+
+EXEENTRY=StartUp
+
+LDEFINES=-subsystem:native /DEBUG /DEBUGTYPE:CV /FIXED:NO
+
+SOURCES=
+
+NOLIBC=1
+
+TARGETLIBS= \
+    $(_COMMONOAKROOT)\lib\$(_CPUDEPPATH)\oemmain.lib \
+    $(_COMMONOAKROOT)\lib\$(_CPUDEPPATH)\nkstub.lib \
+    $(_COMMONOAKROOT)\lib\$(_CPUDEPPATH)\nkldr.lib \
+    $(_TARGETPLATROOT)\lib\$(_CPUDEPPATH)\oal.lib \
+    $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\oal_abort_s3c2440a.lib \
+    $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\oal_cache_s3c2440a.lib \
+    $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\oal_memory_s3c2440a.lib \
+    $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\oal_timer_s3c2440a.lib \
+    $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\oal_intr_s3c2440a.lib \
+    $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\oal_rtc_s3c2440a.lib \
+    $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\oal_profiler_s3c2440a.lib \
+    $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\oal_power_s3c2440a.lib \
+    $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\oal_ioctl_s3c2440a.lib \
+    $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\s3c2440a_args.lib \
+    $(_PLATCOMMONLIB)\$(_CPUINDPATH)\oal_other.lib \
+    $(_PLATCOMMONLIB)\$(_CPUINDPATH)\oal_io.lib \
+    $(_PLATCOMMONLIB)\$(_CPUDEPPATH)\oal_log.lib \
+    $(_TARGETPLATROOT)\lib\$(_CPUDEPPATH)\nandflash_lib.lib \
+    $(_COMMONOAKROOT)\lib\$(_CPUINDPATH)\fulllibc.lib \

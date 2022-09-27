@@ -1,0 +1,6 @@
+OBJECTS=\
+    obj\ARMV4I\retail\reboot.obj\
+    obj\ARMV4I\retail\hwentropy.obj\
+    obj\ARMV4I\retail\deviceid.obj\
+    obj\ARMV4I\retail\deviceinfo.obj
+

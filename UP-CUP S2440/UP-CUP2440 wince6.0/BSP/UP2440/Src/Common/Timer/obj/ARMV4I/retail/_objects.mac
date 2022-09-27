@@ -1,0 +1,5 @@
+OBJECTS=\
+    obj\ARMV4I\retail\timer_fixtick.obj\
+    obj\ARMV4I\retail\watchdog.obj\
+    obj\ARMV4I\retail\oalcpuidle.obj
+

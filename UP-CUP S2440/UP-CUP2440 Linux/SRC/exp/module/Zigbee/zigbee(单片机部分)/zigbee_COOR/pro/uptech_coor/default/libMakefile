@@ -1,0 +1,33 @@
+# make lib written by funchip
+# www.fcdpj.com
+# email webmaster@fcdpj.com
+# use make lib command to creat the lib
+# List C source files here
+
+LIB_C_SRC = console.c MSPI.c NVM.c Tick.c zAPL.c zAPS.c zMAC.c zNWK.c zPHYCC2420.c 
+# List Assemble source files here
+LIB_A_SRC =
+
+# inster or creat the lib's name
+LIBFILE   = libZigbee_COOR
+
+LIB_OBJS  = $(LIB_A_SRC:.S=.o) $(LIB_C_SRC:.c=.o) 
+AR        = avr-ar 
+RANLIB    = avr-ranlib
+
+$(LIBFILE): $(LIBFILE)($(LIB_OBJS)) $(RANLIB) $@
+
+# make lib command
+lib: make_lib
+make_lib:
+	make $(LIB_OBJS)
+	$(AR) -r $(LIBFILE).a $(LIB_OBJS)
+clean:
+	$(REMOVE) $(LIBFILE).a
+	$(REMOVE) $(LIB_C_SRC:.c=.lst)
+	$(REMOVE) $(LIB_C_SRC:.c=.o)
+	$(REMOVE) $(LIB_C_SRC:.c=.s)
+	$(REMOVE) $(LIB_C_SRC:.c=.d)
+	$(REMOVE) $(LIB_A_SRC:.S=.lst)
+	$(REMOVE) $(LIB_A_SRC:.S=.o)
+	$(REMOVE) $(LIB_A_SRC:.S=.d) 

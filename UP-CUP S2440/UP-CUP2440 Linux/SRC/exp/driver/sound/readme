@@ -1,0 +1,2 @@
+if your kernel is not support audio driver ,please insmod sound driver.
+and maybe our kernel have supported the audio function.

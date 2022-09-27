@@ -1,0 +1,418 @@
+                        .module _18b20.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile C:\DOCUME~1\蔡颖鹏\桌面\SensorEXBIcc\18b20.c
+ 0000                   .dbfunc e init_1820 _init_1820 fV
+ 0000           ;              i -> R16,R17
+                        .even
+ 0000           _init_1820::
+ 0000                   .dbline -1
+ 0000                   .dbline 9
+ 0000           ; #include "Generic.h"
+ 0000           ; 
+ 0000           ; 
+ 0000           ; float count; 
+ 0000           ; //温度
+ 0000           ; 
+ 0000           ; 
+ 0000           ; void init_1820(void) 
+ 0000           ; { 
+ 0000                   .dbline 12
+ 0000           ;       int i;
+ 0000           ; 
+ 0000           ;       DDRB |= 0x01;
+ 0000 B89A              sbi 0x17,0
+ 0002                   .dbline 13
+ 0002           ;       PORTB |= 0x01;
+ 0002 C09A              sbi 0x18,0
+ 0004                   .dbline 14
+ 0004           ;       PORTB &= ~0x01;
+ 0004 C098              cbi 0x18,0
+ 0006                   .dbline 16
+ 0006           ;       
+ 0006           ;       i = 3000;
+ 0006 08EB              ldi R16,3000
+ 0008 1BE0              ldi R17,11
+ 000A           L2:
+ 000A                   .dbline 17
+ 000A           L3:
+ 000A                   .dbline 17
+ 000A           ;       while(i--);//480us以上 
+ 000A 1801              movw R2,R16
+ 000C 0150              subi R16,1
+ 000E 1040              sbci R17,0
+ 0010 2220              tst R2
+ 0012 D9F7              brne L2
+ 0014 3320              tst R3
+ 0016 C9F7              brne L2
+ 0018           X0:
+ 0018                   .dbline 19
+ 0018           ; 
+ 0018           ;       PORTB |= 0x01;
+ 0018 C09A              sbi 0x18,0
+ 001A                   .dbline 20
+ 001A           ;       DDRB &= ~0x01;
+ 001A B898              cbi 0x17,0
+ 001C                   .dbline 22
+ 001C           ;       
+ 001C           ;       i = 40;
+ 001C 08E2              ldi R16,40
+ 001E 10E0              ldi R17,0
+ 0020           L5:
+ 0020                   .dbline 23
+ 0020           L6:
+ 0020                   .dbline 23
+ 0020           ;       while(i--);//15~60us
+ 0020 1801              movw R2,R16
+ 0022 0150              subi R16,1
+ 0024 1040              sbci R17,0
+ 0026 2220              tst R2
+ 0028 D9F7              brne L5
+ 002A 3320              tst R3
+ 002C C9F7              brne L5
+ 002E           X1:
+ 002E           L8:
+ 002E                   .dbline 24
+ 002E           L9:
+ 002E                   .dbline 24
+ 002E           ;       while(PINB & 0x01);
+ 002E B099              sbic 0x16,0
+ 0030 FECF              rjmp L8
+ 0032                   .dbline 25
+ 0032           ;     DDRB |= 0x01;
+ 0032 B89A              sbi 0x17,0
+ 0034                   .dbline 26
+ 0034           ;       PORTB |= 0x01;
+ 0034 C09A              sbi 0x18,0
+ 0036                   .dbline 27
+ 0036           ;       i = 150;
+ 0036 06E9              ldi R16,150
+ 0038 10E0              ldi R17,0
+ 003A           L11:
+ 003A                   .dbline 28
+ 003A           L12:
+ 003A                   .dbline 28
+ 003A           ;       while(i--);//60~240us  
+ 003A 1801              movw R2,R16
+ 003C 0150              subi R16,1
+ 003E 1040              sbci R17,0
+ 0040 2220              tst R2
+ 0042 D9F7              brne L11
+ 0044 3320              tst R3
+ 0046 C9F7              brne L11
+ 0048           X2:
+ 0048                   .dbline -2
+ 0048           L1:
+ 0048                   .dbline 0 ; func end
+ 0048 0895              ret
+ 004A                   .dbsym r i 16 I
+ 004A                   .dbend
+ 004A                   .dbfunc e write_1820 _write_1820 fV
+ 004A           ;              m -> R20
+ 004A           ;              i -> R10,R11
+ 004A           ;              x -> R22
+                        .even
+ 004A           _write_1820::
+ 004A 00D0              rcall push_gset3
+ 004C 602F              mov R22,R16
+ 004E                   .dbline -1
+ 004E                   .dbline 32
+ 004E           ; } 
+ 004E           ; 
+ 004E           ; void write_1820(unsigned char x) 
+ 004E           ; {    
+ 004E                   .dbline 35
+ 004E           ;     unsigned char m;
+ 004E           ;       int i;
+ 004E           ;     for(m=0;m<8;m++) 
+ 004E 4427              clr R20
+ 0050 17C0              rjmp L18
+ 0052           L15:
+ 0052                   .dbline 36
+ 0052           ;     { 
+ 0052                   .dbline 37
+ 0052           ;               PORTB &= ~0x01;
+ 0052 C098              cbi 0x18,0
+ 0054                   .dbline 38
+ 0054           ;         if(x&(1<<m))    //写数据，从低位开始 
+ 0054 01E0              ldi R16,1
+ 0056 142F              mov R17,R20
+ 0058 00D0              rcall lsl8
+ 005A 262E              mov R2,R22
+ 005C 2022              and R2,R16
+ 005E 11F0              breq L19
+ 0060                   .dbline 39
+ 0060           ;               PORTB |= 0x01;
+ 0060 C09A              sbi 0x18,0
+ 0062 01C0              rjmp L20
+ 0064           L19:
+ 0064                   .dbline 41
+ 0064           ;         else
+ 0064           ;               PORTB &= ~0x01;
+ 0064 C098              cbi 0x18,0
+ 0066           L20:
+ 0066                   .dbline 42
+ 0066           ;               i = 40;
+ 0066 88E2              ldi R24,40
+ 0068 90E0              ldi R25,0
+ 006A 5C01              movw R10,R24
+ 006C           L21:
+ 006C                   .dbline 43
+ 006C           L22:
+ 006C                   .dbline 43
+ 006C 1501              movw R2,R10
+ 006E C101              movw R24,R2
+ 0070 0197              sbiw R24,1
+ 0072 5C01              movw R10,R24
+ 0074 2220              tst R2
+ 0076 D1F7              brne L21
+ 0078 3320              tst R3
+ 007A C1F7              brne L21
+ 007C           X3:
+ 007C                   .dbline 44
+ 007C C09A              sbi 0x18,0
+ 007E                   .dbline 45
+ 007E           L16:
+ 007E                   .dbline 35
+ 007E 4395              inc R20
+ 0080           L18:
+ 0080                   .dbline 35
+ 0080 4830              cpi R20,8
+ 0082 38F3              brlo L15
+ 0084                   .dbline 46
+ 0084           ;         while(i--);   //15~60us 
+ 0084           ;               PORTB |= 0x01;
+ 0084           ;     } 
+ 0084           ;     PORTB |= 0x01; 
+ 0084 C09A              sbi 0x18,0
+ 0086                   .dbline -2
+ 0086           L14:
+ 0086 00D0              rcall pop_gset3
+ 0088                   .dbline 0 ; func end
+ 0088 0895              ret
+ 008A                   .dbsym r m 20 c
+ 008A                   .dbsym r i 10 I
+ 008A                   .dbsym r x 22 c
+ 008A                   .dbend
+ 008A                   .dbfunc e read_1820 _read_1820 fc
+ 008A           ;           temp -> R20
+ 008A           ;              k -> R22
+ 008A           ;              n -> R10
+ 008A           ;              i -> R12
+                        .even
+ 008A           _read_1820::
+ 008A 00D0              rcall push_gset4
+ 008C                   .dbline -1
+ 008C                   .dbline 51
+ 008C           ; } 
+ 008C           ; 
+ 008C           ; 
+ 008C           ; unsigned char read_1820(void) 
+ 008C           ; {     
+ 008C                   .dbline 53
+ 008C           ;       unsigned char temp,k,n,i; 
+ 008C           ;     temp=0; 
+ 008C 4427              clr R20
+ 008E                   .dbline 54
+ 008E           ;     for(n=0;n<8;n++) 
+ 008E AA24              clr R10
+ 0090 1CC0              rjmp L28
+ 0092           L25:
+ 0092                   .dbline 55
+ 0092           ;     { 
+ 0092                   .dbline 56
+ 0092           ;               PORTB &= ~0x01;
+ 0092 C098              cbi 0x18,0
+ 0094                   .dbline 57
+ 0094           ;               PORTB |= 0x01;
+ 0094 C09A              sbi 0x18,0
+ 0096                   .dbline 58
+ 0096           ;               DDRB &= ~0x01;
+ 0096 B898              cbi 0x17,0
+ 0098                   .dbline 59
+ 0098           ;               k = (PINB&0x01);
+ 0098 66B3              in R22,0x16
+ 009A 6170              andi R22,1
+ 009C                   .dbline 61
+ 009C           ;               //读数据,从低位开始 
+ 009C           ;         if(k) 
+ 009C 29F0              breq L29
+ 009E                   .dbline 62
+ 009E           ;         temp|=(1<<n); 
+ 009E 01E0              ldi R16,1
+ 00A0 1A2D              mov R17,R10
+ 00A2 00D0              rcall lsl8
+ 00A4 402B              or R20,R16
+ 00A6 06C0              rjmp L30
+ 00A8           L29:
+ 00A8                   .dbline 64
+ 00A8           ;         else 
+ 00A8           ;         temp&=~(1<<n); 
+ 00A8 01E0              ldi R16,1
+ 00AA 1A2D              mov R17,R10
+ 00AC 00D0              rcall lsl8
+ 00AE 202E              mov R2,R16
+ 00B0 2094              com R2
+ 00B2 4221              and R20,R2
+ 00B4           L30:
+ 00B4                   .dbline 65
+ 00B4           ;               i = 50;
+ 00B4 82E3              ldi R24,50
+ 00B6 C82E              mov R12,R24
+ 00B8           L31:
+ 00B8                   .dbline 66
+ 00B8           L32:
+ 00B8                   .dbline 66
+ 00B8 2C2C              mov R2,R12
+ 00BA 3324              clr R3
+ 00BC 822D              mov R24,R2
+ 00BE 8150              subi R24,1
+ 00C0 C82E              mov R12,R24
+ 00C2 2220              tst R2
+ 00C4 C9F7              brne L31
+ 00C6                   .dbline 67
+ 00C6 B89A              sbi 0x17,0
+ 00C8                   .dbline 68
+ 00C8           L26:
+ 00C8                   .dbline 54
+ 00C8 A394              inc R10
+ 00CA           L28:
+ 00CA                   .dbline 54
+ 00CA 8A2D              mov R24,R10
+ 00CC 8830              cpi R24,8
+ 00CE 08F3              brlo L25
+ 00D0                   .dbline 69
+ 00D0           ;               while(i--); //60~120us     
+ 00D0           ;               DDRB |= 0x01;
+ 00D0           ;     } 
+ 00D0           ;     return (temp);
+ 00D0 042F              mov R16,R20
+ 00D2                   .dbline -2
+ 00D2           L24:
+ 00D2 00D0              rcall pop_gset4
+ 00D4                   .dbline 0 ; func end
+ 00D4 0895              ret
+ 00D6                   .dbsym r temp 20 c
+ 00D6                   .dbsym r k 22 c
+ 00D6                   .dbsym r n 10 c
+ 00D6                   .dbsym r i 12 c
+ 00D6                   .dbend
+ 00D6                   .dbfunc e Get_Temperature _Get_Temperature fD
+ 00D6           ;           teml -> R20
+ 00D6           ;           temh -> R22
+ 00D6           ;              i -> R10,R11
+                        .even
+ 00D6           _Get_Temperature::
+ 00D6 00D0              rcall push_gset3
+ 00D8                   .dbline -1
+ 00D8                   .dbline 74
+ 00D8           ; }  
+ 00D8           ; 
+ 00D8           ; 
+ 00D8           ; float Get_Temperature(void)  
+ 00D8           ; { 
+ 00D8                   .dbline 77
+ 00D8           ;       unsigned char temh,teml;
+ 00D8           ;       int i; 
+ 00D8           ;     init_1820();        //复位18b20 
+ 00D8 93DF              rcall _init_1820
+ 00DA                   .dbline 78
+ 00DA           ;     write_1820(0xcc);   // 发出转换命令 
+ 00DA 0CEC              ldi R16,204
+ 00DC B6DF              rcall _write_1820
+ 00DE                   .dbline 79
+ 00DE           ;     write_1820(0x44); 
+ 00DE 04E4              ldi R16,68
+ 00E0 B4DF              rcall _write_1820
+ 00E2                   .dbline 80
+ 00E2           ;       i = 400;
+ 00E2 80E9              ldi R24,400
+ 00E4 91E0              ldi R25,1
+ 00E6 5C01              movw R10,R24
+ 00E8           L35:
+ 00E8                   .dbline 81
+ 00E8           L36:
+ 00E8                   .dbline 81
+ 00E8           ;       while(i--); 
+ 00E8 1501              movw R2,R10
+ 00EA C101              movw R24,R2
+ 00EC 0197              sbiw R24,1
+ 00EE 5C01              movw R10,R24
+ 00F0 2220              tst R2
+ 00F2 D1F7              brne L35
+ 00F4 3320              tst R3
+ 00F6 C1F7              brne L35
+ 00F8           X4:
+ 00F8                   .dbline 82
+ 00F8           ;     init_1820(); 
+ 00F8 83DF              rcall _init_1820
+ 00FA                   .dbline 85
+ 00FA           ; 
+ 00FA           ;       //发出读命令 
+ 00FA           ;       write_1820(0xcc);  
+ 00FA 0CEC              ldi R16,204
+ 00FC A6DF              rcall _write_1820
+ 00FE                   .dbline 86
+ 00FE           ;     write_1820(0xbe); 
+ 00FE 0EEB              ldi R16,190
+ 0100 A4DF              rcall _write_1820
+ 0102                   .dbline 89
+ 0102           ; 
+ 0102           ;       //读数据 
+ 0102           ;       teml=read_1820();
+ 0102 C3DF              rcall _read_1820
+ 0104 402F              mov R20,R16
+ 0106                   .dbline 90
+ 0106           ;     temh=read_1820(); 
+ 0106 C1DF              rcall _read_1820
+ 0108 602F              mov R22,R16
+ 010A                   .dbline 93
+ 010A           ; 
+ 010A           ;       //计算具体温度 
+ 010A           ;       count=(temh*256+teml)*0.0625;
+ 010A 00E0              ldi R16,<L38
+ 010C 10E0              ldi R17,>L38
+ 010E 00D0              rcall lpm32
+ 0110 3A93              st -y,R19
+ 0112 2A93              st -y,R18
+ 0114 1A93              st -y,R17
+ 0116 0A93              st -y,R16
+ 0118 262F              mov R18,R22
+ 011A 3327              clr R19
+ 011C 00E0              ldi R16,256
+ 011E 11E0              ldi R17,1
+ 0120 00D0              rcall empy16s
+ 0122 1801              movw R2,R16
+ 0124 442E              mov R4,R20
+ 0126 5524              clr R5
+ 0128 240C              add R2,R4
+ 012A 351C              adc R3,R5
+ 012C 8101              movw R16,R2
+ 012E 00D0              rcall int2fp
+ 0130 3A93              st -y,R19
+ 0132 2A93              st -y,R18
+ 0134 1A93              st -y,R17
+ 0136 0A93              st -y,R16
+ 0138 00D0              rcall empy32f
+ 013A 10930100          sts _count+1,R17
+ 013E 00930000          sts _count,R16
+ 0142 30930300          sts _count+2+1,R19
+ 0146 20930200          sts _count+2,R18
+ 014A                   .dbline 94
+ 014A           ;     return count;
+ 014A                   .dbline -2
+ 014A           L34:
+ 014A 00D0              rcall pop_gset3
+ 014C                   .dbline 0 ; func end
+ 014C 0895              ret
+ 014E                   .dbsym r teml 20 c
+ 014E                   .dbsym r temh 22 c
+ 014E                   .dbsym r i 10 I
+ 014E                   .dbend
+                        .area bss(ram, con, rel)
+ 0000                   .dbfile C:\DOCUME~1\蔡颖鹏\桌面\SensorEXBIcc\18b20.c
+ 0000           _count::
+ 0000                   .blkb 4
+ 0004                   .dbsym e count _count D
+                        .area lit(rom, con, rel)
+ 0000           L38:
+ 0000 0000803D          .word 0x0,0x3d80

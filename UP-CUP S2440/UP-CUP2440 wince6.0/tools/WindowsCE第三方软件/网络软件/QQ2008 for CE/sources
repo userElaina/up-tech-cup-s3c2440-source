@@ -1,0 +1,29 @@
+WINCEREL=1
+RELEASETYPE=LOCAL
+_ISVINCPATH=$(_WINCEROOT)\public\common\sdk\inc;
+_OEMINCPATH=$(_WINCEROOT)\public\common\oak\inc;$(_WINCEROOT)\public\common\sdk\inc;
+TARGETNAME=Tencent
+FILE_VIEW_ROOT_FOLDER= \
+  ReadMe.txt \
+  prelink.bat \
+  postlink.bat \
+ 
+FILE_VIEW_RESOURCE_FOLDER= \
+ 
+FILE_VIEW_INCLUDES_FOLDER= \
+ 
+SOURCES= \
+ 
+TARGETTYPE=NOTARGET
+PRECOMPILED_CXX=1
+TARGETLIBS= \
+  $(_PROJECTROOT)\cesysgen\sdk\lib\$(_CPUINDPATH)\coredll.lib \
+ 
+POSTLINK_PASS_CMD=postlink.bat
+PRELINK_PASS_CMD=prelink.bat
+FILE_VIEW_PARAMETER_FOLDER= \
+  Tencent.bib \
+  Tencent.reg \
+  Tencent.dat \
+  Tencent.db \
+  ProjSysgen.bat 

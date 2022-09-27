@@ -1,0 +1,7 @@
+#README.TXT
+v4lcap
+description: video4linux capture program.
+platform: pxa270
+compiler: gcc-3.2-glibc-2.3.2/bin/arm-linux-gcc
+compile:  simply make, for more,see Makefile.
+run:	  ./v4lcap

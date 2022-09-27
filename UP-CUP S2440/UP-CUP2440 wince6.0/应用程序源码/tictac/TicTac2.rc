@@ -1,0 +1,48 @@
+//======================================================================
+// TicTac2 - Resource file
+//
+// Written for the book Programming Windows CE
+// Copyright (C) 1998 Douglas Boling
+//
+//======================================================================
+
+#include "tictac2.h"
+
+//----------------------------------------------------------------------
+//
+// Icon
+//
+ID_ICON ICON "tictac2.ico"
+
+//----------------------------------------------------------------------
+//
+// Menu
+//
+ID_MENU MENU DISCARDABLE
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New game\tCtrl-N",           IDM_NEWGAME
+        MENUITEM "&Undo last move\tCtrl-Z",     IDM_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+END
+//----------------------------------------------------------------------
+//
+// Accelerator table
+//
+ID_ACCEL ACCELERATORS DISCARDABLE 
+BEGIN
+    "N", IDM_NEWGAME, VIRTKEY, CONTROL
+    "Z", IDM_UNDO,  VIRTKEY, CONTROL
+END
+//----------------------------------------------------------------------
+//
+// String table
+//
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_XTURN, " X's turn"
+    IDS_OTURN, " O's turn"
+END

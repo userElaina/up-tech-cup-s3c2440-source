@@ -1,0 +1,33 @@
+;
+; Copyright (c) Microsoft Corporation.  All rights reserved.
+;
+;
+; Use of this source code is subject to the terms of the Microsoft end-user
+; license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+; If you did not accept the terms of the EULA, you are not authorized to use
+; this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+; install media.
+;
+
+    root:-Directory("\Windows")
+    ;Directory("\Windows"):-Directory("LOC_DESKTOP_DIR")
+    Directory("\Windows"):-Directory("LOC_PROGRAMS_DIR")
+    ;Directory("\Windows\LOC_DESKTOP_DIR"):-File("QQ.lnk", "\Windows\QQ.lnk")
+    Directory("\Windows\LOC_PROGRAMS_DIR"):-File("QQ.lnk", "\Windows\QQ.lnk")
+
+    Directory("\Windows\CustomFace"):-File("SelfDefault.png", "\Windows\SelfDefault.png")
+    Directory("\Windows\imgs"):-File("chatStateIcon.png", "\Windows\chatStateIcon.png")
+    Directory("\Windows\imgs"):-File("init_logo.png", "\Windows\init_logo.png")
+    Directory("\Windows\imgs"):-File("left_arrow_black.png", "\Windows\left_arrow_black.png")
+    Directory("\Windows\imgs"):-File("left_arrow_blue.png", "\Windows\left_arrow_blue.png")
+    Directory("\Windows\imgs"):-File("right_arrow_black.png", "\Windows\right_arrow_black.png")
+    Directory("\Windows\imgs"):-File("right_arrow_blue.png", "\Windows\right_arrow_blue.png")
+    Directory("\Windows\imgs"):-File("SendButton_Black.png", "\Windows\SendButton_Black.png")
+    Directory("\Windows\imgs"):-File("SendButton_Black2.png", "\Windows\SendButton_Black2.png")
+    Directory("\Windows\imgs"):-File("SendButton_Blue.png", "\Windows\SendButton_Blue.png")
+    Directory("\Windows\imgs"):-File("SendButton_Blue2.png", "\Windows\SendButton_Blue2.png")
+
+
+
+
+

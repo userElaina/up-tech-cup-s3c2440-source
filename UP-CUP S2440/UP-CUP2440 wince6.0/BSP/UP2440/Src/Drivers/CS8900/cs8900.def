@@ -1,0 +1,5 @@
+LIBRARY         CS8900
+
+DESCRIPTION     'NDIS Miniport Driver for CS8900 Ethernet Adapters'
+
+EXPORTS         DriverEntry

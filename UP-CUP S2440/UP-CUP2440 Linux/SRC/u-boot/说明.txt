@@ -1,0 +1,1 @@
+编译此u-boot源码，需要使用配套的arm-linux-gcc-4.3.2.tgz交叉编译器

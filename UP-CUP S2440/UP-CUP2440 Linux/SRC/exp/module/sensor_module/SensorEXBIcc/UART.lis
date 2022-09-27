@@ -1,0 +1,520 @@
+                        .module UART.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile C:\DOCUME~1\蔡颖鹏\桌面\SensorEXBIcc\UART.c
+ 0000                   .dbfunc e USART_Init _USART_Init fV
+                        .even
+ 0000           _USART_Init::
+ 0000                   .dbline -1
+ 0000                   .dbline 10
+ 0000           ; #include "generic.h"
+ 0000           ; 
+ 0000           ; #define FOSC 7372800
+ 0000           ; #define BAUDRATE                115200
+ 0000           ; #define UART_WaitForComplete()  while(!(UCSRA&(1<<UDRE)))
+ 0000           ; 
+ 0000           ; unsigned char SendBuffer[7];
+ 0000           ; 
+ 0000           ; void USART_Init(void)
+ 0000           ; {
+ 0000                   .dbline 11
+ 0000           ;       UCSRB = 0x00;//disable while setting baud rate
+ 0000 2224              clr R2
+ 0002 2AB8              out 0xa,R2
+ 0004                   .dbline 12
+ 0004           ;       UCSRA = 0x00;
+ 0004 2BB8              out 0xb,R2
+ 0006                   .dbline 14
+ 0006           ;       //UCSRC = 0x86;
+ 0006           ;       UCSRC = BIT(URSEL) | 0x06;
+ 0006 86E8              ldi R24,134
+ 0008 80BD              out 0x20,R24
+ 000A                   .dbline 17
+ 000A           ;       //UBRR = (unsigned int)( FOSC/(16*BAUDRATE) - 1 );
+ 000A           ;       // 设置波特率
+ 000A           ;       UBRRL = 0x03;//set baud rate lo
+ 000A 83E0              ldi R24,3
+ 000C 89B9              out 0x9,R24
+ 000E                   .dbline 18
+ 000E           ;       UBRRH = 0x00;//set baud rate hi
+ 000E 20BC              out 0x20,R2
+ 0010                   .dbline 19
+ 0010           ;       UCSRB = 0x18;
+ 0010 88E1              ldi R24,24
+ 0012 8AB9              out 0xa,R24
+ 0014                   .dbline -2
+ 0014           L1:
+ 0014                   .dbline 0 ; func end
+ 0014 0895              ret
+ 0016                   .dbend
+ 0016                   .dbfunc e UARTSendaByte _UARTSendaByte fV
+ 0016           ; cTransmitValue -> R16
+                        .even
+ 0016           _UARTSendaByte::
+ 0016                   .dbline -1
+ 0016                   .dbline 23
+ 0016           ; }
+ 0016           ; 
+ 0016           ; void UARTSendaByte(unsigned char cTransmitValue)
+ 0016           ; {
+ 0016           L3:
+ 0016                   .dbline 24
+ 0016           L4:
+ 0016                   .dbline 24
+ 0016           ;       UART_WaitForComplete();
+ 0016 5D9B              sbis 0xb,5
+ 0018 FECF              rjmp L3
+ 001A                   .dbline 25
+ 001A           ;       UDR = cTransmitValue;
+ 001A 0CB9              out 0xc,R16
+ 001C                   .dbline -2
+ 001C           L2:
+ 001C                   .dbline 0 ; func end
+ 001C 0895              ret
+ 001E                   .dbsym r cTransmitValue 16 c
+ 001E                   .dbend
+ 001E                   .dbfunc e UARTSendAMessage _UARTSendAMessage fV
+ 001E           ;              i -> R20,R21
+ 001E           ;            num -> R22,R23
+ 001E           ;     SendBuffer -> R10,R11
+                        .even
+ 001E           _UARTSendAMessage::
+ 001E 00D0              rcall push_gset3
+ 0020 B901              movw R22,R18
+ 0022 5801              movw R10,R16
+ 0024                   .dbline -1
+ 0024                   .dbline 29
+ 0024           ; }
+ 0024           ; 
+ 0024           ; void UARTSendAMessage(unsigned char *SendBuffer, unsigned int num)
+ 0024           ; {
+ 0024                   .dbline 31
+ 0024           ;       unsigned int i;
+ 0024           ;       SendBuffer[5] = 0x00;
+ 0024 2224              clr R2
+ 0026 F501              movw R30,R10
+ 0028 2582              std z+5,R2
+ 002A                   .dbline 32
+ 002A           ;       UARTSendaByte(SendBuffer[0]);
+ 002A F501              movw R30,R10
+ 002C 0081              ldd R16,z+0
+ 002E F3DF              rcall _UARTSendaByte
+ 0030                   .dbline 33
+ 0030           ;       UARTSendaByte(SendBuffer[1]);
+ 0030 F501              movw R30,R10
+ 0032 0181              ldd R16,z+1
+ 0034 F0DF              rcall _UARTSendaByte
+ 0036                   .dbline 34
+ 0036           ;       for( i = 2; i < num-2; i++ )
+ 0036 42E0              ldi R20,2
+ 0038 50E0              ldi R21,0
+ 003A 13C0              rjmp L10
+ 003C           L7:
+ 003C                   .dbline 35
+ 003C                   .dbline 36
+ 003C FA01              movw R30,R20
+ 003E EA0D              add R30,R10
+ 0040 FB1D              adc R31,R11
+ 0042 0081              ldd R16,z+0
+ 0044 E8DF              rcall _UARTSendaByte
+ 0046                   .dbline 37
+ 0046 CB01              movw R24,R22
+ 0048 0297              sbiw R24,2
+ 004A 8A0D              add R24,R10
+ 004C 9B1D              adc R25,R11
+ 004E FA01              movw R30,R20
+ 0050 EA0D              add R30,R10
+ 0052 FB1D              adc R31,R11
+ 0054 4080              ldd R4,z+0
+ 0056 FC01              movw R30,R24
+ 0058 5080              ldd R5,z+0
+ 005A 5424              eor R5,R4
+ 005C 5082              std z+0,R5
+ 005E                   .dbline 38
+ 005E           L8:
+ 005E                   .dbline 34
+ 005E 4F5F              subi R20,255  ; offset = 1
+ 0060 5F4F              sbci R21,255
+ 0062           L10:
+ 0062                   .dbline 34
+ 0062 CB01              movw R24,R22
+ 0064 0297              sbiw R24,2
+ 0066 4817              cp R20,R24
+ 0068 5907              cpc R21,R25
+ 006A 40F3              brlo L7
+ 006C                   .dbline 39
+ 006C           ;       {
+ 006C           ;               UARTSendaByte(SendBuffer[i]);
+ 006C           ;               SendBuffer[num-2]^=SendBuffer[i];
+ 006C           ;       }
+ 006C           ;       UARTSendaByte(SendBuffer[num-2]);
+ 006C FB01              movw R30,R22
+ 006E 3297              sbiw R30,2
+ 0070 EA0D              add R30,R10
+ 0072 FB1D              adc R31,R11
+ 0074 0081              ldd R16,z+0
+ 0076 CFDF              rcall _UARTSendaByte
+ 0078                   .dbline 40
+ 0078           ;       UARTSendaByte(SendBuffer[num-1]);
+ 0078 FB01              movw R30,R22
+ 007A 3197              sbiw R30,1
+ 007C EA0D              add R30,R10
+ 007E FB1D              adc R31,R11
+ 0080 0081              ldd R16,z+0
+ 0082 C9DF              rcall _UARTSendaByte
+ 0084                   .dbline -2
+ 0084           L6:
+ 0084 00D0              rcall pop_gset3
+ 0086                   .dbline 0 ; func end
+ 0086 0895              ret
+ 0088                   .dbsym r i 20 i
+ 0088                   .dbsym r num 22 i
+ 0088                   .dbsym r SendBuffer 10 pc
+ 0088                   .dbend
+ 0088                   .dbfunc e UARTRcvaByte _UARTRcvaByte fc
+                        .even
+ 0088           _UARTRcvaByte::
+ 0088                   .dbline -1
+ 0088                   .dbline 45
+ 0088           ; }
+ 0088           ; 
+ 0088           ; 
+ 0088           ; unsigned char UARTRcvaByte(void)
+ 0088           ; {
+ 0088           L12:
+ 0088                   .dbline 47
+ 0088           L13:
+ 0088                   .dbline 47
+ 0088           ;    // 等待接收数据
+ 0088           ;    while ( !(UCSRA & (1<<RXC)) );
+ 0088 5F9B              sbis 0xb,7
+ 008A FECF              rjmp L12
+ 008C                   .dbline 49
+ 008C           ;    // 从缓冲器中获取并返回数据
+ 008C           ;    return UDR;
+ 008C 0CB1              in R16,0xc
+ 008E                   .dbline -2
+ 008E           L11:
+ 008E                   .dbline 0 ; func end
+ 008E 0895              ret
+ 0090                   .dbend
+ 0090                   .dbfunc e WaitForCMD _WaitForCMD fc
+ 0090           ;              k -> R20,R21
+ 0090           ;            CMD -> R20,R21
+ 0090           ;        rcvByte -> R22
+                        .even
+ 0090           _WaitForCMD::
+ 0090 00D0              rcall push_gset2
+ 0092                   .dbline -1
+ 0092                   .dbline 53
+ 0092           ; }
+ 0092           ; 
+ 0092           ; unsigned char WaitForCMD(void)
+ 0092           ; {
+ 0092                   .dbline 54
+ 0092           ;       unsigned char rcvByte = 0x00;
+ 0092 6627              clr R22
+ 0094                   .dbline 55
+ 0094           ;       unsigned int k = 0;
+ 0094 4427              clr R20
+ 0096 5527              clr R21
+ 0098                   .dbline 56
+ 0098           ;       unsigned CMD = 0x00;
+ 0098 09C0              rjmp L17
+ 009A           L16:
+ 009A                   .dbline 67
+ 009A           ;       /*
+ 009A           ;       //显示0xAA表示等待命令状态
+ 009A           ;       SPI_MasterTransmitaByte(0x88);//显示A
+ 009A           ;       SPI_MasterTransmitaByte(0x88);//显示A
+ 009A           ;               
+ 009A           ;       PORTB&=0xFB;
+ 009A           ;       PORTB|=0x04;
+ 009A           ;       */
+ 009A           ;       //等待帧头
+ 009A           ;       while(1)
+ 009A           ;       {
+ 009A                   .dbline 68
+ 009A           ;               rcvByte = UARTRcvaByte();
+ 009A F6DF              rcall _UARTRcvaByte
+ 009C 602F              mov R22,R16
+ 009E                   .dbline 69
+ 009E           ;               {
+ 009E                   .dbline 70
+ 009E           ;                       if( rcvByte == 0xAA )
+ 009E 0A3A              cpi R16,170
+ 00A0 29F4              brne L19
+ 00A2                   .dbline 71
+ 00A2           ;                       {
+ 00A2                   .dbline 72
+ 00A2           ;                               rcvByte = UARTRcvaByte();
+ 00A2 F2DF              rcall _UARTRcvaByte
+ 00A4 602F              mov R22,R16
+ 00A6                   .dbline 73
+ 00A6           ;                               {
+ 00A6                   .dbline 74
+ 00A6           ;                                       if( rcvByte == 0xFF )
+ 00A6 0F3F              cpi R16,255
+ 00A8 09F4              brne L21
+ 00AA                   .dbline 75
+ 00AA           ;                                       {
+ 00AA                   .dbline 80
+ 00AA           ;                                               /*SPI_MasterTransmitaByte(0x86);//显示E
+ 00AA           ;                                               SPI_MasterTransmitaByte(0x86);//显示E
+ 00AA           ;                                               PORTB&=0xFB;
+ 00AA           ;                                               PORTB|=0x04;*/
+ 00AA           ;                                               break;
+ 00AA 01C0              rjmp L18
+ 00AC           L21:
+ 00AC                   .dbline 82
+ 00AC           ;                                       }
+ 00AC           ;                               }
+ 00AC                   .dbline 83
+ 00AC           ;                       }
+ 00AC           L19:
+ 00AC                   .dbline 84
+ 00AC                   .dbline 85
+ 00AC           L17:
+ 00AC                   .dbline 66
+ 00AC F6CF              rjmp L16
+ 00AE           L18:
+ 00AE                   .dbline 88
+ 00AE           ;               }
+ 00AE           ;       }
+ 00AE           ;       
+ 00AE           ;       //当前有效命令范围0x10~0x20
+ 00AE           ;       rcvByte = UARTRcvaByte();
+ 00AE ECDF              rcall _UARTRcvaByte
+ 00B0 602F              mov R22,R16
+ 00B2                   .dbline 89
+ 00B2           ;       CMD = rcvByte;
+ 00B2 462F              mov R20,R22
+ 00B4 5527              clr R21
+ 00B6                   .dbline 92
+ 00B6           ;       
+ 00B6           ;       //无效命令
+ 00B6           ;       if(( CMD < 0x10 )||( CMD > 0x20 ))
+ 00B6 4031              cpi R20,16
+ 00B8 E0E0              ldi R30,0
+ 00BA 5E07              cpc R21,R30
+ 00BC 28F0              brlo L25
+ 00BE 80E2              ldi R24,32
+ 00C0 90E0              ldi R25,0
+ 00C2 8417              cp R24,R20
+ 00C4 9507              cpc R25,R21
+ 00C6 F0F4              brsh L23
+ 00C8           L25:
+ 00C8                   .dbline 93
+ 00C8           ;       {
+ 00C8                   .dbline 95
+ 00C8           ;               //显示0xbb表示命令无效状态
+ 00C8           ;               SPI_MasterTransmitaByte(0x82);//显示b
+ 00C8 02E8              ldi R16,130
+ 00CA 00D0              rcall _SPI_MasterTransmitaByte
+ 00CC                   .dbline 96
+ 00CC           ;               SPI_MasterTransmitaByte(0x82);//显示b
+ 00CC 02E8              ldi R16,130
+ 00CE 00D0              rcall _SPI_MasterTransmitaByte
+ 00D0                   .dbline 97
+ 00D0           ;               PORTB&=0xFB;
+ 00D0 88B3              in R24,0x18
+ 00D2 8B7F              andi R24,251
+ 00D4 88BB              out 0x18,R24
+ 00D6                   .dbline 98
+ 00D6           ;               PORTB|=0x04;
+ 00D6 C29A              sbi 0x18,2
+ 00D8                   .dbline 100
+ 00D8           ;               
+ 00D8           ;               SendBuffer[0] = 0xBB;
+ 00D8 8BEB              ldi R24,187
+ 00DA 80930000          sts _SendBuffer,R24
+ 00DE                   .dbline 101
+ 00DE           ;               SendBuffer[1] = 0xFF;
+ 00DE 8FEF              ldi R24,255
+ 00E0 80930100          sts _SendBuffer+1,R24
+ 00E4                   .dbline 102
+ 00E4           ;               SendBuffer[2] = 0x00;
+ 00E4 2224              clr R2
+ 00E6 20920200          sts _SendBuffer+2,R2
+ 00EA                   .dbline 103
+ 00EA           ;               SendBuffer[3] = 0x00;
+ 00EA 20920300          sts _SendBuffer+3,R2
+ 00EE                   .dbline 104
+ 00EE           ;               SendBuffer[4] = 0x00;
+ 00EE 20920400          sts _SendBuffer+4,R2
+ 00F2                   .dbline 105
+ 00F2           ;               SendBuffer[6] = 0xFF;
+ 00F2 80930600          sts _SendBuffer+6,R24
+ 00F6                   .dbline 106
+ 00F6           ;               UARTSendAMessage(SendBuffer,7);
+ 00F6 27E0              ldi R18,7
+ 00F8 30E0              ldi R19,0
+ 00FA 00E0              ldi R16,<_SendBuffer
+ 00FC 10E0              ldi R17,>_SendBuffer
+ 00FE 8FDF              rcall _UARTSendAMessage
+ 0100                   .dbline 108
+ 0100           ;               
+ 0100           ;               return (0);
+ 0100 0027              clr R16
+ 0102 4CC0              rjmp L15
+ 0104           L23:
+ 0104                   .dbline 111
+ 0104           ;       }
+ 0104           ;       else
+ 0104           ;       {
+ 0104                   .dbline 113
+ 0104           ;               //检测校验码
+ 0104           ;               rcvByte = UARTRcvaByte();
+ 0104 C1DF              rcall _UARTRcvaByte
+ 0106 602F              mov R22,R16
+ 0108                   .dbline 114
+ 0108           ;               if( (CMD + rcvByte) != 0xFF )
+ 0108 262E              mov R2,R22
+ 010A 3324              clr R3
+ 010C CA01              movw R24,R20
+ 010E 820D              add R24,R2
+ 0110 931D              adc R25,R3
+ 0112 8F3F              cpi R24,255
+ 0114 E0E0              ldi R30,0
+ 0116 9E07              cpc R25,R30
+ 0118 F1F0              breq L31
+ 011A                   .dbline 115
+ 011A           ;               {
+ 011A                   .dbline 117
+ 011A           ;                       //校验码不匹配，显示0xcc表示传输出错
+ 011A           ;                       SPI_MasterTransmitaByte(0xc6);//显示c
+ 011A 06EC              ldi R16,198
+ 011C 00D0              rcall _SPI_MasterTransmitaByte
+ 011E                   .dbline 118
+ 011E           ;                       SPI_MasterTransmitaByte(0xc6);//显示c
+ 011E 06EC              ldi R16,198
+ 0120 00D0              rcall _SPI_MasterTransmitaByte
+ 0122                   .dbline 119
+ 0122           ;                       PORTB&=0xFB;
+ 0122 88B3              in R24,0x18
+ 0124 8B7F              andi R24,251
+ 0126 88BB              out 0x18,R24
+ 0128                   .dbline 120
+ 0128           ;                       PORTB|=0x04;
+ 0128 C29A              sbi 0x18,2
+ 012A                   .dbline 122
+ 012A           ;                       
+ 012A           ;                       SendBuffer[0] = 0xBB;
+ 012A 8BEB              ldi R24,187
+ 012C 80930000          sts _SendBuffer,R24
+ 0130                   .dbline 123
+ 0130           ;                       SendBuffer[1] = 0xFF;
+ 0130 8FEF              ldi R24,255
+ 0132 80930100          sts _SendBuffer+1,R24
+ 0136                   .dbline 124
+ 0136           ;                       SendBuffer[2] = 0x00;
+ 0136 2224              clr R2
+ 0138 20920200          sts _SendBuffer+2,R2
+ 013C                   .dbline 125
+ 013C           ;                       SendBuffer[3] = 0x00;
+ 013C 20920300          sts _SendBuffer+3,R2
+ 0140                   .dbline 126
+ 0140           ;                       SendBuffer[4] = 0x00;
+ 0140 20920400          sts _SendBuffer+4,R2
+ 0144                   .dbline 127
+ 0144           ;                       SendBuffer[6] = 0xFF;
+ 0144 80930600          sts _SendBuffer+6,R24
+ 0148                   .dbline 128
+ 0148           ;                       UARTSendAMessage(SendBuffer,7);
+ 0148 27E0              ldi R18,7
+ 014A 30E0              ldi R19,0
+ 014C 00E0              ldi R16,<_SendBuffer
+ 014E 10E0              ldi R17,>_SendBuffer
+ 0150 66DF              rcall _UARTSendAMessage
+ 0152                   .dbline 130
+ 0152           ;                       
+ 0152           ;                       return (0);     
+ 0152 0027              clr R16
+ 0154 23C0              rjmp L15
+ 0156           L31:
+ 0156                   .dbline 133
+ 0156           ;               }
+ 0156           ;               else
+ 0156           ;               {
+ 0156                   .dbline 134
+ 0156           ;                       rcvByte = UARTRcvaByte();
+ 0156 98DF              rcall _UARTRcvaByte
+ 0158 602F              mov R22,R16
+ 015A                   .dbline 135
+ 015A           ;                       if( rcvByte != 0xFF )
+ 015A 0F3F              cpi R16,255
+ 015C F1F0              breq L38
+ 015E                   .dbline 136
+ 015E           ;                       {
+ 015E                   .dbline 138
+ 015E           ;                               //显示0xdd表明帧结束标志错误
+ 015E           ;                               SPI_MasterTransmitaByte(0xa1);//显示d
+ 015E 01EA              ldi R16,161
+ 0160 00D0              rcall _SPI_MasterTransmitaByte
+ 0162                   .dbline 139
+ 0162           ;                               SPI_MasterTransmitaByte(0xa1);//显示d
+ 0162 01EA              ldi R16,161
+ 0164 00D0              rcall _SPI_MasterTransmitaByte
+ 0166                   .dbline 140
+ 0166           ;                               PORTB&=0xFB;
+ 0166 88B3              in R24,0x18
+ 0168 8B7F              andi R24,251
+ 016A 88BB              out 0x18,R24
+ 016C                   .dbline 141
+ 016C           ;                               PORTB|=0x04;
+ 016C C29A              sbi 0x18,2
+ 016E                   .dbline 143
+ 016E           ;                               
+ 016E           ;                               SendBuffer[0] = 0xBB;
+ 016E 8BEB              ldi R24,187
+ 0170 80930000          sts _SendBuffer,R24
+ 0174                   .dbline 144
+ 0174           ;                               SendBuffer[1] = 0xFF;
+ 0174 8FEF              ldi R24,255
+ 0176 80930100          sts _SendBuffer+1,R24
+ 017A                   .dbline 145
+ 017A           ;                               SendBuffer[2] = 0x00;
+ 017A 2224              clr R2
+ 017C 20920200          sts _SendBuffer+2,R2
+ 0180                   .dbline 146
+ 0180           ;                               SendBuffer[3] = 0x00;
+ 0180 20920300          sts _SendBuffer+3,R2
+ 0184                   .dbline 147
+ 0184           ;                               SendBuffer[4] = 0x00;
+ 0184 20920400          sts _SendBuffer+4,R2
+ 0188                   .dbline 148
+ 0188           ;                               SendBuffer[6] = 0xFF;
+ 0188 80930600          sts _SendBuffer+6,R24
+ 018C                   .dbline 149
+ 018C           ;                               UARTSendAMessage(SendBuffer,7);
+ 018C 27E0              ldi R18,7
+ 018E 30E0              ldi R19,0
+ 0190 00E0              ldi R16,<_SendBuffer
+ 0192 10E0              ldi R17,>_SendBuffer
+ 0194 44DF              rcall _UARTSendAMessage
+ 0196                   .dbline 151
+ 0196           ;                               
+ 0196           ;                               return (0);     
+ 0196 0027              clr R16
+ 0198 01C0              rjmp L15
+ 019A           L38:
+ 019A                   .dbline 154
+ 019A           ;                       }
+ 019A           ;                       else
+ 019A           ;                       {
+ 019A                   .dbline 155
+ 019A           ;                               return (CMD);
+ 019A 042F              mov R16,R20
+ 019C                   .dbline -2
+ 019C           L15:
+ 019C 00D0              rcall pop_gset2
+ 019E                   .dbline 0 ; func end
+ 019E 0895              ret
+ 01A0                   .dbsym r k 20 i
+ 01A0                   .dbsym r CMD 20 i
+ 01A0                   .dbsym r rcvByte 22 c
+ 01A0                   .dbend
+                        .area bss(ram, con, rel)
+ 0000                   .dbfile C:\DOCUME~1\蔡颖鹏\桌面\SensorEXBIcc\UART.c
+ 0000           _SendBuffer::
+ 0000                   .blkb 7
+ 0007                   .dbsym e SendBuffer _SendBuffer A[7:7]c

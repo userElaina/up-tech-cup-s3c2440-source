@@ -1,0 +1,30 @@
+!if "$(BSP_NOCS8900)" == "1"
+SKIPBUILD=1
+!endif
+
+TARGETNAME=cs8900
+RELEASETYPE=PLATFORM
+TARGETTYPE=DYNLINK
+
+DLLENTRY=DllEntry
+###MSC_OPTIMIZATION=/Ox /Fc
+
+TARGETLIBS=                                                     \
+   $(_PROJECTROOT)\cesysgen\sdk\lib\$(_CPUINDPATH)\ndis.lib      \
+   $(_PROJECTROOT)\cesysgen\sdk\lib\$(_CPUINDPATH)\ntcompat.lib  \
+   $(_PROJECTROOT)\cesysgen\sdk\lib\$(_CPUINDPATH)\coredll.lib \
+   $(_PROJECTROOT)\cesysgen\oak\lib\$(_CPUINDPATH)\ceddk.lib   \
+      
+###DEFINES=$(CDEFINES) -DNDIS_MINIPORT_DRIVER -DNDIS40_MINIPORT -DWIN_CE -DARM_PROCESSOR 
+###C_COMPILER_FLAGS=$(C_COMPILER_FLAGS) /Fc
+###LINKER_FLAGS=$(LINKER_FLAGS) -MAP
+###RCNOFONTMAP=1
+###DRIVER_ALIGNMENT=0x200
+
+CDEFINES=$(CDEFINES) -DNDIS_MINIPORT_DRIVER -DCS8900
+
+SOURCES= miniport.c\
+         interrup.c\
+         cs8900.c\
+         wince.c
+

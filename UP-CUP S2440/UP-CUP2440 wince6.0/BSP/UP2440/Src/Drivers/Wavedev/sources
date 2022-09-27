@@ -1,0 +1,54 @@
+!if 0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+!endif
+!if 0
+Use of this source code is subject to the terms of the Microsoft end-user
+license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+If you did not accept the terms of the EULA, you are not authorized to use
+this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+install media.
+!endif
+
+!if "$(BSP_NOAUDIO)" == "1"
+SKIPBUILD=1
+!endif
+
+
+TARGETNAME=s3c2440a_wavedev
+RELEASETYPE=PLATFORM
+TARGETTYPE=DYNLINK
+DLLENTRY=_DllMainCRTStartup
+
+DEFFILE=$(_COMMONOAKROOT)\inc\wavedev.def
+
+INCLUDES=$(INCLUDES);$(_TARGETPLATROOT)\src\inc;
+
+TARGETLIBS=$(_COMMONSDKROOT)\lib\$(_CPUINDPATH)\coredll.lib	\
+
+SOURCELIBS=$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ceddk.lib
+
+
+SOURCES= \
+  devctxt.cpp \
+  hwctxt.cpp \
+  i2s.cpp \
+  input.cpp \
+  midinote.cpp \
+  midistrm.cpp \
+  output.cpp \
+  strmctxt.cpp \
+  wavemain.cpp \
+  mixerdrv.cpp \
+
+FILE_VIEW_INCLUDES_FOLDER= \
+    wfmtmidi.h \
+    audiosys.h \
+    devctxt.h \
+    hwctxt.h \
+    I2S.H \
+    midistrm.h \
+    strmctxt.h \
+    wavemain.h \
+    wavepdd.h \
+    mixerdrv.h \
+

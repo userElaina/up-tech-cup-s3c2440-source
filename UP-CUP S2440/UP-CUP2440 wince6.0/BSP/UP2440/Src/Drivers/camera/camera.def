@@ -1,0 +1,15 @@
+;
+; Windows CE camera Driver. Written by jabez (mostek@dstcorp.com)
+;
+LIBRARY CAMERA
+EXPORTS
+	CIS_Close
+	CIS_Deinit
+	CIS_Init
+	CIS_IOControl
+	CIS_Open
+	CIS_PowerDown
+	CIS_PowerUp
+	CIS_Read
+	CIS_Seek
+	CIS_Write

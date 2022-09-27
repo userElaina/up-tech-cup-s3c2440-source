@@ -1,0 +1,86 @@
+ adc
+
+ Timestamp is 4f87b39c (Fri Apr 13 13:03:24 2012)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000348H .rdata                  CODE
+ 0001:00000348 00000020H .rdata$debug            CODE
+ 0001:00000368 00000488H .text                   CODE
+ 0001:000007f0 00000014H .idata$2                CODE
+ 0001:00000804 00000014H .idata$3                CODE
+ 0001:00000818 00000040H .idata$4                CODE
+ 0001:00000858 0000000cH .idata$6                CODE
+ 0001:00000870 000000a6H .edata                  CODE
+ 0002:00000000 00000040H .idata$5                DATA
+ 0002:00000040 00000034H .bss                    DATA
+ 0003:00000000 00000040H .pdata                  DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0001:00000020       ??_C@_1FM@NCMDJCDN@?$AAA?$AAD?$AAC?$AAE?$AAv?$AAe?$AAn?$AAt?$AA?5?$AAH?$AAa?$AAn?$AAd?$AAl?$AAe?$AAr?$AA?0?$AAW?$AAa?$AAi?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAf?$AAo?$AAr?$AA?5?$AAI?$AAn?$AAt@ 10001020     adc.obj
+ 0001:0000007c       ??_C@_1DM@DKLNCPPH@?$AAI?$AAn?$AAt?$AAe?$AAr?$AAr?$AAu?$AAp?$AAt?$AAI?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA?5?$AAf?$AAa?$AAi?$AAl?$AAe?$AAd?$AA?$CB?$AA?$AN?$AA?6?$AA?$AA@ 1000107c     adc.obj
+ 0001:000000b8       ??_C@_1DC@HKFGMBED@?$AAE?$AAv?$AAe?$AAn?$AAt?$AA?5?$AAc?$AAr?$AAe?$AAa?$AAt?$AAi?$AAo?$AAn?$AA?5?$AAf?$AAa?$AAi?$AAl?$AAe?$AAd?$AA?$CB?$AA?$AN?$AA?6?$AA?$AA@ 100010b8     adc.obj
+ 0001:000000f0       ??_C@_1EO@LPJCKOKM@?$AAF?$AAO?$AAR?$AA?5?$AAA?$AAD?$AAC?$AA_?$AAI?$AAN?$AAT?$AAr?$AAe?$AAg?$AAs?$AA?3?$AA?5?$AAV?$AAi?$AAr?$AAt?$AAu?$AAa?$AAl?$AAC?$AAo?$AAp?$AAy?$AA?5?$AAS?$AAu?$AAc@ 100010f0     adc.obj
+ 0001:00000140       ??_C@_1EO@HHLPFMFJ@?$AAF?$AAo?$AAr?$AA?5?$AAA?$AAD?$AAC?$AA_?$AAI?$AAN?$AAT?$AAr?$AAe?$AAg?$AAs?$AA?3?$AA?5?$AAV?$AAi?$AAr?$AAt?$AAu?$AAa?$AAl?$AAC?$AAo?$AAp?$AAy?$AA?5?$AAf?$AAa?$AAi@ 10001140     adc.obj
+ 0001:00000190       ??_C@_1DK@ENOILNDC@?$AAA?$AAD?$AAC?$AAD?$AAR?$AAV?$AA?4?$AAD?$AAL?$AAL?$AA?3?$AA?5?$AAI?$AAn?$AAi?$AAt?$AAA?$AAd?$AAd?$AAI?$AAN?$AAT?$AAr?$AAe?$AAg?$AA2?$AA?$AN?$AA?6?$AA?$AA@ 10001190     adc.obj
+ 0001:000001d0       ??_C@_1EO@PJJHAKIH@?$AAF?$AAO?$AAR?$AA?5?$AAA?$AAD?$AAC?$AA_?$AAA?$AAD?$AAC?$AAr?$AAe?$AAg?$AAs?$AA?3?$AA?5?$AAV?$AAi?$AAr?$AAt?$AAu?$AAa?$AAl?$AAC?$AAo?$AAp?$AAy?$AA?5?$AAS?$AAu?$AAc@ 100011d0     adc.obj
+ 0001:00000220       ??_C@_1EO@DBLKPIHC@?$AAF?$AAo?$AAr?$AA?5?$AAA?$AAD?$AAC?$AA_?$AAA?$AAD?$AAC?$AAr?$AAe?$AAg?$AAs?$AA?3?$AA?5?$AAV?$AAi?$AAr?$AAt?$AAu?$AAa?$AAl?$AAC?$AAo?$AAp?$AAy?$AA?5?$AAf?$AAa?$AAi@ 10001220     adc.obj
+ 0001:00000270       ??_C@_1DA@COHOPPNK@?$AAA?$AAD?$AAC?$AA_?$AAD?$AAR?$AAV?$AA?3?$AAO?$AAP?$AAE?$AAN?$AA?5?$AAS?$AAU?$AAC?$AAC?$AAE?$AAS?$AAS?$AA?$CB?$AA?$AN?$AA?6?$AA?$AA@ 10001270     adc.obj
+ 0001:000002a0       ??_C@_1FA@HNKAMBMD@?$AAA?$AAD?$AAC?$AA_?$AAR?$AAE?$AAA?$AAD?$AA?3?$AA?5?$AAD?$AAo?$AA?5?$AAN?$AAo?$AAt?$AA?5?$AAK?$AAn?$AAo?$AAw?$AA?5?$AAW?$AAh?$AAa?$AAt?$AA?5?$AAW?$AAa?$AAs?$AA?5?$AAW@ 100012a0     adc.obj
+ 0001:000002f0       ??_C@_1FI@FJNLNBOA@?$AAA?$AAD?$AAC?$AA_?$AAR?$AAE?$AAA?$AAD?$AA?3?$AA?5?$AAF?$AAa?$AAi?$AAl?$AAe?$AAd?$AA?5?$AAs?$AAe?$AAt?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAT?$AAh?$AAr?$AAe?$AAa?$AAd?$AA?5@ 100012f0     adc.obj
+ 0001:00000368       ?DllEntry@@YAHPAXK0@Z      10001368 f   adc.obj
+ 0001:00000370       ?AdcEventHandler@@YAKPAX@Z 10001370 f   adc.obj
+ 0001:000003a8       ?ADC_Init@@YAXXZ           100013a8 f   adc.obj
+ 0001:00000510       ?ADC_Open@@YAKPAXKK@Z      10001510 f   adc.obj
+ 0001:0000052c       ?ADC_Close@@YAHK@Z         1000152c f   adc.obj
+ 0001:00000534       ?ADC_Deinit@@YAKK@Z        10001534 f   adc.obj
+ 0001:0000053c       ?ADC_Read@@YAKKPAXK@Z      1000153c f   adc.obj
+ 0001:00000668       ?ADC_Write@@YAKKPBXK@Z     10001668 f   adc.obj
+ 0001:00000700       InterruptDone              10001700 f   coredll:COREDLL.dll
+ 0001:00000710       WaitForSingleObject        10001710 f   coredll:COREDLL.dll
+ 0001:00000720       NKDbgPrintfW               10001720 f   coredll:COREDLL.dll
+ 0001:00000730       InterruptInitialize        10001730 f   coredll:COREDLL.dll
+ 0001:00000740       CreateEventW               10001740 f   coredll:COREDLL.dll
+ 0001:00000750       InitializeCriticalSection  10001750 f   coredll:COREDLL.dll
+ 0001:00000760       VirtualFree                10001760 f   coredll:COREDLL.dll
+ 0001:00000770       VirtualCopy                10001770 f   coredll:COREDLL.dll
+ 0001:00000780       VirtualAlloc               10001780 f   coredll:COREDLL.dll
+ 0001:00000790       TerminateThread            10001790 f   coredll:COREDLL.dll
+ 0001:000007a0       LeaveCriticalSection       100017a0 f   coredll:COREDLL.dll
+ 0001:000007b0       EnterCriticalSection       100017b0 f   coredll:COREDLL.dll
+ 0001:000007c0       ResumeThread               100017c0 f   coredll:COREDLL.dll
+ 0001:000007d0       CeSetThreadPriority        100017d0 f   coredll:COREDLL.dll
+ 0001:000007e0       CreateThread               100017e0 f   coredll:COREDLL.dll
+ 0001:000007f0       __IMPORT_DESCRIPTOR_COREDLL 100017f0     coredll:COREDLL.dll
+ 0001:00000804       __NULL_IMPORT_DESCRIPTOR   10001804     coredll:COREDLL.dll
+ 0002:00000000       __imp_InterruptDone        10002000     coredll:COREDLL.dll
+ 0002:00000004       __imp_WaitForSingleObject  10002004     coredll:COREDLL.dll
+ 0002:00000008       __imp_NKDbgPrintfW         10002008     coredll:COREDLL.dll
+ 0002:0000000c       __imp_InterruptInitialize  1000200c     coredll:COREDLL.dll
+ 0002:00000010       __imp_CreateEventW         10002010     coredll:COREDLL.dll
+ 0002:00000014       __imp_InitializeCriticalSection 10002014     coredll:COREDLL.dll
+ 0002:00000018       __imp_VirtualFree          10002018     coredll:COREDLL.dll
+ 0002:0000001c       __imp_VirtualCopy          1000201c     coredll:COREDLL.dll
+ 0002:00000020       __imp_VirtualAlloc         10002020     coredll:COREDLL.dll
+ 0002:00000024       __imp_TerminateThread      10002024     coredll:COREDLL.dll
+ 0002:00000028       __imp_LeaveCriticalSection 10002028     coredll:COREDLL.dll
+ 0002:0000002c       __imp_EnterCriticalSection 1000202c     coredll:COREDLL.dll
+ 0002:00000030       __imp_ResumeThread         10002030     coredll:COREDLL.dll
+ 0002:00000034       __imp_CeSetThreadPriority  10002034     coredll:COREDLL.dll
+ 0002:00000038       __imp_CreateThread         10002038     coredll:COREDLL.dll
+ 0002:0000003c       \177COREDLL_NULL_THUNK_DATA 1000203c     coredll:COREDLL.dll
+ 0002:00000040       ?g_htIST@@3PAXA            10002040     adc.obj
+ 0002:00000044       ?adcdev@@3UADC_DEV@@A      10002044     adc.obj
+ 0002:00000064       ?pADC_Dev@@3PAUADC_DEV@@A  10002064     adc.obj
+ 0002:00000068       ?pINTreg@@3PCUS3C2440A_INTR_REG@@C 10002068     adc.obj
+ 0002:0000006c       ?dwThreadID@@3KA           1000206c     adc.obj
+ 0002:00000070       ?g_hevInterrupt@@3PAXA     10002070     adc.obj
+
+ entry point at        0000:00000000
+
+ Static symbols
+

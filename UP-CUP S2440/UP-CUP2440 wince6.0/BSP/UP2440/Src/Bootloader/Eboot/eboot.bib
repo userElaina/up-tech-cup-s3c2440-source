@@ -1,0 +1,51 @@
+;
+; Copyright (c) Microsoft Corporation.  All rights reserved.
+;
+;
+; Use of this source code is subject to the terms of the Microsoft end-user
+; license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+; If you did not accept the terms of the EULA, you are not authorized to use
+; this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+; install media.
+;
+;******************************************************************************
+;*
+;* Copyright (c) 2006 Software Center, Samsung Electronics, Inc.
+;* All rights reserved.
+;*
+;* This software is the confidential and proprietary information of Samsung 
+;* Electronics, Inc("Confidential Information"). You Shall not disclose such 
+;* Confidential Information and shall use it only in accordance with the terms 
+;* of the license agreement you entered into Samsung.
+;*
+;******************************************************************************
+
+MEMORY
+;   Name     Start     Size      Type
+;   -------  --------  --------  ----
+    PTS      80000000  00020000  RESERVED
+    ARGS     80020000  00000800  RESERVED
+    STACK    8002c000  00004000  RESERVED
+    EBOOT    80038000  00060000  RAMIMAGE
+    RAM      800A0000  00008000  RAM  
+    BINFS    800B0000  00021000  RESERVED    
+    
+; Area used to cache nk.bin while programming flash
+    FLSCACHE 80200000  01400000  RESERVED 
+    DISPLAY  80101000  000F0000  RESERVED
+
+CONFIG
+	COMPRESSION=OFF
+	PROFILE=OFF
+	KERNELFIXUPS=ON
+;	ROMOFFSET=25FC8000
+	SRE=ON
+	ROMSTART=80038000
+	ROMWIDTH=32
+	ROMSIZE=00040000
+
+MODULES
+;   Name            Path                                                              Memory Type
+;   --------------  ----------------------------------------------                    -----------
+    nk.exe          $(_TARGETPLATROOT)\target\$(_TGTCPU)\$(WINCEDEBUG)\eboot.exe      EBOOT
+

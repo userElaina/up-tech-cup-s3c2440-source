@@ -1,0 +1,9 @@
+;Windows CE.net STR Driver on board
+LIBRARY STR
+EXPORTS
+STR_Open
+STR_Close
+STR_Init
+STR_Deinit
+STR_Read
+STR_Write

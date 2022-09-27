@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LCD", "LCD\LCD.vcproj", "{105E4548-7C56-4078-9C90-DE149391C36A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|UP2440 SDK (ARMV4I) = Debug|UP2440 SDK (ARMV4I)
+		Release|UP2440 SDK (ARMV4I) = Release|UP2440 SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{105E4548-7C56-4078-9C90-DE149391C36A}.Debug|UP2440 SDK (ARMV4I).ActiveCfg = Debug|UP2440 SDK (ARMV4I)
+		{105E4548-7C56-4078-9C90-DE149391C36A}.Debug|UP2440 SDK (ARMV4I).Build.0 = Debug|UP2440 SDK (ARMV4I)
+		{105E4548-7C56-4078-9C90-DE149391C36A}.Debug|UP2440 SDK (ARMV4I).Deploy.0 = Debug|UP2440 SDK (ARMV4I)
+		{105E4548-7C56-4078-9C90-DE149391C36A}.Release|UP2440 SDK (ARMV4I).ActiveCfg = Release|UP2440 SDK (ARMV4I)
+		{105E4548-7C56-4078-9C90-DE149391C36A}.Release|UP2440 SDK (ARMV4I).Build.0 = Release|UP2440 SDK (ARMV4I)
+		{105E4548-7C56-4078-9C90-DE149391C36A}.Release|UP2440 SDK (ARMV4I).Deploy.0 = Release|UP2440 SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

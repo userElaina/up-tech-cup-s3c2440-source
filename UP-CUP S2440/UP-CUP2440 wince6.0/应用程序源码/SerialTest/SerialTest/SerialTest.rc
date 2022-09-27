@@ -1,0 +1,240 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\SerialTest.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SerialTest.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SERIALTEST_DIALOG DIALOG  0, 0, 258, 201
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW | 0x80000000L
+CAPTION "SerialTest"
+FONT 9, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDC_REC_DISP,16,28,227,46,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_NOHIDESEL | WS_VSCROLL,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "清除接收",IDC_CLEAR_REC,185,13,50,14
+    LTEXT           "串口号：",IDC_STATIC,23,94,28,8
+    LTEXT           "波特率：",IDC_STATIC,23,110,28,8
+    LTEXT           "数据位：",IDC_STATIC,23,126,28,8
+    LTEXT           "停止位：",IDC_STATIC,23,142,28,8
+    LTEXT           "校验：",IDC_STATIC,23,158,28,8
+    COMBOBOX        IDC_PORT,57,92,48,30,CBS_DROPDOWNLIST | CBS_SORT | CBS_NOINTEGRALHEIGHT | CBS_DISABLENOSCROLL | WS_VSCROLL,WS_EX_STATICEDGE
+    COMBOBOX        IDC_BAUD,57,108,48,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_DATA,57,124,48,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_STOP,57,140,48,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_PARITY,57,156,48,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "打开",IDC_OPEN_COM,22,175,38,14
+    PUSHBUTTON      "关闭",IDC_CLOSE_COM,68,175,38,14
+    EDITTEXT        IDC_SEND_EDIT,124,88,118,25,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_NOHIDESEL | WS_VSCROLL,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "发送",IDC_SEND,126,116,50,14
+    PUSHBUTTON      "清除发送",IDC_CLEAR_SEND,189,116,50,14
+    LTEXT           "出品：北京博创兴盛科技有限公司",IDC_STATIC,131,173,104,8
+    LTEXT           "名称：串口测试程序！！",IDC_STATIC,131,158,76,8
+    GROUPBOX        "接收区",IDC_STATIC,15,7,230,70,WS_GROUP
+    GROUPBOX        "串口设置",IDC_STATIC,15,77,98,115,WS_GROUP
+    GROUPBOX        "发送区",IDC_STATIC,122,77,122,63,WS_GROUP
+    GROUPBOX        "",IDC_STATIC,123,143,122,43
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <北京博创兴盛科技有限公司>"
+            VALUE "FileDescription", "TODO: <串口调试>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "SerialTest.exe"
+            VALUE "LegalCopyright", "TODO: (C) <北京博创兴盛科技有限公司>。保留所有权利。"
+            VALUE "OriginalFilename", "SerialTest.exe"
+            VALUE "ProductName", "TODO: <串口调试>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SERIALTEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SERIALTEST_DIALOG DLGINIT
+BEGIN
+    IDC_PORT, 0x403, 5, 0
+0x4f43, 0x314d, "\000" 
+    IDC_PORT, 0x403, 5, 0
+0x4f43, 0x324d, "\000" 
+    IDC_PORT, 0x403, 5, 0
+0x4f43, 0x334d, "\000" 
+    IDC_PORT, 0x403, 5, 0
+0x4f43, 0x344d, "\000" 
+    IDC_PORT, 0x403, 5, 0
+0x4f43, 0x354d, "\000" 
+    IDC_PORT, 0x403, 5, 0
+0x4f43, 0x364d, "\000" 
+    IDC_BAUD, 0x403, 5, 0
+0x3834, 0x3030, "\000" 
+    IDC_BAUD, 0x403, 5, 0
+0x3639, 0x3030, "\000" 
+    IDC_BAUD, 0x403, 6, 0
+0x3931, 0x3032, 0x0030, 
+    IDC_BAUD, 0x403, 6, 0
+0x3833, 0x3034, 0x0030, 
+    IDC_BAUD, 0x403, 6, 0
+0x3735, 0x3036, 0x0030, 
+    IDC_BAUD, 0x403, 7, 0
+0x3131, 0x3235, 0x3030, "\000" 
+    IDC_DATA, 0x403, 2, 0
+0x0037, 
+    IDC_DATA, 0x403, 2, 0
+0x0038, 
+    IDC_STOP, 0x403, 2, 0
+0x0031, 
+    IDC_STOP, 0x403, 4, 0
+0x2e31, 0x0035, 
+    IDC_STOP, 0x403, 2, 0
+0x0032, 
+    IDC_PARITY, 0x403, 3, 0
+0xdece, "\000" 
+    IDC_PARITY, 0x403, 3, 0
+0xe6c6, "\000" 
+    IDC_PARITY, 0x403, 3, 0
+0xbcc5, "\000" 
+    IDC_PARITY, 0x403, 5, 0
+0x614d, 0x6b73, "\000" 
+    0
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\SerialTest.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

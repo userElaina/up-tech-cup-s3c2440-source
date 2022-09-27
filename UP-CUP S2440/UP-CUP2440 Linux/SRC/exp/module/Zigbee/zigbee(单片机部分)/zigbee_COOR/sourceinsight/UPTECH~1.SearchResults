@@ -1,0 +1,58 @@
+---- pCurrentEP Matches (11 in 2 files) ----
+zAPS.c (c:\documents and settings\...\zigbee_coor):43
+EP              *pCurrentEP;                    // Pointer to current endpoint for faster access.
+
+MESSAGE_INFO    currentMessageInfo;             // One generic message packet.
+zAPS.c (c:\documents and settings\...\zigbee_coor):64
+#define APSIsConfirmed()            NWKFrameIsAcked(pCurrentEP->hFrame)
+
+// Calls MAC module to check timeout status of frame associated with currnt ep.
+#define APSIsTimedOut()             NWKFrameIsTimedOut(pCurrentEP->hFrame)
+
+//Calls MAC module to remove frame entry for current ep.
+#define APSRemoveFrame()            NWKFrameRemove(pCurrentEP->hFrame)
+
+//send a frame of the current ep.
+#define APSSend()               pCurrentEP->hFrame = NWKFlush()
+
+//return the number of bytes remaining to be fetched for this EP.
+zAPS.c (c:\documents and settings\...\zigbee_coor):266
+ *                  updates pCurrentEP to point to the newly enabled
+ *                  endpoint.
+ *
+zAPS.c (c:\documents and settings\...\zigbee_coor):277
+    pCurrentEP = (EP*)&epList[0];
+
+    // Find the matching endpoint information
+    for ( i=0; i < NUM_DEFINED_ENDPOINTS; i++, pCurrentEP++)
+    {
+        //ProfileGetSimpleDesc( &simpleDescriptor, i );
+zAPS.c (c:\documents and settings\...\zigbee_coor):286
+            pCurrentEP->flags.Val = 0x00;
+            pCurrentEP->flags.bits.bIsInUse = TRUE;
+
+            return i;
+zAPS.c (c:\documents and settings\...\zigbee_coor):644
+    pCurrentEP->flags.bits.bIsDataReady = FALSE;
+    NWKPayload = apsCurrentFrame.payload;
+    NWKPayloadLength = NWKPayloadLengthSave;
+zAPS.h (c:\documents and settings\...\zigbee_coor):69
+extern EP                           *pCurrentEP;
+
+extern APS_HEADER    apsCurrentFrame;
+zAPS.h (c:\documents and settings\...\zigbee_coor):161
+ *                  updates pCurrentEP to point to the newly enabled
+ *                  endpoint.
+ *
+zAPS.h (c:\documents and settings\...\zigbee_coor):183
+#define APSSetEP(h) (pCurrentEP = &epList[h])
+
+/*********************************************************************
+zAPS.h (c:\documents and settings\...\zigbee_coor):201
+#define APSCloseEP() (pCurrentEP->flags.bits.bIsInUse = FALSE)
+
+/*********************************************************************
+zAPS.h (c:\documents and settings\...\zigbee_coor):257
+#define APSIsGetReady()             (pCurrentEP->flags.bits.bIsDataReady)
+
+/*********************************************************************

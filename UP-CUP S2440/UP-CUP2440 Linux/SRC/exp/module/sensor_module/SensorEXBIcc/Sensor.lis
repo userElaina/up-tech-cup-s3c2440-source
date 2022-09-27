@@ -1,0 +1,1816 @@
+                        .module Sensor.c
+                        .area data(ram, con, rel)
+ 0000           _CMD::
+ 0000                   .blkb 1
+                        .area idata
+ 0000 00                .byte 0
+                        .area data(ram, con, rel)
+ 0001                   .dbfile C:\DOCUME~1\蔡颖鹏\桌面\SensorEXBIcc\Sensor.c
+ 0001                   .dbsym e CMD _CMD c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile C:\DOCUME~1\蔡颖鹏\桌面\SensorEXBIcc\Sensor.c
+ 0000                   .dbfunc e GetSensorMessage _GetSensorMessage fV
+                        .area func_lit(rom, con, rel)
+ 0000           L145:
+ 0000 3100              .word `L6
+ 0002 3800              .word `L7
+ 0004 6F00              .word `L25
+ 0006 A600              .word `L43
+ 0008 AE00              .word `L44
+ 000A B600              .word `L45
+ 000C BE00              .word `L46
+ 000E C600              .word `L47
+ 0010 FD00              .word `L65
+ 0012 3401              .word `L83
+ 0014 6B01              .word `L101
+ 0016 9D01              .word `L119
+ 0018 CF01              .word `L124
+ 001A 2502              .word `L125
+ 001C 4602              .word `L126
+ 001E 7702              .word `L143
+ 0020 7F02              .word `L144
+                        .area text(rom, con, rel)
+ 0000                   .dbfile C:\DOCUME~1\蔡颖鹏\桌面\SensorEXBIcc\Sensor.c
+ 0000           ;        resultL -> y+20
+ 0000           ;        resultH -> y+19
+ 0000           ;     AH3020Flag -> R10
+ 0000           ;         result -> y+0
+ 0000           ;        MQ2Flag -> R20
+ 0000           ;     RE200BFlag -> y+18
+ 0000           ;       REEDFlag -> y+17
+ 0000           ;       MoveFlag -> y+16
+ 0000           ;      TouchFlag -> y+15
+ 0000           ;      SoundFlag -> y+14
+ 0000           ;              i -> R12,R13
+ 0000           ;              j -> R14,R15
+ 0000           ;              k -> R22,R23
+ 0000           ;          param -> R22
+                        .even
+ 0000           _GetSensorMessage::
+ 0000 00D0              rcall push_gset5
+ 0002 602F              mov R22,R16
+ 0004 6597              sbiw R28,21
+ 0006                   .dbline -1
+ 0006                   .dbline 6
+ 0006           ; #include "Generic.h"
+ 0006           ; 
+ 0006           ; unsigned char CMD = 0x00;
+ 0006           ; 
+ 0006           ; void GetSensorMessage( unsigned char param )
+ 0006           ; {
+ 0006                   .dbline 7
+ 0006           ;       float result = 0;
+ 0006 00E0              ldi R16,<L2
+ 0008 10E0              ldi R17,>L2
+ 000A 00D0              rcall lpm32
+ 000C FE01              movw R30,R28
+ 000E 0083              std z+0,R16
+ 0010 1183              std z+1,R17
+ 0012 2283              std z+2,R18
+ 0014 3383              std z+3,R19
+ 0016                   .dbline 8
+ 0016           ;       unsigned char resultH = 0;
+ 0016 0024              clr R0
+ 0018 0B8A              std y+19,R0
+ 001A                   .dbline 9
+ 001A           ;       unsigned char resultL = 0;
+ 001A 0C8A              std y+20,R0
+ 001C                   .dbline 11
+ 001C           ;       unsigned int i,j,k;
+ 001C           ;       unsigned char SoundFlag = 0;
+ 001C 0E86              std y+14,R0
+ 001E                   .dbline 12
+ 001E           ;       unsigned char TouchFlag = 0;
+ 001E 0F86              std y+15,R0
+ 0020                   .dbline 13
+ 0020           ;       unsigned char MoveFlag = 0;
+ 0020 088A              std y+16,R0
+ 0022                   .dbline 14
+ 0022           ;       unsigned char REEDFlag = 0;
+ 0022 098A              std y+17,R0
+ 0024                   .dbline 15
+ 0024           ;       unsigned char RE200BFlag = 0;
+ 0024 0A8A              std y+18,R0
+ 0026                   .dbline 16
+ 0026           ;       unsigned char MQ2Flag = 0;
+ 0026 4427              clr R20
+ 0028                   .dbline 17
+ 0028           ;       unsigned char AH3020Flag = 0;
+ 0028 AA24              clr R10
+ 002A                   .dbline 19
+ 002A           ;       
+ 002A           ;       switch(param)
+ 002A 262E              mov R2,R22
+ 002C 3324              clr R3
+ 002E 3D82              std y+5,R3
+ 0030 2C82              std y+4,R2
+ 0032 C101              movw R24,R2
+ 0034 8031              cpi R24,16
+ 0036 E0E0              ldi R30,0
+ 0038 9E07              cpc R25,R30
+ 003A 0CF4              brge X9
+ 003C 67C2              rjmp L4
+ 003E           X9:
+ 003E 80E2              ldi R24,32
+ 0040 8215              cp R24,R2
+ 0042 9305              cpc R25,R3
+ 0044 0CF4              brge X10
+ 0046 62C2              rjmp L4
+ 0048           X10:
+ 0048 9101              movw R18,R2
+ 004A 02E0              ldi R16,2
+ 004C 10E0              ldi R17,0
+ 004E 00D0              rcall empy16s
+ 0050 F801              movw R30,R16
+ 0052 80E0              ldi R24,<L145-32
+ 0054 90E0              ldi R25,>L145-32
+ 0056 E80F              add R30,R24
+ 0058 F91F              adc R31,R25
+ 005A 0590              lpm R0,Z+
+ 005C 1490              lpm R1,Z
+ 005E F001              movw R30,R0
+ 0060 0994              ijmp
+ 0062           X0:
+ 0062                   .dbline 20
+ 0062           ;       {
+ 0062           L6:
+ 0062                   .dbline 23
+ 0062           ;               //18b20温度传感器
+ 0062           ;               case Temperature18b20:
+ 0062           ;                       {
+ 0062                   .dbline 24
+ 0062           ;                               result = Get_Temperature();
+ 0062 00D0              rcall _Get_Temperature
+ 0064 FE01              movw R30,R28
+ 0066 0083              std z+0,R16
+ 0068 1183              std z+1,R17
+ 006A 2283              std z+2,R18
+ 006C 3383              std z+3,R19
+ 006E                   .dbline 25
+ 006E           ;                               break;
+ 006E 4EC2              rjmp L4
+ 0070           L7:
+ 0070                   .dbline 30
+ 0070           ;                       }
+ 0070           ; 
+ 0070           ;               //MIC声音传感器
+ 0070           ;               case MIC:
+ 0070           ;                       {
+ 0070                   .dbline 32
+ 0070           ;                               
+ 0070           ;                               SoundFlag = 0;
+ 0070 0024              clr R0
+ 0072 0E86              std y+14,R0
+ 0074                   .dbline 33
+ 0074           ;                               for( i = 0;(i<100)&&(SoundFlag == 0);i++ )
+ 0074 CC24              clr R12
+ 0076 DD24              clr R13
+ 0078 21C0              rjmp L11
+ 007A           L8:
+ 007A                   .dbline 34
+ 007A           ;                               {
+ 007A                   .dbline 35
+ 007A           ;                                       for(j = 0;(j<1000)&&(SoundFlag == 0);j++)
+ 007A EE24              clr R14
+ 007C FF24              clr R15
+ 007E 13C0              rjmp L15
+ 0080           L12:
+ 0080                   .dbline 36
+ 0080           ;                                       {
+ 0080                   .dbline 37
+ 0080           ;                                               if( PINB&0x02 )
+ 0080 B19B              sbis 0x16,1
+ 0082 0EC0              rjmp L16
+ 0084                   .dbline 38
+ 0084           ;                                               {
+ 0084                   .dbline 39
+ 0084           ;                                                       k = 100;
+ 0084 64E6              ldi R22,100
+ 0086 70E0              ldi R23,0
+ 0088           L18:
+ 0088                   .dbline 40
+ 0088           L19:
+ 0088                   .dbline 40
+ 0088           ;                                                       while(k--);
+ 0088 1B01              movw R2,R22
+ 008A 6150              subi R22,1
+ 008C 7040              sbci R23,0
+ 008E 2220              tst R2
+ 0090 D9F7              brne L18
+ 0092 3320              tst R3
+ 0094 C9F7              brne L18
+ 0096           X1:
+ 0096                   .dbline 41
+ 0096           ;                                                       if( PINB&0x02 )
+ 0096 B19B              sbis 0x16,1
+ 0098 03C0              rjmp L21
+ 009A                   .dbline 42
+ 009A           ;                                                       {
+ 009A                   .dbline 43
+ 009A           ;                                                               SoundFlag = 1;
+ 009A 0024              clr R0
+ 009C 0394              inc R0
+ 009E 0E86              std y+14,R0
+ 00A0                   .dbline 44
+ 00A0           ;                                                       }
+ 00A0           L21:
+ 00A0                   .dbline 45
+ 00A0           ;                                               }
+ 00A0           L16:
+ 00A0                   .dbline 46
+ 00A0           L13:
+ 00A0                   .dbline 35
+ 00A0 C701              movw R24,R14
+ 00A2 0196              adiw R24,1
+ 00A4 7C01              movw R14,R24
+ 00A6           L15:
+ 00A6                   .dbline 35
+ 00A6 C701              movw R24,R14
+ 00A8 883E              cpi R24,232
+ 00AA E3E0              ldi R30,3
+ 00AC 9E07              cpc R25,R30
+ 00AE 18F4              brsh L23
+ 00B0 0E84              ldd R0,y+14
+ 00B2 0020              tst R0
+ 00B4 29F3              breq L12
+ 00B6           L23:
+ 00B6                   .dbline 47
+ 00B6           L9:
+ 00B6                   .dbline 33
+ 00B6 C601              movw R24,R12
+ 00B8 0196              adiw R24,1
+ 00BA 6C01              movw R12,R24
+ 00BC           L11:
+ 00BC                   .dbline 33
+ 00BC C601              movw R24,R12
+ 00BE 8436              cpi R24,100
+ 00C0 E0E0              ldi R30,0
+ 00C2 9E07              cpc R25,R30
+ 00C4 18F4              brsh L24
+ 00C6 0E84              ldd R0,y+14
+ 00C8 0020              tst R0
+ 00CA B9F2              breq L8
+ 00CC           L24:
+ 00CC                   .dbline 48
+ 00CC           ;                                       }
+ 00CC           ;                               }
+ 00CC           ;                               result = SoundFlag;
+ 00CC 0E85              ldd R16,y+14
+ 00CE 1127              clr R17
+ 00D0 00D0              rcall int2fp
+ 00D2 FE01              movw R30,R28
+ 00D4 0083              std z+0,R16
+ 00D6 1183              std z+1,R17
+ 00D8 2283              std z+2,R18
+ 00DA 3383              std z+3,R19
+ 00DC                   .dbline 50
+ 00DC           ;                               //1有声，0无声
+ 00DC           ;                               break;
+ 00DC 17C2              rjmp L4
+ 00DE           L25:
+ 00DE                   .dbline 55
+ 00DE           ;                       }
+ 00DE           ; 
+ 00DE           ;               //触摸板
+ 00DE           ;               case TouchPad:
+ 00DE           ;                       {
+ 00DE                   .dbline 56
+ 00DE           ;                               TouchFlag = 0;
+ 00DE 0024              clr R0
+ 00E0 0F86              std y+15,R0
+ 00E2                   .dbline 57
+ 00E2           ;                               for( i = 0;(i<100)&&(TouchFlag == 0);i++ )
+ 00E2 CC24              clr R12
+ 00E4 DD24              clr R13
+ 00E6 21C0              rjmp L29
+ 00E8           L26:
+ 00E8                   .dbline 58
+ 00E8           ;                               {
+ 00E8                   .dbline 59
+ 00E8           ;                                       for(j = 0;(j<1000)&&(TouchFlag == 0);j++)
+ 00E8 EE24              clr R14
+ 00EA FF24              clr R15
+ 00EC 13C0              rjmp L33
+ 00EE           L30:
+ 00EE                   .dbline 60
+ 00EE           ;                                       {
+ 00EE                   .dbline 61
+ 00EE           ;                                               if( PINB&0x10 )
+ 00EE B49B              sbis 0x16,4
+ 00F0 0EC0              rjmp L34
+ 00F2                   .dbline 62
+ 00F2           ;                                               {
+ 00F2                   .dbline 63
+ 00F2           ;                                                       k = 100;
+ 00F2 64E6              ldi R22,100
+ 00F4 70E0              ldi R23,0
+ 00F6           L36:
+ 00F6                   .dbline 64
+ 00F6           L37:
+ 00F6                   .dbline 64
+ 00F6           ;                                                       while(k--);
+ 00F6 1B01              movw R2,R22
+ 00F8 6150              subi R22,1
+ 00FA 7040              sbci R23,0
+ 00FC 2220              tst R2
+ 00FE D9F7              brne L36
+ 0100 3320              tst R3
+ 0102 C9F7              brne L36
+ 0104           X2:
+ 0104                   .dbline 65
+ 0104           ;                                                       if( PINB&0x10 )
+ 0104 B49B              sbis 0x16,4
+ 0106 03C0              rjmp L39
+ 0108                   .dbline 66
+ 0108           ;                                                       {
+ 0108                   .dbline 67
+ 0108           ;                                                               TouchFlag = 1;
+ 0108 0024              clr R0
+ 010A 0394              inc R0
+ 010C 0F86              std y+15,R0
+ 010E                   .dbline 68
+ 010E           ;                                                       }
+ 010E           L39:
+ 010E                   .dbline 69
+ 010E           ;                                               }
+ 010E           L34:
+ 010E                   .dbline 70
+ 010E           L31:
+ 010E                   .dbline 59
+ 010E C701              movw R24,R14
+ 0110 0196              adiw R24,1
+ 0112 7C01              movw R14,R24
+ 0114           L33:
+ 0114                   .dbline 59
+ 0114 C701              movw R24,R14
+ 0116 883E              cpi R24,232
+ 0118 E3E0              ldi R30,3
+ 011A 9E07              cpc R25,R30
+ 011C 18F4              brsh L41
+ 011E 0F84              ldd R0,y+15
+ 0120 0020              tst R0
+ 0122 29F3              breq L30
+ 0124           L41:
+ 0124                   .dbline 71
+ 0124           L27:
+ 0124                   .dbline 57
+ 0124 C601              movw R24,R12
+ 0126 0196              adiw R24,1
+ 0128 6C01              movw R12,R24
+ 012A           L29:
+ 012A                   .dbline 57
+ 012A C601              movw R24,R12
+ 012C 8436              cpi R24,100
+ 012E E0E0              ldi R30,0
+ 0130 9E07              cpc R25,R30
+ 0132 18F4              brsh L42
+ 0134 0F84              ldd R0,y+15
+ 0136 0020              tst R0
+ 0138 B9F2              breq L26
+ 013A           L42:
+ 013A                   .dbline 72
+ 013A           ;                                       }
+ 013A           ;                               }
+ 013A           ;                               result = TouchFlag;
+ 013A 0F85              ldd R16,y+15
+ 013C 1127              clr R17
+ 013E 00D0              rcall int2fp
+ 0140 FE01              movw R30,R28
+ 0142 0083              std z+0,R16
+ 0144 1183              std z+1,R17
+ 0146 2283              std z+2,R18
+ 0148 3383              std z+3,R19
+ 014A                   .dbline 74
+ 014A           ;                               //1有接触，0无接触
+ 014A           ;                               break;
+ 014A E0C1              rjmp L4
+ 014C           L43:
+ 014C                   .dbline 79
+ 014C           ;                       }
+ 014C           ; 
+ 014C           ;               //热敏电阻，返回电压值
+ 014C           ;               case TemperatureResister:
+ 014C           ;                       {
+ 014C                   .dbline 80
+ 014C           ;                               result = StartADC(0);
+ 014C 0027              clr R16
+ 014E 00D0              rcall _StartADC
+ 0150 FE01              movw R30,R28
+ 0152 0083              std z+0,R16
+ 0154 1183              std z+1,R17
+ 0156 2283              std z+2,R18
+ 0158 3383              std z+3,R19
+ 015A                   .dbline 81
+ 015A           ;                               break;
+ 015A D8C1              rjmp L4
+ 015C           L44:
+ 015C                   .dbline 86
+ 015C           ;                       }
+ 015C           ; 
+ 015C           ;               //光敏电阻，返回电压值
+ 015C           ;               case LightResister:
+ 015C           ;                       {
+ 015C                   .dbline 87
+ 015C           ;                               result = StartADC(1);
+ 015C 01E0              ldi R16,1
+ 015E 00D0              rcall _StartADC
+ 0160 FE01              movw R30,R28
+ 0162 0083              std z+0,R16
+ 0164 1183              std z+1,R17
+ 0166 2283              std z+2,R18
+ 0168 3383              std z+3,R19
+ 016A                   .dbline 88
+ 016A           ;                               break;
+ 016A D0C1              rjmp L4
+ 016C           L45:
+ 016C                   .dbline 93
+ 016C           ;                       }
+ 016C           ; 
+ 016C           ;               //差分电压，返回电压值
+ 016C           ;               case DifferentialVoltage:
+ 016C           ;                       {
+ 016C                   .dbline 94
+ 016C           ;                               result = StartADC(2);
+ 016C 02E0              ldi R16,2
+ 016E 00D0              rcall _StartADC
+ 0170 FE01              movw R30,R28
+ 0172 0083              std z+0,R16
+ 0174 1183              std z+1,R17
+ 0176 2283              std z+2,R18
+ 0178 3383              std z+3,R19
+ 017A                   .dbline 95
+ 017A           ;                               break;
+ 017A C8C1              rjmp L4
+ 017C           L46:
+ 017C                   .dbline 100
+ 017C           ;                       }
+ 017C           ; 
+ 017C           ;               //霍尔线性传感器，返回电压值
+ 017C           ;               case AH3503:
+ 017C           ;                       {
+ 017C                   .dbline 101
+ 017C           ;                               result = StartADC(3);
+ 017C 03E0              ldi R16,3
+ 017E 00D0              rcall _StartADC
+ 0180 FE01              movw R30,R28
+ 0182 0083              std z+0,R16
+ 0184 1183              std z+1,R17
+ 0186 2283              std z+2,R18
+ 0188 3383              std z+3,R19
+ 018A                   .dbline 102
+ 018A           ;                               break;
+ 018A C0C1              rjmp L4
+ 018C           L47:
+ 018C                   .dbline 107
+ 018C           ;                       }
+ 018C           ; 
+ 018C           ;               //机械抖动开关
+ 018C           ;               case MOVESW:
+ 018C           ;                       {
+ 018C                   .dbline 108
+ 018C           ;                               MoveFlag = 0;
+ 018C 0024              clr R0
+ 018E 088A              std y+16,R0
+ 0190                   .dbline 109
+ 0190           ;                               for( i = 0;(i<100)&&(MoveFlag == 0);i++ )
+ 0190 CC24              clr R12
+ 0192 DD24              clr R13
+ 0194 21C0              rjmp L51
+ 0196           L48:
+ 0196                   .dbline 110
+ 0196           ;                               {
+ 0196                   .dbline 111
+ 0196           ;                                       for(j = 0;(j<1000)&&(MoveFlag == 0);j++)
+ 0196 EE24              clr R14
+ 0198 FF24              clr R15
+ 019A 13C0              rjmp L55
+ 019C           L52:
+ 019C                   .dbline 112
+ 019C           ;                                       {
+ 019C                   .dbline 113
+ 019C           ;                                               if( !(PINC&0x10) )
+ 019C 9C99              sbic 0x13,4
+ 019E 0EC0              rjmp L56
+ 01A0                   .dbline 114
+ 01A0           ;                                               {
+ 01A0                   .dbline 115
+ 01A0           ;                                                       k = 100;
+ 01A0 64E6              ldi R22,100
+ 01A2 70E0              ldi R23,0
+ 01A4           L58:
+ 01A4                   .dbline 116
+ 01A4           L59:
+ 01A4                   .dbline 116
+ 01A4           ;                                                       while(k--);
+ 01A4 1B01              movw R2,R22
+ 01A6 6150              subi R22,1
+ 01A8 7040              sbci R23,0
+ 01AA 2220              tst R2
+ 01AC D9F7              brne L58
+ 01AE 3320              tst R3
+ 01B0 C9F7              brne L58
+ 01B2           X3:
+ 01B2                   .dbline 117
+ 01B2           ;                                                       if( !(PINC&0x10) )
+ 01B2 9C99              sbic 0x13,4
+ 01B4 03C0              rjmp L61
+ 01B6                   .dbline 118
+ 01B6           ;                                                       {
+ 01B6                   .dbline 119
+ 01B6           ;                                                               MoveFlag = 1;
+ 01B6 0024              clr R0
+ 01B8 0394              inc R0
+ 01BA 088A              std y+16,R0
+ 01BC                   .dbline 120
+ 01BC           ;                                                       }
+ 01BC           L61:
+ 01BC                   .dbline 121
+ 01BC           ;                                               }
+ 01BC           L56:
+ 01BC                   .dbline 122
+ 01BC           L53:
+ 01BC                   .dbline 111
+ 01BC C701              movw R24,R14
+ 01BE 0196              adiw R24,1
+ 01C0 7C01              movw R14,R24
+ 01C2           L55:
+ 01C2                   .dbline 111
+ 01C2 C701              movw R24,R14
+ 01C4 883E              cpi R24,232
+ 01C6 E3E0              ldi R30,3
+ 01C8 9E07              cpc R25,R30
+ 01CA 18F4              brsh L63
+ 01CC 0888              ldd R0,y+16
+ 01CE 0020              tst R0
+ 01D0 29F3              breq L52
+ 01D2           L63:
+ 01D2                   .dbline 123
+ 01D2           L49:
+ 01D2                   .dbline 109
+ 01D2 C601              movw R24,R12
+ 01D4 0196              adiw R24,1
+ 01D6 6C01              movw R12,R24
+ 01D8           L51:
+ 01D8                   .dbline 109
+ 01D8 C601              movw R24,R12
+ 01DA 8436              cpi R24,100
+ 01DC E0E0              ldi R30,0
+ 01DE 9E07              cpc R25,R30
+ 01E0 18F4              brsh L64
+ 01E2 0888              ldd R0,y+16
+ 01E4 0020              tst R0
+ 01E6 B9F2              breq L48
+ 01E8           L64:
+ 01E8                   .dbline 124
+ 01E8           ;                                       }
+ 01E8           ;                               }
+ 01E8           ;                               result = MoveFlag;
+ 01E8 0889              ldd R16,y+16
+ 01EA 1127              clr R17
+ 01EC 00D0              rcall int2fp
+ 01EE FE01              movw R30,R28
+ 01F0 0083              std z+0,R16
+ 01F2 1183              std z+1,R17
+ 01F4 2283              std z+2,R18
+ 01F6 3383              std z+3,R19
+ 01F8                   .dbline 126
+ 01F8           ;                               //1有抖动，0无抖动
+ 01F8           ;                               break;
+ 01F8 89C1              rjmp L4
+ 01FA           L65:
+ 01FA                   .dbline 131
+ 01FA           ;                       }
+ 01FA           ; 
+ 01FA           ;               //干簧管，低电平有信号
+ 01FA           ;               case REEDSW:
+ 01FA           ;                       {
+ 01FA                   .dbline 132
+ 01FA           ;                               REEDFlag = 0;
+ 01FA 0024              clr R0
+ 01FC 098A              std y+17,R0
+ 01FE                   .dbline 133
+ 01FE           ;                               for( i = 0;(i<100)&&(REEDFlag == 0);i++ )
+ 01FE CC24              clr R12
+ 0200 DD24              clr R13
+ 0202 21C0              rjmp L69
+ 0204           L66:
+ 0204                   .dbline 134
+ 0204           ;                               {
+ 0204                   .dbline 135
+ 0204           ;                                       for(j = 0;(j<1000)&&(REEDFlag == 0);j++)
+ 0204 EE24              clr R14
+ 0206 FF24              clr R15
+ 0208 13C0              rjmp L73
+ 020A           L70:
+ 020A                   .dbline 136
+ 020A           ;                                       {
+ 020A                   .dbline 137
+ 020A           ;                                               if( !(PINC&0x20) )
+ 020A 9D99              sbic 0x13,5
+ 020C 0EC0              rjmp L74
+ 020E                   .dbline 138
+ 020E           ;                                               {
+ 020E                   .dbline 139
+ 020E           ;                                                       k = 100;
+ 020E 64E6              ldi R22,100
+ 0210 70E0              ldi R23,0
+ 0212           L76:
+ 0212                   .dbline 140
+ 0212           L77:
+ 0212                   .dbline 140
+ 0212           ;                                                       while(k--);
+ 0212 1B01              movw R2,R22
+ 0214 6150              subi R22,1
+ 0216 7040              sbci R23,0
+ 0218 2220              tst R2
+ 021A D9F7              brne L76
+ 021C 3320              tst R3
+ 021E C9F7              brne L76
+ 0220           X4:
+ 0220                   .dbline 141
+ 0220           ;                                                       if( !(PINC&0x20) )
+ 0220 9D99              sbic 0x13,5
+ 0222 03C0              rjmp L79
+ 0224                   .dbline 142
+ 0224           ;                                                       {
+ 0224                   .dbline 143
+ 0224           ;                                                               REEDFlag = 1;
+ 0224 0024              clr R0
+ 0226 0394              inc R0
+ 0228 098A              std y+17,R0
+ 022A                   .dbline 144
+ 022A           ;                                                       }
+ 022A           L79:
+ 022A                   .dbline 145
+ 022A           ;                                               }
+ 022A           L74:
+ 022A                   .dbline 146
+ 022A           L71:
+ 022A                   .dbline 135
+ 022A C701              movw R24,R14
+ 022C 0196              adiw R24,1
+ 022E 7C01              movw R14,R24
+ 0230           L73:
+ 0230                   .dbline 135
+ 0230 C701              movw R24,R14
+ 0232 883E              cpi R24,232
+ 0234 E3E0              ldi R30,3
+ 0236 9E07              cpc R25,R30
+ 0238 18F4              brsh L81
+ 023A 0988              ldd R0,y+17
+ 023C 0020              tst R0
+ 023E 29F3              breq L70
+ 0240           L81:
+ 0240                   .dbline 147
+ 0240           L67:
+ 0240                   .dbline 133
+ 0240 C601              movw R24,R12
+ 0242 0196              adiw R24,1
+ 0244 6C01              movw R12,R24
+ 0246           L69:
+ 0246                   .dbline 133
+ 0246 C601              movw R24,R12
+ 0248 8436              cpi R24,100
+ 024A E0E0              ldi R30,0
+ 024C 9E07              cpc R25,R30
+ 024E 18F4              brsh L82
+ 0250 0988              ldd R0,y+17
+ 0252 0020              tst R0
+ 0254 B9F2              breq L66
+ 0256           L82:
+ 0256                   .dbline 148
+ 0256           ;                                       }
+ 0256           ;                               }
+ 0256           ;                               result = REEDFlag;
+ 0256 0989              ldd R16,y+17
+ 0258 1127              clr R17
+ 025A 00D0              rcall int2fp
+ 025C FE01              movw R30,R28
+ 025E 0083              std z+0,R16
+ 0260 1183              std z+1,R17
+ 0262 2283              std z+2,R18
+ 0264 3383              std z+3,R19
+ 0266                   .dbline 150
+ 0266           ;                               //1有磁变化，0无磁变化
+ 0266           ;                               break;
+ 0266 52C1              rjmp L4
+ 0268           L83:
+ 0268                   .dbline 155
+ 0268           ;                       }
+ 0268           ; 
+ 0268           ;               //热释红外传感器
+ 0268           ;               case RE200B:
+ 0268           ;                       {
+ 0268                   .dbline 156
+ 0268           ;                               RE200BFlag = 0;
+ 0268 0024              clr R0
+ 026A 0A8A              std y+18,R0
+ 026C                   .dbline 157
+ 026C           ;                               for( i = 0;(i<100)&&(RE200BFlag == 0);i++ )
+ 026C CC24              clr R12
+ 026E DD24              clr R13
+ 0270 21C0              rjmp L87
+ 0272           L84:
+ 0272                   .dbline 158
+ 0272           ;                               {
+ 0272                   .dbline 159
+ 0272           ;                                       for(j = 0;(j<1000)&&(RE200BFlag == 0);j++)
+ 0272 EE24              clr R14
+ 0274 FF24              clr R15
+ 0276 13C0              rjmp L91
+ 0278           L88:
+ 0278                   .dbline 160
+ 0278           ;                                       {
+ 0278                   .dbline 161
+ 0278           ;                                               if( PIND&0x04 )
+ 0278 829B              sbis 0x10,2
+ 027A 0EC0              rjmp L92
+ 027C                   .dbline 162
+ 027C           ;                                               {
+ 027C                   .dbline 163
+ 027C           ;                                                       k = 100;
+ 027C 64E6              ldi R22,100
+ 027E 70E0              ldi R23,0
+ 0280           L94:
+ 0280                   .dbline 164
+ 0280           L95:
+ 0280                   .dbline 164
+ 0280           ;                                                       while(k--);
+ 0280 1B01              movw R2,R22
+ 0282 6150              subi R22,1
+ 0284 7040              sbci R23,0
+ 0286 2220              tst R2
+ 0288 D9F7              brne L94
+ 028A 3320              tst R3
+ 028C C9F7              brne L94
+ 028E           X5:
+ 028E                   .dbline 165
+ 028E           ;                                                       if( PIND&0x04 )
+ 028E 829B              sbis 0x10,2
+ 0290 03C0              rjmp L97
+ 0292                   .dbline 166
+ 0292           ;                                                       {
+ 0292                   .dbline 167
+ 0292           ;                                                               RE200BFlag = 1;
+ 0292 0024              clr R0
+ 0294 0394              inc R0
+ 0296 0A8A              std y+18,R0
+ 0298                   .dbline 168
+ 0298           ;                                                       }
+ 0298           L97:
+ 0298                   .dbline 170
+ 0298           ;                                                       
+ 0298           ;                                               }
+ 0298           L92:
+ 0298                   .dbline 171
+ 0298           L89:
+ 0298                   .dbline 159
+ 0298 C701              movw R24,R14
+ 029A 0196              adiw R24,1
+ 029C 7C01              movw R14,R24
+ 029E           L91:
+ 029E                   .dbline 159
+ 029E C701              movw R24,R14
+ 02A0 883E              cpi R24,232
+ 02A2 E3E0              ldi R30,3
+ 02A4 9E07              cpc R25,R30
+ 02A6 18F4              brsh L99
+ 02A8 0A88              ldd R0,y+18
+ 02AA 0020              tst R0
+ 02AC 29F3              breq L88
+ 02AE           L99:
+ 02AE                   .dbline 172
+ 02AE           L85:
+ 02AE                   .dbline 157
+ 02AE C601              movw R24,R12
+ 02B0 0196              adiw R24,1
+ 02B2 6C01              movw R12,R24
+ 02B4           L87:
+ 02B4                   .dbline 157
+ 02B4 C601              movw R24,R12
+ 02B6 8436              cpi R24,100
+ 02B8 E0E0              ldi R30,0
+ 02BA 9E07              cpc R25,R30
+ 02BC 18F4              brsh L100
+ 02BE 0A88              ldd R0,y+18
+ 02C0 0020              tst R0
+ 02C2 B9F2              breq L84
+ 02C4           L100:
+ 02C4                   .dbline 173
+ 02C4           ;                                       }
+ 02C4           ;                               }
+ 02C4           ;                               result = RE200BFlag;
+ 02C4 0A89              ldd R16,y+18
+ 02C6 1127              clr R17
+ 02C8 00D0              rcall int2fp
+ 02CA FE01              movw R30,R28
+ 02CC 0083              std z+0,R16
+ 02CE 1183              std z+1,R17
+ 02D0 2283              std z+2,R18
+ 02D2 3383              std z+3,R19
+ 02D4                   .dbline 175
+ 02D4           ;                               //1，0
+ 02D4           ;                               break;
+ 02D4 1BC1              rjmp L4
+ 02D6           L101:
+ 02D6                   .dbline 180
+ 02D6           ;                       }
+ 02D6           ; 
+ 02D6           ;               //广谱气体传感器
+ 02D6           ;               case MQ2:
+ 02D6           ;                       {
+ 02D6                   .dbline 181
+ 02D6           ;                               MQ2Flag = 0;
+ 02D6 4427              clr R20
+ 02D8                   .dbline 182
+ 02D8           ;                               for( i = 0;(i<100)&&(MQ2Flag == 0);i++ )
+ 02D8 CC24              clr R12
+ 02DA DD24              clr R13
+ 02DC 1EC0              rjmp L105
+ 02DE           L102:
+ 02DE                   .dbline 183
+ 02DE           ;                               {
+ 02DE                   .dbline 184
+ 02DE           ;                                       for(j = 0;(j<1000)&&(MQ2Flag == 0);j++)
+ 02DE EE24              clr R14
+ 02E0 FF24              clr R15
+ 02E2 11C0              rjmp L109
+ 02E4           L106:
+ 02E4                   .dbline 185
+ 02E4           ;                                       {
+ 02E4                   .dbline 186
+ 02E4           ;                                               if( PIND&0x08 )
+ 02E4 839B              sbis 0x10,3
+ 02E6 0CC0              rjmp L110
+ 02E8                   .dbline 187
+ 02E8           ;                                               {
+ 02E8                   .dbline 188
+ 02E8           ;                                                       k = 100;
+ 02E8 64E6              ldi R22,100
+ 02EA 70E0              ldi R23,0
+ 02EC           L112:
+ 02EC                   .dbline 189
+ 02EC           L113:
+ 02EC                   .dbline 189
+ 02EC           ;                                                       while(k--);
+ 02EC 1B01              movw R2,R22
+ 02EE 6150              subi R22,1
+ 02F0 7040              sbci R23,0
+ 02F2 2220              tst R2
+ 02F4 D9F7              brne L112
+ 02F6 3320              tst R3
+ 02F8 C9F7              brne L112
+ 02FA           X6:
+ 02FA                   .dbline 190
+ 02FA           ;                                                       if( PIND&0x08 )
+ 02FA 839B              sbis 0x10,3
+ 02FC 01C0              rjmp L115
+ 02FE                   .dbline 191
+ 02FE           ;                                                       {
+ 02FE                   .dbline 192
+ 02FE           ;                                                               MQ2Flag = 1;
+ 02FE 41E0              ldi R20,1
+ 0300                   .dbline 193
+ 0300           ;                                                       }
+ 0300           L115:
+ 0300                   .dbline 194
+ 0300           ;                                               }
+ 0300           L110:
+ 0300                   .dbline 195
+ 0300           L107:
+ 0300                   .dbline 184
+ 0300 C701              movw R24,R14
+ 0302 0196              adiw R24,1
+ 0304 7C01              movw R14,R24
+ 0306           L109:
+ 0306                   .dbline 184
+ 0306 C701              movw R24,R14
+ 0308 883E              cpi R24,232
+ 030A E3E0              ldi R30,3
+ 030C 9E07              cpc R25,R30
+ 030E 10F4              brsh L117
+ 0310 4423              tst R20
+ 0312 41F3              breq L106
+ 0314           L117:
+ 0314                   .dbline 196
+ 0314           L103:
+ 0314                   .dbline 182
+ 0314 C601              movw R24,R12
+ 0316 0196              adiw R24,1
+ 0318 6C01              movw R12,R24
+ 031A           L105:
+ 031A                   .dbline 182
+ 031A C601              movw R24,R12
+ 031C 8436              cpi R24,100
+ 031E E0E0              ldi R30,0
+ 0320 9E07              cpc R25,R30
+ 0322 10F4              brsh L118
+ 0324 4423              tst R20
+ 0326 D9F2              breq L102
+ 0328           L118:
+ 0328                   .dbline 197
+ 0328           ;                                       }
+ 0328           ;                               }
+ 0328           ;                               result = MQ2Flag;
+ 0328 042F              mov R16,R20
+ 032A 1127              clr R17
+ 032C 00D0              rcall int2fp
+ 032E FE01              movw R30,R28
+ 0330 0083              std z+0,R16
+ 0332 1183              std z+1,R17
+ 0334 2283              std z+2,R18
+ 0336 3383              std z+3,R19
+ 0338                   .dbline 199
+ 0338           ;                               //1，0
+ 0338           ;                               break;
+ 0338 E9C0              rjmp L4
+ 033A           L119:
+ 033A                   .dbline 204
+ 033A           ;                       }
+ 033A           ; 
+ 033A           ;               //红外对射开关（打开）
+ 033A           ;               case StartInfraredRadio:
+ 033A           ;                       {
+ 033A                   .dbline 205
+ 033A           ;                               UCSRB = 0x98;
+ 033A 88E9              ldi R24,152
+ 033C 8AB9              out 0xa,R24
+ 033E                   .dbline 207
+ 033E           ;                               
+ 033E           ;                               StartCountHole();
+ 033E 00D0              rcall _StartCountHole
+ 0340 2AC0              rjmp L121
+ 0342           L120:
+ 0342                   .dbline 209
+ 0342                   .dbline 210
+ 0342 20910000          lds R18,_HoleCountH
+ 0346 30910100          lds R19,_HoleCountH+1
+ 034A 00E0              ldi R16,256
+ 034C 11E0              ldi R17,1
+ 034E 00D0              rcall empy16s
+ 0350 1801              movw R2,R16
+ 0352 42B6              in R4,0x32
+ 0354 5524              clr R5
+ 0356 240C              add R2,R4
+ 0358 351C              adc R3,R5
+ 035A 00E0              ldi R16,<L123
+ 035C 10E0              ldi R17,>L123
+ 035E 00D0              rcall lpm32
+ 0360 3A93              st -y,R19
+ 0362 2A93              st -y,R18
+ 0364 1A93              st -y,R17
+ 0366 0A93              st -y,R16
+ 0368 8101              movw R16,R2
+ 036A 1695              lsr R17
+ 036C 0795              ror R16
+ 036E 00D0              rcall int2fp
+ 0370 3A93              st -y,R19
+ 0372 2A93              st -y,R18
+ 0374 1A93              st -y,R17
+ 0376 0A93              st -y,R16
+ 0378 00D0              rcall empy32fs
+ 037A 8101              movw R16,R2
+ 037C 0170              andi R16,1
+ 037E 1070              andi R17,0
+ 0380 00D0              rcall int2fp
+ 0382 3A93              st -y,R19
+ 0384 2A93              st -y,R18
+ 0386 1A93              st -y,R17
+ 0388 0A93              st -y,R16
+ 038A 00D0              rcall add32f
+ 038C 00D0              rcall _DisplayData
+ 038E                   .dbline 212
+ 038E 88B3              in R24,0x18
+ 0390 8B7F              andi R24,251
+ 0392 88BB              out 0x18,R24
+ 0394                   .dbline 215
+ 0394 C29A              sbi 0x18,2
+ 0396                   .dbline 216
+ 0396           L121:
+ 0396                   .dbline 208
+ 0396           ;                               while(1)
+ 0396 D5CF              rjmp L120
+ 0398           X7:
+ 0398                   .dbline 217
+ 0398           ;                               {
+ 0398           ;                                       DisplayData(HoleCountH*256+TCNT0);
+ 0398           ;                                       //将从机的SS拉低
+ 0398           ;                                       PORTB&=0xFB;
+ 0398           ;       
+ 0398           ;                                       //将从机的SS拉高，表明发送完毕
+ 0398           ;                                       PORTB|=0x04;
+ 0398           ;                               }
+ 0398           ;                               UCSRB = 0x18;
+ 0398 88E1              ldi R24,24
+ 039A 8AB9              out 0xa,R24
+ 039C                   .dbline 218
+ 039C           ;                               break;
+ 039C B7C0              rjmp L4
+ 039E           L124:
+ 039E                   .dbline 223
+ 039E           ;                       }
+ 039E           ;                       
+ 039E           ;               //红外对射开关（关闭）
+ 039E           ;               case FinishInfraredRadio:
+ 039E           ;                       {
+ 039E                   .dbline 224
+ 039E           ;                               FinishCountHole();
+ 039E 00D0              rcall _FinishCountHole
+ 03A0                   .dbline 225
+ 03A0           ;                               result = HoleCountH*256+TCNT0;
+ 03A0 20910000          lds R18,_HoleCountH
+ 03A4 30910100          lds R19,_HoleCountH+1
+ 03A8 00E0              ldi R16,256
+ 03AA 11E0              ldi R17,1
+ 03AC 00D0              rcall empy16s
+ 03AE 1801              movw R2,R16
+ 03B0 42B6              in R4,0x32
+ 03B2 5524              clr R5
+ 03B4 240C              add R2,R4
+ 03B6 351C              adc R3,R5
+ 03B8 00E0              ldi R16,<L123
+ 03BA 10E0              ldi R17,>L123
+ 03BC 00D0              rcall lpm32
+ 03BE 3A93              st -y,R19
+ 03C0 2A93              st -y,R18
+ 03C2 1A93              st -y,R17
+ 03C4 0A93              st -y,R16
+ 03C6 8101              movw R16,R2
+ 03C8 1695              lsr R17
+ 03CA 0795              ror R16
+ 03CC 00D0              rcall int2fp
+ 03CE 3A93              st -y,R19
+ 03D0 2A93              st -y,R18
+ 03D2 1A93              st -y,R17
+ 03D4 0A93              st -y,R16
+ 03D6 00D0              rcall empy32fs
+ 03D8 8101              movw R16,R2
+ 03DA 0170              andi R16,1
+ 03DC 1070              andi R17,0
+ 03DE 00D0              rcall int2fp
+ 03E0 3A93              st -y,R19
+ 03E2 2A93              st -y,R18
+ 03E4 1A93              st -y,R17
+ 03E6 0A93              st -y,R16
+ 03E8 00D0              rcall add32f
+ 03EA FE01              movw R30,R28
+ 03EC 0083              std z+0,R16
+ 03EE 1183              std z+1,R17
+ 03F0 2283              std z+2,R18
+ 03F2 3383              std z+3,R19
+ 03F4                   .dbline 226
+ 03F4           ;                               DisplayData(HoleCountH*256+TCNT0);
+ 03F4 20910000          lds R18,_HoleCountH
+ 03F8 30910100          lds R19,_HoleCountH+1
+ 03FC 00E0              ldi R16,256
+ 03FE 11E0              ldi R17,1
+ 0400 00D0              rcall empy16s
+ 0402 1801              movw R2,R16
+ 0404 42B6              in R4,0x32
+ 0406 5524              clr R5
+ 0408 240C              add R2,R4
+ 040A 351C              adc R3,R5
+ 040C 00E0              ldi R16,<L123
+ 040E 10E0              ldi R17,>L123
+ 0410 00D0              rcall lpm32
+ 0412 3A93              st -y,R19
+ 0414 2A93              st -y,R18
+ 0416 1A93              st -y,R17
+ 0418 0A93              st -y,R16
+ 041A 8101              movw R16,R2
+ 041C 1695              lsr R17
+ 041E 0795              ror R16
+ 0420 00D0              rcall int2fp
+ 0422 3A93              st -y,R19
+ 0424 2A93              st -y,R18
+ 0426 1A93              st -y,R17
+ 0428 0A93              st -y,R16
+ 042A 00D0              rcall empy32fs
+ 042C 8101              movw R16,R2
+ 042E 0170              andi R16,1
+ 0430 1070              andi R17,0
+ 0432 00D0              rcall int2fp
+ 0434 3A93              st -y,R19
+ 0436 2A93              st -y,R18
+ 0438 1A93              st -y,R17
+ 043A 0A93              st -y,R16
+ 043C 00D0              rcall add32f
+ 043E 00D0              rcall _DisplayData
+ 0440                   .dbline 228
+ 0440           ;                               //将从机的SS拉低
+ 0440           ;                               PORTB&=0xFB;
+ 0440 88B3              in R24,0x18
+ 0442 8B7F              andi R24,251
+ 0444 88BB              out 0x18,R24
+ 0446                   .dbline 230
+ 0446           ;                               //将从机的SS拉高，表明发送完毕
+ 0446           ;                               PORTB|=0x04;
+ 0446 C29A              sbi 0x18,2
+ 0448                   .dbline 233
+ 0448           ;                               
+ 0448           ;                               //TCCR0 = 0x00;
+ 0448           ;                               break;
+ 0448 61C0              rjmp L4
+ 044A           L125:
+ 044A                   .dbline 238
+ 044A           ;                       }
+ 044A           ; 
+ 044A           ;               //湿度传感器HS1101
+ 044A           ;               case HS1101:
+ 044A           ;                       {
+ 044A                   .dbline 239
+ 044A           ;                               result=GetHS1101();
+ 044A 00D0              rcall _GetHS1101
+ 044C 1801              movw R2,R16
+ 044E 00E0              ldi R16,<L123
+ 0450 10E0              ldi R17,>L123
+ 0452 00D0              rcall lpm32
+ 0454 3A93              st -y,R19
+ 0456 2A93              st -y,R18
+ 0458 1A93              st -y,R17
+ 045A 0A93              st -y,R16
+ 045C 8101              movw R16,R2
+ 045E 1695              lsr R17
+ 0460 0795              ror R16
+ 0462 00D0              rcall int2fp
+ 0464 3A93              st -y,R19
+ 0466 2A93              st -y,R18
+ 0468 1A93              st -y,R17
+ 046A 0A93              st -y,R16
+ 046C 00D0              rcall empy32fs
+ 046E 8101              movw R16,R2
+ 0470 0170              andi R16,1
+ 0472 1070              andi R17,0
+ 0474 00D0              rcall int2fp
+ 0476 3A93              st -y,R19
+ 0478 2A93              st -y,R18
+ 047A 1A93              st -y,R17
+ 047C 0A93              st -y,R16
+ 047E 00D0              rcall add32f
+ 0480 FE01              movw R30,R28
+ 0482 0083              std z+0,R16
+ 0484 1183              std z+1,R17
+ 0486 2283              std z+2,R18
+ 0488 3383              std z+3,R19
+ 048A                   .dbline 240
+ 048A           ;                               break;
+ 048A 40C0              rjmp L4
+ 048C           L126:
+ 048C                   .dbline 245
+ 048C           ;                       }
+ 048C           ; 
+ 048C           ;               //霍尔开关
+ 048C           ;               case AH3020:
+ 048C           ;                       {
+ 048C                   .dbline 246
+ 048C           ;                               AH3020Flag = 0;
+ 048C AA24              clr R10
+ 048E                   .dbline 247
+ 048E           ;                               for( i = 0;(i<100)&&(AH3020Flag==0);i++ )
+ 048E CC24              clr R12
+ 0490 DD24              clr R13
+ 0492 1DC0              rjmp L130
+ 0494           L127:
+ 0494                   .dbline 248
+ 0494           ;                               {
+ 0494                   .dbline 249
+ 0494           ;                                       for(j = 0;j<1000;j++)
+ 0494 EE24              clr R14
+ 0496 FF24              clr R15
+ 0498 12C0              rjmp L134
+ 049A           L131:
+ 049A                   .dbline 250
+ 049A           ;                                       {
+ 049A                   .dbline 251
+ 049A           ;                                               if( !(PIND&0x40) )
+ 049A 8699              sbic 0x10,6
+ 049C 0DC0              rjmp L135
+ 049E                   .dbline 252
+ 049E           ;                                               {
+ 049E                   .dbline 253
+ 049E           ;                                                       k = 100;
+ 049E 64E6              ldi R22,100
+ 04A0 70E0              ldi R23,0
+ 04A2           L137:
+ 04A2                   .dbline 254
+ 04A2           L138:
+ 04A2                   .dbline 254
+ 04A2           ;                                                       while(k--);
+ 04A2 1B01              movw R2,R22
+ 04A4 6150              subi R22,1
+ 04A6 7040              sbci R23,0
+ 04A8 2220              tst R2
+ 04AA D9F7              brne L137
+ 04AC 3320              tst R3
+ 04AE C9F7              brne L137
+ 04B0           X8:
+ 04B0                   .dbline 255
+ 04B0           ;                                                       if( !(PIND&0x40) )
+ 04B0 8699              sbic 0x10,6
+ 04B2 02C0              rjmp L140
+ 04B4                   .dbline 256
+ 04B4           ;                                                       {
+ 04B4                   .dbline 257
+ 04B4           ;                                                               AH3020Flag = 1;
+ 04B4 AA24              clr R10
+ 04B6 A394              inc R10
+ 04B8                   .dbline 258
+ 04B8           ;                                                       }
+ 04B8           L140:
+ 04B8                   .dbline 259
+ 04B8           ;                                               }
+ 04B8           L135:
+ 04B8                   .dbline 260
+ 04B8           L132:
+ 04B8                   .dbline 249
+ 04B8 C701              movw R24,R14
+ 04BA 0196              adiw R24,1
+ 04BC 7C01              movw R14,R24
+ 04BE           L134:
+ 04BE                   .dbline 249
+ 04BE C701              movw R24,R14
+ 04C0 883E              cpi R24,232
+ 04C2 E3E0              ldi R30,3
+ 04C4 9E07              cpc R25,R30
+ 04C6 48F3              brlo L131
+ 04C8                   .dbline 261
+ 04C8           L128:
+ 04C8                   .dbline 247
+ 04C8 C601              movw R24,R12
+ 04CA 0196              adiw R24,1
+ 04CC 6C01              movw R12,R24
+ 04CE           L130:
+ 04CE                   .dbline 247
+ 04CE C601              movw R24,R12
+ 04D0 8436              cpi R24,100
+ 04D2 E0E0              ldi R30,0
+ 04D4 9E07              cpc R25,R30
+ 04D6 10F4              brsh L142
+ 04D8 AA20              tst R10
+ 04DA E1F2              breq L127
+ 04DC           L142:
+ 04DC                   .dbline 262
+ 04DC           ;                                       }
+ 04DC           ;                               }
+ 04DC           ;                               result = AH3020Flag;
+ 04DC 0A2D              mov R16,R10
+ 04DE 1127              clr R17
+ 04E0 00D0              rcall int2fp
+ 04E2 FE01              movw R30,R28
+ 04E4 0083              std z+0,R16
+ 04E6 1183              std z+1,R17
+ 04E8 2283              std z+2,R18
+ 04EA 3383              std z+3,R19
+ 04EC                   .dbline 264
+ 04EC           ;                               //1，0
+ 04EC           ;                               break;
+ 04EC 0FC0              rjmp L4
+ 04EE           L143:
+ 04EE                   .dbline 269
+ 04EE           ;                       }
+ 04EE           ; 
+ 04EE           ;               //电压输入
+ 04EE           ;               case VoltageInput:
+ 04EE           ;                       {
+ 04EE                   .dbline 270
+ 04EE           ;                               result = StartADC(6);
+ 04EE 06E0              ldi R16,6
+ 04F0 00D0              rcall _StartADC
+ 04F2 FE01              movw R30,R28
+ 04F4 0083              std z+0,R16
+ 04F6 1183              std z+1,R17
+ 04F8 2283              std z+2,R18
+ 04FA 3383              std z+3,R19
+ 04FC                   .dbline 271
+ 04FC           ;                               break;
+ 04FC 07C0              rjmp L4
+ 04FE           L144:
+ 04FE                   .dbline 276
+ 04FE           ;                       }
+ 04FE           ; 
+ 04FE           ;               //电流输入
+ 04FE           ;               case CurrentInput:
+ 04FE           ;                       {
+ 04FE                   .dbline 277
+ 04FE           ;                               result = StartADC(7);
+ 04FE 07E0              ldi R16,7
+ 0500 00D0              rcall _StartADC
+ 0502 FE01              movw R30,R28
+ 0504 0083              std z+0,R16
+ 0506 1183              std z+1,R17
+ 0508 2283              std z+2,R18
+ 050A 3383              std z+3,R19
+ 050C                   .dbline 278
+ 050C           ;                               break;
+ 050C                   .dbline 281
+ 050C           ;                       }
+ 050C           ;               default:
+ 050C           ;                       break;
+ 050C           L4:
+ 050C                   .dbline 283
+ 050C           ;       }
+ 050C           ;       DisplayData(result);
+ 050C FE01              movw R30,R28
+ 050E 0081              ldd R16,z+0
+ 0510 1181              ldd R17,z+1
+ 0512 2281              ldd R18,z+2
+ 0514 3381              ldd R19,z+3
+ 0516 00D0              rcall _DisplayData
+ 0518                   .dbline 286
+ 0518           ;       
+ 0518           ;       //整数显示
+ 0518           ;       if((result>=10)&&(result<100))
+ 0518 FE01              movw R30,R28
+ 051A 2080              ldd R2,z+0
+ 051C 3180              ldd R3,z+1
+ 051E 4280              ldd R4,z+2
+ 0520 5380              ldd R5,z+3
+ 0522 5A92              st -y,R5
+ 0524 4A92              st -y,R4
+ 0526 3A92              st -y,R3
+ 0528 2A92              st -y,R2
+ 052A 00E0              ldi R16,<L149
+ 052C 10E0              ldi R17,>L149
+ 052E 00D0              rcall lpm32
+ 0530 3A93              st -y,R19
+ 0532 2A93              st -y,R18
+ 0534 1A93              st -y,R17
+ 0536 0A93              st -y,R16
+ 0538 00D0              rcall cmp32f
+ 053A 0CF4              brge X11
+ 053C B5C0              rjmp L147
+ 053E           X11:
+ 053E FE01              movw R30,R28
+ 0540 2080              ldd R2,z+0
+ 0542 3180              ldd R3,z+1
+ 0544 4280              ldd R4,z+2
+ 0546 5380              ldd R5,z+3
+ 0548 5A92              st -y,R5
+ 054A 4A92              st -y,R4
+ 054C 3A92              st -y,R3
+ 054E 2A92              st -y,R2
+ 0550 00E0              ldi R16,<L150
+ 0552 10E0              ldi R17,>L150
+ 0554 00D0              rcall lpm32
+ 0556 3A93              st -y,R19
+ 0558 2A93              st -y,R18
+ 055A 1A93              st -y,R17
+ 055C 0A93              st -y,R16
+ 055E 00D0              rcall cmp32f
+ 0560 0CF0              brlt X12
+ 0562 A2C0              rjmp L147
+ 0564           X12:
+ 0564                   .dbline 287
+ 0564           ;       {
+ 0564                   .dbline 288
+ 0564           ;               resultH = (unsigned char)(result/10);
+ 0564 FE01              movw R30,R28
+ 0566 2080              ldd R2,z+0
+ 0568 3180              ldd R3,z+1
+ 056A 4280              ldd R4,z+2
+ 056C 5380              ldd R5,z+3
+ 056E 5A92              st -y,R5
+ 0570 4A92              st -y,R4
+ 0572 3A92              st -y,R3
+ 0574 2A92              st -y,R2
+ 0576 00E0              ldi R16,<L149
+ 0578 10E0              ldi R17,>L149
+ 057A 00D0              rcall lpm32
+ 057C 3A93              st -y,R19
+ 057E 2A93              st -y,R18
+ 0580 1A93              st -y,R17
+ 0582 0A93              st -y,R16
+ 0584 00D0              rcall div32f
+ 0586 FE01              movw R30,R28
+ 0588 0683              std z+6,R16
+ 058A 1783              std z+7,R17
+ 058C 2087              std z+8,R18
+ 058E 3187              std z+9,R19
+ 0590 FE01              movw R30,R28
+ 0592 2680              ldd R2,z+6
+ 0594 3780              ldd R3,z+7
+ 0596 4084              ldd R4,z+8
+ 0598 5184              ldd R5,z+9
+ 059A 5A92              st -y,R5
+ 059C 4A92              st -y,R4
+ 059E 3A92              st -y,R3
+ 05A0 2A92              st -y,R2
+ 05A2 00E0              ldi R16,<L153
+ 05A4 10E0              ldi R17,>L153
+ 05A6 00D0              rcall lpm32
+ 05A8 3A93              st -y,R19
+ 05AA 2A93              st -y,R18
+ 05AC 1A93              st -y,R17
+ 05AE 0A93              st -y,R16
+ 05B0 00D0              rcall cmp32f
+ 05B2 BCF0              brlt L151
+ 05B4 FE01              movw R30,R28
+ 05B6 2680              ldd R2,z+6
+ 05B8 3780              ldd R3,z+7
+ 05BA 4084              ldd R4,z+8
+ 05BC 5184              ldd R5,z+9
+ 05BE 5A92              st -y,R5
+ 05C0 4A92              st -y,R4
+ 05C2 3A92              st -y,R3
+ 05C4 2A92              st -y,R2
+ 05C6 00E0              ldi R16,<L153
+ 05C8 10E0              ldi R17,>L153
+ 05CA 00D0              rcall lpm32
+ 05CC 3A93              st -y,R19
+ 05CE 2A93              st -y,R18
+ 05D0 1A93              st -y,R17
+ 05D2 0A93              st -y,R16
+ 05D4 00D0              rcall sub32f
+ 05D6 00D0              rcall fp2int
+ 05D8 C801              movw R24,R16
+ 05DA 8050              subi R24,0  ; offset = 32768
+ 05DC 9048              sbci R25,128
+ 05DE 5C01              movw R10,R24
+ 05E0 07C0              rjmp L152
+ 05E2           L151:
+ 05E2 FE01              movw R30,R28
+ 05E4 0681              ldd R16,z+6
+ 05E6 1781              ldd R17,z+7
+ 05E8 2085              ldd R18,z+8
+ 05EA 3185              ldd R19,z+9
+ 05EC 00D0              rcall fp2int
+ 05EE 5801              movw R10,R16
+ 05F0           L152:
+ 05F0 AB8A              std y+19,R10
+ 05F2                   .dbline 289
+ 05F2           ;               resultL = (unsigned char)(result-resultH*10);
+ 05F2 FE01              movw R30,R28
+ 05F4 2080              ldd R2,z+0
+ 05F6 3180              ldd R3,z+1
+ 05F8 4280              ldd R4,z+2
+ 05FA 5380              ldd R5,z+3
+ 05FC 5A92              st -y,R5
+ 05FE 4A92              st -y,R4
+ 0600 3A92              st -y,R3
+ 0602 2A92              st -y,R2
+ 0604 8AE0              ldi R24,10
+ 0606 0A2C              mov R0,R10
+ 0608 809D              mul R24,R0
+ 060A 8001              movw R16,R0
+ 060C 00D0              rcall int2fp
+ 060E 3A93              st -y,R19
+ 0610 2A93              st -y,R18
+ 0612 1A93              st -y,R17
+ 0614 0A93              st -y,R16
+ 0616 00D0              rcall sub32f
+ 0618 FE01              movw R30,R28
+ 061A 0287              std z+10,R16
+ 061C 1387              std z+11,R17
+ 061E 2487              std z+12,R18
+ 0620 3587              std z+13,R19
+ 0622 FE01              movw R30,R28
+ 0624 2284              ldd R2,z+10
+ 0626 3384              ldd R3,z+11
+ 0628 4484              ldd R4,z+12
+ 062A 5584              ldd R5,z+13
+ 062C 5A92              st -y,R5
+ 062E 4A92              st -y,R4
+ 0630 3A92              st -y,R3
+ 0632 2A92              st -y,R2
+ 0634 00E0              ldi R16,<L153
+ 0636 10E0              ldi R17,>L153
+ 0638 00D0              rcall lpm32
+ 063A 3A93              st -y,R19
+ 063C 2A93              st -y,R18
+ 063E 1A93              st -y,R17
+ 0640 0A93              st -y,R16
+ 0642 00D0              rcall cmp32f
+ 0644 BCF0              brlt L154
+ 0646 FE01              movw R30,R28
+ 0648 2284              ldd R2,z+10
+ 064A 3384              ldd R3,z+11
+ 064C 4484              ldd R4,z+12
+ 064E 5584              ldd R5,z+13
+ 0650 5A92              st -y,R5
+ 0652 4A92              st -y,R4
+ 0654 3A92              st -y,R3
+ 0656 2A92              st -y,R2
+ 0658 00E0              ldi R16,<L153
+ 065A 10E0              ldi R17,>L153
+ 065C 00D0              rcall lpm32
+ 065E 3A93              st -y,R19
+ 0660 2A93              st -y,R18
+ 0662 1A93              st -y,R17
+ 0664 0A93              st -y,R16
+ 0666 00D0              rcall sub32f
+ 0668 00D0              rcall fp2int
+ 066A C801              movw R24,R16
+ 066C 8050              subi R24,0  ; offset = 32768
+ 066E 9048              sbci R25,128
+ 0670 5C01              movw R10,R24
+ 0672 07C0              rjmp L155
+ 0674           L154:
+ 0674 FE01              movw R30,R28
+ 0676 0285              ldd R16,z+10
+ 0678 1385              ldd R17,z+11
+ 067A 2485              ldd R18,z+12
+ 067C 3585              ldd R19,z+13
+ 067E 00D0              rcall fp2int
+ 0680 5801              movw R10,R16
+ 0682           L155:
+ 0682 AC8A              std y+20,R10
+ 0684                   .dbline 291
+ 0684           ;               
+ 0684           ;               SendBuffer[0] = 0xBB;
+ 0684 8BEB              ldi R24,187
+ 0686 80930000          sts _SendBuffer,R24
+ 068A                   .dbline 292
+ 068A           ;               SendBuffer[1] = 0xFF;
+ 068A 8FEF              ldi R24,255
+ 068C 80930100          sts _SendBuffer+1,R24
+ 0690                   .dbline 293
+ 0690           ;               SendBuffer[2] = resultH;
+ 0690 0B88              ldd R0,y+19
+ 0692 00920200          sts _SendBuffer+2,R0
+ 0696                   .dbline 294
+ 0696           ;               SendBuffer[3] = resultL;
+ 0696 0A2C              mov R0,R10
+ 0698 00920300          sts _SendBuffer+3,R0
+ 069C                   .dbline 295
+ 069C           ;               SendBuffer[4] = 0x00;
+ 069C 2224              clr R2
+ 069E 20920400          sts _SendBuffer+4,R2
+ 06A2                   .dbline 296
+ 06A2           ;               SendBuffer[6] = 0xFF;
+ 06A2 80930600          sts _SendBuffer+6,R24
+ 06A6                   .dbline 297
+ 06A6           ;       }
+ 06A6 C3C0              rjmp L148
+ 06A8           L147:
+ 06A8                   .dbline 299
+ 06A8           ;       //浮点数显示
+ 06A8           ;       else if((result>=0)&&(result<10))
+ 06A8 FE01              movw R30,R28
+ 06AA 2080              ldd R2,z+0
+ 06AC 3180              ldd R3,z+1
+ 06AE 4280              ldd R4,z+2
+ 06B0 5380              ldd R5,z+3
+ 06B2 5A92              st -y,R5
+ 06B4 4A92              st -y,R4
+ 06B6 3A92              st -y,R3
+ 06B8 2A92              st -y,R2
+ 06BA 00E0              ldi R16,<L2
+ 06BC 10E0              ldi R17,>L2
+ 06BE 00D0              rcall lpm32
+ 06C0 3A93              st -y,R19
+ 06C2 2A93              st -y,R18
+ 06C4 1A93              st -y,R17
+ 06C6 0A93              st -y,R16
+ 06C8 00D0              rcall cmp32f
+ 06CA 0CF4              brge X13
+ 06CC A1C0              rjmp L161
+ 06CE           X13:
+ 06CE FE01              movw R30,R28
+ 06D0 2080              ldd R2,z+0
+ 06D2 3180              ldd R3,z+1
+ 06D4 4280              ldd R4,z+2
+ 06D6 5380              ldd R5,z+3
+ 06D8 5A92              st -y,R5
+ 06DA 4A92              st -y,R4
+ 06DC 3A92              st -y,R3
+ 06DE 2A92              st -y,R2
+ 06E0 00E0              ldi R16,<L149
+ 06E2 10E0              ldi R17,>L149
+ 06E4 00D0              rcall lpm32
+ 06E6 3A93              st -y,R19
+ 06E8 2A93              st -y,R18
+ 06EA 1A93              st -y,R17
+ 06EC 0A93              st -y,R16
+ 06EE 00D0              rcall cmp32f
+ 06F0 0CF0              brlt X14
+ 06F2 8EC0              rjmp L161
+ 06F4           X14:
+ 06F4                   .dbline 300
+ 06F4           ;       {
+ 06F4                   .dbline 301
+ 06F4           ;               resultH = (unsigned char)result;
+ 06F4 FE01              movw R30,R28
+ 06F6 2080              ldd R2,z+0
+ 06F8 3180              ldd R3,z+1
+ 06FA 4280              ldd R4,z+2
+ 06FC 5380              ldd R5,z+3
+ 06FE 5A92              st -y,R5
+ 0700 4A92              st -y,R4
+ 0702 3A92              st -y,R3
+ 0704 2A92              st -y,R2
+ 0706 00E0              ldi R16,<L153
+ 0708 10E0              ldi R17,>L153
+ 070A 00D0              rcall lpm32
+ 070C 3A93              st -y,R19
+ 070E 2A93              st -y,R18
+ 0710 1A93              st -y,R17
+ 0712 0A93              st -y,R16
+ 0714 00D0              rcall cmp32f
+ 0716 BCF0              brlt L163
+ 0718 FE01              movw R30,R28
+ 071A 2080              ldd R2,z+0
+ 071C 3180              ldd R3,z+1
+ 071E 4280              ldd R4,z+2
+ 0720 5380              ldd R5,z+3
+ 0722 5A92              st -y,R5
+ 0724 4A92              st -y,R4
+ 0726 3A92              st -y,R3
+ 0728 2A92              st -y,R2
+ 072A 00E0              ldi R16,<L153
+ 072C 10E0              ldi R17,>L153
+ 072E 00D0              rcall lpm32
+ 0730 3A93              st -y,R19
+ 0732 2A93              st -y,R18
+ 0734 1A93              st -y,R17
+ 0736 0A93              st -y,R16
+ 0738 00D0              rcall sub32f
+ 073A 00D0              rcall fp2int
+ 073C C801              movw R24,R16
+ 073E 8050              subi R24,0  ; offset = 32768
+ 0740 9048              sbci R25,128
+ 0742 5C01              movw R10,R24
+ 0744 07C0              rjmp L164
+ 0746           L163:
+ 0746 FE01              movw R30,R28
+ 0748 0081              ldd R16,z+0
+ 074A 1181              ldd R17,z+1
+ 074C 2281              ldd R18,z+2
+ 074E 3381              ldd R19,z+3
+ 0750 00D0              rcall fp2int
+ 0752 5801              movw R10,R16
+ 0754           L164:
+ 0754 AB8A              std y+19,R10
+ 0756                   .dbline 302
+ 0756           ;               resultL = (unsigned char)(result*10)%10;
+ 0756 00E0              ldi R16,<L149
+ 0758 10E0              ldi R17,>L149
+ 075A 00D0              rcall lpm32
+ 075C 3A93              st -y,R19
+ 075E 2A93              st -y,R18
+ 0760 1A93              st -y,R17
+ 0762 0A93              st -y,R16
+ 0764 FE01              movw R30,R28
+ 0766            ; stack offset 4
+ 0766 2480              ldd R2,z+4
+ 0768 3580              ldd R3,z+5
+ 076A 4680              ldd R4,z+6
+ 076C 5780              ldd R5,z+7
+ 076E 5A92              st -y,R5
+ 0770 4A92              st -y,R4
+ 0772 3A92              st -y,R3
+ 0774 2A92              st -y,R2
+ 0776 00D0              rcall empy32f
+ 0778 FE01              movw R30,R28
+ 077A 0683              std z+6,R16
+ 077C 1783              std z+7,R17
+ 077E 2087              std z+8,R18
+ 0780 3187              std z+9,R19
+ 0782 FE01              movw R30,R28
+ 0784 2680              ldd R2,z+6
+ 0786 3780              ldd R3,z+7
+ 0788 4084              ldd R4,z+8
+ 078A 5184              ldd R5,z+9
+ 078C 5A92              st -y,R5
+ 078E 4A92              st -y,R4
+ 0790 3A92              st -y,R3
+ 0792 2A92              st -y,R2
+ 0794 00E0              ldi R16,<L153
+ 0796 10E0              ldi R17,>L153
+ 0798 00D0              rcall lpm32
+ 079A 3A93              st -y,R19
+ 079C 2A93              st -y,R18
+ 079E 1A93              st -y,R17
+ 07A0 0A93              st -y,R16
+ 07A2 00D0              rcall cmp32f
+ 07A4 BCF0              brlt L165
+ 07A6 FE01              movw R30,R28
+ 07A8 2680              ldd R2,z+6
+ 07AA 3780              ldd R3,z+7
+ 07AC 4084              ldd R4,z+8
+ 07AE 5184              ldd R5,z+9
+ 07B0 5A92              st -y,R5
+ 07B2 4A92              st -y,R4
+ 07B4 3A92              st -y,R3
+ 07B6 2A92              st -y,R2
+ 07B8 00E0              ldi R16,<L153
+ 07BA 10E0              ldi R17,>L153
+ 07BC 00D0              rcall lpm32
+ 07BE 3A93              st -y,R19
+ 07C0 2A93              st -y,R18
+ 07C2 1A93              st -y,R17
+ 07C4 0A93              st -y,R16
+ 07C6 00D0              rcall sub32f
+ 07C8 00D0              rcall fp2int
+ 07CA C801              movw R24,R16
+ 07CC 8050              subi R24,0  ; offset = 32768
+ 07CE 9048              sbci R25,128
+ 07D0 5C01              movw R10,R24
+ 07D2 07C0              rjmp L166
+ 07D4           L165:
+ 07D4 FE01              movw R30,R28
+ 07D6 0681              ldd R16,z+6
+ 07D8 1781              ldd R17,z+7
+ 07DA 2085              ldd R18,z+8
+ 07DC 3185              ldd R19,z+9
+ 07DE 00D0              rcall fp2int
+ 07E0 5801              movw R10,R16
+ 07E2           L166:
+ 07E2 1AE0              ldi R17,10
+ 07E4 0A2D              mov R16,R10
+ 07E6 00D0              rcall mod8u
+ 07E8 0C8B              std y+20,R16
+ 07EA                   .dbline 303
+ 07EA           ;               SendBuffer[0] = 0xBB;
+ 07EA 8BEB              ldi R24,187
+ 07EC 80930000          sts _SendBuffer,R24
+ 07F0                   .dbline 304
+ 07F0           ;               SendBuffer[1] = 0xFF;
+ 07F0 8FEF              ldi R24,255
+ 07F2 80930100          sts _SendBuffer+1,R24
+ 07F6                   .dbline 305
+ 07F6           ;               SendBuffer[2] = resultH;
+ 07F6 0B88              ldd R0,y+19
+ 07F8 00920200          sts _SendBuffer+2,R0
+ 07FC                   .dbline 306
+ 07FC           ;               SendBuffer[3] = resultL;
+ 07FC 002E              mov R0,R16
+ 07FE 00920300          sts _SendBuffer+3,R0
+ 0802                   .dbline 307
+ 0802           ;               SendBuffer[4] = 0x01;
+ 0802 81E0              ldi R24,1
+ 0804 80930400          sts _SendBuffer+4,R24
+ 0808                   .dbline 308
+ 0808           ;               SendBuffer[6] = 0xFF;
+ 0808 8FEF              ldi R24,255
+ 080A 80930600          sts _SendBuffer+6,R24
+ 080E                   .dbline 309
+ 080E           ;       }
+ 080E 0FC0              rjmp L162
+ 0810           L161:
+ 0810                   .dbline 311
+ 0810           ;       else
+ 0810           ;       {
+ 0810                   .dbline 312
+ 0810           ;               SendBuffer[0] = 0xBB;
+ 0810 8BEB              ldi R24,187
+ 0812 80930000          sts _SendBuffer,R24
+ 0816                   .dbline 313
+ 0816           ;               SendBuffer[1] = 0xFF;
+ 0816 8FEF              ldi R24,255
+ 0818 80930100          sts _SendBuffer+1,R24
+ 081C                   .dbline 314
+ 081C           ;               SendBuffer[2] = 0xFF;
+ 081C 80930200          sts _SendBuffer+2,R24
+ 0820                   .dbline 315
+ 0820           ;               SendBuffer[3] = 0xFF;
+ 0820 80930300          sts _SendBuffer+3,R24
+ 0824                   .dbline 316
+ 0824           ;               SendBuffer[4] = 0x00;
+ 0824 2224              clr R2
+ 0826 20920400          sts _SendBuffer+4,R2
+ 082A                   .dbline 317
+ 082A           ;               SendBuffer[6] = 0xFF;
+ 082A 80930600          sts _SendBuffer+6,R24
+ 082E                   .dbline 318
+ 082E           ;       }
+ 082E           L162:
+ 082E           L148:
+ 082E                   .dbline 319
+ 082E           ;       UARTSendAMessage(SendBuffer,7);
+ 082E 27E0              ldi R18,7
+ 0830 30E0              ldi R19,0
+ 0832 00E0              ldi R16,<_SendBuffer
+ 0834 10E0              ldi R17,>_SendBuffer
+ 0836 00D0              rcall _UARTSendAMessage
+ 0838                   .dbline -2
+ 0838           L1:
+ 0838 6596              adiw R28,21
+ 083A 00D0              rcall pop_gset5
+ 083C                   .dbline 0 ; func end
+ 083C 0895              ret
+ 083E                   .dbsym l resultL 20 c
+ 083E                   .dbsym l resultH 19 c
+ 083E                   .dbsym r AH3020Flag 10 c
+ 083E                   .dbsym l result 0 D
+ 083E                   .dbsym r MQ2Flag 20 c
+ 083E                   .dbsym l RE200BFlag 18 c
+ 083E                   .dbsym l REEDFlag 17 c
+ 083E                   .dbsym l MoveFlag 16 c
+ 083E                   .dbsym l TouchFlag 15 c
+ 083E                   .dbsym l SoundFlag 14 c
+ 083E                   .dbsym r i 12 i
+ 083E                   .dbsym r j 14 i
+ 083E                   .dbsym r k 22 i
+ 083E                   .dbsym r param 22 c
+ 083E                   .dbend
+                        .area lit(rom, con, rel)
+ 0000           L153:
+ 0000 00000047          .word 0x0,0x4700
+ 0004           L150:
+ 0004 0000C842          .word 0x0,0x42c8
+ 0008           L149:
+ 0008 00002041          .word 0x0,0x4120
+ 000C           L123:
+ 000C 00000040          .word 0x0,0x4000
+ 0010           L2:
+ 0010 00000000          .word 0x0,0x0

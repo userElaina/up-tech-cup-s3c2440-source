@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LED", "LED\LED.vcproj", "{A76B6ACC-C664-4D56-A836-916A69C506D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|UP2440 SDK (ARMV4I) = Debug|UP2440 SDK (ARMV4I)
+		Release|UP2440 SDK (ARMV4I) = Release|UP2440 SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A76B6ACC-C664-4D56-A836-916A69C506D1}.Debug|UP2440 SDK (ARMV4I).ActiveCfg = Debug|UP2440 SDK (ARMV4I)
+		{A76B6ACC-C664-4D56-A836-916A69C506D1}.Debug|UP2440 SDK (ARMV4I).Build.0 = Debug|UP2440 SDK (ARMV4I)
+		{A76B6ACC-C664-4D56-A836-916A69C506D1}.Debug|UP2440 SDK (ARMV4I).Deploy.0 = Debug|UP2440 SDK (ARMV4I)
+		{A76B6ACC-C664-4D56-A836-916A69C506D1}.Release|UP2440 SDK (ARMV4I).ActiveCfg = Release|UP2440 SDK (ARMV4I)
+		{A76B6ACC-C664-4D56-A836-916A69C506D1}.Release|UP2440 SDK (ARMV4I).Build.0 = Release|UP2440 SDK (ARMV4I)
+		{A76B6ACC-C664-4D56-A836-916A69C506D1}.Release|UP2440 SDK (ARMV4I).Deploy.0 = Release|UP2440 SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

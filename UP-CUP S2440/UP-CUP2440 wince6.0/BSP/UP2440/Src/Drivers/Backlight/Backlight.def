@@ -1,0 +1,12 @@
+LIBRARY backlight
+
+EXPORTS BAK_Init
+	BAK_Deinit
+	BAK_Open
+	BAK_Close 
+	BAK_Read
+	BAK_Write
+	BAK_Seek
+	BAK_PowerDown
+	BAK_PowerUp
+	BAK_IOControl

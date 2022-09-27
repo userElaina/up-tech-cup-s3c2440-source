@@ -1,0 +1,3 @@
+---- UART0_InitUART 匹配 (2 in 0 文件) ----
+Console.c (i:\up-sma~1\智能家居\zigbee~1\zigbee~2):35:void UART0_InitUART( unsigned long baudrate )
+Console.c (i:\up-sma~1\智能家居\zigbee~1\zigbee~2):124:	UART0_InitUART(115200);

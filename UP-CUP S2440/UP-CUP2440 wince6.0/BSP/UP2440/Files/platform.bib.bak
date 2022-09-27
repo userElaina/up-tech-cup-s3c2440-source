@@ -1,0 +1,215 @@
+;
+; Copyright (c) Microsoft Corporation.  All rights reserved.
+;
+;
+; Use of this source code is subject to the terms of the Microsoft end-user
+; license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+; If you did not accept the terms of the EULA, you are not authorized to use
+; this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+; install media.
+;
+
+MODULES
+
+;	Name					Path						Memory	Type
+;	--------------				----------------------------------		------	---
+
+; -----------------------------------------------------------------------------
+
+;---------------- Display Driver -----------------------------------------------
+; @CESYSGEN IF CE_MODULES_DISPLAY
+IF BSP_NODISPLAY !
+	S3C2440DISP.dll				$(_FLATRELEASEDIR)\S3C2440DISP.dll		NK	SHK
+ENDIF BSP_NODISPLAY !
+; @CESYSGEN ENDIF CE_MODULES_DISPLAY
+;------------------------------------------------------------------------------
+
+;---------- Keyboard/Mouse Driver --------------------------------------------
+; @CESYSGEN IF CE_MODULES_KEYBD || CE_MODULES_POINTER
+IF BSP_NOKEYBD !
+IF LOCALE=0411 !
+IF LOCALE=0412 !
+IF BSP_KEYBD_NOP
+; @CESYSGEN IF CE_MODULES_NOPKEYBOARD
+	kbdmouse.dll				$(_FLATRELEASEDIR)\KbdNopUs.dll			NK	SHK
+; @CESYSGEN ENDIF CE_MODULES_NOPKEYBOARD
+ENDIF	; BSP_KEYBD_NOP
+IF BSP_KEYBD_NOP !
+	kbdmouse.dll				$(_FLATRELEASEDIR)\KbdS3C2440Us.dll		NK	SHK
+ENDIF	; BSP_KEYBD_NOP
+ENDIF	; LOCALE != 0412
+ENDIF	; LOCALE != 0411
+IF LOCALE=0411
+IF BSP_KEYBD_JPN1
+IF BSP_KEYBD_NOP
+; @CESYSGEN IF CE_MODULES_NOPKEYBOARD
+	kbdmouse.dll				$(_FLATRELEASEDIR)\KbdNopJpn1.dll		NK	SHK
+; @CESYSGEN ENDIF CE_MODULES_NOPKEYBOARD
+ENDIF	; BSP_KEYBD_NOP
+IF BSP_KEYBD_NOP !
+	kbdmouse.dll				$(_FLATRELEASEDIR)\KbdS3C2440Jpn1.dll		NK	SHK
+ENDIF	; BSP_KEYBD_NOP
+ENDIF	; BSP_KEYBD_JPN1
+IF BSP_KEYBD_JPN1 !
+IF BSP_KEYBD_NOP
+; @CESYSGEN IF CE_MODULES_NOPKEYBOARD
+	kbdmouse.dll				$(_FLATRELEASEDIR)\KbdNopJpn2.dll		NK	SHK
+; @CESYSGEN ENDIF CE_MODULES_NOPKEYBOARD
+ENDIF	; BSP_KEYBD_NOP
+IF BSP_KEYBD_NOP !
+	kbdmouse.dll				$(_FLATRELEASEDIR)\KbdS3C2440Jpn2.dll		NK	SHK
+ENDIF	; BSP_KEYBD_NOP
+ENDIF	; BSP_KEYBD_JPN1
+ENDIF	; LOCALE == 0411
+IF LOCALE=0412
+IF BSP_KEYBD_NOP
+; @CESYSGEN IF CE_MODULES_NOPKEYBOARD
+	kbdmouse.dll				$(_FLATRELEASEDIR)\KbdNopKor.dll		NK	SHK
+; @CESYSGEN ENDIF CE_MODULES_NOPKEYBOARD
+ENDIF	; BSP_KEYBD_NOP
+IF BSP_KEYBD_NOP !
+	kbdmouse.dll				$(_FLATRELEASEDIR)\KbdS3C2440Kor.dll		NK	SHK
+ENDIF	; BSP_KEYBD_NOP
+ENDIF	; LOCALE == 0412
+ENDIF BSP_NOKEYBD !
+; @CESYSGEN ENDIF CE_MODULES_KEYBD || CE_MODULES_POINTER
+;-----------------------------------------------------------------------------------
+
+;--------- Touch Driver ------------------------------------------------------------
+; @CESYSGEN IF CE_MODULES_POINTER
+IF BSP_NOTOUCH !
+	touch.dll				$(_FLATRELEASEDIR)\s3c2440a_touch.dll		NK	SHK
+ENDIF BSP_NOTOUCH !
+; @CESYSGEN ENDIF CE_MODULES_POINTER
+;------------------------------------------------------------------------------------
+
+;------------ SDHC Driver -----------------------------------------------------------
+; @CESYSGEN IF CE_MODULES_SDBUS
+IF BSP_NOSD !
+	sdhc_sc2440.dll				$(_FLATRELEASEDIR)\sdhc_sc2440.dll		NK	SHK
+ENDIF BSP_NOSD !
+; @CESYSGEN ENDIF CE_MODULES_SDBUS
+;------------------------------------------------------------------------------------
+
+;------------------ NandFlash Driver ------------------------------------------------
+IF BSP_NONAND !
+	nandflash.dll				$(_FLATRELEASEDIR)\nandflash.dll		NK	SHK
+ENDIF ; BSP_NONAND
+;------------------------------------------------------------------------------------
+
+
+; @CESYSGEN IF CE_MODULES_DEVICE
+
+;------- USB Host Controller Driver ----------------------------------------------
+IF BSP_NOUSBHCD !
+	ohci2.dll				$(_FLATRELEASEDIR)\ohci2.dll			NK	SHK
+ENDIF BSP_NOUSBHCD !
+;----------------------------------------------------------------------------------
+
+;------- USB Function Client Driver ----------------------------------------------
+; @CESYSGEN IF CE_MODULES_USBFN
+IF BSP_NOUSBFN !
+IF BSP_KITL != USBSERIAL
+	sc2440usbfn.dll				$(_FLATRELEASEDIR)\sc2440usbfn.dll		NK	SHK
+ENDIF
+ENDIF BSP_NOUSBFN !
+; @CESYSGEN ENDIF CE_MODULES_USBFN
+;-----------------------------------------------------------------------------------
+
+;-------- PCCard Driver ------------------------------------------------------------
+; @CESYSGEN IF CE_MODULES_PCCARD
+IF BSP_NOPCCARD !
+;	pcc_smdk2440.dll			$(_FLATRELEASEDIR)\pcc_smdk2440.dll		NK	SHK
+;	pcc_serv.dll				$(_FLATRELEASEDIR)\pcc_serv16.dll		NK	SHK
+;	pcmcia.dll				$(_FLATRELEASEDIR)\pcc_pcm.dll			NK	SHK
+ENDIF BSP_NOPCCARD !
+; @CESYSGEN ENDIF CE_MODULES_PCCARD
+;-----------------------------------------------------------------------------------
+
+;------------ Power Button Driver --------------------------------------------------
+IF BSP_NOPWRBTN !
+;	PowerButton.dll				$(_FLATRELEASEDIR)\PowerButton.dll		NK	SHK
+ENDIF BSP_NOPWRBTN !
+;-----------------------------------------------------------------------------------
+
+;----------- Audio Driver ----------------------------------------------------------
+; @CESYSGEN IF CE_MODULES_WAVEAPI
+IF BSP_NOAUDIO !
+	s3c2440a_wavedev.dll			$(_FLATRELEASEDIR)\s3c2440a_wavedev.dll		NK	SHK
+ENDIF BSP_NOAUDIO !
+; @CESYSGEN ENDIF CE_MODULES_WAVEAPI
+;-----------------------------------------------------------------------------------
+
+;------------ Serial Driver --------------------------------------------------------
+; @CESYSGEN IF CE_MODULES_SERIAL
+IF BSP_NOSERIAL !
+	serial_smdk2440.dll			$(_FLATRELEASEDIR)\serial_smdk2440.dll		NK	SHK
+ENDIF BSP_NOSERIAL !
+; @CESYSGEN ENDIF CE_MODULES_SERIAL
+;------------------------------------------------------------------------------------
+
+;------------ Battery Driver --------------------------------------------------------
+; @CESYSGEN IF CE_MODULES_BATTDRVR
+IF BSP_NOBATTERY !
+	battdrvr.dll				$(_FLATRELEASEDIR)\battdrvr.dll			NK	SHK
+ENDIF BSP_NOBATTERY !
+; @CESYSGEN ENDIF CE_MODULES_BATTDRVR
+;------------------------------------------------------------------------------------
+
+;------------- Notofication LED Driver -----------------------------------------------
+; @CESYSGEN IF CE_MODULES_NLEDDRVR
+IF BSP_NONLED !
+;	nleddrvr.dll				$(_FLATRELEASEDIR)\nleddrvr.dll			NK	SHK
+ENDIF   ; BSP_NONLED !
+; @CESYSGEN ENDIF CE_MODULES_NLEDDRVR
+;-------------------------------------------------------------------------------------
+
+
+;------------- Backlight Driver ------------------------------------------------------
+IF BSP_NOBACKLIGHT !
+	backlight.dll				$(_FLATRELEASEDIR)\backlight.dll		NK	SHK
+	advbacklight.dll			$(_FLATRELEASEDIR)\advbacklight.dll		NK	SHK
+ENDIF ; BSP_NOBACKLIGHT
+;-------------------------------------------------------------------------------------
+
+;-------- I2C Driver ---------------------------------------------------------------------------
+IF BSP_NOI2C !
+	i2c.dll					$(_FLATRELEASEDIR)\i2c.dll			NK	SHK
+ENDIF BSP_NOI2C !
+;-----------------------------------------------------------------------------------------------
+
+
+;-------- Camera Driver -----------------------------------------------------------------------
+IF BSP_NOCAMERA !
+	camera.dll				$(_FLATRELEASEDIR)\camera.dll			NK	SHK
+ENDIF BSP_NOCAMERA !
+;-----------------------------------------------------------------------------------------------
+
+; @CESYSGEN ENDIF CE_MODULES_DEVICE
+
+IF BSP_NODM9isa !
+	dm9000.dll				$(_FLATRELEASEDIR)\dm9000.dll			NK	SHK
+ENDIF BSP_DM9isa
+	GPIODriver.dll				$(_FLATRELEASEDIR)\GPIODriver.dll		NK	SHK
+	EINTDriver.dll				$(_FLATRELEASEDIR)\EINTDriver.dll		NK	SHK
+	PWMDriver.dll				$(_FLATRELEASEDIR)\PWMDriver.dll		NK	SHK
+	RT2501USB.dll				$(_FLATRELEASEDIR)\RT2501USB.dll		NK	SHK
+	
+;	led.dll				$(_FLATRELEASEDIR)\led.dll			NK	SHK
+
+;	adc.dll			$(_FLATRELEASEDIR)\adc.dll				NK SHK
+	dcmotor.dll		$(_FLATRELEASEDIR)\dcmotor.dll			NK  SHK
+
+; ---------- D3DM Driver --------------------------------------------------------------
+; @CESYSGEN IF DIRECTX_MODULES_D3DM
+IF BSP_NOD3DM !
+	d3dm_sedrv.dll				$(_FLATRELEASEDIR)\d3dm_sedrv.dll		NK	SHK
+ENDIF ; BSP_NOD3DM
+; @CESYSGEN ENDIF DIRECTX_MODULES_D3DM
+;--------------------------------------------------------------------------------------
+
+FILES
+;	Name					Path						Memory	Type
+;	--------------				----------------------------------		------	----
+
+

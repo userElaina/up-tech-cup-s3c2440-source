@@ -1,0 +1,9 @@
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\STR]
+"Index"=dword:1
+"Prefix"="STR"
+"DLL"="STR.dll"
+"Order"=dword:0
+"Irq"=dword:2
+;"SysIntr"=dword:10
+;
+;

@@ -1,0 +1,28 @@
+!if 0
+Copyright (c) 2006. Samsung Electronics, co. ltd  All rights reserved.
+!endif
+
+!if "$(BSP_NOTOUCH)" == "1"
+SKIPBUILD=1
+!endif
+
+SYNCHRONIZE_DRAIN=1
+
+TARGETNAME=s3c2440a_touch
+RELEASETYPE=PLATFORM
+TARGETTYPE=DYNLINK
+DLLENTRY=_DllMainCRTStartup
+
+DEFFILE=$(_COMMONOAKROOT)\inc\touch.def
+
+TARGETLIBS=$(_COMMONSDKROOT)\lib\$(_CPUINDPATH)\coredll.lib
+
+SOURCELIBS= \
+			$(_COMMONOAKROOT)\lib\$(_CPUINDPATH)\tch_cal.lib \
+			$(_COMMONOAKROOT)\lib\$(_CPUINDPATH)\tchmdd.lib  
+
+SOURCES=s3c2440a_touch.cpp
+
+PREPROCESSDEFFILE=1
+
+INCLUDES=$(_TARGETPLATROOT)\src\inc;

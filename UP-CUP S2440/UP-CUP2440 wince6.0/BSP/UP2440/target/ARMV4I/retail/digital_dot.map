@@ -1,0 +1,68 @@
+ digital_dot
+
+ Timestamp is 4f8932b0 (Sat Apr 14 16:17:52 2012)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 000003daH .rdata                  CODE
+ 0001:000003dc 00000028H .rdata$debug            CODE
+ 0001:00000404 00000430H .text                   CODE
+ 0001:00000834 00000014H .idata$2                CODE
+ 0001:00000848 00000014H .idata$3                CODE
+ 0001:0000085c 00000014H .idata$4                CODE
+ 0001:00000870 0000000cH .idata$6                CODE
+ 0001:00000880 000000d9H .edata                  CODE
+ 0002:00000000 00000014H .idata$5                DATA
+ 0002:00000018 000000e0H .data                   DATA
+ 0002:000000f8 0000000cH .bss                    DATA
+ 0003:00000000 00000048H .pdata                  DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0001:00000020       ??_C@_1EE@HFJPDHG@?$AAD?$AAi?$AAg?$AAi?$AAt?$AAa?$AAl?$AA_?$AAD?$AAo?$AAt?$AA?3?$AAD?$AAL?$AAL?$AA_?$AAP?$AAR?$AAO?$AAC?$AAE?$AAS?$AAS?$AA_?$AAD?$AAE?$AAT?$AAA?$AAC?$AAH?$AA?4?$AA?$AN@ 10001020     Digital_Dot.obj
+ 0001:00000068       ??_C@_1EE@ONCCMJJA@?$AAD?$AAi?$AAg?$AAi?$AAt?$AAa?$AAl?$AA_?$AAD?$AAo?$AAt?$AA?3?$AAD?$AAL?$AAL?$AA_?$AAP?$AAR?$AAO?$AAC?$AAE?$AAS?$AAS?$AA_?$AAA?$AAT?$AAT?$AAA?$AAC?$AAH?$AA?4?$AA?$AN@ 10001068     Digital_Dot.obj
+ 0001:000000ac       ??_C@_1DO@NCFDBPKE@?$AAF?$AAo?$AAr?$AA?5?$AAD?$AAi?$AAg?$AAi?$AAt?$AAa?$AAl?$AA_?$AAD?$AAo?$AAt?$AA?3?$AA?5?$AAi?$AAn?$AAi?$AAt?$AA?5?$AAi?$AAs?$AA?5?$AAo?$AAk?$AA?$CB?$AA?$AN?$AA?6?$AA?$AA@ 100010ac     Digital_Dot.obj
+ 0001:000000f0       ??_C@_1EK@HDKMPJMG@?$AAD?$AAi?$AAg?$AAi?$AAt?$AAa?$AAl?$AA_?$AAD?$AAo?$AAt?$AA?3?$AAs?$AAi?$AAz?$AAe?$AA?5?$AAo?$AAf?$AA?5?$AAl?$AAe?$AAd?$AAa?$AAr?$AAr?$AAa?$AAy?$AA?5?$AAi?$AAs?$AA?5@ 100010f0     Digital_Dot.obj
+ 0001:00000140       ??_C@_1EO@BPMPGHO@?$AAF?$AAo?$AAr?$AA?5?$AAD?$AAi?$AAg?$AAi?$AAt?$AAa?$AAl?$AA_?$AAD?$AAo?$AAt?$AA?3?$AA?5?$AAV?$AAi?$AAr?$AAt?$AAu?$AAa?$AAl?$AAC?$AAo?$AAp?$AAy?$AA?5?$AAf?$AAa?$AAi@ 10001140     Digital_Dot.obj
+ 0001:00000190       ??_C@_1FC@IHHBOMFD@?$AAF?$AAo?$AAr?$AA?5?$AAD?$AAi?$AAg?$AAi?$AAt?$AAa?$AAl?$AA_?$AAD?$AAo?$AAt?$AA?5?$AA?3?$AA?5?$AAV?$AAi?$AAr?$AAt?$AAu?$AAa?$AAl?$AAA?$AAl?$AAl?$AAo?$AAc?$AA?5?$AAf@ 10001190     Digital_Dot.obj
+ 0001:000001e4       ??_C@_1DA@PHACKCAP@?$AAD?$AAi?$AAg?$AAi?$AAt?$AAa?$AAl?$AA_?$AAD?$AAo?$AAt?$AA?3?$AAD?$AAD?$AAT?$AA_?$AAO?$AAp?$AAe?$AAn?$AA?4?$AA?$AN?$AA?6?$AA?$AA@ 100011e4     Digital_Dot.obj
+ 0001:00000214       ??_C@_1DA@OOFKCHHP@?$AAD?$AAi?$AAg?$AAi?$AAt?$AAa?$AAl?$AA_?$AAD?$AAo?$AAt?$AA?3?$AAD?$AAD?$AAT?$AA_?$AAR?$AAe?$AAa?$AAd?$AA?4?$AA?$AN?$AA?6?$AA?$AA@ 10001214     Digital_Dot.obj
+ 0001:00000244       ??_C@_1DC@MBCHMCOC@?$AAD?$AAi?$AAg?$AAi?$AAt?$AAa?$AAl?$AA_?$AAD?$AAo?$AAt?$AA?3?$AAD?$AAD?$AAT?$AA_?$AAC?$AAl?$AAo?$AAs?$AAe?$AA?4?$AA?$AN?$AA?6?$AA?$AA@ 10001244     Digital_Dot.obj
+ 0001:00000278       ??_C@_1DI@JBCEBDCC@?$AAF?$AAo?$AAr?$AA?5?$AAD?$AAi?$AAg?$AAi?$AAt?$AAa?$AAl?$AA_?$AAD?$AAo?$AAt?$AA?3?$AA?5?$AAi?$AAn?$AAi?$AAt?$AA?5?$AAC?$AAE?$AA?$CB?$AA?$AN?$AA?6?$AA?$AA@ 10001278     Digital_Dot.obj
+ 0001:000002b0       ??_C@_1EM@CNCALJH@?$AAF?$AAo?$AAr?$AA?5?$AAD?$AAi?$AAg?$AAi?$AAt?$AAa?$AAl?$AA_?$AAD?$AAo?$AAt?$AA?3?$AA?5?$AAC?$AAO?$AAM?$AAM?$AAA?$AAN?$AAD?$AA_?$AAA?$AAR?$AAR?$AAA?$AAY?$AAS?$AAH@ 100012b0     Digital_Dot.obj
+ 0001:00000300       ??_C@_1EI@NLAILMJG@?$AAF?$AAo?$AAr?$AA?5?$AAD?$AAi?$AAg?$AAi?$AAt?$AAa?$AAl?$AA_?$AAD?$AAo?$AAt?$AA?3?$AA?5?$AAC?$AAO?$AAM?$AAM?$AAA?$AAN?$AAD?$AA_?$AAL?$AAE?$AAD?$AAS?$AAH?$AAO?$AAW@ 10001300     Digital_Dot.obj
+ 0001:00000348       ??_C@_1EG@DHDANMAE@?$AAF?$AAo?$AAr?$AA?5?$AAD?$AAi?$AAg?$AAi?$AAt?$AAa?$AAl?$AA_?$AAD?$AAo?$AAt?$AA?3?$AA?5?$AAC?$AAO?$AAM?$AAM?$AAA?$AAN?$AAD?$AA_?$AAL?$AAE?$AAD?$AAO?$AAF?$AAF?$AA?$CB@ 10001348     Digital_Dot.obj
+ 0001:00000390       ??_C@_1EK@GMPGANMP@?$AAF?$AAo?$AAr?$AA?5?$AAD?$AAi?$AAg?$AAi?$AAt?$AAa?$AAl?$AA_?$AAD?$AAo?$AAt?$AA?3?$AA?5?$AAC?$AAO?$AAM?$AAM?$AAA?$AAN?$AAD?$AA_?$AAA?$AAR?$AAR?$AAA?$AAY?$AAO?$AAF@ 10001390     Digital_Dot.obj
+ 0001:00000404       ?DllEntry@@YAHPAXK0@Z      10001404 f   Digital_Dot.obj
+ 0001:0000043c       ?DDT_Init@@YAKK@Z          1000143c f   Digital_Dot.obj
+ 0001:00000574       ?DDT_Open@@YAKKKK@Z        10001574 f   Digital_Dot.obj
+ 0001:00000590       ?DDT_Read@@YAKKPAXK@Z      10001590 f   Digital_Dot.obj
+ 0001:000005ac       ?DDT_Close@@YAHK@Z         100015ac f   Digital_Dot.obj
+ 0001:000005c8       ?DDT_Deinit@@YAHK@Z        100015c8 f   Digital_Dot.obj
+ 0001:000005d0       ?DDT_Write@@YAKKPBXK@Z     100015d0 f   Digital_Dot.obj
+ 0001:000005d8       ?DDT_Seek@@YAKKJK@Z        100015d8 f   Digital_Dot.obj
+ 0001:000005e0       ?DDT_IOControl@@YAHKKPAEK0KPAK@Z 100015e0 f   Digital_Dot.obj
+ 0001:000007f4       NKDbgPrintfW               100017f4 f   coredll:COREDLL.dll
+ 0001:00000804       Sleep                      10001804 f   coredll:COREDLL.dll
+ 0001:00000814       VirtualCopy                10001814 f   coredll:COREDLL.dll
+ 0001:00000824       VirtualAlloc               10001824 f   coredll:COREDLL.dll
+ 0001:00000834       __IMPORT_DESCRIPTOR_COREDLL 10001834     coredll:COREDLL.dll
+ 0001:00000848       __NULL_IMPORT_DESCRIPTOR   10001848     coredll:COREDLL.dll
+ 0002:00000000       __imp_Sleep                10002000     coredll:COREDLL.dll
+ 0002:00000004       __imp_VirtualCopy          10002004     coredll:COREDLL.dll
+ 0002:00000008       __imp_VirtualAlloc         10002008     coredll:COREDLL.dll
+ 0002:0000000c       __imp_NKDbgPrintfW         1000200c     coredll:COREDLL.dll
+ 0002:00000010       \177COREDLL_NULL_THUNK_DATA 10002010     coredll:COREDLL.dll
+ 0002:00000018       ?LedData@@3PAIA            10002018     Digital_Dot.obj
+ 0002:00000058       ?DotLetter@@3PAY03IA       10002058     Digital_Dot.obj
+ 0002:000000f8       ?dot@@3PAUDot@@A           100020f8     Digital_Dot.obj
+ 0002:000000fc       ?temp@@3PAUDot@@A          100020fc     Digital_Dot.obj
+ 0002:00000100       ?ledshow@@3PAULed@@A       10002100     Digital_Dot.obj
+
+ entry point at        0000:00000000
+
+ Static symbols
+

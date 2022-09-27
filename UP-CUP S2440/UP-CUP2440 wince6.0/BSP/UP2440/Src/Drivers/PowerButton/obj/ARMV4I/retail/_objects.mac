@@ -1,0 +1,4 @@
+OBJECTS=\
+    obj\ARMV4I\retail\pwr.obj\
+    obj\ARMV4I\retail\PowerButton.obj
+

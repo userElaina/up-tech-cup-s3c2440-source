@@ -1,0 +1,6 @@
+OBJECTS=\
+    obj\ARMV4I\debug\init.obj\
+    obj\ARMV4I\debug\pdsocket.obj\
+    obj\ARMV4I\debug\pcmsock.obj\
+    obj\ARMV4I\debug\pcmwin.obj
+

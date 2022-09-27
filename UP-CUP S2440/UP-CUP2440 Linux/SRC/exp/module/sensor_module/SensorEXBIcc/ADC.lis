@@ -1,0 +1,161 @@
+                        .module ADC.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile C:\DOCUME~1\蔡颖鹏\桌面\SensorEXBIcc\ADC.c
+ 0000                   .dbfunc e ADC_Init _ADC_Init fV
+                        .even
+ 0000           _ADC_Init::
+ 0000                   .dbline -1
+ 0000                   .dbline 4
+ 0000           ; #include "Generic.h"
+ 0000           ; 
+ 0000           ; void ADC_Init(void)
+ 0000           ; {  
+ 0000                   .dbline 5
+ 0000           ;       ADCSRA = 0x00; //disable adc
+ 0000 2224              clr R2
+ 0002 26B8              out 0x6,R2
+ 0004                   .dbline 6
+ 0004           ;     ADMUX = 0x40; 
+ 0004 80E4              ldi R24,64
+ 0006 87B9              out 0x7,R24
+ 0008                   .dbline 7
+ 0008           ;     ACSR  = 0x80;
+ 0008 80E8              ldi R24,128
+ 000A 88B9              out 0x8,R24
+ 000C                   .dbline 8
+ 000C           ;     ADCSRA = 0x01;
+ 000C 81E0              ldi R24,1
+ 000E 86B9              out 0x6,R24
+ 0010                   .dbline -2
+ 0010           L1:
+ 0010                   .dbline 0 ; func end
+ 0010 0895              ret
+ 0012                   .dbend
+ 0012                   .dbfunc e StartADC _StartADC fD
+ 0012           ;        voltage -> y+0
+ 0012           ;     SensorCode -> R20
+                        .even
+ 0012           _StartADC::
+ 0012 00D0              rcall push_gset1
+ 0014 402F              mov R20,R16
+ 0016 2497              sbiw R28,4
+ 0018                   .dbline -1
+ 0018                   .dbline 12
+ 0018           ; }
+ 0018           ; 
+ 0018           ; float StartADC( char SensorCode )
+ 0018           ; {  
+ 0018                   .dbline 13
+ 0018           ;     float voltage = 0;
+ 0018 00E0              ldi R16,<L3
+ 001A 10E0              ldi R17,>L3
+ 001C 00D0              rcall lpm32
+ 001E FE01              movw R30,R28
+ 0020 0083              std z+0,R16
+ 0022 1183              std z+1,R17
+ 0024 2283              std z+2,R18
+ 0026 3383              std z+3,R19
+ 0028                   .dbline 14
+ 0028           ;       ADCSRA = 0x00; //disable adc
+ 0028 2224              clr R2
+ 002A 26B8              out 0x6,R2
+ 002C                   .dbline 15
+ 002C           ;       ADMUX = 0x40|SensorCode;//0~7
+ 002C 842F              mov R24,R20
+ 002E 8064              ori R24,64
+ 0030 87B9              out 0x7,R24
+ 0032                   .dbline 16
+ 0032           ;       ADCSRA = 0xc1;
+ 0032 81EC              ldi R24,193
+ 0034 86B9              out 0x6,R24
+ 0036           L4:
+ 0036                   .dbline 17
+ 0036           L5:
+ 0036                   .dbline 17
+ 0036           ;       while( ADCSRA&0x40 );
+ 0036 3699              sbic 0x6,6
+ 0038 FECF              rjmp L4
+ 003A                   .dbline 18
+ 003A           ;       voltage = (float)ADC*VREF/1024;
+ 003A 24B0              in R2,0x4
+ 003C 35B0              in R3,0x5
+ 003E 00E0              ldi R16,<L7
+ 0040 10E0              ldi R17,>L7
+ 0042 00D0              rcall lpm32
+ 0044 3A93              st -y,R19
+ 0046 2A93              st -y,R18
+ 0048 1A93              st -y,R17
+ 004A 0A93              st -y,R16
+ 004C 00E0              ldi R16,<L8
+ 004E 10E0              ldi R17,>L8
+ 0050 00D0              rcall lpm32
+ 0052 3A93              st -y,R19
+ 0054 2A93              st -y,R18
+ 0056 1A93              st -y,R17
+ 0058 0A93              st -y,R16
+ 005A 8101              movw R16,R2
+ 005C 1695              lsr R17
+ 005E 0795              ror R16
+ 0060 00D0              rcall int2fp
+ 0062 3A93              st -y,R19
+ 0064 2A93              st -y,R18
+ 0066 1A93              st -y,R17
+ 0068 0A93              st -y,R16
+ 006A 00D0              rcall empy32fs
+ 006C 8101              movw R16,R2
+ 006E 0170              andi R16,1
+ 0070 1070              andi R17,0
+ 0072 00D0              rcall int2fp
+ 0074 3A93              st -y,R19
+ 0076 2A93              st -y,R18
+ 0078 1A93              st -y,R17
+ 007A 0A93              st -y,R16
+ 007C 00D0              rcall add32fs
+ 007E 00D0              rcall empy32fs
+ 0080 00E0              ldi R16,<L9
+ 0082 10E0              ldi R17,>L9
+ 0084 00D0              rcall lpm32
+ 0086 3A93              st -y,R19
+ 0088 2A93              st -y,R18
+ 008A 1A93              st -y,R17
+ 008C 0A93              st -y,R16
+ 008E 00D0              rcall div32f
+ 0090 FE01              movw R30,R28
+ 0092 0083              std z+0,R16
+ 0094 1183              std z+1,R17
+ 0096 2283              std z+2,R18
+ 0098 3383              std z+3,R19
+ 009A                   .dbline 28
+ 009A           ;       /*
+ 009A           ;               //fortest
+ 009A           ;               DisplayData(voltage);
+ 009A           ;               //将从机的SS拉低
+ 009A           ;               PORTB&=0xFB;
+ 009A           ;       
+ 009A           ;               //将从机的SS拉高，表明发送完毕
+ 009A           ;               PORTB|=0x04;
+ 009A           ;       */
+ 009A           ;       return voltage;
+ 009A FE01              movw R30,R28
+ 009C 0081              ldd R16,z+0
+ 009E 1181              ldd R17,z+1
+ 00A0 2281              ldd R18,z+2
+ 00A2 3381              ldd R19,z+3
+ 00A4                   .dbline -2
+ 00A4           L2:
+ 00A4 2496              adiw R28,4
+ 00A6 00D0              rcall pop_gset1
+ 00A8                   .dbline 0 ; func end
+ 00A8 0895              ret
+ 00AA                   .dbsym l voltage 0 D
+ 00AA                   .dbsym r SensorCode 20 c
+ 00AA                   .dbend
+                        .area lit(rom, con, rel)
+ 0000           L9:
+ 0000 00008044          .word 0x0,0x4480
+ 0004           L8:
+ 0004 00000040          .word 0x0,0x4000
+ 0008           L7:
+ 0008 0000A040          .word 0x0,0x40a0
+ 000C           L3:
+ 000C 00000000          .word 0x0,0x0

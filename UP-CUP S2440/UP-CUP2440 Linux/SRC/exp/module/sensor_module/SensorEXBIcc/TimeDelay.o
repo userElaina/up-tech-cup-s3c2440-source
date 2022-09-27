@@ -1,0 +1,87 @@
+XL
+H 1 areas 6 global symbols
+M TimeDelay.c
+S push_gset1 Ref0000
+S pop_gset1 Ref0000
+A text size 7C flags 0
+dbfile C:\DOCUME~1\≤Ã”±≈Ù\◊¿√Ê\SensorEXBIcc\TimeDelay.c
+dbfunc e delay_50us 0 fV
+dbsym r j 14 i
+dbsym r n 10 i
+dbline FFFFFFFF 2
+dbline 6 2
+dbline 8 2
+dbline 9 4
+dbline A 4
+dbline B A
+dbline A A
+dbline A E
+dbline C 16
+dbline 8 16
+dbline 8 1A
+dbline FFFFFFFE 20
+dbline 0 22
+dbfunc e delay_ms 24 fV
+dbsym r n 14 i
+dbline FFFFFFFF 28
+dbline 10 28
+dbline 11 28
+dbline 12 2A
+dbline 13 2A
+dbline 14 30
+dbline 11 30
+dbline 11 34
+dbline FFFFFFFE 3A
+dbline 0 3C
+dbfunc e delay_50ms 3E fV
+dbsym r i 14 i
+dbsym r n 10 i
+dbline FFFFFFFF 40
+dbline 18 40
+dbline 1A 40
+dbline 1B 42
+dbline 1C 42
+dbline 1D 48
+dbline 1C 48
+dbline 1C 4C
+dbline 1E 54
+dbline 1A 54
+dbline 1A 58
+dbline FFFFFFFE 5E
+dbline 0 60
+dbfunc e delay_s 62 fV
+dbsym r n 14 i
+dbline FFFFFFFF 66
+dbline 22 66
+dbline 23 66
+dbline 24 68
+dbline 25 68
+dbline 26 6E
+dbline 23 6E
+dbline 23 72
+dbline FFFFFFFE 78
+dbline 0 7A
+S _delay_50ms Def003E
+S _delay_50us Def0000
+S _delay_s Def0062
+S _delay_ms Def0024
+T 00 00 00 D0 0B C0 44 27 55 27 02 C0 4F 5F 5F 4F
+R 00 00 00 00 82 02 00 00
+T 0E 00 46 34 E0 E0 5E 07 D0 F3 01 50 10 40 00 30
+R 00 00 00 00
+T 1C 00 01 07 91 F7 00 D0 08 95
+R 00 00 00 00 82 06 01 00
+T 24 00 00 D0 A8 01 05 C0 04 E1 10 E0 E8 DF 41 50
+R 00 00 00 00 82 02 00 00
+T 32 00 50 40 40 30 45 07 C1 F7 00 D0 08 95
+R 00 00 00 00 82 0A 01 00
+T 3E 00 00 D0 0B C0 44 27 55 27 02 C0 4F 5F 5F 4F
+R 00 00 00 00 82 02 00 00
+T 4C 00 42 3A ED EC 5E 07 D0 F3 01 50 10 40 00 30
+R 00 00 00 00
+T 5A 00 01 07 91 F7 00 D0 08 95
+R 00 00 00 00 82 06 01 00
+T 62 00 00 D0 A8 01 05 C0 04 E1 10 E0 E8 DF 41 50
+R 00 00 00 00 82 02 00 00
+T 70 00 50 40 40 30 45 07 C1 F7 00 D0 08 95
+R 00 00 00 00 82 0A 01 00
